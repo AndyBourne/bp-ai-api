@@ -1,0 +1,33 @@
+name: 自动发布 Quarto 博客
+
+on:
+  push:
+    branches: [ main ]  # 当 main 分支有变动时触发
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: 安装 Python 环境 (如果有 Jupyter Cell)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: pip install jupyter pandas matplotlib  # 根据你的 SpaceX 脚本需求添加
+
+      - name: 渲染并发布到 GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages  # 也可以改为 quarto-pub 或 connect
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub 自动生成，无需手动设置
