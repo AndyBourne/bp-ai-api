@@ -1,0 +1,5 @@
+/.quarto/	Quarto 的内部缓存，不需要备份
+/_site/ 或 /docs/	渲染生成的静态网页（除非你直接用它发布）
+/.ipynb_checkpoints/	Jupyter Notebook 的自动保存点
+*.pyc	Python 编译文件
+.DS_Store	Mac 系统的索引文件
