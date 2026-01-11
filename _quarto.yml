@@ -4,6 +4,7 @@ project:
 
 website:
   title: "AndyBourne-Blog"
+  site-url: https://andybourne.github.io/bp-ai-api/
   
   navbar:
     # --- 这一层是 navbar 的全局设置 ---

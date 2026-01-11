@@ -7,27 +7,6 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "深空经济：卫星竞争格局",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AndyBourne-Blog",
-    "section": "",
-    "text": "深空经济：卫星竞争格局\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/Aviation-Space/SpaceX20260110.html",
     "href": "posts/Aviation-Space/SpaceX20260110.html",
     "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
@@ -61,5 +40,26 @@
     "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
     "section": "2.1 SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：",
     "text": "2.1 SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：\n\n2.1.1 1. 成本壁垒：无可匹敌的可复用经济学\n\n\n2.1.2 SpaceX 将航天发射从“定制工艺品”变成了“工业标准品”。\n\n\n2.1.3 边际成本：通过一级火箭复用，内部发射边际成本已降至约 1500 万美元。\n\n\n2.1.4 盈利能力：当复用次数达到 5 次时，毛利率可达 68% 左右。\n\n\n2.1.5 规模效应：这种壁垒不是专利壁垒，而是每年 100+ 次发射所积累的数据与供应链效率。\n\n\n2.1.6 2. 制造壁垒：垂直整合与先进制造体系\n\n\n2.1.7 SpaceX 实现了 80% 以上的自研自产（从 Merlin/Raptor 发动机到航天服及飞行软件）。\n\n\n2.1.8 迭代速度：垂直整合策略使其能以“消费电子产品”的速度更新航天器。\n\n\n2.1.9 生产模式：将火箭制造从“手工作坊”带入了“流水线时代”。\n\n\n2.1.10 3. 客户壁垒：与政府的战略共生\n\n\n2.1.11 SpaceX 与 NASA 及美国国防部（DoD）已演变为深度绑定的战略共生关系。\n\n\n2.1.12 研发补贴：政府通过长期高价值合同，为 Starship 等核心研发提供了事实上的巨额补贴。\n\n\n2.1.13 路径依赖：美国政府获得了独立、廉价且领先的太空进入能力，彻底摆脱了传统军工复合体的低效。"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "深空经济：卫星竞争格局",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AndyBourne-Blog",
+    "section": "",
+    "text": "深空经济：卫星竞争格局\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
   }
 ]

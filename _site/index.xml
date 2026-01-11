@@ -6,16 +6,17 @@
       version="2.0">
 <channel>
 <title>AndyBourne-Blog</title>
-<link>https://your-website-url.example.com/</link>
-<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
-<description>A blog built with Quarto</description>
+<link>https://andybourne.github.io/bp-ai-api/</link>
+<atom:link href="https://andybourne.github.io/bp-ai-api/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
 <generator>quarto-1.8.26</generator>
 <lastBuildDate>Fri, 09 Jan 2026 16:00:00 GMT</lastBuildDate>
 <item>
   <title>深空经济：卫星竞争格局</title>
   <dc:creator>Harlow Malloc</dc:creator>
-  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <link>https://andybourne.github.io/bp-ai-api/posts/post-with-code/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -29,14 +30,14 @@
   <category>news</category>
   <category>code</category>
   <category>analysis</category>
-  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <guid>https://andybourne.github.io/bp-ai-api/posts/post-with-code/</guid>
   <pubDate>Fri, 09 Jan 2026 16:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://andybourne.github.io/bp-ai-api/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>AndyBourne</title>
+  <title>商业航天SpaceX估值，全球商业航天发展态势分析</title>
   <dc:creator>Andy Bourne</dc:creator>
-  <link>https://your-website-url.example.com/posts/Aviation-Space/SpaceX20260110.html</link>
+  <link>https://andybourne.github.io/bp-ai-api/posts/Aviation-Space/SpaceX20260110.html</link>
   <description><![CDATA[ 
 
 
@@ -44,35 +45,181 @@
 
 
 
+<p>from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles m = Map( basemap=basemap_to_tiles( basemaps.NASAGIBS.ModisTerraTrueColorCR, “2017-04-08” ), center=(52.204793, 360.121558), zoom=4 ) m.add_layer(Marker(location=(52.204793, 360.121558))) m</p>
+<section id="核心护城河分析" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="核心护城河分析"><span class="header-section-number">0.1</span> 🛡️ 核心护城河分析</h2>
+<p>SpaceX 的核心竞争力源于三个维度的深度融合：</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>1. 成本壁垒：无可匹敌的可复用经济学
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>通过猎鹰 9 号的一级复用，SpaceX 将内部发射边际成本降至约 <strong>1500 万美元</strong>。当复用任务达到 5 次时，毛利率可高达 <strong>68%</strong>。这种壁垒不是专利，而是制造与运营的规模效应。</p>
+</div>
+</div>
+<section id="制造壁垒垂直整合体系" class="level3" data-number="0.1.1">
+<h3 data-number="0.1.1" class="anchored" data-anchor-id="制造壁垒垂直整合体系"><span class="header-section-number">0.1.1</span> 2. 制造壁垒：垂直整合体系</h3>
+<p>SpaceX 实现了 <strong>80% 以上的自研自产</strong>。从 Merlin 发动机到航天服软件，垂直整合带来了极高的迭代速度。</p>
+</section>
+<section id="客户壁垒与政府的战略共生" class="level3" data-number="0.1.2">
+<h3 data-number="0.1.2" class="anchored" data-anchor-id="客户壁垒与政府的战略共生"><span class="header-section-number">0.1.2</span> 3. 客户壁垒：与政府的战略共生</h3>
+<p>NASA 和美国国防部通过高价值合同，为 SpaceX 的核心研发（尤其是 Starship）提供了事实上的巨额补贴。</p>
+</section>
+</section>
+<section id="三重增长曲线叠加" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="三重增长曲线叠加"><span class="header-section-number">0.2</span> 📈 三重增长曲线叠加</h2>
+<p>SpaceX 的价值由三个不同生命周期的业务有机组合而成：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>维度</strong></th>
+<th style="text-align: left;"><strong>第一曲线：发射业务</strong></th>
+<th style="text-align: left;"><strong>第二曲线：Starlink</strong></th>
+<th style="text-align: left;"><strong>第三曲线：Starship</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>角色</strong></td>
+<td style="text-align: left;">现金奶牛（基石）</td>
+<td style="text-align: left;">增长引擎（SaaS 化）</td>
+<td style="text-align: left;">颠覆性期权（未来）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>特征</strong></td>
+<td style="text-align: left;">绝对垄断，稳定现金流</td>
+<td style="text-align: left;">订阅制高经常性收入</td>
+<td style="text-align: left;">解锁万亿级潜在市场</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>现状</strong></td>
+<td style="text-align: left;">猎鹰 9 号高频发射</td>
+<td style="text-align: left;">全球最大卫星互联网</td>
+<td style="text-align: left;">研发关键期，运力革命</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>核心洞察
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SpaceX 的内部发射边际成本已降至约 1500 万美元，这使其在面对传统巨头时拥有绝对的定价权。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Andy 的思考
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>这种成本优势不是靠压榨利润，而是靠“可复用经济学”实现的范式转移。</p>
+</div>
+</div>
+</section>
+<section id="spacex以第一性原理重塑航天工业" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> SpaceX：以第一性原理重塑航天工业</h1>
+<section id="spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰"><span class="header-section-number">1.1</span> SpaceX 的本质不是一家传统的航空航天制造商，而是一家将第一性原理应用到极致的太空物流与基础设施垄断商。它构建了一个自我强化的商业闭环：利用 Falcon 9 的成本优势构建 Starlink 网络，再利用其产生的巨额现金流供养人类史上最宏大的工程——Starship（星舰）。</h2>
+</section>
+</section>
+<section id="核心护城河分析-1" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 核心护城河分析</h1>
+<section id="spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合"><span class="header-section-number">2.1</span> SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：</h2>
+<section id="成本壁垒无可匹敌的可复用经济学-1" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="成本壁垒无可匹敌的可复用经济学-1"><span class="header-section-number">2.1.1</span> 1. 成本壁垒：无可匹敌的可复用经济学</h3>
+</section>
+<section id="spacex-将航天发射从定制工艺品变成了工业标准品" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="spacex-将航天发射从定制工艺品变成了工业标准品"><span class="header-section-number">2.1.2</span> SpaceX 将航天发射从“定制工艺品”变成了“工业标准品”。</h3>
+</section>
+<section id="边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元"><span class="header-section-number">2.1.3</span> 边际成本：通过一级火箭复用，内部发射边际成本已降至约 1500 万美元。</h3>
+</section>
+<section id="盈利能力当复用次数达到-5-次时毛利率可达-68-左右" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="盈利能力当复用次数达到-5-次时毛利率可达-68-左右"><span class="header-section-number">2.1.4</span> 盈利能力：当复用次数达到 5 次时，毛利率可达 68% 左右。</h3>
+</section>
+<section id="规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率"><span class="header-section-number">2.1.5</span> 规模效应：这种壁垒不是专利壁垒，而是每年 100+ 次发射所积累的数据与供应链效率。</h3>
+</section>
+<section id="制造壁垒垂直整合与先进制造体系" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="制造壁垒垂直整合与先进制造体系"><span class="header-section-number">2.1.6</span> 2. 制造壁垒：垂直整合与先进制造体系</h3>
+</section>
+<section id="spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件"><span class="header-section-number">2.1.7</span> SpaceX 实现了 80% 以上的自研自产（从 Merlin/Raptor 发动机到航天服及飞行软件）。</h3>
+</section>
+<section id="迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器"><span class="header-section-number">2.1.8</span> 迭代速度：垂直整合策略使其能以“消费电子产品”的速度更新航天器。</h3>
+</section>
+<section id="生产模式将火箭制造从手工作坊带入了流水线时代" class="level3" data-number="2.1.9">
+<h3 data-number="2.1.9" class="anchored" data-anchor-id="生产模式将火箭制造从手工作坊带入了流水线时代"><span class="header-section-number">2.1.9</span> 生产模式：将火箭制造从“手工作坊”带入了“流水线时代”。</h3>
+</section>
+<section id="客户壁垒与政府的战略共生-1" class="level3" data-number="2.1.10">
+<h3 data-number="2.1.10" class="anchored" data-anchor-id="客户壁垒与政府的战略共生-1"><span class="header-section-number">2.1.10</span> 3. 客户壁垒：与政府的战略共生</h3>
+</section>
+<section id="spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系" class="level3" data-number="2.1.11">
+<h3 data-number="2.1.11" class="anchored" data-anchor-id="spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系"><span class="header-section-number">2.1.11</span> SpaceX 与 NASA 及美国国防部（DoD）已演变为深度绑定的战略共生关系。</h3>
+</section>
+<section id="研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴" class="level3" data-number="2.1.12">
+<h3 data-number="2.1.12" class="anchored" data-anchor-id="研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴"><span class="header-section-number">2.1.12</span> 研发补贴：政府通过长期高价值合同，为 Starship 等核心研发提供了事实上的巨额补贴。</h3>
+</section>
+<section id="路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效" class="level3" data-number="2.1.13">
+<h3 data-number="2.1.13" class="anchored" data-anchor-id="路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效"><span class="header-section-number">2.1.13</span> 路径依赖：美国政府获得了独立、廉价且领先的太空进入能力，彻底摆脱了传统军工复合体的低效。</h3>
 
+
+</section>
+</section>
+</section>
 
  ]]></description>
   <category>估值</category>
   <category>商业航天</category>
   <category>硬科技</category>
-  <guid>https://your-website-url.example.com/posts/Aviation-Space/SpaceX20260110.html</guid>
+  <guid>https://andybourne.github.io/bp-ai-api/posts/Aviation-Space/SpaceX20260110.html</guid>
   <pubDate>Fri, 09 Jan 2026 16:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/Aviation-Space/cover.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://andybourne.github.io/bp-ai-api/posts/Aviation-Space/cover.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Welcome To My Blog</title>
   <dc:creator>Tristan O&#39;Malley</dc:creator>
-  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <link>https://andybourne.github.io/bp-ai-api/posts/welcome/</link>
   <description><![CDATA[ 
+
 
 
 
 
 
 <p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p><img src="https://andybourne.github.io/bp-ai-api/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
 <p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <guid>https://andybourne.github.io/bp-ai-api/posts/welcome/</guid>
   <pubDate>Tue, 06 Jan 2026 16:00:00 GMT</pubDate>
 </item>
 </channel>
