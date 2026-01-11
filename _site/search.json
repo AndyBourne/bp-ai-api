@@ -25,6 +25,41 @@
     "href": "index.html",
     "title": "AndyBourne-Blog",
     "section": "",
-    "text": "深空经济：卫星竞争格局\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nAndyBourne\n\n\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "深空经济：卫星竞争格局\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 7, 2026\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Aviation-Space/SpaceX20260110.html",
+    "href": "posts/Aviation-Space/SpaceX20260110.html",
+    "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
+    "section": "",
+    "text": "from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles m = Map( basemap=basemap_to_tiles( basemaps.NASAGIBS.ModisTerraTrueColorCR, “2017-04-08” ), center=(52.204793, 360.121558), zoom=4 ) m.add_layer(Marker(location=(52.204793, 360.121558))) m"
+  },
+  {
+    "objectID": "posts/Aviation-Space/SpaceX20260110.html#核心护城河分析",
+    "href": "posts/Aviation-Space/SpaceX20260110.html#核心护城河分析",
+    "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
+    "section": "0.1 🛡️ 核心护城河分析",
+    "text": "0.1 🛡️ 核心护城河分析\nSpaceX 的核心竞争力源于三个维度的深度融合：\n\n\n\n\n\n\nNote1. 成本壁垒：无可匹敌的可复用经济学\n\n\n\n通过猎鹰 9 号的一级复用，SpaceX 将内部发射边际成本降至约 1500 万美元。当复用任务达到 5 次时，毛利率可高达 68%。这种壁垒不是专利，而是制造与运营的规模效应。\n\n\n\n0.1.1 2. 制造壁垒：垂直整合体系\nSpaceX 实现了 80% 以上的自研自产。从 Merlin 发动机到航天服软件，垂直整合带来了极高的迭代速度。\n\n\n0.1.2 3. 客户壁垒：与政府的战略共生\nNASA 和美国国防部通过高价值合同，为 SpaceX 的核心研发（尤其是 Starship）提供了事实上的巨额补贴。"
+  },
+  {
+    "objectID": "posts/Aviation-Space/SpaceX20260110.html#三重增长曲线叠加",
+    "href": "posts/Aviation-Space/SpaceX20260110.html#三重增长曲线叠加",
+    "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
+    "section": "0.2 📈 三重增长曲线叠加",
+    "text": "0.2 📈 三重增长曲线叠加\nSpaceX 的价值由三个不同生命周期的业务有机组合而成：\n\n\n\n\n\n\n\n\n\n维度\n第一曲线：发射业务\n第二曲线：Starlink\n第三曲线：Starship\n\n\n\n\n角色\n现金奶牛（基石）\n增长引擎（SaaS 化）\n颠覆性期权（未来）\n\n\n特征\n绝对垄断，稳定现金流\n订阅制高经常性收入\n解锁万亿级潜在市场\n\n\n现状\n猎鹰 9 号高频发射\n全球最大卫星互联网\n研发关键期，运力革命\n\n\n\n\n\n\n\n\n\n\nNote核心洞察\n\n\n\nSpaceX 的内部发射边际成本已降至约 1500 万美元，这使其在面对传统巨头时拥有绝对的定价权。\n\n\n\n\n\n\n\n\nTipAndy 的思考\n\n\n\n这种成本优势不是靠压榨利润，而是靠“可复用经济学”实现的范式转移。"
+  },
+  {
+    "objectID": "posts/Aviation-Space/SpaceX20260110.html#spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰",
+    "href": "posts/Aviation-Space/SpaceX20260110.html#spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰",
+    "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
+    "section": "1.1 SpaceX 的本质不是一家传统的航空航天制造商，而是一家将第一性原理应用到极致的太空物流与基础设施垄断商。它构建了一个自我强化的商业闭环：利用 Falcon 9 的成本优势构建 Starlink 网络，再利用其产生的巨额现金流供养人类史上最宏大的工程——Starship（星舰）。",
+    "text": "1.1 SpaceX 的本质不是一家传统的航空航天制造商，而是一家将第一性原理应用到极致的太空物流与基础设施垄断商。它构建了一个自我强化的商业闭环：利用 Falcon 9 的成本优势构建 Starlink 网络，再利用其产生的巨额现金流供养人类史上最宏大的工程——Starship（星舰）。"
+  },
+  {
+    "objectID": "posts/Aviation-Space/SpaceX20260110.html#spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合",
+    "href": "posts/Aviation-Space/SpaceX20260110.html#spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合",
+    "title": "商业航天SpaceX估值，全球商业航天发展态势分析",
+    "section": "2.1 SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：",
+    "text": "2.1 SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：\n\n2.1.1 1. 成本壁垒：无可匹敌的可复用经济学\n\n\n2.1.2 SpaceX 将航天发射从“定制工艺品”变成了“工业标准品”。\n\n\n2.1.3 边际成本：通过一级火箭复用，内部发射边际成本已降至约 1500 万美元。\n\n\n2.1.4 盈利能力：当复用次数达到 5 次时，毛利率可达 68% 左右。\n\n\n2.1.5 规模效应：这种壁垒不是专利壁垒，而是每年 100+ 次发射所积累的数据与供应链效率。\n\n\n2.1.6 2. 制造壁垒：垂直整合与先进制造体系\n\n\n2.1.7 SpaceX 实现了 80% 以上的自研自产（从 Merlin/Raptor 发动机到航天服及飞行软件）。\n\n\n2.1.8 迭代速度：垂直整合策略使其能以“消费电子产品”的速度更新航天器。\n\n\n2.1.9 生产模式：将火箭制造从“手工作坊”带入了“流水线时代”。\n\n\n2.1.10 3. 客户壁垒：与政府的战略共生\n\n\n2.1.11 SpaceX 与 NASA 及美国国防部（DoD）已演变为深度绑定的战略共生关系。\n\n\n2.1.12 研发补贴：政府通过长期高价值合同，为 Starship 等核心研发提供了事实上的巨额补贴。\n\n\n2.1.13 路径依赖：美国政府获得了独立、廉价且领先的太空进入能力，彻底摆脱了传统军工复合体的低效。"
   }
 ]

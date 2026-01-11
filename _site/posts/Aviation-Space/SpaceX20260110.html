@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2026-01-10">
 <meta name="description" content="本文主要阐述全球商业航天的发展态势">
 
-<title>AndyBourne – AndyBourne-Blog</title>
+<title>商业航天SpaceX估值，全球商业航天发展态势分析 – AndyBourne-Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,10 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8448bcf7f9565bffb32063743d474478.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,10 +77,171 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -92,24 +257,31 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">首页</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">关于</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://github.com/your-username/AndyBourne-Blog"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -118,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">AndyBourne</h1>
+      <h1 class="title">商业航天SpaceX估值，全球商业航天发展态势分析</h1>
                   <div>
         <div class="description">
           本文主要阐述全球商业航天的发展态势
@@ -156,7 +328,43 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#核心护城河分析" id="toc-核心护城河分析" class="nav-link active" data-scroll-target="#核心护城河分析"><span class="header-section-number">0.1</span> 🛡️ 核心护城河分析</a>
+  <ul class="collapse">
+  <li><a href="#制造壁垒垂直整合体系" id="toc-制造壁垒垂直整合体系" class="nav-link" data-scroll-target="#制造壁垒垂直整合体系"><span class="header-section-number">0.1.1</span> 2. 制造壁垒：垂直整合体系</a></li>
+  <li><a href="#客户壁垒与政府的战略共生" id="toc-客户壁垒与政府的战略共生" class="nav-link" data-scroll-target="#客户壁垒与政府的战略共生"><span class="header-section-number">0.1.2</span> 3. 客户壁垒：与政府的战略共生</a></li>
+  </ul></li>
+  <li><a href="#三重增长曲线叠加" id="toc-三重增长曲线叠加" class="nav-link" data-scroll-target="#三重增长曲线叠加"><span class="header-section-number">0.2</span> 📈 三重增长曲线叠加</a></li>
+  <li><a href="#spacex以第一性原理重塑航天工业" id="toc-spacex以第一性原理重塑航天工业" class="nav-link" data-scroll-target="#spacex以第一性原理重塑航天工业"><span class="header-section-number">1</span> SpaceX：以第一性原理重塑航天工业</a>
+  <ul class="collapse">
+  <li><a href="#spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰" id="toc-spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰" class="nav-link" data-scroll-target="#spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰"><span class="header-section-number">1.1</span> SpaceX 的本质不是一家传统的航空航天制造商，而是一家将第一性原理应用到极致的太空物流与基础设施垄断商。它构建了一个自我强化的商业闭环：利用 Falcon 9 的成本优势构建 Starlink 网络，再利用其产生的巨额现金流供养人类史上最宏大的工程——Starship（星舰）。</a></li>
+  </ul></li>
+  <li><a href="#核心护城河分析-1" id="toc-核心护城河分析-1" class="nav-link" data-scroll-target="#核心护城河分析-1"><span class="header-section-number">2</span> 核心护城河分析</a>
+  <ul class="collapse">
+  <li><a href="#spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合" id="toc-spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合" class="nav-link" data-scroll-target="#spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合"><span class="header-section-number">2.1</span> SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：</a>
+  <ul class="collapse">
+  <li><a href="#成本壁垒无可匹敌的可复用经济学-1" id="toc-成本壁垒无可匹敌的可复用经济学-1" class="nav-link" data-scroll-target="#成本壁垒无可匹敌的可复用经济学-1"><span class="header-section-number">2.1.1</span> 1. 成本壁垒：无可匹敌的可复用经济学</a></li>
+  <li><a href="#spacex-将航天发射从定制工艺品变成了工业标准品" id="toc-spacex-将航天发射从定制工艺品变成了工业标准品" class="nav-link" data-scroll-target="#spacex-将航天发射从定制工艺品变成了工业标准品"><span class="header-section-number">2.1.2</span> SpaceX 将航天发射从“定制工艺品”变成了“工业标准品”。</a></li>
+  <li><a href="#边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元" id="toc-边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元" class="nav-link" data-scroll-target="#边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元"><span class="header-section-number">2.1.3</span> 边际成本：通过一级火箭复用，内部发射边际成本已降至约 1500 万美元。</a></li>
+  <li><a href="#盈利能力当复用次数达到-5-次时毛利率可达-68-左右" id="toc-盈利能力当复用次数达到-5-次时毛利率可达-68-左右" class="nav-link" data-scroll-target="#盈利能力当复用次数达到-5-次时毛利率可达-68-左右"><span class="header-section-number">2.1.4</span> 盈利能力：当复用次数达到 5 次时，毛利率可达 68% 左右。</a></li>
+  <li><a href="#规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率" id="toc-规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率" class="nav-link" data-scroll-target="#规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率"><span class="header-section-number">2.1.5</span> 规模效应：这种壁垒不是专利壁垒，而是每年 100+ 次发射所积累的数据与供应链效率。</a></li>
+  <li><a href="#制造壁垒垂直整合与先进制造体系" id="toc-制造壁垒垂直整合与先进制造体系" class="nav-link" data-scroll-target="#制造壁垒垂直整合与先进制造体系"><span class="header-section-number">2.1.6</span> 2. 制造壁垒：垂直整合与先进制造体系</a></li>
+  <li><a href="#spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件" id="toc-spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件" class="nav-link" data-scroll-target="#spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件"><span class="header-section-number">2.1.7</span> SpaceX 实现了 80% 以上的自研自产（从 Merlin/Raptor 发动机到航天服及飞行软件）。</a></li>
+  <li><a href="#迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器" id="toc-迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器" class="nav-link" data-scroll-target="#迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器"><span class="header-section-number">2.1.8</span> 迭代速度：垂直整合策略使其能以“消费电子产品”的速度更新航天器。</a></li>
+  <li><a href="#生产模式将火箭制造从手工作坊带入了流水线时代" id="toc-生产模式将火箭制造从手工作坊带入了流水线时代" class="nav-link" data-scroll-target="#生产模式将火箭制造从手工作坊带入了流水线时代"><span class="header-section-number">2.1.9</span> 生产模式：将火箭制造从“手工作坊”带入了“流水线时代”。</a></li>
+  <li><a href="#客户壁垒与政府的战略共生-1" id="toc-客户壁垒与政府的战略共生-1" class="nav-link" data-scroll-target="#客户壁垒与政府的战略共生-1"><span class="header-section-number">2.1.10</span> 3. 客户壁垒：与政府的战略共生</a></li>
+  <li><a href="#spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系" id="toc-spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系" class="nav-link" data-scroll-target="#spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系"><span class="header-section-number">2.1.11</span> SpaceX 与 NASA 及美国国防部（DoD）已演变为深度绑定的战略共生关系。</a></li>
+  <li><a href="#研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴" id="toc-研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴" class="nav-link" data-scroll-target="#研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴"><span class="header-section-number">2.1.12</span> 研发补贴：政府通过长期高价值合同，为 Starship 等核心研发提供了事实上的巨额补贴。</a></li>
+  <li><a href="#路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效" id="toc-路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效" class="nav-link" data-scroll-target="#路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效"><span class="header-section-number">2.1.13</span> 路径依赖：美国政府获得了独立、廉价且领先的太空进入能力，彻底摆脱了传统军工复合体的低效。</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -165,11 +373,169 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles m = Map( basemap=basemap_to_tiles( basemaps.NASAGIBS.ModisTerraTrueColorCR, “2017-04-08” ), center=(52.204793, 360.121558), zoom=4 ) m.add_layer(Marker(location=(52.204793, 360.121558))) m</p>
+<section id="核心护城河分析" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="核心护城河分析"><span class="header-section-number">0.1</span> 🛡️ 核心护城河分析</h2>
+<p>SpaceX 的核心竞争力源于三个维度的深度融合：</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>1. 成本壁垒：无可匹敌的可复用经济学
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>通过猎鹰 9 号的一级复用，SpaceX 将内部发射边际成本降至约 <strong>1500 万美元</strong>。当复用任务达到 5 次时，毛利率可高达 <strong>68%</strong>。这种壁垒不是专利，而是制造与运营的规模效应。</p>
+</div>
+</div>
+<section id="制造壁垒垂直整合体系" class="level3" data-number="0.1.1">
+<h3 data-number="0.1.1" class="anchored" data-anchor-id="制造壁垒垂直整合体系"><span class="header-section-number">0.1.1</span> 2. 制造壁垒：垂直整合体系</h3>
+<p>SpaceX 实现了 <strong>80% 以上的自研自产</strong>。从 Merlin 发动机到航天服软件，垂直整合带来了极高的迭代速度。</p>
+</section>
+<section id="客户壁垒与政府的战略共生" class="level3" data-number="0.1.2">
+<h3 data-number="0.1.2" class="anchored" data-anchor-id="客户壁垒与政府的战略共生"><span class="header-section-number">0.1.2</span> 3. 客户壁垒：与政府的战略共生</h3>
+<p>NASA 和美国国防部通过高价值合同，为 SpaceX 的核心研发（尤其是 Starship）提供了事实上的巨额补贴。</p>
+</section>
+</section>
+<section id="三重增长曲线叠加" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="三重增长曲线叠加"><span class="header-section-number">0.2</span> 📈 三重增长曲线叠加</h2>
+<p>SpaceX 的价值由三个不同生命周期的业务有机组合而成：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>维度</strong></th>
+<th style="text-align: left;"><strong>第一曲线：发射业务</strong></th>
+<th style="text-align: left;"><strong>第二曲线：Starlink</strong></th>
+<th style="text-align: left;"><strong>第三曲线：Starship</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>角色</strong></td>
+<td style="text-align: left;">现金奶牛（基石）</td>
+<td style="text-align: left;">增长引擎（SaaS 化）</td>
+<td style="text-align: left;">颠覆性期权（未来）</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>特征</strong></td>
+<td style="text-align: left;">绝对垄断，稳定现金流</td>
+<td style="text-align: left;">订阅制高经常性收入</td>
+<td style="text-align: left;">解锁万亿级潜在市场</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>现状</strong></td>
+<td style="text-align: left;">猎鹰 9 号高频发射</td>
+<td style="text-align: left;">全球最大卫星互联网</td>
+<td style="text-align: left;">研发关键期，运力革命</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>核心洞察
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SpaceX 的内部发射边际成本已降至约 1500 万美元，这使其在面对传统巨头时拥有绝对的定价权。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Andy 的思考
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>这种成本优势不是靠压榨利润，而是靠“可复用经济学”实现的范式转移。</p>
+</div>
+</div>
+</section>
+<section id="spacex以第一性原理重塑航天工业" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> SpaceX：以第一性原理重塑航天工业</h1>
+<section id="spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="spacex-的本质不是一家传统的航空航天制造商而是一家将第一性原理应用到极致的太空物流与基础设施垄断商它构建了一个自我强化的商业闭环利用-falcon-9-的成本优势构建-starlink-网络再利用其产生的巨额现金流供养人类史上最宏大的工程starship星舰"><span class="header-section-number">1.1</span> SpaceX 的本质不是一家传统的航空航天制造商，而是一家将第一性原理应用到极致的太空物流与基础设施垄断商。它构建了一个自我强化的商业闭环：利用 Falcon 9 的成本优势构建 Starlink 网络，再利用其产生的巨额现金流供养人类史上最宏大的工程——Starship（星舰）。</h2>
+</section>
+</section>
+<section id="核心护城河分析-1" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 核心护城河分析</h1>
+<section id="spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="spacex-的领先地位并非源于单一的技术突破而是三个维度的深度融合"><span class="header-section-number">2.1</span> SpaceX 的领先地位并非源于单一的技术突破，而是三个维度的深度融合：</h2>
+<section id="成本壁垒无可匹敌的可复用经济学-1" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="成本壁垒无可匹敌的可复用经济学-1"><span class="header-section-number">2.1.1</span> 1. 成本壁垒：无可匹敌的可复用经济学</h3>
+</section>
+<section id="spacex-将航天发射从定制工艺品变成了工业标准品" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="spacex-将航天发射从定制工艺品变成了工业标准品"><span class="header-section-number">2.1.2</span> SpaceX 将航天发射从“定制工艺品”变成了“工业标准品”。</h3>
+</section>
+<section id="边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="边际成本通过一级火箭复用内部发射边际成本已降至约-1500-万美元"><span class="header-section-number">2.1.3</span> 边际成本：通过一级火箭复用，内部发射边际成本已降至约 1500 万美元。</h3>
+</section>
+<section id="盈利能力当复用次数达到-5-次时毛利率可达-68-左右" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="盈利能力当复用次数达到-5-次时毛利率可达-68-左右"><span class="header-section-number">2.1.4</span> 盈利能力：当复用次数达到 5 次时，毛利率可达 68% 左右。</h3>
+</section>
+<section id="规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="规模效应这种壁垒不是专利壁垒而是每年-100-次发射所积累的数据与供应链效率"><span class="header-section-number">2.1.5</span> 规模效应：这种壁垒不是专利壁垒，而是每年 100+ 次发射所积累的数据与供应链效率。</h3>
+</section>
+<section id="制造壁垒垂直整合与先进制造体系" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="制造壁垒垂直整合与先进制造体系"><span class="header-section-number">2.1.6</span> 2. 制造壁垒：垂直整合与先进制造体系</h3>
+</section>
+<section id="spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="spacex-实现了-80-以上的自研自产从-merlinraptor-发动机到航天服及飞行软件"><span class="header-section-number">2.1.7</span> SpaceX 实现了 80% 以上的自研自产（从 Merlin/Raptor 发动机到航天服及飞行软件）。</h3>
+</section>
+<section id="迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="迭代速度垂直整合策略使其能以消费电子产品的速度更新航天器"><span class="header-section-number">2.1.8</span> 迭代速度：垂直整合策略使其能以“消费电子产品”的速度更新航天器。</h3>
+</section>
+<section id="生产模式将火箭制造从手工作坊带入了流水线时代" class="level3" data-number="2.1.9">
+<h3 data-number="2.1.9" class="anchored" data-anchor-id="生产模式将火箭制造从手工作坊带入了流水线时代"><span class="header-section-number">2.1.9</span> 生产模式：将火箭制造从“手工作坊”带入了“流水线时代”。</h3>
+</section>
+<section id="客户壁垒与政府的战略共生-1" class="level3" data-number="2.1.10">
+<h3 data-number="2.1.10" class="anchored" data-anchor-id="客户壁垒与政府的战略共生-1"><span class="header-section-number">2.1.10</span> 3. 客户壁垒：与政府的战略共生</h3>
+</section>
+<section id="spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系" class="level3" data-number="2.1.11">
+<h3 data-number="2.1.11" class="anchored" data-anchor-id="spacex-与-nasa-及美国国防部dod已演变为深度绑定的战略共生关系"><span class="header-section-number">2.1.11</span> SpaceX 与 NASA 及美国国防部（DoD）已演变为深度绑定的战略共生关系。</h3>
+</section>
+<section id="研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴" class="level3" data-number="2.1.12">
+<h3 data-number="2.1.12" class="anchored" data-anchor-id="研发补贴政府通过长期高价值合同为-starship-等核心研发提供了事实上的巨额补贴"><span class="header-section-number">2.1.12</span> 研发补贴：政府通过长期高价值合同，为 Starship 等核心研发提供了事实上的巨额补贴。</h3>
+</section>
+<section id="路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效" class="level3" data-number="2.1.13">
+<h3 data-number="2.1.13" class="anchored" data-anchor-id="路径依赖美国政府获得了独立廉价且领先的太空进入能力彻底摆脱了传统军工复合体的低效"><span class="header-section-number">2.1.13</span> 路径依赖：美国政府获得了独立、廉价且领先的太空进入能力，彻底摆脱了传统军工复合体的低效。</h3>
 
+
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -241,7 +607,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

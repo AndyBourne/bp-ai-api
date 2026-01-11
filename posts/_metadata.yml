@@ -3,7 +3,11 @@
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
+code-fold: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+execute: 
+  freeze: auto
 

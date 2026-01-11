@@ -1,23 +1,33 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  description: "A blog built with Quarto"
-  site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
   title: "AndyBourne-Blog"
+  
   navbar:
+    # --- 这一层是 navbar 的全局设置 ---
+    background: primary
+    search: true
+    
+    # --- 这一层是导航栏的左右布局 ---
+    left:
+      - href: index.qmd
+        text: 首页
+      - href: about.qmd
+        text: 关于
+
     right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+      - icon: github
+        href: https://github.com/your-username/AndyBourne-Blog
+
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-
-
+    theme: 
+      light: cosmo
+      dark: slate
+    toc: true
+    code-fold: true
 
