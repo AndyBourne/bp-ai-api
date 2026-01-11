@@ -1,13 +1,43 @@
 [
   {
+    "listing": "/posts/Valuation/index.html",
+    "items": [
+      "/posts/Valuation/HZTW-TTR/hztw-tr.html",
+      "/posts/Valuation/TSW-GPU/TSW-GPU.html",
+      "/posts/Valuation/Rocet—AeroSpace/Roceket-Space20250111.html",
+      "/posts/Valuation/DCF/DCF.html",
+      "/posts/Valuation/post-with-code/post-with-code.html",
+      "/posts/Valuation/Avitation-Aerofugia/Aerofugia.html",
+      "/posts/Valuation/Aviation-Space/SpaceX20260110.html"
+    ]
+  },
+  {
+    "listing": "/posts/Welcome/index.html",
+    "items": [
+      "/posts/Welcome/welcome.html"
+    ]
+  },
+  {
+    "listing": "/posts/Mirror/index.html",
+    "items": [
+      "/posts/Mirror/0000/0000.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/posts/HZTW-TTR/hztw-tr.html",
-      "/posts/TSW-GPU/TSW-GPU.html",
-      "/posts/post-with-code/post-with-code.html",
-      "/posts/welcome/welcome.html",
-      "/posts/Avitation-Aerofugia/Aerofugia.html",
-      "/posts/Aviation-Space/SpaceX20260110.html"
+      "/posts/Welcome/index.html",
+      "/posts/Valuation/index.html",
+      "/posts/Mirror/index.html",
+      "/posts/Valuation/HZTW-TTR/hztw-tr.html",
+      "/posts/Valuation/TSW-GPU/TSW-GPU.html",
+      "/posts/Valuation/Rocet—AeroSpace/Roceket-Space20250111.html",
+      "/posts/Valuation/DCF/DCF.html",
+      "/posts/Welcome/welcome.html",
+      "/posts/Valuation/post-with-code/post-with-code.html",
+      "/posts/Valuation/Avitation-Aerofugia/Aerofugia.html",
+      "/posts/Valuation/Aviation-Space/SpaceX20260110.html",
+      "/posts/Mirror/0000/0000.html"
     ]
   }
 ]

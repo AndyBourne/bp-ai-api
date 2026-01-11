@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="AndyBourne">
+<meta name="dcterms.date" content="2026-01-11">
+
+<title>DCF估值：同一价值的10种不同衡量体系 – AndyBourne-Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8448bcf7f9565bffb32063743d474478.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">AndyBourne-Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">首页</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">关于</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/your-username/AndyBourne-Blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">DCF估值：同一价值的10种不同衡量体系</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">DCF</div>
+                <div class="quarto-category">估值</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>AndyBourne </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 11, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#先把地图画出来同一价值的-10-种坐标系" id="toc-先把地图画出来同一价值的-10-种坐标系" class="nav-link active" data-scroll-target="#先把地图画出来同一价值的-10-种坐标系">🧭 1) 先把地图画出来：同一价值的 10 种“坐标系”</a></li>
+  <li><a href="#十种方法逐一讲清它们各自看什么现金流用什么贴现率算出什么价值" id="toc-十种方法逐一讲清它们各自看什么现金流用什么贴现率算出什么价值" class="nav-link" data-scroll-target="#十种方法逐一讲清它们各自看什么现金流用什么贴现率算出什么价值">🔟 2) 十种方法逐一讲清：它们各自“看什么现金流、用什么贴现率、算出什么价值”</a>
+  <ul class="collapse">
+  <li><a href="#方法-1股权现金流ecf贴现到股权价值" id="toc-方法-1股权现金流ecf贴现到股权价值" class="nav-link" data-scroll-target="#方法-1股权现金流ecf贴现到股权价值">方法 1：股权现金流（ECF）贴现到股权价值</a></li>
+  <li><a href="#方法-2自由现金流fcf用-wacc-贴现到企业价值de" id="toc-方法-2自由现金流fcf用-wacc-贴现到企业价值de" class="nav-link" data-scroll-target="#方法-2自由现金流fcf用-wacc-贴现到企业价值de">方法 2：自由现金流（FCF）用 WACC 贴现到企业价值（D+E）</a></li>
+  <li><a href="#方法-3资本现金流ccf用税前-wacc-贴现到企业价值" id="toc-方法-3资本现金流ccf用税前-wacc-贴现到企业价值" class="nav-link" data-scroll-target="#方法-3资本现金流ccf用税前-wacc-贴现到企业价值">方法 3：资本现金流（CCF）用税前 WACC 贴现到企业价值</a></li>
+  <li><a href="#方法-4apv调整现值无杠杆价值-税盾价值" id="toc-方法-4apv调整现值无杠杆价值-税盾价值" class="nav-link" data-scroll-target="#方法-4apv调整现值无杠杆价值-税盾价值">方法 4：APV（调整现值）：无杠杆价值 + 税盾价值</a></li>
+  <li><a href="#方法-5业务风险调整后的-fcf把融资影响从贴现率挪到现金流" id="toc-方法-5业务风险调整后的-fcf把融资影响从贴现率挪到现金流" class="nav-link" data-scroll-target="#方法-5业务风险调整后的-fcf把融资影响从贴现率挪到现金流">方法 5：业务风险调整后的 FCF（把融资影响从贴现率挪到现金流）</a></li>
+  <li><a href="#方法-6业务风险调整后的-ecf同上但从股权现金流出发" id="toc-方法-6业务风险调整后的-ecf同上但从股权现金流出发" class="nav-link" data-scroll-target="#方法-6业务风险调整后的-ecf同上但从股权现金流出发">方法 6：业务风险调整后的 ECF（同上，但从股权现金流出发）</a></li>
+  <li><a href="#方法-7经济利润economic-profit-ep法账面股权-未来超额收益的现值" id="toc-方法-7经济利润economic-profit-ep法账面股权-未来超额收益的现值" class="nav-link" data-scroll-target="#方法-7经济利润economic-profit-ep法账面股权-未来超额收益的现值">方法 7：经济利润（Economic Profit, EP）法：账面股权 + 未来“超额收益”的现值</a></li>
+  <li><a href="#方法-8eva-法投入资本账面值-未来-eva-的现值" id="toc-方法-8eva-法投入资本账面值-未来-eva-的现值" class="nav-link" data-scroll-target="#方法-8eva-法投入资本账面值-未来-eva-的现值">方法 8：EVA 法：投入资本账面值 + 未来 EVA 的现值</a></li>
+  <li><a href="#方法-9无风险利率调整后的-fcf用-rf-贴现但现金流被风险校正" id="toc-方法-9无风险利率调整后的-fcf用-rf-贴现但现金流被风险校正" class="nav-link" data-scroll-target="#方法-9无风险利率调整后的-fcf用-rf-贴现但现金流被风险校正">方法 9：无风险利率调整后的 FCF（用 RF 贴现，但现金流被“风险校正”）</a></li>
+  <li><a href="#方法-10无风险利率调整后的-ecf同理从股权端出发" id="toc-方法-10无风险利率调整后的-ecf同理从股权端出发" class="nav-link" data-scroll-target="#方法-10无风险利率调整后的-ecf同理从股权端出发">方法 10：无风险利率调整后的 ECF（同理，从股权端出发）</a></li>
+  </ul></li>
+  <li><a href="#为什么10-法必同值核心不是神秘而是三件事保持一致" id="toc-为什么10-法必同值核心不是神秘而是三件事保持一致" class="nav-link" data-scroll-target="#为什么10-法必同值核心不是神秘而是三件事保持一致">🔗 3) 为什么“10 法必同值”：核心不是神秘，而是三件事保持一致</a>
+  <ul class="collapse">
+  <li><a href="#现金流口径必须自洽尤其是-fcfecf债务变动" id="toc-现金流口径必须自洽尤其是-fcfecf债务变动" class="nav-link" data-scroll-target="#现金流口径必须自洽尤其是-fcfecf债务变动">3.1 现金流口径必须自洽（尤其是 FCF、ECF、债务变动）</a></li>
+  <li><a href="#贴现率口径必须与风险归属一致wacckekurf-不是随便换的" id="toc-贴现率口径必须与风险归属一致wacckekurf-不是随便换的" class="nav-link" data-scroll-target="#贴现率口径必须与风险归属一致wacckekurf-不是随便换的">3.2 贴现率口径必须与风险归属一致（WACC/Ke/Ku/RF 不是随便换的）</a></li>
+  <li><a href="#你对债务政策到底是什么必须讲清楚" id="toc-你对债务政策到底是什么必须讲清楚" class="nav-link" data-scroll-target="#你对债务政策到底是什么必须讲清楚">3.3 你对“债务政策”到底是什么，必须讲清楚</a></li>
+  </ul></li>
+  <li><a href="#真实分歧在哪里9-种税盾价值vts理论到底在争什么" id="toc-真实分歧在哪里9-种税盾价值vts理论到底在争什么" class="nav-link" data-scroll-target="#真实分歧在哪里9-种税盾价值vts理论到底在争什么">⚔️ 4) 真实分歧在哪里：9 种税盾价值（VTS）理论到底在争什么</a>
+  <ul class="collapse">
+  <li><a href="#fernandez-2007债务政策用账面-de-恒定等假设" id="toc-fernandez-2007债务政策用账面-de-恒定等假设" class="nav-link" data-scroll-target="#fernandez-2007债务政策用账面-de-恒定等假设">4.1 Fernandez (2007)：债务政策用“账面 D/E 恒定”等假设</a></li>
+  <li><a href="#miles-ezzell-1980市场价值-de-恒定经典教材口径之一" id="toc-miles-ezzell-1980市场价值-de-恒定经典教材口径之一" class="nav-link" data-scroll-target="#miles-ezzell-1980市场价值-de-恒定经典教材口径之一">4.2 Miles &amp; Ezzell (1980)：市场价值 D/E 恒定（经典教材口径之一）</a></li>
+  <li><a href="#modigliani-miller-1963未来债务金额今天已知税盾更像无风险" id="toc-modigliani-miller-1963未来债务金额今天已知税盾更像无风险" class="nav-link" data-scroll-target="#modigliani-miller-1963未来债务金额今天已知税盾更像无风险">4.3 Modigliani &amp; Miller (1963)：未来债务金额“今天已知”，税盾更像无风险</a></li>
+  <li><a href="#myers-1974类似-mm但税盾按-kd-贴现" id="toc-myers-1974类似-mm但税盾按-kd-贴现" class="nav-link" data-scroll-target="#myers-1974类似-mm但税盾按-kd-贴现">4.4 Myers (1974)：类似 MM，但税盾按 Kd 贴现</a></li>
+  <li><a href="#miller-1977税盾价值可能为-0" id="toc-miller-1977税盾价值可能为-0" class="nav-link" data-scroll-target="#miller-1977税盾价值可能为-0">4.5 Miller (1977)：税盾价值可能为 0</a></li>
+  <li><a href="#harris-pringle-1985-ruback-1995税盾按-ku-贴现" id="toc-harris-pringle-1985-ruback-1995税盾按-ku-贴现" class="nav-link" data-scroll-target="#harris-pringle-1985-ruback-1995税盾按-ku-贴现">4.6 Harris &amp; Pringle (1985) / Ruback (1995)：税盾按 Ku 贴现</a></li>
+  <li><a href="#damodaran-1994用特定-β-杠杆化关系引入杠杆成本影响" id="toc-damodaran-1994用特定-β-杠杆化关系引入杠杆成本影响" class="nav-link" data-scroll-target="#damodaran-1994用特定-β-杠杆化关系引入杠杆成本影响">4.7 Damodaran (1994)：用特定 β 杠杆化关系引入杠杆成本/影响</a></li>
+  <li><a href="#practitioners-method从业者常用的简化-β-关系" id="toc-practitioners-method从业者常用的简化-β-关系" class="nav-link" data-scroll-target="#practitioners-method从业者常用的简化-β-关系">4.8 Practitioners method（从业者常用的简化 β 关系）</a></li>
+  <li><a href="#with-cost-of-leverage把杠杆成本显式建模为利差成本的现值" id="toc-with-cost-of-leverage把杠杆成本显式建模为利差成本的现值" class="nav-link" data-scroll-target="#with-cost-of-leverage把杠杆成本显式建模为利差成本的现值">4.9 With-cost-of leverage：把杠杆成本显式建模为“利差成本”的现值</a></li>
+  <li><a href="#x-作者用一个例子打脸式展示vts-可能从-0-到-745" id="toc-x-作者用一个例子打脸式展示vts-可能从-0-到-745" class="nav-link" data-scroll-target="#x-作者用一个例子打脸式展示vts-可能从-0-到-745">4.x 作者用一个例子“打脸式”展示：VTS 可能从 0 到 745</a></li>
+  </ul></li>
+  <li><a href="#toro-inc.-示例究竟验证了什么以及它提醒你的建模前提" id="toc-toro-inc.-示例究竟验证了什么以及它提醒你的建模前提" class="nav-link" data-scroll-target="#toro-inc.-示例究竟验证了什么以及它提醒你的建模前提">🧪 5) Toro Inc.&nbsp;示例究竟验证了什么（以及它提醒你的建模前提）</a></li>
+  <li><a href="#把它变成你能直接用的建模清单避免最常见的坑" id="toc-把它变成你能直接用的建模清单避免最常见的坑" class="nav-link" data-scroll-target="#把它变成你能直接用的建模清单避免最常见的坑">🧰 6) 把它变成你能直接用的建模清单（避免最常见的坑）</a>
+  <ul class="collapse">
+  <li><a href="#先选方法不是关键先选假设集合才关键" id="toc-先选方法不是关键先选假设集合才关键" class="nav-link" data-scroll-target="#先选方法不是关键先选假设集合才关键">6.1 先选方法不是关键，先选“假设集合”才关键</a></li>
+  <li><a href="#如果你用-wacc-法方法-2要对wacc-可能是迭代的有心理准备" id="toc-如果你用-wacc-法方法-2要对wacc-可能是迭代的有心理准备" class="nav-link" data-scroll-target="#如果你用-wacc-法方法-2要对wacc-可能是迭代的有心理准备">6.2 如果你用 WACC 法（方法 2），要对“WACC 可能是迭代的”有心理准备</a></li>
+  <li><a href="#apv-是最适合把争议摊开讲的框架" id="toc-apv-是最适合把争议摊开讲的框架" class="nav-link" data-scroll-target="#apv-是最适合把争议摊开讲的框架">6.3 APV 是最适合“把争议摊开讲”的框架</a></li>
+  <li><a href="#epeva-看似会计其实是-dcf-的等价表达" id="toc-epeva-看似会计其实是-dcf-的等价表达" class="nav-link" data-scroll-target="#epeva-看似会计其实是-dcf-的等价表达">6.4 EP/EVA 看似会计，其实是 DCF 的等价表达</a></li>
+  </ul></li>
+  <li><a href="#一句话版再次详细阐述的总收束" id="toc-一句话版再次详细阐述的总收束" class="nav-link" data-scroll-target="#一句话版再次详细阐述的总收束">✅ 7) 一句话版“再次详细阐述”的总收束</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<p>这篇 Fernandez（2023）的价值在于：它把“DCF 估值为什么会算出不同结果”这件事彻底拆开——<strong>只要假设一致，10 种贴现法必然同值；一旦出现分歧，几乎都不是 DCF 的错，而是你对税盾（VTS）与负债政策的假设不一致</strong>。下面我按“能用来讲课/写研报/搭模型”的方式，再更细地阐述一遍。</p>
+<hr>
+<section id="先把地图画出来同一价值的-10-种坐标系" class="level2">
+<h2 class="anchored" data-anchor-id="先把地图画出来同一价值的-10-种坐标系">🧭 1) 先把地图画出来：同一价值的 10 种“坐标系”</h2>
+<p>作者列的 10 种方法，本质上是对同一家公司的同一个价值，用不同“坐标系”表达：</p>
+<ul>
+<li>有的从 <strong>股东角度</strong>出发（看 ECF，用 Ke 贴现）；</li>
+<li>有的从 <strong>企业整体（债+股）</strong>出发（看 FCF，用 WACC 贴现）；</li>
+<li>有的把“税盾”单独拎出来（APV）；</li>
+<li>有的从 <strong>会计剩余收益</strong>角度出发（经济利润 EP、EVA）；</li>
+<li>还有“把风险搬进现金流、用更低的贴现率”（RF 或 Ku）这类等价变形。</li>
+</ul>
+<p><strong>关键命题</strong>：在“同一组假设”下，这些方法只是代数变形/口径变换，价值必相同。</p>
+<hr>
+</section>
+<section id="十种方法逐一讲清它们各自看什么现金流用什么贴现率算出什么价值" class="level2">
+<h2 class="anchored" data-anchor-id="十种方法逐一讲清它们各自看什么现金流用什么贴现率算出什么价值">🔟 2) 十种方法逐一讲清：它们各自“看什么现金流、用什么贴现率、算出什么价值”</h2>
+<p>为了不把你淹没在符号里，我先用一句话解释每种方法的直觉，再给出核心等式框架。</p>
+<section id="方法-1股权现金流ecf贴现到股权价值" class="level3">
+<h3 class="anchored" data-anchor-id="方法-1股权现金流ecf贴现到股权价值">方法 1：股权现金流（ECF）贴现到股权价值</h3>
+<ul>
+<li>直觉：只看“最后落到股东口袋”的钱。</li>
+<li>框架： <span class="math display">\[
+E_0 = PV_0[K_{e,t}; ECF_t]
+\]</span></li>
+</ul>
+<p>同时，债务价值也可以用债务现金流贴现： <span class="math display">\[
+D_0 = PV_0[K_{d,t}; CFd_t]
+\]</span> 其中（文中定义）债务现金流： <span class="math display">\[
+CFd_t = I_t - \Delta D_t
+\]</span></p>
+<hr>
+</section>
+<section id="方法-2自由现金流fcf用-wacc-贴现到企业价值de" class="level3">
+<h3 class="anchored" data-anchor-id="方法-2自由现金流fcf用-wacc-贴现到企业价值de">方法 2：自由现金流（FCF）用 WACC 贴现到企业价值（D+E）</h3>
+<ul>
+<li>直觉：把公司当成一个“整体资产池”，先算企业价值，再减债得股权。 <span class="math display">\[
+E_0 + D_0 = PV_0[WACC_t; FCF_t]
+\]</span></li>
+</ul>
+<p>WACC 的“严格定义”（这点很重要：它依赖价值权重，天然迭代）： <span class="math display">\[
+WACC_t = \frac{E_{t-1}K_{e,t}+D_{t-1}K_{d,t}(1-T)}{E_{t-1}+D_{t-1}}
+\]</span></p>
+<hr>
+</section>
+<section id="方法-3资本现金流ccf用税前-wacc-贴现到企业价值" class="level3">
+<h3 class="anchored" data-anchor-id="方法-3资本现金流ccf用税前-wacc-贴现到企业价值">方法 3：资本现金流（CCF）用税前 WACC 贴现到企业价值</h3>
+<ul>
+<li>直觉：既然方法 2 用 WACC 把税效应“揉”进贴现率，那我也可以把税效应放回现金流（税盾直接加回），然后用税前折现率。 <span class="math display">\[
+E_0 + D_0 = PV_0[WACCBT_t; CCF_t]
+\]</span></li>
+</ul>
+<p>税前加权资本成本： <span class="math display">\[
+WACCBT_t = \frac{E_{t-1}K_{e,t}+D_{t-1}K_{d,t}}{E_{t-1}+D_{t-1}}
+\]</span></p>
+<p>关键桥接式（把 CCF、FCF、税盾现金流连起来）： <span class="math display">\[
+CCF_t = FCF_t + I_tT
+\]</span></p>
+<hr>
+</section>
+<section id="方法-4apv调整现值无杠杆价值-税盾价值" class="level3">
+<h3 class="anchored" data-anchor-id="方法-4apv调整现值无杠杆价值-税盾价值">方法 4：APV（调整现值）：无杠杆价值 + 税盾价值</h3>
+<ul>
+<li>直觉：先把公司当成“完全无债”，得到业务本身价值；再把融资带来的税盾（以及可能的融资成本）作为“调整项”加回。 <span class="math display">\[
+E_0 + D_0 = V_{u,0} + VTS_0
+\]</span> 其中无杠杆价值： <span class="math display">\[
+V_{u,0} = PV_0[K_{u,t}; FCF_t]
+\]</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>这篇文章后半部分几乎都在说：<strong>VTS 怎么算</strong>，是分歧之源。</p>
+</blockquote>
+<hr>
+</section>
+<section id="方法-5业务风险调整后的-fcf把融资影响从贴现率挪到现金流" class="level3">
+<h3 class="anchored" data-anchor-id="方法-5业务风险调整后的-fcf把融资影响从贴现率挪到现金流">方法 5：业务风险调整后的 FCF（把融资影响从贴现率挪到现金流）</h3>
+<ul>
+<li>直觉：我不想用 WACC 这种“会随杠杆变化的折现率”，那就把差额调整到现金流里，然后全程用 Ku 贴现。 <span class="math display">\[
+E_0 + D_0 = PV_0[K_{u,t}; FCF_{t\\Ku}]
+\]</span></li>
+</ul>
+<p>调整后的现金流定义（来自令方法 5 与方法 2 等价的代数推导）： <span class="math display">\[
+FCF_{t\\Ku} = FCF_t - (E_{t-1}+D_{t-1})(WACC_t-K_{u,t})
+\]</span></p>
+<hr>
+</section>
+<section id="方法-6业务风险调整后的-ecf同上但从股权现金流出发" class="level3">
+<h3 class="anchored" data-anchor-id="方法-6业务风险调整后的-ecf同上但从股权现金流出发">方法 6：业务风险调整后的 ECF（同上，但从股权现金流出发）</h3>
+<ul>
+<li>直觉：仍然只想用 Ku 贴现，但我从 ECF 出发把“股权要求回报与资产回报的差异”挪到现金流里。 <span class="math display">\[
+E_0 = PV_0[K_{u,t}; ECF_{t\\Ku}]
+\]</span></li>
+</ul>
+<p>定义： <span class="math display">\[
+ECF_{t\\Ku} = ECF_t - E_{t-1}(K_{e,t}-K_{u,t})
+\]</span></p>
+<hr>
+</section>
+<section id="方法-7经济利润economic-profit-ep法账面股权-未来超额收益的现值" class="level3">
+<h3 class="anchored" data-anchor-id="方法-7经济利润economic-profit-ep法账面股权-未来超额收益的现值">方法 7：经济利润（Economic Profit, EP）法：账面股权 + 未来“超额收益”的现值</h3>
+<ul>
+<li>直觉：公司股权价值 = 现在账面资本 + 未来每期创造的“超额净利润”（超过股权资本成本的部分）的现值。 <span class="math display">\[
+E_0 = Ebv_0 + PV_0[K_{e,t}; EP_t]
+\]</span></li>
+</ul>
+<p>经济利润定义： <span class="math display">\[
+EP_t = PAT_t - K_{e,t} \cdot Ebv_{t-1}
+\]</span></p>
+<hr>
+</section>
+<section id="方法-8eva-法投入资本账面值-未来-eva-的现值" class="level3">
+<h3 class="anchored" data-anchor-id="方法-8eva-法投入资本账面值-未来-eva-的现值">方法 8：EVA 法：投入资本账面值 + 未来 EVA 的现值</h3>
+<ul>
+<li>直觉：企业价值 = 现在投入资本（债+股的账面） + 未来每期创造的“超过 WACC 的经营利润”的现值。 <span class="math display">\[
+E_0 + D_0 = (Ebv_0 + N_0) + PV_0[WACC_t; EVA_t]
+\]</span></li>
+</ul>
+<p>EVA 定义（文中用 NOPAT 表示无杠杆经营税后利润）： <span class="math display">\[
+EVA_t = NOPAT_t - (D_{t-1}+Ebv_{t-1})WACC_t
+\]</span></p>
+<hr>
+</section>
+<section id="方法-9无风险利率调整后的-fcf用-rf-贴现但现金流被风险校正" class="level3">
+<h3 class="anchored" data-anchor-id="方法-9无风险利率调整后的-fcf用-rf-贴现但现金流被风险校正">方法 9：无风险利率调整后的 FCF（用 RF 贴现，但现金流被“风险校正”）</h3>
+<ul>
+<li>直觉：把所有风险溢价都塞进“调整后的现金流”，贴现率退回到 RF。 <span class="math display">\[
+E_0 + D_0 = PV_0[RF_t; FCF_{t\\RF}]
+\]</span></li>
+</ul>
+<p>定义： <span class="math display">\[
+FCF_{t\\RF} = FCF_t - (E_{t-1}+D_{t-1})(WACC_t-RF_t)
+\]</span></p>
+<hr>
+</section>
+<section id="方法-10无风险利率调整后的-ecf同理从股权端出发" class="level3">
+<h3 class="anchored" data-anchor-id="方法-10无风险利率调整后的-ecf同理从股权端出发">方法 10：无风险利率调整后的 ECF（同理，从股权端出发）</h3>
+<p><span class="math display">\[
+E_0 = PV_0[RF_t; ECF_{t\\RF}]
+\]</span></p>
+<p>定义： <span class="math display">\[
+ECF_{t\\RF} = ECF_t - E_{t-1}(K_{e,t}-RF_t)
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="为什么10-法必同值核心不是神秘而是三件事保持一致" class="level2">
+<h2 class="anchored" data-anchor-id="为什么10-法必同值核心不是神秘而是三件事保持一致">🔗 3) 为什么“10 法必同值”：核心不是神秘，而是三件事保持一致</h2>
+<p>作者强调“总是同值”的前提，其实就是下面三类一致性。只要它们不被你在模型里悄悄打破，就不会出现“方法 A 算 100，方法 B 算 130”。</p>
+<section id="现金流口径必须自洽尤其是-fcfecf债务变动" class="level3">
+<h3 class="anchored" data-anchor-id="现金流口径必须自洽尤其是-fcfecf债务变动">3.1 现金流口径必须自洽（尤其是 FCF、ECF、债务变动）</h3>
+<p>文中给了一个关键桥梁：FCF 与 ECF 的关系式（把债务融资与税影响表达出来）：</p>
+<p><span class="math display">\[
+FCF_t = ECF_t - \Delta D_t + I_t(1-T)
+\]</span></p>
+<p>它在说一件很朴素的事：<br>
+- 股东拿到的现金（ECF）<br>
+- 加回“当期新增借款净流入”（如果你借了更多钱，股东现金流会被“融资”抬高，但那不是经营创造的）<br>
+- 再把“利息税后成本”调整回来<br>
+就得到“如果没有债务时这家公司会产生的经营性现金”（FCF 的定义/直觉）。</p>
+<hr>
+</section>
+<section id="贴现率口径必须与风险归属一致wacckekurf-不是随便换的" class="level3">
+<h3 class="anchored" data-anchor-id="贴现率口径必须与风险归属一致wacckekurf-不是随便换的">3.2 贴现率口径必须与风险归属一致（WACC/Ke/Ku/RF 不是随便换的）</h3>
+<ul>
+<li>用 ECF 就该配 Ke；<br>
+</li>
+<li>用 FCF 就该配 WACC（或配 Ku 但你必须先做风险调整现金流）；<br>
+</li>
+<li>用 APV 就是 Ku 贴现无杠杆 FCF + 对税盾单独选择贴现率（这一步最容易出分歧）。</li>
+</ul>
+<hr>
+</section>
+<section id="你对债务政策到底是什么必须讲清楚" class="level3">
+<h3 class="anchored" data-anchor-id="你对债务政策到底是什么必须讲清楚">3.3 你对“债务政策”到底是什么，必须讲清楚</h3>
+<p>很多人模型里“潜规则”是：<br>
+- 一会儿假设债务固定金额；<br>
+- 一会儿又让 D/V 恒定；<br>
+- 同时又用一个“恒定 WACC”。</p>
+<p>这在作者的框架里等同于：<strong>每个方法的假设不一致</strong>，自然算出不同答案。</p>
+<hr>
+</section>
+</section>
+<section id="真实分歧在哪里9-种税盾价值vts理论到底在争什么" class="level2">
+<h2 class="anchored" data-anchor-id="真实分歧在哪里9-种税盾价值vts理论到底在争什么">⚔️ 4) 真实分歧在哪里：9 种税盾价值（VTS）理论到底在争什么</h2>
+<p>这篇文章最尖锐的观点之一是：<br>
+&gt; 估值分歧主要来自 VTS（税盾价值）如何计算，而不是 DCF 框架本身。</p>
+<p>税盾的“对象”很简单：利息可税前抵扣带来的节税。<br>
+但它的“价值”取决于两个更深的问题：</p>
+<ol type="1">
+<li><strong>未来税盾现金流有多确定？</strong>（取决于未来债务水平、盈利可抵税能力、税制）<br>
+</li>
+<li><strong>税盾现金流的风险应当用什么贴现率？</strong>（RF / Kd / Ku / 混合 / 其他）</li>
+</ol>
+<p>下面是文中 9 种理论的“争议点翻译版”（不死背名字也能讲清楚）。</p>
+<hr>
+<section id="fernandez-2007债务政策用账面-de-恒定等假设" class="level3">
+<h3 class="anchored" data-anchor-id="fernandez-2007债务政策用账面-de-恒定等假设">4.1 Fernandez (2007)：债务政策用“账面 D/E 恒定”等假设</h3>
+<ul>
+<li>核心：公司保持某种目标杠杆（以账面值口径），则未来债务增量的风险与经营现金流风险相关。</li>
+<li>结果：税盾贴现的风险属性更接近业务端（而非纯无风险）。</li>
+</ul>
+<hr>
+</section>
+<section id="miles-ezzell-1980市场价值-de-恒定经典教材口径之一" class="level3">
+<h3 class="anchored" data-anchor-id="miles-ezzell-1980市场价值-de-恒定经典教材口径之一">4.2 Miles &amp; Ezzell (1980)：市场价值 D/E 恒定（经典教材口径之一）</h3>
+<ul>
+<li>核心：公司每期“再平衡”杠杆率，保持市场价值 D/E 恒定。<br>
+</li>
+<li>结论特征：税盾贴现率<strong>第一期</strong>与<strong>后续期</strong>不同（第一期用 Kd，后续用 Ku），因为再平衡机制改变了税盾风险结构。</li>
+</ul>
+<hr>
+</section>
+<section id="modigliani-miller-1963未来债务金额今天已知税盾更像无风险" class="level3">
+<h3 class="anchored" data-anchor-id="modigliani-miller-1963未来债务金额今天已知税盾更像无风险">4.3 Modigliani &amp; Miller (1963)：未来债务金额“今天已知”，税盾更像无风险</h3>
+<ul>
+<li>核心：每年债务路径确定 → 利息税盾路径确定（在能充分抵税等前提下）。<br>
+</li>
+<li>因此：税盾以 <strong>RF</strong> 贴现（税盾风险很低）。</li>
+</ul>
+<hr>
+</section>
+<section id="myers-1974类似-mm但税盾按-kd-贴现" class="level3">
+<h3 class="anchored" data-anchor-id="myers-1974类似-mm但税盾按-kd-贴现">4.4 Myers (1974)：类似 MM，但税盾按 Kd 贴现</h3>
+<ul>
+<li>核心差别：税盾风险被认为与债务更接近，所以用 <strong>Kd</strong> 折现，而非 RF。</li>
+</ul>
+<hr>
+</section>
+<section id="miller-1977税盾价值可能为-0" class="level3">
+<h3 class="anchored" data-anchor-id="miller-1977税盾价值可能为-0">4.5 Miller (1977)：税盾价值可能为 0</h3>
+<ul>
+<li>核心：在考虑个人税与公司税的均衡框架下，杠杆税优势可能被抵消，税盾净价值为零。</li>
+<li>提醒：这是一个“强假设下的结论”，不是说现实中永远没有税盾。</li>
+</ul>
+<hr>
+</section>
+<section id="harris-pringle-1985-ruback-1995税盾按-ku-贴现" class="level3">
+<h3 class="anchored" data-anchor-id="harris-pringle-1985-ruback-1995税盾按-ku-贴现">4.6 Harris &amp; Pringle (1985) / Ruback (1995)：税盾按 Ku 贴现</h3>
+<ul>
+<li>核心：税盾风险更像企业资产风险（与经营现金流同风险等级）。<br>
+</li>
+<li>典型表达（文中提及的形式）是把税盾现金流按 Ku 折现。</li>
+</ul>
+<hr>
+</section>
+<section id="damodaran-1994用特定-β-杠杆化关系引入杠杆成本影响" class="level3">
+<h3 class="anchored" data-anchor-id="damodaran-1994用特定-β-杠杆化关系引入杠杆成本影响">4.7 Damodaran (1994)：用特定 β 杠杆化关系引入杠杆成本/影响</h3>
+<ul>
+<li>核心：通过 βL 与 βu 的关系式决定 Ke，进而影响 WACC 与价值。<br>
+</li>
+<li>作者指出：Damodaran 的杠杆 β 关系式与 Fernandez 的推导不同，导致差异。</li>
+</ul>
+<hr>
+</section>
+<section id="practitioners-method从业者常用的简化-β-关系" class="level3">
+<h3 class="anchored" data-anchor-id="practitioners-method从业者常用的简化-β-关系">4.8 Practitioners method（从业者常用的简化 β 关系）</h3>
+<ul>
+<li>核心：用更简化（甚至偏经验）的 β 杠杆化方式，把杠杆风险推高，从而改变 Ke/WACC。<br>
+</li>
+<li>现实意义：这就是“投行模板/咨询模板”里常见的做法来源之一。</li>
+</ul>
+<hr>
+</section>
+<section id="with-cost-of-leverage把杠杆成本显式建模为利差成本的现值" class="level3">
+<h3 class="anchored" data-anchor-id="with-cost-of-leverage把杠杆成本显式建模为利差成本的现值">4.9 With-cost-of leverage：把杠杆成本显式建模为“利差成本”的现值</h3>
+<ul>
+<li>核心：除了税盾，还要扣除“公司借款利率高于无风险利率”的那部分利差成本现值。<br>
+</li>
+<li>这等于把杠杆的副作用显式化，而不是隐含在贴现率里。</li>
+</ul>
+<hr>
+</section>
+<section id="x-作者用一个例子打脸式展示vts-可能从-0-到-745" class="level3">
+<h3 class="anchored" data-anchor-id="x-作者用一个例子打脸式展示vts-可能从-0-到-745">4.x 作者用一个例子“打脸式”展示：VTS 可能从 0 到 745</h3>
+<p>文中提到：对同一家示例公司、同样债务规模（示例里债务 N=1500 的设定），不同 VTS 理论会让税盾价值在 <strong>0 到 745</strong> 之间跳动。</p>
+<p>这句话的意义是：<br>
+- 你可以在模型里非常“认真地做 DCF”，但只要对税盾贴现率/债务路径假设不同，结果就能差到让人以为是两家公司。</p>
+<hr>
+</section>
+</section>
+<section id="toro-inc.-示例究竟验证了什么以及它提醒你的建模前提" class="level2">
+<h2 class="anchored" data-anchor-id="toro-inc.-示例究竟验证了什么以及它提醒你的建模前提">🧪 5) Toro Inc.&nbsp;示例究竟验证了什么（以及它提醒你的建模前提）</h2>
+<p>示例部分做了两件事：</p>
+<ol type="1">
+<li>用预测报表推导 ECF / FCF / CCF，展示这些现金流之间能按定义严丝合缝对上。<br>
+</li>
+<li>在同一参数与假设下，用 10 种方法轮流估值，验证“同值”。再切换 VTS 理论，展示分歧从哪里来。</li>
+</ol>
+<p>文中还有一个很实务的“前提警告”： - 章节中主要公式默认 <strong>债务市场价值 = 名义/账面价值</strong>，也就是利率与 Kd 匹配。<br>
+- 如果债务市值≠账面值，需要用附录 3 的修正公式，否则你会在“债务现金流—贴现—市值”这一环自己制造误差。</p>
+<hr>
+</section>
+<section id="把它变成你能直接用的建模清单避免最常见的坑" class="level2">
+<h2 class="anchored" data-anchor-id="把它变成你能直接用的建模清单避免最常见的坑">🧰 6) 把它变成你能直接用的建模清单（避免最常见的坑）</h2>
+<p>下面这些是按作者框架提炼的“模型自检点”，非常适合做 DCF 审计：</p>
+<section id="先选方法不是关键先选假设集合才关键" class="level3">
+<h3 class="anchored" data-anchor-id="先选方法不是关键先选假设集合才关键">6.1 先选方法不是关键，先选“假设集合”才关键</h3>
+<p>至少要明确三件事： - 税率 T 与可抵税能力（是否会亏损导致税盾用不上）；<br>
+- 债务政策（固定债务金额？固定 D/E？固定 D/V？按账面还是按市值再平衡？）；<br>
+- 税盾风险贴现率（RF/Kd/Ku/混合）。</p>
+<hr>
+</section>
+<section id="如果你用-wacc-法方法-2要对wacc-可能是迭代的有心理准备" class="level3">
+<h3 class="anchored" data-anchor-id="如果你用-wacc-法方法-2要对wacc-可能是迭代的有心理准备">6.2 如果你用 WACC 法（方法 2），要对“WACC 可能是迭代的”有心理准备</h3>
+<p>因为文中 WACC 权重用的是估值过程中的 E、D（不是随手拿账面值，也不是外生给定的市值），所以常见实现路径是： - 先猜一个 WACC 或企业价值； - 算出 D/E 权重； - 更新 WACC； - 迭代到收敛。</p>
+<p>如果你模型里“WACC 固定 + D/V 固定 + 债务金额也固定”，那其实是混合了互相矛盾的假设。</p>
+<hr>
+</section>
+<section id="apv-是最适合把争议摊开讲的框架" class="level3">
+<h3 class="anchored" data-anchor-id="apv-是最适合把争议摊开讲的框架">6.3 APV 是最适合“把争议摊开讲”的框架</h3>
+<p>当你需要在报告里解释“杠杆怎么创造价值、风险怎么处理”时，APV 通常最清晰： - 业务价值：用 Ku 贴现无杠杆 FCF；<br>
+- 融资副产品（税盾/发行成本/困境成本）：单独列出、单独贴现。<br>
+争议点也最透明：<strong>VTS 用什么贴现率</strong>。</p>
+<hr>
+</section>
+<section id="epeva-看似会计其实是-dcf-的等价表达" class="level3">
+<h3 class="anchored" data-anchor-id="epeva-看似会计其实是-dcf-的等价表达">6.4 EP/EVA 看似会计，其实是 DCF 的等价表达</h3>
+<p>只要： - 账面值口径一致； - NOPAT、投入资本、WACC 等定义一致； EVA/EP 不是“另一套估值学”，只是把价值分解为“资本基数 + 超额收益现值”。</p>
+<hr>
+</section>
+</section>
+<section id="一句话版再次详细阐述的总收束" class="level2">
+<h2 class="anchored" data-anchor-id="一句话版再次详细阐述的总收束">✅ 7) 一句话版“再次详细阐述”的总收束</h2>
+<ul>
+<li><strong>10 种 DCF 方法必同值</strong>：它们只是从 ECF/FCF/CCF/APV/EP/EVA/RF 调整等不同入口描述同一个价值。<br>
+</li>
+<li><strong>分歧几乎都来自 VTS</strong>：税盾现金流有多确定、风险像谁（RF/Kd/Ku）、债务政策如何再平衡——这些假设一变，估值就能大幅跳动。<br>
+</li>
+<li><strong>建模的王道是“假设一致性”</strong>：不一致才是估值结果不一致的根源，而不是“方法选错”。</li>
+</ul>
+<hr>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/andybourne\.github\.io\/bp-ai-api\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
