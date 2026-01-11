@@ -49,20 +49,6 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog 欢迎来到我的博客",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AndyBourne-Blog",
-    "section": "",
-    "text": "深空经济：卫星竞争格局\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My New Blog\n\n\n\n反思\n\n估值\n\n商业航天\n\n深空经济\n\n相对估值法，DCF自由现金折现\n\n风险投资\n\n初创公司\n\n创业\n\n投资\n\n写作未来\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/welcome/welcome.html",
     "href": "posts/welcome/welcome.html",
     "title": "Welcome to My New Blog",
@@ -89,5 +75,12 @@
     "title": "Welcome to My New Blog",
     "section": "",
     "text": "第一个假设，世界是有平行时空的。\n第二个假设，超能力者只能观察，不能改变；而且观察的数量是有限的，每次只能观察一个。观察的过程要消耗自己的物理尺度也就是自己生命值。\n第三个假设，在一个封闭的平时时空里，一个人的生命如果能跨越其物理尺度，那么他就能跃迁到另一个平行时空（且维度只能比此前高一个等级里)。\n最后一个假设，平行时空最高等级与最低等级的维度之差不能大于等于10个等级."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AndyBourne-Blog",
+    "section": "",
+    "text": "深空经济：卫星竞争格局\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My New Blog\n\n\n\n反思\n\n估值\n\n商业航天\n\n深空经济\n\n相对估值法，DCF自由现金折现\n\n风险投资\n\n初创公司\n\n创业\n\n投资\n\n写作未来\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\nNo matching items"
   }
 ]
