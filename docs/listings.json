@@ -1,7 +1,14 @@
 [
   {
+    "listing": "/posts/Welcome/index.html",
+    "items": [
+      "/posts/Welcome/Rethink20260114/20260114.html"
+    ]
+  },
+  {
     "listing": "/posts/Valuation/index.html",
     "items": [
+      "/posts/Valuation/1999-Berkshire-Hathaway/Buffet.html",
       "/posts/Valuation/HZTW-TTR/hztw-tr.html",
       "/posts/Valuation/TSW-GPU/TSW-GPU.html",
       "/posts/Valuation/Rocet—AeroSpace/Roceket-Space20250111.html",
@@ -9,12 +16,6 @@
       "/posts/Valuation/post-with-code/post-with-code.html",
       "/posts/Valuation/Avitation-Aerofugia/Aerofugia.html",
       "/posts/Valuation/Aviation-Space/SpaceX20260110.html"
-    ]
-  },
-  {
-    "listing": "/posts/Welcome/index.html",
-    "items": [
-      "/posts/Welcome/Rethink20260114/20260114.html"
     ]
   },
   {
@@ -30,6 +31,7 @@
       "/posts/Valuation/index.html",
       "/posts/Mirror/index.html",
       "/posts/Welcome/Rethink20260114/20260114.html",
+      "/posts/Valuation/1999-Berkshire-Hathaway/Buffet.html",
       "/posts/Valuation/HZTW-TTR/hztw-tr.html",
       "/posts/Valuation/TSW-GPU/TSW-GPU.html",
       "/posts/Valuation/Rocet—AeroSpace/Roceket-Space20250111.html",
