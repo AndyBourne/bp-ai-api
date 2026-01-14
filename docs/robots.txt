@@ -1,1 +1,1 @@
-Sitemap: https://andybourne.github.io/bp-ai-api/sitemap.xml
+Sitemap: https://andybourne.cn/sitemap.xml
