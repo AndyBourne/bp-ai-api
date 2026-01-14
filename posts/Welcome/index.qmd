@@ -1,0 +1,6 @@
+---
+title: "Welcome"
+listing:
+  contents: Rethink20260114
+  sort: "date desc"
+---
