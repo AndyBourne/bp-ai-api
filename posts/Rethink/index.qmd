@@ -1,6 +1,8 @@
 ---
 title: "Rethink"
 listing:
-  contents: Rethink20260114
+  contents: .
   sort: "date desc"
+  page-size: 10
+  type: default
 ---
