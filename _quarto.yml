@@ -20,7 +20,7 @@ website:
 
     right:
       - icon: twitter
-        href: https://twitter.com
+        href: https://x.com/andybourne_cn
       - icon: github
         href: https://github.com/andybourne/AndyBourne-Blog
 
@@ -31,5 +31,5 @@ format:
       dark: slate
     toc: true
     code-fold: true
-
+    include-after-body: footer.html
 
