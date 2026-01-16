@@ -1,5 +1,5 @@
 ---
-title: "Welcome"
+title: "Rethink"
 listing:
   contents: Rethink20260114
   sort: "date desc"
