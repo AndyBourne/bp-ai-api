@@ -1194,7 +1194,7 @@ Apple 用“现金与有价证券−全部有息负债（含 commercial paper）
 Alphabet 数据内可复算的“现金与有价证券−长期债务”。</p></li>
 </ul>
 <hr>
-<p>按照“先基础数据、再完整计算过程、最后完整结论”，两家公司已按同一模板跑通；你现在只需要替换 <strong>WACC、显性期增长、永续增长</strong> 三个假设，就能瞬间得到新的一组估值输出（其余全部是财报硬数据佐证）。</p>
+<p>按照“先基础数据、再完整计算过程、最后完整结论”，两家公司已按同一模板跑通；现在只需要替换 <strong>WACC、显性期增长、永续增长</strong> 三个假设，就能得到新的一组估值输出（其余全部是财报硬数据佐证）。</p>
 <hr>
 
 
@@ -1772,9 +1772,8 @@ Alphabet 数据内可复算的“现金与有价证券−长期债务”。</p><
 
 <section id="纳瓦尔-深度访谈的精华总结" class="level2">
 
-<ul>
-<li>纳瓦尔·拉维坎特（Naval Ravikant）是一位著名的创业家、投资者和思想家，他的深度访谈涵盖了创业、财富创造、幸福和生活哲学等多个方面。以下是访谈中的一些精华总结：</li>
-</ul>
+<section id="纳瓦尔拉维坎特naval-ravikant是一位著名的创业家投资者和思想家他的深度访谈涵盖了创业财富创造幸福和生活哲学等多个方面以下是访谈中的一些精华总结" class="level5">
+
 <ol type="1">
 <li><strong>财富创造的原则</strong>：</li>
 </ol>
@@ -1825,6 +1824,7 @@ Alphabet 数据内可复算的“现金与有价证券−长期债务”。</p><
 <li>合作和团队精神是实现更大目标的关键。</li>
 <li>纳瓦尔的访谈内容深刻且富有启发性，鼓励人们追求更有意义和充实的生活。通过应用这些原则，个人可以在财富、幸福和个人成长方面取得显著进步。</li>
 </ul>
+</section>
 </section>
 <section id="时间是唯一的稀缺性资源" class="level2">
 <h2 class="anchored" data-anchor-id="时间是唯一的稀缺性资源">时间是唯一的稀缺性资源</h2>
@@ -4057,7 +4057,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluaw==" data-listing-date-sort="1768320000000" data-listing-file-modified-sort="1768650307306" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
+<div class="quarto-post image-right" data-index="1" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluaw==" data-listing-date-sort="1768320000000" data-listing-file-modified-sort="1768726397322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
 <div class="thumbnail"><a href="../../posts/Rethink/Rethink20260114/Rethink20260114.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Rethink/Rethink20260114/Nove.jpeg" class="thumbnail-image">
@@ -4107,7 +4107,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Sun, 18 Jan 2026 08:36:14 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 08:54:56 GMT</pubDate>
 </item>
 <item>
   <title>Valuation</title>
@@ -4125,7 +4125,7 @@ AndyBourne
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768725216273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1554">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768726370891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1554">
 <div class="thumbnail"><a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/theModelOfValuation/BusinesAnalyisize.png" class="thumbnail-image">
@@ -4430,7 +4430,7 @@ Andy Bourne
 
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Valuation/</guid>
-  <pubDate>Sun, 18 Jan 2026 08:36:14 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 08:54:56 GMT</pubDate>
 </item>
 <item>
   <title>Mirror</title>
@@ -4477,7 +4477,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Mirror/</guid>
-  <pubDate>Sun, 18 Jan 2026 08:36:14 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 08:54:56 GMT</pubDate>
 </item>
 <item>
   <title>Mirror 镜子 0000-01-01</title>
