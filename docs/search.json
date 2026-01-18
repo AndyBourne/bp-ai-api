@@ -420,6 +420,13 @@
     "text": "Rethink| 20260116\n格林的故事之所以伟大，是因为它触及了生命的本质。\n\n\n\n\n\n\n\n\n维度 Dimension\n细节描述 Detailed Description\n生命启示 Insight\n\n\n\n\n生存 Survival\n从奶瓶喂养到荒野捕猎 (From bottle-feeding to wild hunting)\n潜能需要自由来激发 (Potential requires freedom)\n\n\n情感 Emotion\n衔兔报恩与山脊回望 (The gift of the rabbit & the backward glance)\n万物皆有灵，爱能跨越物种 (All beings have souls; love transcends species)\n\n\n结局 Ending\n虽相见却不相拥 (Meeting again but not embracing)\n尊重是爱的最高境界 (Respect is the highest form of love)\n\n\n\n几年后，他们再次相遇。格林已成狼王，它带着妻儿远观李微漪，却不再靠近。它眼里的温柔依旧，但它已经完全属于了荒野。李微漪说：“我救了它一命，它却救了我的灵魂。”\nYears later, they met again. Green was now an Alpha. He watched Li Weiyi from a distance with his mate and cubs but did not approach. The tenderness in his eyes remained, but he belonged entirely to the wild now. Li Weiyi said: “I saved his life, but he saved my soul.”"
   },
   {
+    "objectID": "posts/Rethink/index.html",
+    "href": "posts/Rethink/index.html",
+    "title": "Rethink",
+    "section": "",
+    "text": "Rethink20260118\n\n\n\n\n\n\n\n\nJan 18, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260116\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260114\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to AndyBourne’s Blog\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/Rethink/Rethink20260114/Rethink20260114.html",
     "href": "posts/Rethink/Rethink20260114/Rethink20260114.html",
     "title": "Rethink20260114",
@@ -455,11 +462,46 @@
     "text": "变富 = 独特知识 X 技能 x 杠杆\n\n财富是通向自由系统的工具，欲望是痛苦的来源。\n独特知识：真正愿意长期研究的内容。找到愿意研究10年的东西，没人监督。\n杠杆：人力，资本，媒体，代码\n媒体：内容创造，开始做同步发出内容。\n公开思考，把真正的思考放在世界里。"
   },
   {
-    "objectID": "posts/Rethink/index.html",
-    "href": "posts/Rethink/index.html",
-    "title": "Rethink",
+    "objectID": "posts/Rethink/ Rethink20260118/Rethink20260118.html",
+    "href": "posts/Rethink/ Rethink20260118/Rethink20260118.html",
+    "title": "Rethink20260118",
     "section": "",
-    "text": "Rethink20260116\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260114\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to AndyBourne’s Blog\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\nNo matching items"
+    "text": "想要挖掘 Gabriel Leopold 故事背后的底层逻辑，需要进入更微观的视角。这不仅仅是一个“少年天才”的励志片，更是一场关于技术选型、开源博弈与个人品牌构建的精密行动。\n以下是 Gabriel 进入 OpenAI 过程中那些鲜为人知、极具技术含金量的细节梳理"
+  },
+  {
+    "objectID": "posts/Rethink/ Rethink20260118/Rethink20260118.html#第一阶段技术深潜为什么是-triton",
+    "href": "posts/Rethink/ Rethink20260118/Rethink20260118.html#第一阶段技术深潜为什么是-triton",
+    "title": "Rethink20260118",
+    "section": "第一阶段：技术深潜——为什么是 Triton？",
+    "text": "第一阶段：技术深潜——为什么是 Triton？\n在 2023 年，大多数开发者还在卷“提示词工程”或“简单的 RAG 应用”时，Gabriel 选择了最难的一条路：GPU 算子优化。\n\n核心细节：Triton 的降维打击\nGabriel 意识到，如果你想让 AI 模型跑得更快，你必须直接与硬件对话。他深入研究了 OpenAI 开发的 Triton（一种用于编写高效 GPU 内核的语言）。 - 攻克难题： 他在 GitHub 上发布了一系列关于如何利用 Triton 优化 FlashAttention 的代码片段。这证明了他不仅理解数学原理，还能将其转化为极致的硬件性能。 - 自律的狂热： 据他在社交媒体上的记录，他曾为了调试一个显存对齐问题，连续数周在深夜研究 CUDA 的底层文档。这种“硬核”属性让他迅速脱离了“业余爱好者”的范畴。"
+  },
+  {
+    "objectID": "posts/Rethink/ Rethink20260118/Rethink20260118.html#第二阶段bitnet-1.58成名的投名状",
+    "href": "posts/Rethink/ Rethink20260118/Rethink20260118.html#第二阶段bitnet-1.58成名的投名状",
+    "title": "Rethink20260118",
+    "section": "第二阶段：BitNet 1.58——成名的“投名状”",
+    "text": "第二阶段：BitNet 1.58——成名的“投名状”\n如果说 Triton 是他的武器，那么 BitNet 1.58 就是他成名的战役。这是他职业生涯中最重要的转折点。\n\n核心细节：复现微软的“不可能”\n2024 年初，微软发布了关于 1.58 位大语言模型的论文。当时业界普遍持怀疑态度，而 Gabriel 是第一批在开源社区提供完整、高性能复现版本的人。 - 工程奇迹： 他不仅复现了逻辑，还针对推理速度做了极致优化。他的 GitHub 仓库 bitnet 迅速成为了该领域的标杆。 - 大佬背书： 他的代码引起了 Andrej Karpathy（OpenAI 创始成员）和 Jason Wei（思维链论文作者）的公开关注。当这些 AI 界的“教父”开始在推特上提及一个高中生的名字时，OpenAI 的大门已经向他敞开了一半。"
+  },
+  {
+    "objectID": "posts/Rethink/ Rethink20260118/Rethink20260118.html#第三阶段面试与入职不只是写代码",
+    "href": "posts/Rethink/ Rethink20260118/Rethink20260118.html#第三阶段面试与入职不只是写代码",
+    "title": "Rethink20260118",
+    "section": "第三阶段：面试与入职——不只是写代码",
+    "text": "第三阶段：面试与入职——不只是写代码\n进入 OpenAI 的面试流程对任何人来说都是“地狱模式”，更何况是一个没有大学文凭的年轻人。\n\n核心细节：面试中的“降维沟通”\n\n面试表现： 据悉，Gabriel 在面试中展示了对模型量化（Quantization）和稀疏计算（Sparsity）的深刻理解。他能够清晰地解释如何通过牺牲极小的精度来换取数倍的推理速度——这正是 OpenAI 在大规模部署模型时最头疼的问题。\n入职身份： 他并不是以“实习生”身份入职，而是作为 Research Engineer（研究工程师）。在 OpenAI，这意味着他拥有与博士生、资深专家同等的权限和责任。"
+  },
+  {
+    "objectID": "posts/Rethink/ Rethink20260118/Rethink20260118.html#深度对比gabriel-的技术图谱",
+    "href": "posts/Rethink/ Rethink20260118/Rethink20260118.html#深度对比gabriel-的技术图谱",
+    "title": "Rethink20260118",
+    "section": "深度对比：Gabriel 的技术图谱",
+    "text": "深度对比：Gabriel 的技术图谱\n为了看清他的实力，我们可以将他的技能树与普通开发者进行对比：\n\n\n\n\n\n\n\n\n\n技能维度\n普通 AI 开发者\nGabriel Leopold\nOpenAI 的评价维度\n\n\n\n\n应用层\n调用 API，写 Prompt\n开发底层算子，优化内核\n极高 (底层架构能力)\n\n\n理论层\n了解 Transformer 结构\n掌握量化、稀疏化、1-bit 原理\n极高 (前沿研究能力)\n\n\n工程层\n使用现成库 (HuggingFace)\n编写 Triton/CUDA 扩展\n极高 (性能压榨能力)\n\n\n影响力\n简历投递\n开源项目被行业大佬转发\n满分 (社区公信力)"
+  },
+  {
+    "objectID": "posts/Rethink/ Rethink20260118/Rethink20260118.html#关键启示给后来者的gabriel-公式",
+    "href": "posts/Rethink/ Rethink20260118/Rethink20260118.html#关键启示给后来者的gabriel-公式",
+    "title": "Rethink20260118",
+    "section": "关键启示：给后来者的“Gabriel 公式”",
+    "text": "关键启示：给后来者的“Gabriel 公式”\nGabriel 的成功可以总结为一个公式： \\[成功 = 极窄的硬核赛道 (Triton) + 高质量的开源输出 (BitNet) + 顶级社交杠杆 (X/Twitter)\\]\n\n最后的细节：他的办公桌上放着什么？\n在入职 OpenAI 后，Gabriel 分享过他的工作状态。他依然保持着那种“黑客”式的纯粹： - 专注领域： 现在的他正处于 OpenAI Inference 团队的核心，负责让 GPT-o1 这种具备推理能力的模型运行得更加流畅。 - 心态： 他曾在推特上淡然地提到，他并不觉得由于没上大学而错过了什么，因为“在这里，我每天都在和编写教科书的人一起改写教科书”。\n这种“跳过过程，直达本质”的路径，正是 AGI 时代对人才定义的最高级重塑。Gabriel Leopold 不仅仅是一个高中生，他是新一代“AI 原住民”工程师的先遣兵。"
   },
   {
     "objectID": "posts/Rethink/welcome.html",
@@ -1047,6 +1089,6 @@
     "href": "index.html",
     "title": "AndyBourne-Blog",
     "section": "",
-    "text": "Rethink\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValuation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMirror\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n研究框架/估值模型\n\n\n\n研究框架\n\n估值\n\n商业分析\n\n分析模型\n\n\n\n\n\n\n\n\n\nJan 18, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260116\n\n\n\n反思\n\nRethink\n\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n航空发动机-人类工业上皇冠上的明珠\n\n\n\n航空发动机\n\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n埃隆·马斯克（Elon Musk）关于AI的洞察\n\n\n\nValuation\n\n估值\n\nElon Musk\n\nxAI\n\nTESLAqu a\n\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260114\n\n\n\n反思\n\nRethink\n\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n1999 Berkshire Hathaway Annual Meeting: Coca-Cola Q&A——1999年伯克希尔·哈撒韦股东大会\n\n\n\n反思\n\n估值\n\n伯克希尔·哈撒韦\n\n巴菲特\n\n芒格\n\n长期\n\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nSpaceX背后的男人——汤姆·穆尔赫尔（Tom Mueller）\n\n\n\nSpaceX\n\n估值\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nTR：相控阵天线解决方案提供商—成都华芯天微科技有限公司研究报告\n\n\n\nTR\n\n相控阵天线\n\n估值\n\nODM\n\nOEM\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n算力ODM：计算解决方案——深圳市天思智慧科技有限公司\n\n\n\n算力\n\nODM\n\n估值\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n深空经济：商业航天——综述\n\n\n\n深空经济\n\n商业航天\n\n估值，综述\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nDCF估值：同一价值的10种不同衡量体系\n\n\n\nDCF\n\n估值\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to AndyBourne’s Blog\n\n\n\n反思\n\n估值\n\n商业航天\n\n深空经济\n\n相对估值法，DCF自由现金折现\n\n风险投资\n\n初创公司\n\n创业\n\n投资\n\n写作未来\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n深空经济：卫星竞争格局——上海格思航天科技有限公司投资报告\n\n\n\n深空经济\n\n商业航天\n\n估值\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n低空经济：低空竞争格局——沃飞长空投资报告\n\n\n\n低空经济\n\n沃飞长空\n\n估值\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\nSapceX\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\n\n\n\n\n\n\n\nMirror 镜子 0000-01-01\n\n\n\nMirror\n\n镜子\n\n创作\n\n\n\n想象力是价值的源泉，现实是行动者的酬劳\n\n\n\n\n\nJan 1, 1\n\n\nAndyBourne\n\n\n\n\n\nNo matching items"
+    "text": "Rethink\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValuation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMirror\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260118\n\n\n\n反思\n\nRethink，Gabriel\n\n\n\n\n\n\n\n\n\nJan 18, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n研究框架/估值模型\n\n\n\n研究框架\n\n估值\n\n商业分析\n\n分析模型\n\n\n\n\n\n\n\n\n\nJan 18, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260116\n\n\n\n反思\n\nRethink\n\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n航空发动机-人类工业上皇冠上的明珠\n\n\n\n航空发动机\n\n\n\n\n\n\n\n\n\nJan 16, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n埃隆·马斯克（Elon Musk）关于AI的洞察\n\n\n\nValuation\n\n估值\n\nElon Musk\n\nxAI\n\nTESLAqu a\n\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nRethink20260114\n\n\n\n反思\n\nRethink\n\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n1999 Berkshire Hathaway Annual Meeting: Coca-Cola Q&A——1999年伯克希尔·哈撒韦股东大会\n\n\n\n反思\n\n估值\n\n伯克希尔·哈撒韦\n\n巴菲特\n\n芒格\n\n长期\n\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nSpaceX背后的男人——汤姆·穆尔赫尔（Tom Mueller）\n\n\n\nSpaceX\n\n估值\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nTR：相控阵天线解决方案提供商—成都华芯天微科技有限公司研究报告\n\n\n\nTR\n\n相控阵天线\n\n估值\n\nODM\n\nOEM\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n算力ODM：计算解决方案——深圳市天思智慧科技有限公司\n\n\n\n算力\n\nODM\n\n估值\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n深空经济：商业航天——综述\n\n\n\n深空经济\n\n商业航天\n\n估值，综述\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nDCF估值：同一价值的10种不同衡量体系\n\n\n\nDCF\n\n估值\n\n\n\n\n\n\n\n\n\nJan 11, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to AndyBourne’s Blog\n\n\n\n反思\n\n估值\n\n商业航天\n\n深空经济\n\n相对估值法，DCF自由现金折现\n\n风险投资\n\n初创公司\n\n创业\n\n投资\n\n写作未来\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n深空经济：卫星竞争格局——上海格思航天科技有限公司投资报告\n\n\n\n深空经济\n\n商业航天\n\n估值\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n低空经济：低空竞争格局——沃飞长空投资报告\n\n\n\n低空经济\n\n沃飞长空\n\n估值\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nAndyBourne\n\n\n\n\n\n\n\n\n\n\n\n\n商业航天SpaceX估值，全球商业航天发展态势分析\n\n\n\nSapceX\n\n估值\n\n商业航天\n\n硬科技\n\n\n\n本文主要阐述全球商业航天的发展态势\n\n\n\n\n\nJan 10, 2026\n\n\nAndy Bourne\n\n\n\n\n\n\n\n\n\n\n\n\nMirror 镜子 0000-01-01\n\n\n\nMirror\n\n镜子\n\n创作\n\n\n\n想象力是价值的源泉，现实是行动者的酬劳\n\n\n\n\n\nJan 1, 1\n\n\nAndyBourne\n\n\n\n\n\nNo matching items"
   }
 ]

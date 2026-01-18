@@ -12,6 +12,115 @@
 <generator>quarto-1.8.26</generator>
 <lastBuildDate>Sat, 17 Jan 2026 16:00:00 GMT</lastBuildDate>
 <item>
+  <title>Rethink20260118</title>
+  <dc:creator>AndyBourne </dc:creator>
+  <link>https://andybourne.cn/posts/Rethink/ Rethink20260118/Rethink20260118.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>想要挖掘 Gabriel Leopold 故事背后的底层逻辑，需要进入更微观的视角。这不仅仅是一个“少年天才”的励志片，更是一场关于<strong>技术选型、开源博弈与个人品牌构建</strong>的精密行动。</p>
+<p>以下是 Gabriel 进入 OpenAI 过程中那些鲜为人知、极具技术含金量的细节梳理</p>
+<section id="第一阶段技术深潜为什么是-triton" class="level2">
+<h2 class="anchored" data-anchor-id="第一阶段技术深潜为什么是-triton">第一阶段：技术深潜——为什么是 Triton？</h2>
+<p>在 2023 年，大多数开发者还在卷“提示词工程”或“简单的 RAG 应用”时，Gabriel 选择了最难的一条路：<strong>GPU 算子优化</strong>。</p>
+<section id="核心细节triton-的降维打击" class="level3">
+<h3 class="anchored" data-anchor-id="核心细节triton-的降维打击">核心细节：Triton 的降维打击</h3>
+<p>Gabriel 意识到，如果你想让 AI 模型跑得更快，你必须直接与硬件对话。他深入研究了 OpenAI 开发的 <strong>Triton</strong>（一种用于编写高效 GPU 内核的语言）。 - <strong>攻克难题：</strong> 他在 GitHub 上发布了一系列关于如何利用 Triton 优化 <strong>FlashAttention</strong> 的代码片段。这证明了他不仅理解数学原理，还能将其转化为极致的硬件性能。 - <strong>自律的狂热：</strong> 据他在社交媒体上的记录，他曾为了调试一个显存对齐问题，连续数周在深夜研究 CUDA 的底层文档。这种“硬核”属性让他迅速脱离了“业余爱好者”的范畴。</p>
+<hr>
+</section>
+</section>
+<section id="第二阶段bitnet-1.58成名的投名状" class="level2">
+<h2 class="anchored" data-anchor-id="第二阶段bitnet-1.58成名的投名状">第二阶段：BitNet 1.58——成名的“投名状”</h2>
+<p>如果说 Triton 是他的武器，那么 <strong>BitNet 1.58</strong> 就是他成名的战役。这是他职业生涯中最重要的转折点。</p>
+<section id="核心细节复现微软的不可能" class="level3">
+<h3 class="anchored" data-anchor-id="核心细节复现微软的不可能">核心细节：复现微软的“不可能”</h3>
+<p>2024 年初，微软发布了关于 1.58 位大语言模型的论文。当时业界普遍持怀疑态度，而 Gabriel 是第一批在开源社区提供<strong>完整、高性能复现版本</strong>的人。 - <strong>工程奇迹：</strong> 他不仅复现了逻辑，还针对推理速度做了极致优化。他的 GitHub 仓库 <code>bitnet</code> 迅速成为了该领域的标杆。 - <strong>大佬背书：</strong> 他的代码引起了 <strong>Andrej Karpathy</strong>（OpenAI 创始成员）和 <strong>Jason Wei</strong>（思维链论文作者）的公开关注。当这些 AI 界的“教父”开始在推特上提及一个高中生的名字时，OpenAI 的大门已经向他敞开了一半。</p>
+<hr>
+</section>
+</section>
+<section id="第三阶段面试与入职不只是写代码" class="level2">
+<h2 class="anchored" data-anchor-id="第三阶段面试与入职不只是写代码">第三阶段：面试与入职——不只是写代码</h2>
+<p>进入 OpenAI 的面试流程对任何人来说都是“地狱模式”，更何况是一个没有大学文凭的年轻人。</p>
+<section id="核心细节面试中的降维沟通" class="level3">
+<h3 class="anchored" data-anchor-id="核心细节面试中的降维沟通">核心细节：面试中的“降维沟通”</h3>
+<ul>
+<li><strong>面试表现：</strong> 据悉，Gabriel 在面试中展示了对<strong>模型量化（Quantization）</strong>和<strong>稀疏计算（Sparsity）</strong>的深刻理解。他能够清晰地解释如何通过牺牲极小的精度来换取数倍的推理速度——这正是 OpenAI 在大规模部署模型时最头疼的问题。</li>
+<li><strong>入职身份：</strong> 他并不是以“实习生”身份入职，而是作为 <strong>Research Engineer（研究工程师）</strong>。在 OpenAI，这意味着他拥有与博士生、资深专家同等的权限和责任。</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="深度对比gabriel-的技术图谱" class="level2">
+<h2 class="anchored" data-anchor-id="深度对比gabriel-的技术图谱">深度对比：Gabriel 的技术图谱</h2>
+<p>为了看清他的实力，我们可以将他的技能树与普通开发者进行对比：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>技能维度</strong></th>
+<th style="text-align: left;"><strong>普通 AI 开发者</strong></th>
+<th style="text-align: left;"><strong>Gabriel Leopold</strong></th>
+<th style="text-align: left;"><strong>OpenAI 的评价维度</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>应用层</strong></td>
+<td style="text-align: left;">调用 API，写 Prompt</td>
+<td style="text-align: left;">开发底层算子，优化内核</td>
+<td style="text-align: left;"><strong>极高</strong> (底层架构能力)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>理论层</strong></td>
+<td style="text-align: left;">了解 Transformer 结构</td>
+<td style="text-align: left;">掌握量化、稀疏化、1-bit 原理</td>
+<td style="text-align: left;"><strong>极高</strong> (前沿研究能力)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>工程层</strong></td>
+<td style="text-align: left;">使用现成库 (HuggingFace)</td>
+<td style="text-align: left;">编写 Triton/CUDA 扩展</td>
+<td style="text-align: left;"><strong>极高</strong> (性能压榨能力)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>影响力</strong></td>
+<td style="text-align: left;">简历投递</td>
+<td style="text-align: left;">开源项目被行业大佬转发</td>
+<td style="text-align: left;"><strong>满分</strong> (社区公信力)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="关键启示给后来者的gabriel-公式" class="level2">
+<h2 class="anchored" data-anchor-id="关键启示给后来者的gabriel-公式">关键启示：给后来者的“Gabriel 公式”</h2>
+<p>Gabriel 的成功可以总结为一个公式： <strong><img src="https://latex.codecogs.com/png.latex?%E6%88%90%E5%8A%9F%20=%20%E6%9E%81%E7%AA%84%E7%9A%84%E7%A1%AC%E6%A0%B8%E8%B5%9B%E9%81%93%20(Triton)%20+%20%E9%AB%98%E8%B4%A8%E9%87%8F%E7%9A%84%E5%BC%80%E6%BA%90%E8%BE%93%E5%87%BA%20(BitNet)%20+%20%E9%A1%B6%E7%BA%A7%E7%A4%BE%E4%BA%A4%E6%9D%A0%E6%9D%86%20(X/Twitter)"></strong></p>
+<section id="最后的细节他的办公桌上放着什么" class="level3">
+<h3 class="anchored" data-anchor-id="最后的细节他的办公桌上放着什么">最后的细节：他的办公桌上放着什么？</h3>
+<p>在入职 OpenAI 后，Gabriel 分享过他的工作状态。他依然保持着那种“黑客”式的纯粹： - <strong>专注领域：</strong> 现在的他正处于 OpenAI <strong>Inference 团队</strong>的核心，负责让 GPT-o1 这种具备推理能力的模型运行得更加流畅。 - <strong>心态：</strong> 他曾在推特上淡然地提到，他并不觉得由于没上大学而错过了什么，因为“在这里，我每天都在和编写教科书的人一起改写教科书”。</p>
+<p>这种<strong>“跳过过程，直达本质”</strong>的路径，正是 AGI 时代对人才定义的最高级重塑。Gabriel Leopold 不仅仅是一个高中生，他是新一代“AI 原住民”工程师的先遣兵。</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>反思</category>
+  <category>Rethink，Gabriel</category>
+  <guid>https://andybourne.cn/posts/Rethink/ Rethink20260118/Rethink20260118.html</guid>
+  <pubDate>Sat, 17 Jan 2026 16:00:00 GMT</pubDate>
+  <media:content url="https://andybourne.cn/posts/Rethink/ Rethink20260118/Gabriel.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>研究框架/估值模型</title>
   <dc:creator>AndyBourne </dc:creator>
   <link>https://andybourne.cn/posts/Valuation/theModelOfValuation/ModelOfValuation.html</link>
@@ -4034,7 +4143,30 @@ Alphabet 数据内可复算的“现金与有价证券−长期债务”。</p><
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluaw==" data-listing-date-sort="1768492800000" data-listing-file-modified-sort="1768707338421" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="695">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluayVFRiVCQyU4Q0dhYnJpZWw=" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768756532712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
+<div class="thumbnail"><a href="../../posts/Rethink/ Rethink20260118/Rethink20260118.html" class="no-external">
+
+<img loading="lazy" src="https://andybourne.cn/posts/Rethink/ Rethink20260118/Gabriel.jpeg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+
+<div class="delink listing-description"><a href="../../posts/Rethink/ Rethink20260118/Rethink20260118.html" class="no-external">
+<!-- desc(5A0113B34292)[max=175]:posts/Rethink/ Rethink20260118/Rethink20260118.html -->
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../posts/Rethink/ Rethink20260118/Rethink20260118.html" class="no-external">
+<div class="listing-date">
+Jan 18, 2026
+</div>
+<div class="listing-author">
+AndyBourne
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluaw==" data-listing-date-sort="1768492800000" data-listing-file-modified-sort="1768707338421" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="695">
 <div class="thumbnail"><a href="../../posts/Rethink/Rethink20260116/Rethink20260116.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Rethink/Rethink20260116/Rebackwolf.png" class="thumbnail-image">
@@ -4057,7 +4189,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluaw==" data-listing-date-sort="1768320000000" data-listing-file-modified-sort="1768726397322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
+<div class="quarto-post image-right" data-index="2" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluaw==" data-listing-date-sort="1768320000000" data-listing-file-modified-sort="1768726397322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
 <div class="thumbnail"><a href="../../posts/Rethink/Rethink20260114/Rethink20260114.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Rethink/Rethink20260114/Nove.jpeg" class="thumbnail-image">
@@ -4080,7 +4212,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU2JUI3JUIxJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU3JTlCJUI4JUU1JUFGJUI5JUU0JUJDJUIwJUU1JTgwJUJDJUU2JUIzJTk1JUVGJUJDJThDRENGJUU4JTg3JUFBJUU3JTk0JUIxJUU3JThFJUIwJUU5JTg3JTkxJUU2JThBJTk4JUU3JThFJUIwJTJDJUU5JUEzJThFJUU5JTk5JUE5JUU2JThBJTk1JUU4JUI1JTg0JTJDJUU1JTg4JTlEJUU1JTg4JTlCJUU1JTg1JUFDJUU1JThGJUI4JTJDJUU1JTg4JTlCJUU0JUI4JTlBJTJDJUU2JThBJTk1JUU4JUI1JTg0JTJDJUU1JTg2JTk5JUU0JUJEJTlDJUU2JTlDJUFBJUU2JTlEJUE1" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768569869077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<div class="quarto-post image-right" data-index="3" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU2JUI3JUIxJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU3JTlCJUI4JUU1JUFGJUI5JUU0JUJDJUIwJUU1JTgwJUJDJUU2JUIzJTk1JUVGJUJDJThDRENGJUU4JTg3JUFBJUU3JTk0JUIxJUU3JThFJUIwJUU5JTg3JTkxJUU2JThBJTk4JUU3JThFJUIwJTJDJUU5JUEzJThFJUU5JTk5JUE5JUU2JThBJTk1JUU4JUI1JTg0JTJDJUU1JTg4JTlEJUU1JTg4JTlCJUU1JTg1JUFDJUU1JThGJUI4JTJDJUU1JTg4JTlCJUU0JUI4JTlBJTJDJUU2JThBJTk1JUU4JUI1JTg0JTJDJUU1JTg2JTk5JUU0JUJEJTlDJUU2JTlDJUFBJUU2JTlEJUE1" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768569869077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
 <div class="thumbnail"><a href="../../posts/Rethink/welcome.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Rethink/AndyBourne.jpeg" class="thumbnail-image">
@@ -4107,7 +4239,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Sun, 18 Jan 2026 11:22:35 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 17:18:26 GMT</pubDate>
 </item>
 <item>
   <title>Valuation</title>
@@ -4430,7 +4562,7 @@ Andy Bourne
 
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Valuation/</guid>
-  <pubDate>Sun, 18 Jan 2026 11:22:35 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 17:18:26 GMT</pubDate>
 </item>
 <item>
   <title>Mirror</title>
@@ -4477,7 +4609,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Mirror/</guid>
-  <pubDate>Sun, 18 Jan 2026 11:22:35 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 17:18:26 GMT</pubDate>
 </item>
 <item>
   <title>Mirror 镜子 0000-01-01</title>
