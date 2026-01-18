@@ -24,7 +24,12 @@
 
 <section id="典型分析框架" class="level1">
 <h1>典型分析框架</h1>
-<p>—— <img src="https://andybourne.cn/posts/Valuation/theModelOfValuation/ModelOfValuation_files/figure-html/05c2df0d-1-BusinesAnalyisize.png" class="img-fluid" alt="BusinesAnalyisize.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://andybourne.cn/posts/Valuation/theModelOfValuation/ModelOfValuation_files/figure-html/05c2df0d-1-BusinesAnalyisize.png" class="img-fluid figure-img"></p>
+<figcaption>BusinesAnalyisize.png</figcaption>
+</figure>
+</div>
 </section>
 <section id="整体分析" class="level1">
 <h1>整体分析</h1>
@@ -480,6 +485,716 @@
 </li>
 <li><strong>同一模型有不同版本</strong>：比如 SWOT、BSC、BCG 都有大量变体，不纠结“唯一正确”。</li>
 </ul>
+<hr>
+<p>把“所有估值模型”穷举到数学意义上的全集不现实：估值本质是<strong>把未来现金流/收益分配/清算结果在不确定性下折现</strong>，因此会不断产生新变体（尤其在期权、结构化融资、平台经济、加密资产等领域）。但我可以给你一份接近“战略级全景图”的清单：<strong>主流、常用、可复用且在投行/PEVC/企业财务/二级研究里真的会用到的估值模型族谱</strong>，并配上直观例子。</p>
+<p>下面这份就是“超级大脑版工具库”：按<strong>估值逻辑</strong>而不是按“名词堆砌”来归类，你拿去就能对号入座。</p>
+<hr>
+</section>
+</section>
+<section id="估值模型" class="level1">
+<h1>估值模型</h1>
+<section id="估值模型的总地图四大来源" class="level2">
+<h2 class="anchored" data-anchor-id="估值模型的总地图四大来源">估值模型的总地图：四大来源</h2>
+<p>几乎所有估值法都可归到四类之一：</p>
+<ol type="1">
+<li><strong>现金流折现系（Intrinsic / DCF）</strong>：值多少钱 = 未来能吐出多少现金<br>
+</li>
+<li><strong>相对估值系（Multiples / Comparables）</strong>：值多少钱 = 市场上“类似东西”卖多少钱<br>
+</li>
+<li><strong>期权与状态系（Options / Contingent claims）</strong>：值多少钱 = 不确定性 + 管理层选择权值多少<br>
+</li>
+<li><strong>资产/清算与会计锚系（Asset-based / Accounting anchors</strong>：值多少钱 = 现在拆开卖/重置要多少钱</li>
+</ol>
+<hr>
+</section>
+<section id="现金流折现系dcf-家族" class="level2">
+<h2 class="anchored" data-anchor-id="现金流折现系dcf-家族">1） 现金流折现系（DCF 家族）</h2>
+<p>这一类最“正统”，核心公式是把未来现金流按风险折现：</p>
+<p><img src="https://latex.codecogs.com/png.latex?V=%5Csum_%7Bt=1%7D%5E%7BT%7D%5Cfrac%7BCF_t%7D%7B(1+r)%5Et%7D+%5Cfrac%7BTV%7D%7B(1+r)%5ET%7D"></p>
+<section id="企业自由现金流-dcffcff-dcf" class="level3">
+<h3 class="anchored" data-anchor-id="企业自由现金流-dcffcff-dcf">1.1 企业自由现金流 DCF（FCFF DCF）</h3>
+<ul>
+<li><strong>对象</strong>：企业整体价值（Enterprise Value, EV）</li>
+<li><strong>现金流</strong>：<img src="https://latex.codecogs.com/png.latex?FCFF%20=%20EBIT(1-T)+D%5C&amp;A%20-%20Capex%20-%20%5CDelta%20NWC"></li>
+<li><strong>折现率</strong>：WACC</li>
+</ul>
+<p><strong>例子（极简）</strong>：<br>
+假设未来 5 年 FCFF 分别为 1、1.2、1.4、1.6、1.8 亿元；WACC=10%；第 5 年后永续增长 <img src="https://latex.codecogs.com/png.latex?g=3%5C%25">。<br>
+终值（永续增长法）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?TV=%5Cfrac%7BFCFF_6%7D%7BWACC-g%7D=%5Cfrac%7B1.8%5Ctimes(1+0.03)%7D%7B0.10-0.03%7D=26.49%5C%20%5Ctext%7B%E4%BA%BF%E5%85%83%7D"></p>
+<p>把 1–5 年现金流和 TV 都折现相加得到 EV，再减净债务得到股权价值。</p>
+</section>
+<section id="股权自由现金流-dcffcfe-dcf" class="level3">
+<h3 class="anchored" data-anchor-id="股权自由现金流-dcffcfe-dcf">1.2 股权自由现金流 DCF（FCFE DCF）</h3>
+<ul>
+<li><strong>对象</strong>：股权价值（Equity Value）</li>
+<li><strong>现金流</strong>：给股东的钱（考虑借款/还款）</li>
+<li><strong>折现率</strong>：股权资本成本 <img src="https://latex.codecogs.com/png.latex?r_e"></li>
+</ul>
+</section>
+<section id="股利折现模型ddm" class="level3">
+<h3 class="anchored" data-anchor-id="股利折现模型ddm">1.3 股利折现模型（DDM）</h3>
+<ul>
+<li><strong>对象</strong>：稳定分红公司（银行、公用事业等常见）</li>
+<li>Gordon 模型：</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?P_0=%5Cfrac%7BD_1%7D%7Br-g%7D"></p>
+<p><strong>例子</strong>：明年股利 2 元，<img src="https://latex.codecogs.com/png.latex?r=10%5C%25">，<img src="https://latex.codecogs.com/png.latex?g=4%5C%25">：<br>
+<img src="https://latex.codecogs.com/png.latex?P_0=%5Cfrac%7B2%7D%7B0.10-0.04%7D=33.33%5C%20%5Ctext%7B%E5%85%83%7D"></p>
+</section>
+<section id="经济利润剩余收益模型residual-income-eva" class="level3">
+<h3 class="anchored" data-anchor-id="经济利润剩余收益模型residual-income-eva">1.4 经济利润/剩余收益模型（Residual Income / EVA）</h3>
+<ul>
+<li><strong>思想</strong>：企业价值 = 账面净资产 + 未来“超额收益”的现值<br>
+</li>
+<li>常见形式：</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?V_0=BV_0+%5Csum_%7Bt=1%7D%5E%7BT%7D%5Cfrac%7BRI_t%7D%7B(1+r_e)%5Et%7D"></p>
+<p>其中 <img src="https://latex.codecogs.com/png.latex?RI_t=NI_t-r_e%5Ctimes%20BV_%7Bt-1%7D"></p>
+</section>
+<section id="apv调整现值法" class="level3">
+<h3 class="anchored" data-anchor-id="apv调整现值法">1.5 APV（调整现值法）</h3>
+<ul>
+<li><strong>适用</strong>：资本结构会明显变化（杠杆收购/项目融资）</li>
+<li>思想：<br>
+<img src="https://latex.codecogs.com/png.latex?V=V_%7Bunlevered%7D+PV(%5Ctext%7B%E7%A8%8E%E7%9B%BE%7D)-PV(%5Ctext%7B%E8%B4%A2%E5%8A%A1%E5%9B%B0%E5%A2%83/%E5%8F%91%E8%A1%8C%E6%88%90%E6%9C%AC%7D)"></li>
+</ul>
+</section>
+<section id="分部估值-sotpsum-of-the-parts" class="level3">
+<h3 class="anchored" data-anchor-id="分部估值-sotpsum-of-the-parts">1.6 分部估值 / SOTP（Sum of the Parts）</h3>
+<ul>
+<li><strong>适用</strong>：集团公司、多业务（每个业务用最适合的模型）</li>
+<li>例：A 业务用 EV/EBITDA，B 业务用 DCF，C 业务按资产重估，然后加总减净债。</li>
+</ul>
+</section>
+<section id="项目基建类-dcfproject-finance-dcf" class="level3">
+<h3 class="anchored" data-anchor-id="项目基建类-dcfproject-finance-dcf">1.7 项目/基建类 DCF（Project Finance DCF）</h3>
+<ul>
+<li><strong>对象</strong>：单项目现金流（收费公路、电站、数据中心等）</li>
+<li>强调：契约现金流、DSCR、分层资本结构（债务/优先/普通）</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="相对估值系可比公司可比交易倍数法" class="level2">
+<h2 class="anchored" data-anchor-id="相对估值系可比公司可比交易倍数法">2） 相对估值系（可比公司/可比交易/倍数法）</h2>
+<p>这类“市场锚”很强：用同类资产的定价来推你的定价。</p>
+<section id="可比公司法trading-comps" class="level3">
+<h3 class="anchored" data-anchor-id="可比公司法trading-comps">2.1 可比公司法（Trading Comps）</h3>
+<p>常用倍数： - <strong>EV/Sales</strong> - <strong>EV/EBITDA</strong> - <strong>EV/EBIT</strong> - <strong>P/E</strong> - <strong>P/B</strong>（金融/重资产某些场景） - <strong>PEG</strong>（增长修正的 P/E）</p>
+<p><strong>例子</strong>：SaaS 公司明年收入 10 亿元，可比公司 EV/Sales=6x，则<br>
+<img src="https://latex.codecogs.com/png.latex?EV=10%5Ctimes%206=60%5C%20%5Ctext%7B%E4%BA%BF%E5%85%83%7D"></p>
+</section>
+<section id="可比交易法precedent-transactions" class="level3">
+<h3 class="anchored" data-anchor-id="可比交易法precedent-transactions">2.2 可比交易法（Precedent Transactions）</h3>
+<ul>
+<li>用历史并购交易倍数（通常包含控制权溢价）</li>
+<li>例：同赛道过去一年收购 EV/EBITDA 中位数 12x，你公司 EBITDA=3 亿：<br>
+<img src="https://latex.codecogs.com/png.latex?%20EV=3%5Ctimes%2012=36%5C%20%5Ctext%7B%E4%BA%BF%E5%85%83%7D%20"><br>
+再根据净债得股权价值。</li>
+</ul>
+</section>
+<section id="指标化单位经济倍数行业特化" class="level3">
+<h3 class="anchored" data-anchor-id="指标化单位经济倍数行业特化">2.3 指标化/单位经济倍数（行业特化）</h3>
+<ul>
+<li>电商：EV/GMV、EV/订单<br>
+</li>
+<li>社交/内容：EV/MAU、EV/DAU、EV/ARPU（谨慎使用）<br>
+</li>
+<li>订阅：EV/ARR、EV/NRR 结合 rule of 40<br>
+</li>
+<li>游戏：EV/流水、EV/活跃<br>
+</li>
+<li>银行：P/B + ROE（用“ROE–COE”解释合理 PB）</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="期权与不确定性系real-options-cca" class="level2">
+<h2 class="anchored" data-anchor-id="期权与不确定性系real-options-cca">3） 期权与不确定性系（Real Options / CCA）</h2>
+<p>当“未来分叉很多、且管理层能选择”的时候，这类模型非常香。</p>
+<section id="金融期权定价blackscholes二叉树" class="level3">
+<h3 class="anchored" data-anchor-id="金融期权定价blackscholes二叉树">3.1 金融期权定价（Black–Scholes、二叉树）</h3>
+<ul>
+<li>适用：有明确行权结构的权益（认股权证、可转债某部分、期权激励）</li>
+</ul>
+<p><strong>例子（概念）</strong>：把“某项目二期扩产权”视作一份看涨期权：现在投入少量保持选择权，等需求确定再决定是否大投。</p>
+</section>
+<section id="实物期权real-options" class="level3">
+<h3 class="anchored" data-anchor-id="实物期权real-options">3.2 实物期权（Real Options）</h3>
+<p>典型权利： - 延期投资权、扩张权、收缩/停产权、放弃权、切换投入品/产线权<br>
+常用于：矿业、制药管线、硬科技研发、平台补贴战等。</p>
+</section>
+<section id="或有索赔结构化资本contingent-claims-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="或有索赔结构化资本contingent-claims-analysis">3.3 或有索赔/结构化资本（Contingent Claims Analysis）</h3>
+<ul>
+<li>例：把股权看成对公司资产的看涨期权（Merton 模型思想），用于信用风险与某些复杂资本结构估值。</li>
+</ul>
+</section>
+<section id="概率树情景加权-dcfdecision-tree-dcf" class="level3">
+<h3 class="anchored" data-anchor-id="概率树情景加权-dcfdecision-tree-dcf">3.4 概率树/情景加权 DCF（Decision Tree DCF）</h3>
+<ul>
+<li>适用：里程碑驱动（新药临床、航天发射成功率、审批）</li>
+<li>例：成功概率 30% 估值 100 亿，失败概率 70% 估值 10 亿：<br>
+<img src="https://latex.codecogs.com/png.latex?V=0.3%5Ctimes%20100+0.7%5Ctimes%2010=37%5C%20%5Ctext%7B%E4%BA%BF%7D"><br>
+再按阶段折现。</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="资产清算与成本锚系asset-based" class="level2">
+<h2 class="anchored" data-anchor-id="资产清算与成本锚系asset-based">4） 资产/清算与成本锚系（Asset-based）</h2>
+<p>当现金流难预测、或资产可单独定价时，用这类更稳。</p>
+<section id="账面价值法book-value" class="level3">
+<h3 class="anchored" data-anchor-id="账面价值法book-value">4.1 账面价值法（Book Value）</h3>
+<ul>
+<li>适用：金融机构、资产密集且会计接近公允的行业（但要警惕历史成本偏差）</li>
+</ul>
+</section>
+<section id="重置成本法replacement-cost" class="level3">
+<h3 class="anchored" data-anchor-id="重置成本法replacement-cost">4.2 重置成本法（Replacement Cost）</h3>
+<ul>
+<li>例：要复制一个云数据中心网络需要 50 亿资本开支，那么企业估值很难长期低于“重建成本”太多（除非资产闲置/技术过时）。</li>
+</ul>
+</section>
+<section id="清算价值法liquidation-value" class="level3">
+<h3 class="anchored" data-anchor-id="清算价值法liquidation-value">4.3 清算价值法（Liquidation Value）</h3>
+<ul>
+<li>适用：困境企业、破产重整<br>
+</li>
+<li>例：可回收资产 20 亿，优先债务 15 亿，则股权理论上约 5 亿（再扣处置折价/费用）。</li>
+</ul>
+</section>
+<section id="navreits-常用的净资产价值资产逐项评估" class="level3">
+<h3 class="anchored" data-anchor-id="navreits-常用的净资产价值资产逐项评估">4.4 NAV/REITs 常用的净资产价值（资产逐项评估）</h3>
+<ul>
+<li>房地产：按可比成交、租金资本化等给每个资产估值，汇总得到 NAV。</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="融资与-vc-常用实务模型不是玄学是场景化" class="level2">
+<h2 class="anchored" data-anchor-id="融资与-vc-常用实务模型不是玄学是场景化">5） 融资与 VC 常用“实务模型”（不是玄学，是场景化）</h2>
+<p>严格说它们多是 DCF/倍数/期权思想的“简化版”，但在一级市场非常常见。</p>
+<section id="venture-capital-methodvc-法" class="level3">
+<h3 class="anchored" data-anchor-id="venture-capital-methodvc-法">5.1 Venture Capital Method（VC 法）</h3>
+<ul>
+<li>用未来退出价值倒推今日估值：<br>
+<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPost-money%7D=%5Cfrac%7B%5Ctext%7BExit%20Value%7D%7D%7B(1+R)%5En%7D"></li>
+</ul>
+<p><strong>例子</strong>：预计 5 年后退出市值 50 亿，投资人目标年化 40%：<br>
+<img src="https://latex.codecogs.com/png.latex?Post=%5Cfrac%7B50%7D%7B(1.4)%5E5%7D=9.30%5C%20%5Ctext%7B%E4%BA%BF%7D"><br>
+如果本轮投 2 亿，则<br>
+<img src="https://latex.codecogs.com/png.latex?Pre=9.30-2=7.30%5C%20%5Ctext%7B%E4%BA%BF%7D"></p>
+</section>
+<section id="first-chicago-method三情景法" class="level3">
+<h3 class="anchored" data-anchor-id="first-chicago-method三情景法">5.2 First Chicago Method（三情景法）</h3>
+<ul>
+<li>乐观/基准/悲观分别估值，再概率加权（常和退出倍数结合）</li>
+</ul>
+</section>
+<section id="scorecard-berkus-risk-factor-summation早期定性定量混合" class="level3">
+<h3 class="anchored" data-anchor-id="scorecard-berkus-risk-factor-summation早期定性定量混合">5.3 Scorecard / Berkus / Risk Factor Summation（早期定性定量混合）</h3>
+<ul>
+<li>适用：收入很早、数据不足的种子/天使轮<br>
+</li>
+<li>用团队、市场、产品、牵引力等维度加权，得到一个估值区间（更像“定价框架”）。</li>
+</ul>
+</section>
+<section id="可转债safe-的定价折扣率估值上限" class="level3">
+<h3 class="anchored" data-anchor-id="可转债safe-的定价折扣率估值上限">5.4 可转债/SAFE 的定价（折扣率+估值上限）</h3>
+<ul>
+<li>本质是期权化：未来按更优条件转换，估值上限像“隐含行权价”。</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="其他常见估值口径变体你会在报告里看到" class="level2">
+<h2 class="anchored" data-anchor-id="其他常见估值口径变体你会在报告里看到">6） 其他常见“估值口径/变体”（你会在报告里看到）</h2>
+<p>这些不一定是一整套模型，但经常作为关键组件出现：</p>
+<ul>
+<li><strong>永续增长终值（Gordon TV） vs 退出倍数终值（Exit Multiple TV）</strong></li>
+<li><strong>WACC 估算体系</strong>：CAPM、加杠杆/去杠杆 Beta、国家风险溢价</li>
+<li><strong>通胀/汇率/税制调整的跨国 DCF</strong></li>
+<li><strong>ESG/碳成本内生化估值</strong>（把碳税/碳价作为现金流项或风险溢价）</li>
+<li><strong>客户合同/订阅队列的 cohort DCF</strong>（按留存曲线滚动预测）</li>
+<li><strong>银行/保险专用框架</strong>：股利能力、ROE 驱动的 P/B 合理区间、内含价值（EV，Embedded Value）</li>
+</ul>
+<hr>
+</section>
+<section id="一句话选型避免模型堆成山" class="level2">
+<h2 class="anchored" data-anchor-id="一句话选型避免模型堆成山">一句话选型（避免“模型堆成山”）</h2>
+<ul>
+<li><strong>现金流可预测</strong> → FCFF/FCFE/DDM/EVA<br>
+</li>
+<li><strong>市场有足够可比</strong> → Comps/Transactions<br>
+</li>
+<li><strong>未来分叉大且可选择</strong> → Real Options/Decision Tree<br>
+</li>
+<li><strong>资产可拆可卖或困境</strong> → NAV/清算/重置成本<br>
+</li>
+<li><strong>早期融资定价</strong> → VC 法 + 三情景 + 条款结构</li>
+</ul>
+<hr>
+</section>
+<section id="最关键的tips估值的真相" class="level2">
+<h2 class="anchored" data-anchor-id="最关键的tips估值的真相">最关键的Tips（估值的真相）</h2>
+<p>估值不是“算出唯一真值”，而是<strong>在一组假设下得到一段合理区间</strong>。真正的专业感来自： - 假设是否可辩护（增长、利润率、再投资、折现率）<br>
+- 模型是否与业务匹配（比如早期公司硬上 DDM 就很滑稽）<br>
+- 结果是否能被多模型交叉验证（DCF × 倍数 × 情景）</p>
+<hr>
+</section>
+</section>
+<section id="例子-苹果公司和字母表公司谷歌母公司" class="level1">
+<h1>例子 苹果公司和字母表公司（谷歌母公司）</h1>
+<p>下面把 <strong>Apple</strong> 与 <strong>Alphabet（Google）</strong> 按同一套“审计可复算”的框架重做一遍：<strong>先列基础数据 → 再逐步推导 FCFF → 再 DCF 得 EV → 再调到股权价值与每股价值 → 最后给完整结论</strong>。过程里会把每一步用到的财报行项目与公式写清楚，方便进行逐行核对。</p>
+<blockquote class="blockquote">
+<p>单位约定：财报取数默认 <strong>USD millions（百万美元）</strong>；进入估值时我会换算成 <strong>USD bn（十亿美元）</strong>，并在公式里标注。</p>
+</blockquote>
+<hr>
+<section id="一基础数据先把可复算输入放在最前面" class="level2">
+<h2 class="anchored" data-anchor-id="一基础数据先把可复算输入放在最前面">一、基础数据（先把“可复算输入”放在最前面）</h2>
+<p>这一部分只列数据中里明确出现的数字。</p>
+<section id="applefy2024期末-2024-09-28" class="level3">
+<h3 class="anchored" data-anchor-id="applefy2024期末-2024-09-28">1）Apple（FY2024，期末 2024-09-28）</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>项目</th>
+<th style="text-align: right;">数值</th>
+<th>口径/来源</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Operating income（<img src="https://latex.codecogs.com/png.latex?EBIT">）</td>
+<td style="text-align: right;">123,216</td>
+<td>利润表</td>
+</tr>
+<tr class="even">
+<td>Income before taxes</td>
+<td style="text-align: right;">123,485</td>
+<td>利润表</td>
+</tr>
+<tr class="odd">
+<td>Provision for income taxes</td>
+<td style="text-align: right;">29,749</td>
+<td>利润表</td>
+</tr>
+<tr class="even">
+<td>折旧摊销（<img src="https://latex.codecogs.com/png.latex?D%5C&amp;A">）</td>
+<td style="text-align: right;">11,445</td>
+<td>现金流量表（折旧摊销）</td>
+</tr>
+<tr class="odd">
+<td>Capex</td>
+<td style="text-align: right;">9,447</td>
+<td>现金流量表（购建 PP&amp;E）</td>
+</tr>
+<tr class="even">
+<td>营运资本现金贡献合计（CFO明细）</td>
+<td style="text-align: right;">+3,651</td>
+<td>CFO 的 WC 相关行项目合计</td>
+</tr>
+<tr class="odd">
+<td>Cash &amp; equivalents</td>
+<td style="text-align: right;">29,943</td>
+<td>资产负债表</td>
+</tr>
+<tr class="even">
+<td>Marketable securities（流动）</td>
+<td style="text-align: right;">35,228</td>
+<td>资产负债表</td>
+</tr>
+<tr class="odd">
+<td>Marketable securities（非流动）</td>
+<td style="text-align: right;">91,479</td>
+<td>资产负债表</td>
+</tr>
+<tr class="even">
+<td>Commercial paper</td>
+<td style="text-align: right;">9,967</td>
+<td>资产负债表</td>
+</tr>
+<tr class="odd">
+<td>Term debt（流动）</td>
+<td style="text-align: right;">10,912</td>
+<td>资产负债表</td>
+</tr>
+<tr class="even">
+<td>Term debt（非流动）</td>
+<td style="text-align: right;">85,750</td>
+<td>资产负债表</td>
+</tr>
+<tr class="odd">
+<td>稀释股数（thousands）</td>
+<td style="text-align: right;">15,408,095</td>
+<td>EPS 注释/股本</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>估值假设（用于 DCF，非财报数据）：显性期 5 年；<img src="https://latex.codecogs.com/png.latex?WACC=8.5%5C%25">；显性期增长 <img src="https://latex.codecogs.com/png.latex?g_%7B1-5%7D=4%5C%25">；永续增长 <img src="https://latex.codecogs.com/png.latex?g=2.5%5C%25">。</p>
+</blockquote>
+<hr>
+</section>
+<section id="alphabetfy2024期末-2024-12-31" class="level3">
+<h3 class="anchored" data-anchor-id="alphabetfy2024期末-2024-12-31">2）Alphabet（FY2024，期末 2024-12-31）</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>项目</th>
+<th style="text-align: right;">数值</th>
+<th>口径/来源</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Operating income（<img src="https://latex.codecogs.com/png.latex?EBIT">）</td>
+<td style="text-align: right;">112,390</td>
+<td>利润表</td>
+</tr>
+<tr class="even">
+<td>Income before income taxes</td>
+<td style="text-align: right;">119,815</td>
+<td>利润表</td>
+</tr>
+<tr class="odd">
+<td>Provision for income taxes</td>
+<td style="text-align: right;">19,697</td>
+<td>利润表</td>
+</tr>
+<tr class="even">
+<td>CFO（经营现金流）</td>
+<td style="text-align: right;">125,299</td>
+<td>现金流量表</td>
+</tr>
+<tr class="odd">
+<td>Capex（Purchases of property and equipment）</td>
+<td style="text-align: right;">52,535</td>
+<td>现金流量表</td>
+</tr>
+<tr class="even">
+<td>Depreciation of property and equipment</td>
+<td style="text-align: right;">15,311</td>
+<td>现金流量表</td>
+</tr>
+<tr class="odd">
+<td>Stock-based compensation（SBC）</td>
+<td style="text-align: right;">22,785</td>
+<td>现金流量表</td>
+</tr>
+<tr class="even">
+<td>WC 相关变动合计（现金贡献）</td>
+<td style="text-align: right;">-8,406</td>
+<td>现金流量表 WC 行项目合计</td>
+</tr>
+<tr class="odd">
+<td>Total cash, cash equivalents, and marketable securities</td>
+<td style="text-align: right;">95,657</td>
+<td>资产负债表</td>
+</tr>
+<tr class="even">
+<td>Long-term debt</td>
+<td style="text-align: right;">10,883</td>
+<td>资产负债表</td>
+</tr>
+<tr class="odd">
+<td>总在外经济权益股数（A+B+C）</td>
+<td style="text-align: right;">12,190 million</td>
+<td>10-K 股本披露（A+B+C）</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>估值假设（用于 DCF，非财报数据）：显性期 5 年；<img src="https://latex.codecogs.com/png.latex?WACC=9.0%5C%25">；显性期增长 <img src="https://latex.codecogs.com/png.latex?g_%7B1-5%7D=10%5C%25">；永续增长 <img src="https://latex.codecogs.com/png.latex?g=3.0%5C%25">。<br>
+说明：你之前给过利息费用（268）。为了保证“完全按本轮图片可复算”，下文的 FCFF 我以 <strong>不依赖利息数据</strong> 的 CFO 法为主；若你坚持企业口径“加回税后利息”，我也给出如何调整。</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="二apple详细计算完整过程" class="level2">
+<h2 class="anchored" data-anchor-id="二apple详细计算完整过程">二、Apple：详细计算（完整过程）</h2>
+<p>这一段从税率 → NOPAT → FCFF（逐项）→ DCF → 每股价值。</p>
+<section id="计算有效税率-t-与-nopat" class="level3">
+<h3 class="anchored" data-anchor-id="计算有效税率-t-与-nopat">1）计算有效税率 <img src="https://latex.codecogs.com/png.latex?T"> 与 <img src="https://latex.codecogs.com/png.latex?NOPAT"></h3>
+<p>有效税率：</p>
+<p><img src="https://latex.codecogs.com/png.latex?T=%5Cfrac%7BTaxes%7D%7BPreTaxIncome%7D=%5Cfrac%7B29,749%7D%7B123,485%7D=24.09%5C%25"></p>
+<p>税后经营利润（NOPAT）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?NOPAT=EBIT(1-T)=123,216%5Ctimes(1-0.2409)=93,537"></p>
+<hr>
+</section>
+<section id="计算-delta-nwc用-cfo-的营运资本行项目对账" class="level3">
+<h3 class="anchored" data-anchor-id="计算-delta-nwc用-cfo-的营运资本行项目对账">2）计算 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC">（用 CFO 的营运资本行项目对账）</h3>
+<p>先把 CFO 明细中与经营性资产负债变动相关的项目合计为“对 CFO 的现金贡献”：</p>
+<ul>
+<li>AR：<img src="https://latex.codecogs.com/png.latex?(3,788)"><br>
+</li>
+<li>Vendor non-trade receivables：<img src="https://latex.codecogs.com/png.latex?(1,356)"><br>
+</li>
+<li>Inventories：<img src="https://latex.codecogs.com/png.latex?(1,046)"><br>
+</li>
+<li>Other assets：<img src="https://latex.codecogs.com/png.latex?(11,731)"><br>
+</li>
+<li>AP：<img src="https://latex.codecogs.com/png.latex?+6,020"><br>
+</li>
+<li>Other liabilities：<img src="https://latex.codecogs.com/png.latex?+15,552"></li>
+</ul>
+<p>合计（对 CFO 的现金贡献）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?WC%5C%20Cash%5C%20Contribution=-3,788-1,356-1,046-11,731+6,020+15,552=+3,651"></p>
+<p>把它转换为 FCFF 公式里的 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC">（<strong>营运资本增加占用现金为正</strong>）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC=-WC%5C%20Cash%5C%20Contribution=-3,651"></p>
+<hr>
+</section>
+<section id="计算基期-fcfffy2024" class="level3">
+<h3 class="anchored" data-anchor-id="计算基期-fcfffy2024">3）计算基期 FCFF（FY2024）</h3>
+<p>采用严格逐项法：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF=NOPAT+D%5C&amp;A-Capex-%5CDelta%20NWC"></p>
+<p>代入：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF_%7B2024%7D=93,537+11,445-9,447-(-3,651)=99,186"></p>
+<p>换算为十亿美元：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF_0=99,186%5C%20(USD%5C%20m)=99.186%5C%20(USD%5C%20bn)"></p>
+<hr>
+</section>
+<section id="dcf-估值ev显性期-5-年-永续终值" class="level3">
+<h3 class="anchored" data-anchor-id="dcf-估值ev显性期-5-年-永续终值">4）DCF 估值：<img src="https://latex.codecogs.com/png.latex?EV">（显性期 5 年 + 永续终值）</h3>
+<p>假设：<img src="https://latex.codecogs.com/png.latex?WACC=8.5%5C%25">，<img src="https://latex.codecogs.com/png.latex?g_%7B1-5%7D=4%5C%25">，永续 <img src="https://latex.codecogs.com/png.latex?g=2.5%5C%25">。</p>
+<p>显性期：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF_t=FCFF_0(1+g_%7B1-5%7D)%5Et"><br>
+<img src="https://latex.codecogs.com/png.latex?PV_t=%5Cfrac%7BFCFF_t%7D%7B(1+WACC)%5Et%7D"></p>
+<p>用 <img src="https://latex.codecogs.com/png.latex?FCFF_0=99.186">（bn）计算得到（四舍五入）：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">年度</th>
+<th style="text-align: right;"><strong>FCFF（bn）</strong></th>
+<th style="text-align: right;"><strong>折现因子</strong></th>
+<th style="text-align: right;"><strong>PV（bn）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">103.153</td>
+<td style="text-align: right;">0.9217</td>
+<td style="text-align: right;">95.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">107.279</td>
+<td style="text-align: right;">0.8495</td>
+<td style="text-align: right;">91.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">111.570</td>
+<td style="text-align: right;">0.7830</td>
+<td style="text-align: right;">87.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">116.033</td>
+<td style="text-align: right;">0.7216</td>
+<td style="text-align: right;">83.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">120.674</td>
+<td style="text-align: right;">0.6652</td>
+<td style="text-align: right;">80.3</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://latex.codecogs.com/png.latex?PV_%7B1-5%7D%5Capprox%20437.6%5C%20(bn)"></p>
+<p>终值：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF_6=FCFF_5(1+g)=120.674%5Ctimes1.025=123.691"><br>
+<img src="https://latex.codecogs.com/png.latex?TV=%5Cfrac%7BFCFF_6%7D%7BWACC-g%7D=%5Cfrac%7B123.691%7D%7B0.085-0.025%7D=2,061.5"><br>
+<img src="https://latex.codecogs.com/png.latex?PV(TV)=TV%5Ctimes0.6652=1,371.7"></p>
+<p>企业价值：</p>
+<p><img src="https://latex.codecogs.com/png.latex?EV=PV_%7B1-5%7D+PV(TV)=437.6+1,371.7=1,809.3%5C%20(USD%5C%20bn)"></p>
+<hr>
+</section>
+<section id="从-ev-调整到股权价值与每股价值" class="level3">
+<h3 class="anchored" data-anchor-id="从-ev-调整到股权价值与每股价值">5）从 <img src="https://latex.codecogs.com/png.latex?EV"> 调整到股权价值与每股价值</h3>
+<p>先算净现金（bn）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?Cash%5C&amp;Sec=29,943+35,228+91,479=156,650%5C%20(m)=156.650%5C%20(bn)"><br>
+<img src="https://latex.codecogs.com/png.latex?Debt=9,967+10,912+85,750=106,629%5C%20(m)=106.629%5C%20(bn)"><br>
+<img src="https://latex.codecogs.com/png.latex?Net%5C%20Cash=156.650-106.629=50.021%5C%20(bn)"></p>
+<p>股权价值：</p>
+<p><img src="https://latex.codecogs.com/png.latex?Equity=EV+Net%5C%20Cash=1,809.3+50.021=1,859.3%5C%20(bn)"></p>
+<p>每股价值（稀释股数 15.408095 bn）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?V_0=%5Cfrac%7B1,859.3%7D%7B15.408095%7D=120.7%5C%20%5Ctext%7BUSD/share%7D"></p>
+<hr>
+<hr>
+</section>
+</section>
+<section id="三alphabet详细计算完整过程" class="level2">
+<h2 class="anchored" data-anchor-id="三alphabet详细计算完整过程">三、Alphabet：详细计算（完整过程）</h2>
+<p>这一段把 <img src="https://latex.codecogs.com/png.latex?T">、<img src="https://latex.codecogs.com/png.latex?NOPAT">、<img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC">、FCFF（两种方式对账）、DCF、净现金、每股价值全部串起来。</p>
+<section id="计算有效税率-t-与-nopat-1" class="level3">
+<h3 class="anchored" data-anchor-id="计算有效税率-t-与-nopat-1">1）计算有效税率 <img src="https://latex.codecogs.com/png.latex?T"> 与 <img src="https://latex.codecogs.com/png.latex?NOPAT"></h3>
+<p><img src="https://latex.codecogs.com/png.latex?T=%5Cfrac%7B19,697%7D%7B119,815%7D=16.44%5C%25"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NOPAT=EBIT(1-T)=112,390%5Ctimes(1-0.1644)=93,909"></p>
+<hr>
+</section>
+<section id="从现金流量表拆出-delta-nwc可对账" class="level3">
+<h3 class="anchored" data-anchor-id="从现金流量表拆出-delta-nwc可对账">2）从现金流量表拆出 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC">（可对账）</h3>
+<p>FY2024 WC 相关项目（对 CFO 的现金贡献）：</p>
+<ul>
+<li>Accounts receivable：<img src="https://latex.codecogs.com/png.latex?(5,891)"><br>
+</li>
+<li>Income taxes, net：<img src="https://latex.codecogs.com/png.latex?(2,418)"><br>
+</li>
+<li>Other assets：<img src="https://latex.codecogs.com/png.latex?(1,397)"><br>
+</li>
+<li>Accounts payable：<img src="https://latex.codecogs.com/png.latex?+359"><br>
+</li>
+<li>Accrued expenses and other liabilities：<img src="https://latex.codecogs.com/png.latex?(1,161)"><br>
+</li>
+<li>Accrued revenue share：<img src="https://latex.codecogs.com/png.latex?+1,059"><br>
+</li>
+<li>Deferred revenue：<img src="https://latex.codecogs.com/png.latex?+1,043"></li>
+</ul>
+<p>合计（对 CFO 的贡献）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?WC%5C%20Cash%5C%20Contribution=-5,891-2,418-1,397+359-1,161+1,059+1,043=-8,406"></p>
+<p>换成 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC">（营运资本增加占用现金为正）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC=+8,406"></p>
+<hr>
+</section>
+<section id="计算基期-fcfffy2024给你两条可复算路径" class="level3">
+<h3 class="anchored" data-anchor-id="计算基期-fcfffy2024给你两条可复算路径">3）计算基期 FCFF（FY2024）：给你两条可复算路径</h3>
+<section id="路径-acfo-法强可对账推荐" class="level4">
+<h4 class="anchored" data-anchor-id="路径-acfo-法强可对账推荐">路径 A：CFO 法（强可对账，推荐）</h4>
+<p>现金流量表给出： - <img src="https://latex.codecogs.com/png.latex?CFO=125,299"> - <img src="https://latex.codecogs.com/png.latex?Capex=52,535"></p>
+<p>企业自由现金流（不加回利息的简化企业口径）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF=CFO-Capex=125,299-52,535=72,764"></p>
+<p>换算：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF_0=72.764%5C%20(USD%5C%20bn)"></p>
+<blockquote class="blockquote">
+<p>如果你坚持“严格无杠杆 FCFF（加回税后利息）”，且利息费用为 268，则：<br>
+<img src="https://latex.codecogs.com/png.latex?FCFF%5E%7Bunlevered%7D%5Capprox%2072,764+268(1-0.1644)=72,988">（USD m）<br>
+但注意：<strong>利息 268 不是来自你本轮这张现金流图</strong>，所以“完全按本轮附件可复算”的版本应以 <img src="https://latex.codecogs.com/png.latex?72,764"> 为准。</p>
+</blockquote>
+</section>
+<section id="路径-bnopat-法用于解释为什么-cfo-法更稳" class="level4">
+<h4 class="anchored" data-anchor-id="路径-bnopat-法用于解释为什么-cfo-法更稳">路径 B：NOPAT 法（用于解释为什么 CFO 法更稳）</h4>
+<p>若只回加“折旧”会低估，因为 CFO 还回加了 SBC、递延税等大量非现金项。给你一个“完整应回加项”的框架：</p>
+<p>现金流表非现金/调整项合计（FY2024）： - Depreciation：15,311<br>
+- SBC：22,785<br>
+- Deferred income taxes：<img src="https://latex.codecogs.com/png.latex?(5,257)"><br>
+- Securities gain/loss：<img src="https://latex.codecogs.com/png.latex?(2,671)"><br>
+- Other：3,419</p>
+<p>调整项合计：</p>
+<p><img src="https://latex.codecogs.com/png.latex?Adj=15,311+22,785-5,257-2,671+3,419=33,587"></p>
+<p>用 NOPAT 框架可写成（解释用）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?CFO%5Capprox%20NetIncome+Adj+WC%5C%20Cash%5C%20Contribution"></p>
+<p>而 FCFF（企业口径近似）最终会回到：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF%5Capprox%20CFO-Capex"></p>
+<p>所以实务里，拿到现金流表整页时，用 <img src="https://latex.codecogs.com/png.latex?CFO-Capex"> 最干净、最不容易漏项。</p>
+<hr>
+</section>
+</section>
+<section id="dcf-估值ev用本轮可复算的-fcff_072.764" class="level3">
+<h3 class="anchored" data-anchor-id="dcf-估值ev用本轮可复算的-fcff_072.764">4）DCF 估值：<img src="https://latex.codecogs.com/png.latex?EV">（用本轮可复算的 <img src="https://latex.codecogs.com/png.latex?FCFF_0=72.764">）</h3>
+<p>假设：<img src="https://latex.codecogs.com/png.latex?WACC=9.0%5C%25">，<img src="https://latex.codecogs.com/png.latex?g_%7B1-5%7D=10%5C%25">，永续 <img src="https://latex.codecogs.com/png.latex?g=3.0%5C%25">。<br>
+（与之前一致，便于横向比较。）</p>
+<p>显性期：</p>
+<p><img src="https://latex.codecogs.com/png.latex?FCFF_t=FCFF_0(1+g_%7B1-5%7D)%5Et,%5Cquad%20PV_t=%5Cfrac%7BFCFF_t%7D%7B(1+WACC)%5Et%7D"></p>
+<p>终值：</p>
+<p><img src="https://latex.codecogs.com/png.latex?TV=%5Cfrac%7BFCFF_6%7D%7BWACC-g%7D,%5Cquad%20FCFF_6=FCFF_5(1+g)"></p>
+<p>用 <img src="https://latex.codecogs.com/png.latex?FCFF_0=72.764">（bn）计算，得到（四舍五入）：</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?PV_%7B1-5%7D%5Capprox%20374.0%5C%20(bn)"><br>
+</li>
+<li><img src="https://latex.codecogs.com/png.latex?PV(TV)%5Capprox%201,307.1%5C%20(bn)"></li>
+</ul>
+<p>因此：</p>
+<p><img src="https://latex.codecogs.com/png.latex?EV%5Capprox%20374.0+1,307.1=1,681.1%5C%20(USD%5C%20bn)"></p>
+<p>（和我之前用 72.988/73.023 得到的约 1.686 万亿美元非常接近，差异来自基期 FCFF 的微小调整。）</p>
+<hr>
+</section>
+<section id="从-ev-调整到股权价值与每股价值用资产负债表" class="level3">
+<h3 class="anchored" data-anchor-id="从-ev-调整到股权价值与每股价值用资产负债表">5）从 <img src="https://latex.codecogs.com/png.latex?EV"> 调整到股权价值与每股价值（用资产负债表）</h3>
+<p>净现金（按“现金+有价证券−长期债务”的可复算口径）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?Net%5C%20Cash=95,657-10,883=84,774%5C%20(m)=84.774%5C%20(bn)"></p>
+<p>股权价值：</p>
+<p><img src="https://latex.codecogs.com/png.latex?Equity%5Capprox%201,681.1+84.774=1,765.9%5C%20(bn)"></p>
+<p>每股价值（A+B+C 合计 12.190 bn）：</p>
+<p><img src="https://latex.codecogs.com/png.latex?V_0=%5Cfrac%7B1,765.9%7D%7B12.190%7D=144.9%5C%20%5Ctext%7BUSD/share%7D"></p>
+<blockquote class="blockquote">
+<p>口径提示：这版净现金<strong>只减了 Long-term debt</strong>（因为资产负债表截图未单列短期借款/商业票据）。若短债存在，会让净现金略低，从而每股略低；若还有其他可快速变现投资或受限现金等，也可能带来反向调整。你给的这页表能保证“按页内信息可复算”。</p>
+</blockquote>
+<hr>
+<hr>
+</section>
+</section>
+<section id="四完整结论两家公司同框输出" class="level2">
+<h2 class="anchored" data-anchor-id="四完整结论两家公司同框输出">四、完整结论（两家公司同框输出）</h2>
+<p>下面把两家公司在“本轮假设下”的估值结果放在一张表里，便于你直接引用。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>公司</th>
+<th style="text-align: right;">基期 FCFF（bn）</th>
+<th>DCF 假设（WACC / 显性增速 / 永续）</th>
+<th style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?EV">（bn）</th>
+<th style="text-align: right;">净现金（bn）</th>
+<th style="text-align: right;">股权价值（bn）</th>
+<th style="text-align: right;">每股价值（USD）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Apple（FY2024）</td>
+<td style="text-align: right;">99.186</td>
+<td>8.5% / 4% / 2.5%</td>
+<td style="text-align: right;">1,809.3</td>
+<td style="text-align: right;">50.021</td>
+<td style="text-align: right;">1,859.3</td>
+<td style="text-align: right;">120.7</td>
+</tr>
+<tr class="even">
+<td>Alphabet（FY2024）</td>
+<td style="text-align: right;">72.764</td>
+<td>9.0% / 10% / 3.0%</td>
+<td style="text-align: right;">1,681.1</td>
+<td style="text-align: right;">84.774</td>
+<td style="text-align: right;">1,765.9</td>
+<td style="text-align: right;">144.9</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="可以直接复核的关键对账点保证计算不飘" class="level2">
+<h2 class="anchored" data-anchor-id="可以直接复核的关键对账点保证计算不飘">可以直接复核的“关键对账点”（保证计算不飘）</h2>
+<ul>
+<li><p><strong>Apple 的 FCFF</strong>：<br>
+<img src="https://latex.codecogs.com/png.latex?FCFF=EBIT(1-T)+D%5C&amp;A-Capex-%5CDelta%20NWC"><br>
+其中 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20NWC"> 是把 CFO 中经营资产负债变动合计为 +3,651 后取相反号得到 -3,651。</p></li>
+<li><p><strong>Alphabet 的 FCFF（推荐）</strong>：<br>
+<img src="https://latex.codecogs.com/png.latex?FCFF=CFO-Capex"><br>
+因为现金流表里 SBC、递延税、证券损益等非现金项很大，用 NOPAT 法若漏加会低估。</p></li>
+<li><p><strong>从 EV 到 Equity</strong>：<br>
+Apple 用“现金与有价证券−全部有息负债（含 commercial paper）”；<br>
+Alphabet 数据内可复算的“现金与有价证券−长期债务”。</p></li>
+</ul>
+<hr>
+<p>按照“先基础数据、再完整计算过程、最后完整结论”，两家公司已按同一模板跑通；你现在只需要替换 <strong>WACC、显性期增长、永续增长</strong> 三个假设，就能瞬间得到新的一组估值输出（其余全部是财报硬数据佐证）。</p>
 <hr>
 
 
@@ -3392,7 +4107,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Sun, 18 Jan 2026 07:04:32 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 08:36:14 GMT</pubDate>
 </item>
 <item>
   <title>Valuation</title>
@@ -3410,7 +4125,7 @@ AndyBourne
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768719782419" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="501">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768725216273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1554">
 <div class="thumbnail"><a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/theModelOfValuation/BusinesAnalyisize.png" class="thumbnail-image">
@@ -3685,7 +4400,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="U2FwY2VYJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU3JUExJUFDJUU3JUE3JTkxJUU2JThBJTgw" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768708706177" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="761">
+<div class="quarto-post image-right" data-index="11" data-categories="U2FwY2VYJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU3JUExJUFDJUU3JUE3JTkxJUU2JThBJTgw" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768719863496" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="761">
 <div class="thumbnail"><a href="../../posts/Valuation/Aviation-Space/SpaceX20260110.html" class="no-external">
 
 <img loading="lazy" data-src="../../posts/Valuation/Aviation-Space/cover.jpg" class="thumbnail-image">
@@ -3715,7 +4430,7 @@ Andy Bourne
 
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Valuation/</guid>
-  <pubDate>Sun, 18 Jan 2026 07:04:32 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 08:36:14 GMT</pubDate>
 </item>
 <item>
   <title>Mirror</title>
@@ -3762,7 +4477,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Mirror/</guid>
-  <pubDate>Sun, 18 Jan 2026 07:04:32 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 08:36:14 GMT</pubDate>
 </item>
 <item>
   <title>Mirror 镜子 0000-01-01</title>
