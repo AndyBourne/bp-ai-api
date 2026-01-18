@@ -574,6 +574,69 @@
     "text": "总结：\n航空发动机的竞争已经进入了“数字定义动力”的时代。 1. 软件定义： 现代航发的 FADEC 源代码超过百万行，它不仅控制油门，还负责预测故障、管理热能、优化寿命。 2. 材料定义： 谁掌握了新一代 CMC 和超高温单晶，谁就拥有了更高的卡诺循环效率。 3. 架构定义： 变循环（VCE）是跨代发展的分水岭，它标志着发动机从“死结构”进化到了“活系统”。\n这就是航空发动机的全部真相：它是在物理法则的钢丝绳上，跳着最精密的舞蹈。"
   },
   {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html",
+    "title": "研究框架/估值模型",
+    "section": "",
+    "text": "——"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#宏观环境看趋势",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#宏观环境看趋势",
+    "title": "研究框架/估值模型",
+    "section": "1.1 宏观环境（看趋势）",
+    "text": "1.1 宏观环境（看趋势）\n\n1.1.1 政策支持\n\n\n1.1.2 经济处于扩张、收缩、衰退 收缩中\n\n\n1.1.3 利率周期 基准利率上行还是下行 下行下降 2025年5月20日央行宣布下调政策利率0.1个百分点，带动LPR下行0.1个百分点。这是2025年首次也是年内唯一一次LPR调整。\n\n\n1.1.4 信贷周期 宽松还是紧缩 宽松"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#行业分析-看赛道",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#行业分析-看赛道",
+    "title": "研究框架/估值模型",
+    "section": "1.2 行业分析 （看赛道）",
+    "text": "1.2 行业分析 （看赛道）\n\n1.2.1 市场规模与生命周期\n\n\n1.2.2 产业链分析\n\n\n1.2.3 竞争强度\n\n\n1.2.4 供给侧分析"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#公司业务-找生意",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#公司业务-找生意",
+    "title": "研究框架/估值模型",
+    "section": "1.3 公司业务 （找生意）",
+    "text": "1.3 公司业务 （找生意）\n\n1.3.1 是否是好生意 产品和服务是什么？收费模式 一次性、订阅、佣金制 为什么买 目标客户是谁？用户的核心痛点是什么？公司如何解决。\n\n\n1.3.2 是否有护城河（强大的竞争优势，无形资产（品牌、专利技术、政府牌照），更换成本巨大，产品价值随用户数量增加而提升，规模经济\n\n\n1.3.3 初创/高成长企业 单位经济效益：毛利、客户获取成本（CAC）、生命周期（LTV）、FCF转正路径\n\n\n1.3.4"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#财务解析-测质量",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#财务解析-测质量",
+    "title": "研究框架/估值模型",
+    "section": "1.4 财务解析 （测质量）",
+    "text": "1.4 财务解析 （测质量）\n\n1.4.1 利润表 增长与盈利结构 产品定价权与效率：毛利率、经营利润率；利润可持续性：扣非净利润率 收入驱动分析：收入增加的驱动是：提价？扩量（销量）？新品？并购？ 资产与费用结构 盈利能力（股东视角）：ROE 净资产收益率\n\n\n1.4.2 现金流量表 汇款质量验证 经营性活动现金流（CFO）长期是否为证？ 营运资本质量（应收账款、存货，应付账款增减） 自由现金流（FCF） FCF=CFO-资本开支支（CapEx 取投资活动现金流中“购建固定资产/无形资产支付的现金”）\n\n\n1.4.3 资产负债表：是否扛得住 长期信用安全 净负债/EBITDA 〈 3倍，短期流动性“ 流动比率 〉2倍，速动比率 资产负债表 〈50% 资本机构质量：关注负债结构（有息负债：银行借款，债券）无媳负债（营收账款的）的占比\n\n\n盈利质量（主营业务是否是持续盈利），现金质量（CFO/净利润产比率，回款质量，FCF持续 增长还是下降或者稳定）"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#管理层-舵手及团队",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#管理层-舵手及团队",
+    "title": "研究框架/估值模型",
+    "section": "1.5 管理层 （舵手及团队）",
+    "text": "1.5 管理层 （舵手及团队）\n\n1.5.1 利益绑定 高持股意味着CEO财富命运与股权深度绑定，薪酬结构中股权激励的占比是高于现金奖金\n\n\n1.5.2 经营能力与效率 长期盈利增长 跨周期表现 连续盈利年限 效率对比（人均产值/人均创利是否在行业中领先）\n\n\n1.5.3 再投资 并购与出售 股东回报\n\n\n1.5.4 管理层可靠性验证 激励与一致性，经营能力（近EPS CAGR） ，资本配置能力（是否FCF投入到高ROIC中），警惕信号（是否有财务造假，不合理的高溢价并购，不透明的关联交易）"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#内在价值-价格",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#内在价值-价格",
+    "title": "研究框架/估值模型",
+    "section": "1.6 内在价值 （价格）",
+    "text": "1.6 内在价值 （价格）\n\n1.6.1 现金流折现（DCF）"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#相对估值pepbevebitda",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#相对估值pepbevebitda",
+    "title": "研究框架/估值模型",
+    "section": "### 1.6.2 相对估值（P/E，P/B，EV/EBITDA）",
+    "text": "### 1.6.2 相对估值（P/E，P/B，EV/EBITDA）"
+  },
+  {
+    "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#战略管理",
+    "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#战略管理",
+    "title": "研究框架/估值模型",
+    "section": "战略管理",
+    "text": "战略管理\n\n1.1 宏观环境分析（PESTEL）\n\n\n1.2 竞争格局分析（波特五力）\n\n\n1.3 产业链分析（价值链）\n\n\n1.4 战略定位（BCG矩阵）\n\n\n1.5 战略选择（SWOT）\n\n\n1.6 战略执行（平衡计分卡）\n\n\n1.7 战略变革（战略转型）\n\n\n1.8 战略评估（战略诊断）\n\n\n1.9 战略实施（战略执行）\n\n\n1.10 战略优化（战略优化）\n\n\n1.11 战略创新（战略创新）\n\n\n1.12 战略国际化（战略国际化）\n\n\n1.13 战略并购（战略并购）\n\n\n1.14 战略组织（战略组织）\n\n\n1.15 战略执行（战略执行）\n\n\n1.16 战略评估（战略评估）\n\n\n1.17 战略优化（战略）"
+  },
+  {
     "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#战略问题的导航图先选模型再做分析",
     "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#战略问题的导航图先选模型再做分析",
     "title": "研究框架/估值模型",
@@ -655,7 +718,7 @@
     "href": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#一张选型表不同战略任务常用哪些模型",
     "title": "研究框架/估值模型",
     "section": "12）一张“选型表”：不同战略任务常用哪些模型",
-    "text": "12）一张“选型表”：不同战略任务常用哪些模型\n下面这张表帮你在实战里快速挑工具（而不是硬背清单）。\n\n\n\n\n\n\n\n\n战略任务\n优先模型\n产出物\n\n\n\n\n判断行业吸引力\n五力、生命周期、利润池\n进入/退出、利润来源\n\n\n找差异化与护城河\n通用战略、价值链、VRIO、7 Powers\n竞争优势叙事与证据\n\n\n定战略方向/增长路径\nAnsoff、商业模式画布、AARRR、LTV/CAC\n增长假设与关键指标\n\n\n多业务资源分配\nBCG、GE 九宫格、70-20-10\n投资/收缩/孵化清单\n\n\n做平台与生态\n生态地图、网络效应、标准战、竞合\n角色、规则、补贴侧\n\n\n创新与技术路线\nS 曲线、路线图、双元组织\n路线、里程碑、组织安排\n\n\n国际化扩张\nCAGE、I-R、进入模式\n国家优先级与进入打法\n\n\n并购/合作\nBuild-Buy-Partner、协同、PMI\n标的逻辑与整合计划\n\n\n战略落地\nBSC、OKR、7S、RACI\n指标树、机制与节奏"
+    "text": "12）一张“选型表”：不同战略任务常用哪些模型\n下面这张表满足在实践里快速挑工具。\n\n\n\n\n\n\n\n\n战略任务\n优先模型\n产出物\n\n\n\n\n判断行业吸引力\n五力、生命周期、利润池\n进入/退出、利润来源\n\n\n找差异化与护城河\n通用战略、价值链、VRIO、7 Powers\n竞争优势叙事与证据\n\n\n定战略方向/增长路径\nAnsoff、商业模式画布、AARRR、LTV/CAC\n增长假设与关键指标\n\n\n多业务资源分配\nBCG、GE 九宫格、70-20-10\n投资/收缩/孵化清单\n\n\n做平台与生态\n生态地图、网络效应、标准战、竞合\n角色、规则、补贴侧\n\n\n创新与技术路线\nS 曲线、路线图、双元组织\n路线、里程碑、组织安排\n\n\n国际化扩张\nCAGE、I-R、进入模式\n国家优先级与进入打法\n\n\n并购/合作\nBuild-Buy-Partner、协同、PMI\n标的逻辑与整合计划\n\n\n战略落地\nBSC、OKR、7S、RACI\n指标树、机制与节奏"
   },
   {
     "objectID": "posts/Valuation/theModelOfValuation/ModelOfValuation.html#关键-takeaway避免模型堆砌",
