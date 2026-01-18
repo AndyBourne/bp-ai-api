@@ -10,7 +10,487 @@
 <atom:link href="https://andybourne.cn/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Thu, 15 Jan 2026 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 17 Jan 2026 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>研究框架/估值模型</title>
+  <dc:creator>AndyBourne </dc:creator>
+  <link>https://andybourne.cn/posts/Valuation/theModelOfValuation/ModelOfValuation.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="整体分析" class="level1">
+<h1>整体分析</h1>
+<section id="宏观环境看趋势" class="level2">
+<h2 class="anchored" data-anchor-id="宏观环境看趋势">1.1 宏观环境（看趋势）</h2>
+<section id="政策支持" class="level3">
+<h3 class="anchored" data-anchor-id="政策支持">1.1.1 政策支持</h3>
+</section>
+<section id="经济处于扩张收缩衰退-收缩中" class="level3">
+<h3 class="anchored" data-anchor-id="经济处于扩张收缩衰退-收缩中">1.1.2 经济处于扩张、收缩、衰退 收缩中</h3>
+</section>
+<section id="利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整" class="level3">
+<h3 class="anchored" data-anchor-id="利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整">1.1.3 利率周期 基准利率上行还是下行 下行下降 2025年5月20日央行宣布下调政策利率0.1个百分点，带动LPR下行0.1个百分点。这是2025年首次也是年内唯一一次LPR调整。</h3>
+</section>
+<section id="信贷周期-宽松还是紧缩-宽松" class="level3">
+<h3 class="anchored" data-anchor-id="信贷周期-宽松还是紧缩-宽松">1.1.4 信贷周期 宽松还是紧缩 宽松</h3>
+</section>
+</section>
+<section id="行业分析-看赛道" class="level2">
+<h2 class="anchored" data-anchor-id="行业分析-看赛道">1.2 行业分析 （看赛道）</h2>
+<section id="市场规模与生命周期" class="level3">
+<h3 class="anchored" data-anchor-id="市场规模与生命周期">1.2.1 市场规模与生命周期</h3>
+</section>
+<section id="产业链分析" class="level3">
+<h3 class="anchored" data-anchor-id="产业链分析">1.2.2 产业链分析</h3>
+</section>
+<section id="竞争强度" class="level3">
+<h3 class="anchored" data-anchor-id="竞争强度">1.2.3 竞争强度</h3>
+</section>
+<section id="供给侧分析" class="level3">
+<h3 class="anchored" data-anchor-id="供给侧分析">1.2.4 供给侧分析</h3>
+</section>
+</section>
+<section id="公司业务-找生意" class="level2">
+<h2 class="anchored" data-anchor-id="公司业务-找生意">1.3 公司业务 （找生意）</h2>
+<section id="是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决" class="level3">
+<h3 class="anchored" data-anchor-id="是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决">1.3.1 是否是好生意 产品和服务是什么？收费模式 一次性、订阅、佣金制 为什么买 目标客户是谁？用户的核心痛点是什么？公司如何解决。</h3>
+</section>
+<section id="是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济" class="level3">
+<h3 class="anchored" data-anchor-id="是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济">1.3.2 是否有护城河（强大的竞争优势，无形资产（品牌、专利技术、政府牌照），更换成本巨大，产品价值随用户数量增加而提升，规模经济</h3>
+</section>
+<section id="初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径" class="level3">
+<h3 class="anchored" data-anchor-id="初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径">1.3.3 初创/高成长企业 单位经济效益：毛利、客户获取成本（CAC）、生命周期（LTV）、FCF转正路径</h3>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">1.3.4</h3>
+</section>
+</section>
+<section id="财务解析-测质量" class="level2">
+<h2 class="anchored" data-anchor-id="财务解析-测质量">1.4 财务解析 （测质量）</h2>
+<section id="利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率" class="level3">
+<h3 class="anchored" data-anchor-id="利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率">1.4.1 利润表 增长与盈利结构 产品定价权与效率：毛利率、经营利润率；利润可持续性：扣非净利润率 收入驱动分析：收入增加的驱动是：提价？扩量（销量）？新品？并购？ 资产与费用结构 盈利能力（股东视角）：ROE 净资产收益率</h3>
+</section>
+<section id="现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金" class="level3">
+<h3 class="anchored" data-anchor-id="现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金">1.4.2 现金流量表 汇款质量验证 经营性活动现金流（CFO）长期是否为证？ 营运资本质量（应收账款、存货，应付账款增减） 自由现金流（FCF） FCF=CFO-资本开支支（CapEx 取投资活动现金流中“购建固定资产/无形资产支付的现金”）</h3>
+</section>
+<section id="资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比" class="level3">
+<h3 class="anchored" data-anchor-id="资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比">1.4.3 资产负债表：是否扛得住 长期信用安全 净负债/EBITDA 〈 3倍，短期流动性“ 流动比率 〉2倍，速动比率 资产负债表 〈50% 资本机构质量：关注负债结构（有息负债：银行借款，债券）无媳负债（营收账款的）的占比</h3>
+</section>
+<section id="盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定" class="level3">
+<h3 class="anchored" data-anchor-id="盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定">盈利质量（主营业务是否是持续盈利），现金质量（CFO/净利润产比率，回款质量，FCF持续 增长还是下降或者稳定）</h3>
+</section>
+</section>
+<section id="管理层-舵手及团队" class="level2">
+<h2 class="anchored" data-anchor-id="管理层-舵手及团队">1.5 管理层 （舵手及团队）</h2>
+<section id="利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金" class="level3">
+<h3 class="anchored" data-anchor-id="利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金">1.5.1 利益绑定 高持股意味着CEO财富命运与股权深度绑定，薪酬结构中股权激励的占比是高于现金奖金</h3>
+</section>
+<section id="经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先" class="level3">
+<h3 class="anchored" data-anchor-id="经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先">1.5.2 经营能力与效率 长期盈利增长 跨周期表现 连续盈利年限 效率对比（人均产值/人均创利是否在行业中领先）</h3>
+</section>
+<section id="再投资-并购与出售-股东回报" class="level3">
+<h3 class="anchored" data-anchor-id="再投资-并购与出售-股东回报">1.5.3 再投资 并购与出售 股东回报</h3>
+</section>
+<section id="管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易" class="level3">
+<h3 class="anchored" data-anchor-id="管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易">1.5.4 管理层可靠性验证 激励与一致性，经营能力（近EPS CAGR） ，资本配置能力（是否FCF投入到高ROIC中），警惕信号（是否有财务造假，不合理的高溢价并购，不透明的关联交易）</h3>
+</section>
+</section>
+<section id="内在价值-价格" class="level2">
+<h2 class="anchored" data-anchor-id="内在价值-价格">1.6 内在价值 （价格）</h2>
+<section id="现金流折现dcf" class="level3">
+<h3 class="anchored" data-anchor-id="现金流折现dcf">1.6.1 现金流折现（DCF）</h3>
+</section>
+</section>
+<section id="相对估值pepbevebitda" class="level2">
+<h2 class="anchored" data-anchor-id="相对估值pepbevebitda">### 1.6.2 相对估值（P/E，P/B，EV/EBITDA）</h2>
+</section>
+<section id="战略管理" class="level2">
+<h2 class="anchored" data-anchor-id="战略管理">战略管理</h2>
+<section id="宏观环境分析pestel" class="level3">
+<h3 class="anchored" data-anchor-id="宏观环境分析pestel">1.1 宏观环境分析（PESTEL）</h3>
+</section>
+<section id="竞争格局分析波特五力" class="level3">
+<h3 class="anchored" data-anchor-id="竞争格局分析波特五力">1.2 竞争格局分析（波特五力）</h3>
+</section>
+<section id="产业链分析价值链" class="level3">
+<h3 class="anchored" data-anchor-id="产业链分析价值链">1.3 产业链分析（价值链）</h3>
+</section>
+<section id="战略定位bcg矩阵" class="level3">
+<h3 class="anchored" data-anchor-id="战略定位bcg矩阵">1.4 战略定位（BCG矩阵）</h3>
+</section>
+<section id="战略选择swot" class="level3">
+<h3 class="anchored" data-anchor-id="战略选择swot">1.5 战略选择（SWOT）</h3>
+</section>
+<section id="战略执行平衡计分卡" class="level3">
+<h3 class="anchored" data-anchor-id="战略执行平衡计分卡">1.6 战略执行（平衡计分卡）</h3>
+</section>
+<section id="战略变革战略转型" class="level3">
+<h3 class="anchored" data-anchor-id="战略变革战略转型">1.7 战略变革（战略转型）</h3>
+</section>
+<section id="战略评估战略诊断" class="level3">
+<h3 class="anchored" data-anchor-id="战略评估战略诊断">1.8 战略评估（战略诊断）</h3>
+</section>
+<section id="战略实施战略执行" class="level3">
+<h3 class="anchored" data-anchor-id="战略实施战略执行">1.9 战略实施（战略执行）</h3>
+</section>
+<section id="战略优化战略优化" class="level3">
+<h3 class="anchored" data-anchor-id="战略优化战略优化">1.10 战略优化（战略优化）</h3>
+</section>
+<section id="战略创新战略创新" class="level3">
+<h3 class="anchored" data-anchor-id="战略创新战略创新">1.11 战略创新（战略创新）</h3>
+</section>
+<section id="战略国际化战略国际化" class="level3">
+<h3 class="anchored" data-anchor-id="战略国际化战略国际化">1.12 战略国际化（战略国际化）</h3>
+</section>
+<section id="战略并购战略并购" class="level3">
+<h3 class="anchored" data-anchor-id="战略并购战略并购">1.13 战略并购（战略并购）</h3>
+</section>
+<section id="战略组织战略组织" class="level3">
+<h3 class="anchored" data-anchor-id="战略组织战略组织">1.14 战略组织（战略组织）</h3>
+</section>
+<section id="战略执行战略执行" class="level3">
+<h3 class="anchored" data-anchor-id="战略执行战略执行">1.15 战略执行（战略执行）</h3>
+</section>
+<section id="战略评估战略评估" class="level3">
+<h3 class="anchored" data-anchor-id="战略评估战略评估">1.16 战略评估（战略评估）</h3>
+</section>
+<section id="战略优化战略" class="level3">
+<h3 class="anchored" data-anchor-id="战略优化战略">1.17 战略优化（战略）</h3>
+<hr>
+</section>
+</section>
+</section>
+<section id="战略分析" class="level1">
+<h1>战略分析</h1>
+<p>战略框架是一个不断演化的工具集合，学界、咨询界、行业内方法论和公司自研框架层出不穷，也没有权威的“全集目录”。我们需要的通常是：<strong>把主流、常用、可复用的战略模型按用途系统整理成一张“工具地图”</strong>，遇到问题就能快速选对框架。</p>
+<p>下面是一份尽可能全面的<strong>战略模型大全（按场景分类）</strong>，覆盖经典理论、咨询常用工具、增长/平台/创新/国际化/并购/组织与执行等模块。</p>
+<hr>
+<section id="战略问题的导航图先选模型再做分析" class="level2">
+<h2 class="anchored" data-anchor-id="战略问题的导航图先选模型再做分析">1）战略问题的“导航图”（先选模型，再做分析）</h2>
+<p>不同问题用不同模型，先把“战略问题类型”对齐：</p>
+<ul>
+<li><strong>外部环境/行业怎么变？</strong> → 宏观与行业结构模型<br>
+</li>
+<li><strong>我们凭什么赢？</strong> → 竞争优势与资源能力模型<br>
+</li>
+<li><strong>去哪儿打、打什么？</strong> → 业务组合与资源配置模型<br>
+</li>
+<li><strong>怎么增长？</strong> → 增长与商业模式模型<br>
+</li>
+<li><strong>怎么创新、怎么防被颠覆？</strong> → 创新与颠覆模型<br>
+</li>
+<li><strong>怎么落地？</strong> → 目标分解、执行与组织模型<br>
+</li>
+<li><strong>怎么应对不确定性？</strong> → 情景、博弈与风险模型</li>
+</ul>
+<hr>
+</section>
+<section id="宏观环境与行业结构世界怎么影响我们" class="level2">
+<h2 class="anchored" data-anchor-id="宏观环境与行业结构世界怎么影响我们">2）宏观环境与行业结构（“世界怎么影响我们”）</h2>
+<p>这一类用于判断外部机会/威胁、行业利润池和结构性趋势。</p>
+<section id="宏观与制度" class="level3">
+<h3 class="anchored" data-anchor-id="宏观与制度">宏观与制度</h3>
+<ul>
+<li><strong>PEST / PESTEL</strong>（政治、经济、社会、技术、环境、法律）</li>
+<li><strong>STEEP / STEEPLE</strong>（PESTEL 的变体）</li>
+<li><strong>制度理论 / 监管风险框架</strong></li>
+<li><strong>国家钻石模型（Porter Diamond）</strong>（国家竞争优势）</li>
+</ul>
+</section>
+<section id="行业结构与竞争态势" class="level3">
+<h3 class="anchored" data-anchor-id="行业结构与竞争态势">行业结构与竞争态势</h3>
+<ul>
+<li><strong>波特五力模型（Five Forces）</strong></li>
+<li><strong>战略群组（Strategic Groups）</strong></li>
+<li><strong>价值网（Value Net, Brandenburger &amp; Nalebuff）</strong>（竞合）</li>
+<li><strong>产业生命周期（Industry Life Cycle）</strong></li>
+<li><strong>利润池（Profit Pools）</strong></li>
+<li><strong>SCP 范式（Structure–Conduct–Performance）</strong></li>
+<li><strong>CPM/竞争剖面矩阵（Competitive Profile Matrix）</strong></li>
+</ul>
+</section>
+<section id="市场与用户洞察战略输入" class="level3">
+<h3 class="anchored" data-anchor-id="市场与用户洞察战略输入">市场与用户洞察（战略输入）</h3>
+<ul>
+<li><strong>STP</strong>（细分-目标-定位）</li>
+<li><strong>需求链/购买决策链（DMU）</strong></li>
+<li><strong>Jobs to be Done（JTBD）</strong></li>
+<li><strong>用户旅程图（Customer Journey Map）</strong></li>
+<li><strong>Kano 模型</strong>（满意度与特性）</li>
+<li><strong>采用扩散理论（Diffusion of Innovations）</strong></li>
+<li><strong>“跨越鸿沟”（Crossing the Chasm）</strong></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="竞争优势与凭什么赢护城河在哪里" class="level2">
+<h2 class="anchored" data-anchor-id="竞争优势与凭什么赢护城河在哪里">3）竞争优势与“凭什么赢”（护城河在哪里）</h2>
+<p>这一类回答：优势来自成本、差异化、网络效应、资源能力还是位置？</p>
+<section id="竞争定位学派positioning" class="level3">
+<h3 class="anchored" data-anchor-id="竞争定位学派positioning">竞争定位学派（Positioning）</h3>
+<ul>
+<li><strong>波特通用战略（成本领先/差异化/聚焦）</strong></li>
+<li><strong>价值链（Value Chain）</strong></li>
+<li><strong>活动系统地图（Activity System Map）</strong></li>
+<li><strong>战略权衡（Trade-offs）</strong></li>
+<li><strong>战略画布/价值曲线（Blue Ocean Strategy Canvas）</strong></li>
+<li><strong>四项行动框架（消减-剔除-提升-创造）</strong></li>
+<li><strong>战略钟（Bowman’s Strategy Clock）</strong></li>
+</ul>
+</section>
+<section id="资源能力学派rbv能力" class="level3">
+<h3 class="anchored" data-anchor-id="资源能力学派rbv能力">资源能力学派（RBV/能力）</h3>
+<ul>
+<li><strong>RBV 资源基础观</strong></li>
+<li><strong>VRIO/VRIN</strong>（价值、稀缺、难模仿、组织）</li>
+<li><strong>核心能力（Core Competence）</strong></li>
+<li><strong>动态能力（Dynamic Capabilities：感知-捕捉-重构）</strong></li>
+<li><strong>知识基础观（KBV）</strong></li>
+<li><strong>经验曲线/学习曲线（Experience Curve）</strong></li>
+<li><strong>规模经济/范围经济/网络经济</strong></li>
+</ul>
+</section>
+<section id="护城河与竞争机制更投资视角" class="level3">
+<h3 class="anchored" data-anchor-id="护城河与竞争机制更投资视角">护城河与竞争机制（更“投资视角”）</h3>
+<ul>
+<li><strong>“护城河五源”</strong>（品牌、成本、转换成本、网络效应、规模/渠道等不同流派略有差异）</li>
+<li><strong>七种力量（7 Powers, Hamilton Helmer）</strong>：规模经济、网络效应、反向定位、转换成本、品牌、资源角、流程权力</li>
+<li><strong>竞争优势持续性分析</strong>（耐久度、侵蚀因素）</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="业务组合与资源配置做什么不做什么" class="level2">
+<h2 class="anchored" data-anchor-id="业务组合与资源配置做什么不做什么">4）业务组合与资源配置（“做什么、不做什么”）</h2>
+<p>集团/多业务最需要这一类，用来决定投什么、砍什么、怎么配资源。</p>
+<ul>
+<li><strong>BCG 矩阵（明星/金牛/问号/瘦狗）</strong></li>
+<li><strong>GE/麦肯锡九宫格（行业吸引力×竞争实力）</strong></li>
+<li><strong>Ansoff 矩阵（市场×产品：渗透/开发/开发/多元化）</strong></li>
+<li><strong>产品组合/管线管理（Stage-Gate 管线、组合平衡）</strong></li>
+<li><strong>70-20-10 创新组合</strong>（核心/邻近/变革）</li>
+<li><strong>资源配置与资本预算</strong>（NPV/IRR/回收期等—偏财务，但常嵌入战略）</li>
+<li><strong>增长-份额矩阵、市场吸引力矩阵（各类变体）</strong></li>
+</ul>
+<hr>
+</section>
+<section id="增长战略与商业模式怎么把钱越赚越多" class="level2">
+<h2 class="anchored" data-anchor-id="增长战略与商业模式怎么把钱越赚越多">5）增长战略与商业模式（“怎么把钱越赚越多”）</h2>
+<p>这是互联网/消费/ToB 都常用的“增长打法”。</p>
+<section id="增长路径与杠杆" class="level3">
+<h3 class="anchored" data-anchor-id="增长路径与杠杆">增长路径与杠杆</h3>
+<ul>
+<li><strong>AARRR 漏斗（海盗指标）</strong></li>
+<li><strong>增长会计（Growth Accounting）</strong></li>
+<li><strong>LTV/CAC 经济模型</strong></li>
+<li><strong>定价与收入模型框架</strong>（价值定价、分层定价、Freemium、捆绑、动态定价等）</li>
+<li><strong>渠道战略框架</strong>（直销/分销/平台招商/生态合作）</li>
+</ul>
+</section>
+<section id="商业模式与价值创造" class="level3">
+<h3 class="anchored" data-anchor-id="商业模式与价值创造">商业模式与价值创造</h3>
+<ul>
+<li><strong>商业模式画布（Business Model Canvas）</strong></li>
+<li><strong>精益画布（Lean Canvas）</strong></li>
+<li><strong>价值主张画布（Value Proposition Canvas）</strong></li>
+<li><strong>商业模式类型学</strong>（订阅、交易、佣金、广告、使用计费、授权、服务化等）</li>
+<li><strong>单位经济（Unit Economics）</strong></li>
+<li><strong>双边/多边市场框架</strong>（交叉网络效应、补贴侧、鸡生蛋问题）</li>
+</ul>
+</section>
+<section id="产品-市场匹配与扩张" class="level3">
+<h3 class="anchored" data-anchor-id="产品-市场匹配与扩张">产品-市场匹配与扩张</h3>
+<ul>
+<li><strong>PMF（Product-Market Fit）框架</strong>（含 Sean Ellis 测试等）</li>
+<li><strong>PLG（Product-Led Growth）</strong></li>
+<li><strong>销售驱动增长（SLG）与混合增长</strong></li>
+<li><strong>Land and Expand（先落地再扩张）</strong>（ToB 常用）</li>
+<li><strong>渗透定价 vs 撇脂定价</strong>（进入策略）</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="平台生态与竞合搭台还是上台" class="level2">
+<h2 class="anchored" data-anchor-id="平台生态与竞合搭台还是上台">6）平台、生态与竞合（“搭台还是上台”）</h2>
+<p>平台公司、供应链主导者、系统性产品（如操作系统/支付/云/卫星互联网）离不开这类模型。</p>
+<ul>
+<li><strong>平台战略（Platform Strategy）</strong></li>
+<li><strong>生态系统地图（Ecosystem Mapping）</strong></li>
+<li><strong>模块化理论（Modularity）</strong></li>
+<li><strong>互补品与补贴策略（Complementors）</strong></li>
+<li><strong>标准战（Standards Battles）</strong></li>
+<li><strong>锁定与转换成本模型（Lock-in）</strong></li>
+<li><strong>Co-opetition（竞合）与 Value Net</strong></li>
+<li><strong>Keystone/ Dominator / Niche Player（生态角色）</strong></li>
+<li><strong>API/接口治理与平台规则设计框架</strong></li>
+</ul>
+<hr>
+</section>
+<section id="创新颠覆与技术战略如何不被时代换掉" class="level2">
+<h2 class="anchored" data-anchor-id="创新颠覆与技术战略如何不被时代换掉">7）创新、颠覆与技术战略（“如何不被时代换掉”）</h2>
+<p>适用于新技术冲击、产品代际更替、硬科技路线选择。</p>
+<ul>
+<li><strong>颠覆式创新（Christensen Disruption）</strong></li>
+<li><strong>S 曲线（技术/性能 S-Curve）</strong></li>
+<li><strong>Henderson–Clark</strong>（组件/架构创新：渐进/模块/架构/激进）</li>
+<li><strong>技术路线图（Technology Roadmap）</strong></li>
+<li><strong>探索-利用（Exploration vs Exploitation）</strong></li>
+<li><strong>双元组织（Ambidexterity）</strong></li>
+<li><strong>开放式创新（Open Innovation）</strong></li>
+<li><strong>TRIZ（发明问题解决理论）</strong></li>
+<li><strong>Stage-Gate（研发到商业化流程）</strong></li>
+<li><strong>专利墙/专利地图（Patent Landscaping）</strong>（偏技术战略）</li>
+</ul>
+<hr>
+</section>
+<section id="国际化与进入战略去哪里打怎么进" class="level2">
+<h2 class="anchored" data-anchor-id="国际化与进入战略去哪里打怎么进">8）国际化与进入战略（“去哪里打、怎么进”）</h2>
+<ul>
+<li><strong>进入模式选择</strong>：出口、许可、合资、并购、绿地投资、特许经营等框架</li>
+<li><strong>CAGE 距离框架</strong>（文化/行政/地理/经济差异）</li>
+<li><strong>Uppsala 渐进国际化模型</strong></li>
+<li><strong>全球整合-本地响应（I-R 框架）</strong></li>
+<li><strong>跨国战略类型</strong>：国际型/多国本地化/全球标准化/跨国型</li>
+</ul>
+<hr>
+</section>
+<section id="并购联盟与合作战略买借建" class="level2">
+<h2 class="anchored" data-anchor-id="并购联盟与合作战略买借建">9）并购、联盟与合作战略（“买、借、建”）</h2>
+<ul>
+<li><strong>Build–Buy–Partner（自建/并购/合作）</strong></li>
+<li><strong>并购协同框架</strong>（成本协同/收入协同/能力协同）</li>
+<li><strong>尽调框架</strong>（商业、财务、法务、技术、人力）</li>
+<li><strong>并购后整合 PMI 框架</strong></li>
+<li><strong>战略联盟治理</strong>（控制权、激励相容、知识转移）</li>
+<li><strong>交易成本经济学（TCE）</strong>（自制还是外包/合作）</li>
+</ul>
+<hr>
+</section>
+<section id="组织与执行战略落不了地没有战略" class="level2">
+<h2 class="anchored" data-anchor-id="组织与执行战略落不了地没有战略">10）组织与执行（“战略落不了地=没有战略”）</h2>
+<p>再好的战略，不进机制和组织就会蒸发。</p>
+<ul>
+<li><strong>SWOT/TOWS</strong>（注意：SWOT 不是战略本身，是汇总与匹配）</li>
+<li><strong>平衡计分卡（BSC）</strong></li>
+<li><strong>OKR</strong></li>
+<li><strong>Hoshin Kanri（方针管理）</strong></li>
+<li><strong>7S 模型（麦肯锡）</strong></li>
+<li><strong>RACI（职责分配）</strong></li>
+<li><strong>KPI 树/目标分解（逻辑树、MECE）</strong></li>
+<li><strong>PDCA / OODA</strong>（闭环改进/快速决策）</li>
+<li><strong>变革管理</strong>：Kotter 8 步、ADKAR</li>
+<li><strong>组织设计</strong>：Span of Control、集权/分权、矩阵组织等</li>
+</ul>
+<hr>
+</section>
+<section id="不确定性博弈与风险未来不止一种" class="level2">
+<h2 class="anchored" data-anchor-id="不确定性博弈与风险未来不止一种">11）不确定性、博弈与风险（“未来不止一种”）</h2>
+<ul>
+<li><strong>情景规划（Scenario Planning）</strong></li>
+<li><strong>敏感性分析/压力测试</strong></li>
+<li><strong>蒙特卡洛模拟</strong>（偏量化）</li>
+<li><strong>实物期权（Real Options）</strong></li>
+<li><strong>博弈论框架</strong>（先动优势、承诺、信誉、囚徒困境等）</li>
+<li><strong>黑天鹅/反脆弱（Taleb）</strong></li>
+<li><strong>风险矩阵（概率×影响）</strong></li>
+<li><strong>预警指标体系（Leading Indicators）</strong></li>
+</ul>
+<hr>
+</section>
+<section id="一张选型表不同战略任务常用哪些模型" class="level2">
+<h2 class="anchored" data-anchor-id="一张选型表不同战略任务常用哪些模型">12）一张“选型表”：不同战略任务常用哪些模型</h2>
+<p>下面这张表帮你在实战里快速挑工具（而不是硬背清单）。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>战略任务</strong></th>
+<th><strong>优先模型</strong></th>
+<th><strong>产出物</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>判断行业吸引力</td>
+<td>五力、生命周期、利润池</td>
+<td>进入/退出、利润来源</td>
+</tr>
+<tr class="even">
+<td>找差异化与护城河</td>
+<td>通用战略、价值链、VRIO、7 Powers</td>
+<td>竞争优势叙事与证据</td>
+</tr>
+<tr class="odd">
+<td>定战略方向/增长路径</td>
+<td>Ansoff、商业模式画布、AARRR、LTV/CAC</td>
+<td>增长假设与关键指标</td>
+</tr>
+<tr class="even">
+<td>多业务资源分配</td>
+<td>BCG、GE 九宫格、70-20-10</td>
+<td>投资/收缩/孵化清单</td>
+</tr>
+<tr class="odd">
+<td>做平台与生态</td>
+<td>生态地图、网络效应、标准战、竞合</td>
+<td>角色、规则、补贴侧</td>
+</tr>
+<tr class="even">
+<td>创新与技术路线</td>
+<td>S 曲线、路线图、双元组织</td>
+<td>路线、里程碑、组织安排</td>
+</tr>
+<tr class="odd">
+<td>国际化扩张</td>
+<td>CAGE、I-R、进入模式</td>
+<td>国家优先级与进入打法</td>
+</tr>
+<tr class="even">
+<td>并购/合作</td>
+<td>Build-Buy-Partner、协同、PMI</td>
+<td>标的逻辑与整合计划</td>
+</tr>
+<tr class="odd">
+<td>战略落地</td>
+<td>BSC、OKR、7S、RACI</td>
+<td>指标树、机制与节奏</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="关键-takeaway避免模型堆砌" class="level2">
+<h2 class="anchored" data-anchor-id="关键-takeaway避免模型堆砌">关键 takeaway（避免“模型堆砌”）</h2>
+<ul>
+<li><strong>模型不是越多越好</strong>：一份高质量战略通常只需要 3–6 个框架，彼此串成因果链。<br>
+</li>
+<li><strong>顺序很重要</strong>：外部（机会/结构）→内部（能力/优势）→选择（哪里打/怎么赢）→落地（组织/指标/节奏）。<br>
+</li>
+<li><strong>同一模型有不同版本</strong>：比如 SWOT、BSC、BCG 都有大量变体，不纠结“唯一正确”。</li>
+</ul>
+<hr>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>研究框架</category>
+  <category>估值</category>
+  <category>商业分析</category>
+  <category>分析模型</category>
+  <guid>https://andybourne.cn/posts/Valuation/theModelOfValuation/ModelOfValuation.html</guid>
+  <pubDate>Sat, 17 Jan 2026 16:00:00 GMT</pubDate>
+  <media:content url="https://andybourne.cn/posts/Valuation/theModelOfValuation/BusinesAnalyisize.png" medium="image" type="image/png" height="74" width="144"/>
+</item>
 <item>
   <title>Rethink20260116</title>
   <dc:creator>AndyBourne </dc:creator>
@@ -2908,7 +3388,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Sun, 18 Jan 2026 03:59:12 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 06:51:39 GMT</pubDate>
 </item>
 <item>
   <title>Valuation</title>
@@ -2926,7 +3406,32 @@ AndyBourne
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU4JTg4JUFBJUU3JUE5JUJBJUU1JThGJTkxJUU1JThBJUE4JUU2JTlDJUJB" data-listing-date-sort="1768492800000" data-listing-file-modified-sort="1768707903046" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768718925990" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="500">
+<div class="thumbnail"><a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">
+
+<img loading="lazy" src="https://andybourne.cn/posts/Valuation/theModelOfValuation/BusinesAnalyisize.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">研究框架/估值模型</a>
+</h3>
+<div class="delink listing-description"><a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">
+<!-- desc(5A0113B34292)[max=175]:posts/Valuation/theModelOfValuation/ModelOfValuation.html -->
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">
+<div class="listing-date">
+Jan 18, 2026
+</div>
+<div class="listing-author">
+AndyBourne
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="JUU4JTg4JUFBJUU3JUE5JUJBJUU1JThGJTkxJUU1JThBJUE4JUU2JTlDJUJB" data-listing-date-sort="1768492800000" data-listing-file-modified-sort="1768707903046" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606">
 <div class="thumbnail"><a href="../../posts/Valuation/AeroEngine/AeroEngine.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/AeroEngine/AeroEngine.jpg" class="thumbnail-image">
@@ -2951,7 +3456,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="VmFsdWF0aW9uJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDRWxvbiUyME11c2slMkN4QUklMkNURVNMQXF1JTIwYQ==" data-listing-date-sort="1768406400000" data-listing-file-modified-sort="1768468971527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="735">
+<div class="quarto-post image-right" data-index="2" data-categories="VmFsdWF0aW9uJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDRWxvbiUyME11c2slMkN4QUklMkNURVNMQXF1JTIwYQ==" data-listing-date-sort="1768406400000" data-listing-file-modified-sort="1768468971527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="735">
 <div class="thumbnail"><a href="../../posts/Valuation/xAI_tesla/xAI_tesla.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/xAI_tesla/xAi.jpeg" class="thumbnail-image">
@@ -2976,7 +3481,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU0JUJDJUFGJUU1JTg1JThCJUU1JUI4JThDJUU1JUIwJTk0JUMyJUI3JUU1JTkzJTg4JUU2JTkyJTkyJUU5JTlGJUE2JTJDJUU1JUI3JUI0JUU4JThGJUIyJUU3JTg5JUI5JTJDJUU4JThBJTkyJUU2JUEwJUJDJTJDJUU5JTk1JUJGJUU2JTlDJTlG" data-listing-date-sort="1768320000000" data-listing-file-modified-sort="1768470159334" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="698">
+<div class="quarto-post image-right" data-index="3" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU0JUJDJUFGJUU1JTg1JThCJUU1JUI4JThDJUU1JUIwJTk0JUMyJUI3JUU1JTkzJTg4JUU2JTkyJTkyJUU5JTlGJUE2JTJDJUU1JUI3JUI0JUU4JThGJUIyJUU3JTg5JUI5JTJDJUU4JThBJTkyJUU2JUEwJUJDJTJDJUU5JTk1JUJGJUU2JTlDJTlG" data-listing-date-sort="1768320000000" data-listing-file-modified-sort="1768470159334" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="698">
 <div class="thumbnail"><a href="../../posts/Valuation/1999-Berkshire-Hathaway/Buffet.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/1999-Berkshire-Hathaway/Buffet.png" class="thumbnail-image">
@@ -3001,7 +3506,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="U3BhY2VYJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768647593931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="163">
+<div class="quarto-post image-right" data-index="4" data-categories="U3BhY2VYJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768647593931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="163">
 <div class="thumbnail"><a href="../../posts/Valuation/Tom-Mueller/TomMuller.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/Tom-Mueller/TomMuller.webp" class="thumbnail-image">
@@ -3026,7 +3531,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="VFIlMkMlRTclOUIlQjglRTYlOEUlQTclRTklOTglQjUlRTUlQTQlQTklRTclQkElQkYlMkMlRTQlQkMlQjAlRTUlODAlQkMlMkNPRE0lMkNPRU0=" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707562514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
+<div class="quarto-post image-right" data-index="5" data-categories="VFIlMkMlRTclOUIlQjglRTYlOEUlQTclRTklOTglQjUlRTUlQTQlQTklRTclQkElQkYlMkMlRTQlQkMlQjAlRTUlODAlQkMlMkNPRE0lMkNPRU0=" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707562514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
 <div class="thumbnail"><a href="../../posts/Valuation/HZTW-TTR/hztw-tr.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/HZTW-TTR/hztw.png" class="thumbnail-image">
@@ -3051,7 +3556,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="JUU3JUFFJTk3JUU1JThBJTlCJTJDT0RNJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707343918" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="quarto-post image-right" data-index="6" data-categories="JUU3JUFFJTk3JUU1JThBJTlCJTJDT0RNJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707343918" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
 <div class="thumbnail"><a href="../../posts/Valuation/TSW-GPU/TSW-GPU.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/TSW-GPU/tsw.jpg" class="thumbnail-image">
@@ -3076,7 +3581,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="JUU2JUI3JUIxJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU0JUJDJUIwJUU1JTgwJUJDJUVGJUJDJThDJUU3JUJCJUJDJUU4JUJGJUIw" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707332982" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136">
+<div class="quarto-post image-right" data-index="7" data-categories="JUU2JUI3JUIxJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU0JUJDJUIwJUU1JTgwJUJDJUVGJUJDJThDJUU3JUJCJUJDJUU4JUJGJUIw" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707332982" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136">
 <div class="thumbnail"><a href="../../posts/Valuation/Rocet—AeroSpace/Roceket-Space20250111.html" class="no-external">
 
 <!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:posts/Valuation/Rocet—AeroSpace/Roceket-Space20250111.html -->
@@ -3101,7 +3606,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="RENGJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707557893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="546">
+<div class="quarto-post image-right" data-index="8" data-categories="RENGJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1768060800000" data-listing-file-modified-sort="1768707557893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="546">
 <div class="thumbnail"><a href="../../posts/Valuation/DCF/DCF.html" class="no-external">
 
 <!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:posts/Valuation/DCF/DCF.html -->
@@ -3126,7 +3631,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="JUU2JUI3JUIxJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768203036051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="293">
+<div class="quarto-post image-right" data-index="9" data-categories="JUU2JUI3JUIxJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768203036051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="293">
 <div class="thumbnail"><a href="../../posts/Valuation/post-with-code/post-with-code.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/post-with-code/image.jpg" class="thumbnail-image">
@@ -3151,10 +3656,10 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="JUU0JUJEJThFJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU2JUIyJTgzJUU5JUEzJTlFJUU5JTk1JUJGJUU3JUE5JUJBJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768147345874" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
+<div class="quarto-post image-right" data-index="10" data-categories="JUU0JUJEJThFJUU3JUE5JUJBJUU3JUJCJThGJUU2JUI1JThFJTJDJUU2JUIyJTgzJUU5JUEzJTlFJUU5JTk1JUJGJUU3JUE5JUJBJTJDJUU0JUJDJUIwJUU1JTgwJUJD" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768147345874" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
 <div class="thumbnail"><a href="../../posts/Valuation/Avitation-Aerofugia/Aerofugia.html" class="no-external">
 
-<img loading="lazy" src="https://andybourne.cn/posts/Valuation/Avitation-Aerofugia/Aerofugia.jpg" class="thumbnail-image">
+<img loading="lazy" data-src="../../posts/Valuation/Avitation-Aerofugia/Aerofugia.jpg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
@@ -3176,7 +3681,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="U2FwY2VYJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU3JUExJUFDJUU3JUE3JTkxJUU2JThBJTgw" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768708706177" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="761">
+<div class="quarto-post image-right" data-index="11" data-categories="U2FwY2VYJTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU4JTg4JUFBJUU1JUE0JUE5JTJDJUU3JUExJUFDJUU3JUE3JTkxJUU2JThBJTgw" data-listing-date-sort="1767974400000" data-listing-file-modified-sort="1768708706177" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="761">
 <div class="thumbnail"><a href="../../posts/Valuation/Aviation-Space/SpaceX20260110.html" class="no-external">
 
 <img loading="lazy" data-src="../../posts/Valuation/Aviation-Space/cover.jpg" class="thumbnail-image">
@@ -3206,7 +3711,7 @@ Andy Bourne
 
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Valuation/</guid>
-  <pubDate>Sun, 18 Jan 2026 03:59:12 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 06:51:39 GMT</pubDate>
 </item>
 <item>
   <title>Mirror</title>
@@ -3253,7 +3758,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Mirror/</guid>
-  <pubDate>Sun, 18 Jan 2026 03:59:12 GMT</pubDate>
+  <pubDate>Sun, 18 Jan 2026 06:51:39 GMT</pubDate>
 </item>
 <item>
   <title>Mirror 镜子 0000-01-01</title>

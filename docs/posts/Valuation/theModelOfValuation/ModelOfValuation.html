@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="AndyBourne">
+<meta name="dcterms.date" content="2026-01-18">
+
+<title>研究框架/估值模型 – AndyBourne-Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8448bcf7f9565bffb32063743d474478.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">AndyBourne-Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">首页</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">关于</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/andybourne_cn"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/andybourne/AndyBourne-Blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">研究框架/估值模型</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">研究框架</div>
+                <div class="quarto-category">估值</div>
+                <div class="quarto-category">商业分析</div>
+                <div class="quarto-category">分析模型</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>AndyBourne </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 18, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#整体分析" id="toc-整体分析" class="nav-link active" data-scroll-target="#整体分析">整体分析</a>
+  <ul class="collapse">
+  <li><a href="#宏观环境看趋势" id="toc-宏观环境看趋势" class="nav-link" data-scroll-target="#宏观环境看趋势">1.1 宏观环境（看趋势）</a>
+  <ul class="collapse">
+  <li><a href="#政策支持" id="toc-政策支持" class="nav-link" data-scroll-target="#政策支持">1.1.1 政策支持</a></li>
+  <li><a href="#经济处于扩张收缩衰退-收缩中" id="toc-经济处于扩张收缩衰退-收缩中" class="nav-link" data-scroll-target="#经济处于扩张收缩衰退-收缩中">1.1.2 经济处于扩张、收缩、衰退 收缩中</a></li>
+  <li><a href="#利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整" id="toc-利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整" class="nav-link" data-scroll-target="#利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整">1.1.3 利率周期 基准利率上行还是下行 下行下降 2025年5月20日央行宣布下调政策利率0.1个百分点，带动LPR下行0.1个百分点。这是2025年首次也是年内唯一一次LPR调整。</a></li>
+  <li><a href="#信贷周期-宽松还是紧缩-宽松" id="toc-信贷周期-宽松还是紧缩-宽松" class="nav-link" data-scroll-target="#信贷周期-宽松还是紧缩-宽松">1.1.4 信贷周期 宽松还是紧缩 宽松</a></li>
+  </ul></li>
+  <li><a href="#行业分析-看赛道" id="toc-行业分析-看赛道" class="nav-link" data-scroll-target="#行业分析-看赛道">1.2 行业分析 （看赛道）</a>
+  <ul class="collapse">
+  <li><a href="#市场规模与生命周期" id="toc-市场规模与生命周期" class="nav-link" data-scroll-target="#市场规模与生命周期">1.2.1 市场规模与生命周期</a></li>
+  <li><a href="#产业链分析" id="toc-产业链分析" class="nav-link" data-scroll-target="#产业链分析">1.2.2 产业链分析</a></li>
+  <li><a href="#竞争强度" id="toc-竞争强度" class="nav-link" data-scroll-target="#竞争强度">1.2.3 竞争强度</a></li>
+  <li><a href="#供给侧分析" id="toc-供给侧分析" class="nav-link" data-scroll-target="#供给侧分析">1.2.4 供给侧分析</a></li>
+  </ul></li>
+  <li><a href="#公司业务-找生意" id="toc-公司业务-找生意" class="nav-link" data-scroll-target="#公司业务-找生意">1.3 公司业务 （找生意）</a>
+  <ul class="collapse">
+  <li><a href="#是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决" id="toc-是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决" class="nav-link" data-scroll-target="#是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决">1.3.1 是否是好生意 产品和服务是什么？收费模式 一次性、订阅、佣金制 为什么买 目标客户是谁？用户的核心痛点是什么？公司如何解决。</a></li>
+  <li><a href="#是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济" id="toc-是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济" class="nav-link" data-scroll-target="#是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济">1.3.2 是否有护城河（强大的竞争优势，无形资产（品牌、专利技术、政府牌照），更换成本巨大，产品价值随用户数量增加而提升，规模经济</a></li>
+  <li><a href="#初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径" id="toc-初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径" class="nav-link" data-scroll-target="#初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径">1.3.3 初创/高成长企业 单位经济效益：毛利、客户获取成本（CAC）、生命周期（LTV）、FCF转正路径</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.3.4</a></li>
+  </ul></li>
+  <li><a href="#财务解析-测质量" id="toc-财务解析-测质量" class="nav-link" data-scroll-target="#财务解析-测质量">1.4 财务解析 （测质量）</a>
+  <ul class="collapse">
+  <li><a href="#利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率" id="toc-利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率" class="nav-link" data-scroll-target="#利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率">1.4.1 利润表 增长与盈利结构 产品定价权与效率：毛利率、经营利润率；利润可持续性：扣非净利润率 收入驱动分析：收入增加的驱动是：提价？扩量（销量）？新品？并购？ 资产与费用结构 盈利能力（股东视角）：ROE 净资产收益率</a></li>
+  <li><a href="#现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金" id="toc-现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金" class="nav-link" data-scroll-target="#现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金">1.4.2 现金流量表 汇款质量验证 经营性活动现金流（CFO）长期是否为证？ 营运资本质量（应收账款、存货，应付账款增减） 自由现金流（FCF） FCF=CFO-资本开支支（CapEx 取投资活动现金流中“购建固定资产/无形资产支付的现金”）</a></li>
+  <li><a href="#资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比" id="toc-资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比" class="nav-link" data-scroll-target="#资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比">1.4.3 资产负债表：是否扛得住 长期信用安全 净负债/EBITDA 〈 3倍，短期流动性“ 流动比率 〉2倍，速动比率 资产负债表 〈50% 资本机构质量：关注负债结构（有息负债：银行借款，债券）无媳负债（营收账款的）的占比</a></li>
+  <li><a href="#盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定" id="toc-盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定" class="nav-link" data-scroll-target="#盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定">盈利质量（主营业务是否是持续盈利），现金质量（CFO/净利润产比率，回款质量，FCF持续 增长还是下降或者稳定）</a></li>
+  </ul></li>
+  <li><a href="#管理层-舵手及团队" id="toc-管理层-舵手及团队" class="nav-link" data-scroll-target="#管理层-舵手及团队">1.5 管理层 （舵手及团队）</a>
+  <ul class="collapse">
+  <li><a href="#利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金" id="toc-利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金" class="nav-link" data-scroll-target="#利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金">1.5.1 利益绑定 高持股意味着CEO财富命运与股权深度绑定，薪酬结构中股权激励的占比是高于现金奖金</a></li>
+  <li><a href="#经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先" id="toc-经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先" class="nav-link" data-scroll-target="#经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先">1.5.2 经营能力与效率 长期盈利增长 跨周期表现 连续盈利年限 效率对比（人均产值/人均创利是否在行业中领先）</a></li>
+  <li><a href="#再投资-并购与出售-股东回报" id="toc-再投资-并购与出售-股东回报" class="nav-link" data-scroll-target="#再投资-并购与出售-股东回报">1.5.3 再投资 并购与出售 股东回报</a></li>
+  <li><a href="#管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易" id="toc-管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易" class="nav-link" data-scroll-target="#管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易">1.5.4 管理层可靠性验证 激励与一致性，经营能力（近EPS CAGR） ，资本配置能力（是否FCF投入到高ROIC中），警惕信号（是否有财务造假，不合理的高溢价并购，不透明的关联交易）</a></li>
+  </ul></li>
+  <li><a href="#内在价值-价格" id="toc-内在价值-价格" class="nav-link" data-scroll-target="#内在价值-价格">1.6 内在价值 （价格）</a>
+  <ul class="collapse">
+  <li><a href="#现金流折现dcf" id="toc-现金流折现dcf" class="nav-link" data-scroll-target="#现金流折现dcf">1.6.1 现金流折现（DCF）</a></li>
+  </ul></li>
+  <li><a href="#相对估值pepbevebitda" id="toc-相对估值pepbevebitda" class="nav-link" data-scroll-target="#相对估值pepbevebitda">### 1.6.2 相对估值（P/E，P/B，EV/EBITDA）</a></li>
+  <li><a href="#战略管理" id="toc-战略管理" class="nav-link" data-scroll-target="#战略管理">战略管理</a>
+  <ul class="collapse">
+  <li><a href="#宏观环境分析pestel" id="toc-宏观环境分析pestel" class="nav-link" data-scroll-target="#宏观环境分析pestel">1.1 宏观环境分析（PESTEL）</a></li>
+  <li><a href="#竞争格局分析波特五力" id="toc-竞争格局分析波特五力" class="nav-link" data-scroll-target="#竞争格局分析波特五力">1.2 竞争格局分析（波特五力）</a></li>
+  <li><a href="#产业链分析价值链" id="toc-产业链分析价值链" class="nav-link" data-scroll-target="#产业链分析价值链">1.3 产业链分析（价值链）</a></li>
+  <li><a href="#战略定位bcg矩阵" id="toc-战略定位bcg矩阵" class="nav-link" data-scroll-target="#战略定位bcg矩阵">1.4 战略定位（BCG矩阵）</a></li>
+  <li><a href="#战略选择swot" id="toc-战略选择swot" class="nav-link" data-scroll-target="#战略选择swot">1.5 战略选择（SWOT）</a></li>
+  <li><a href="#战略执行平衡计分卡" id="toc-战略执行平衡计分卡" class="nav-link" data-scroll-target="#战略执行平衡计分卡">1.6 战略执行（平衡计分卡）</a></li>
+  <li><a href="#战略变革战略转型" id="toc-战略变革战略转型" class="nav-link" data-scroll-target="#战略变革战略转型">1.7 战略变革（战略转型）</a></li>
+  <li><a href="#战略评估战略诊断" id="toc-战略评估战略诊断" class="nav-link" data-scroll-target="#战略评估战略诊断">1.8 战略评估（战略诊断）</a></li>
+  <li><a href="#战略实施战略执行" id="toc-战略实施战略执行" class="nav-link" data-scroll-target="#战略实施战略执行">1.9 战略实施（战略执行）</a></li>
+  <li><a href="#战略优化战略优化" id="toc-战略优化战略优化" class="nav-link" data-scroll-target="#战略优化战略优化">1.10 战略优化（战略优化）</a></li>
+  <li><a href="#战略创新战略创新" id="toc-战略创新战略创新" class="nav-link" data-scroll-target="#战略创新战略创新">1.11 战略创新（战略创新）</a></li>
+  <li><a href="#战略国际化战略国际化" id="toc-战略国际化战略国际化" class="nav-link" data-scroll-target="#战略国际化战略国际化">1.12 战略国际化（战略国际化）</a></li>
+  <li><a href="#战略并购战略并购" id="toc-战略并购战略并购" class="nav-link" data-scroll-target="#战略并购战略并购">1.13 战略并购（战略并购）</a></li>
+  <li><a href="#战略组织战略组织" id="toc-战略组织战略组织" class="nav-link" data-scroll-target="#战略组织战略组织">1.14 战略组织（战略组织）</a></li>
+  <li><a href="#战略执行战略执行" id="toc-战略执行战略执行" class="nav-link" data-scroll-target="#战略执行战略执行">1.15 战略执行（战略执行）</a></li>
+  <li><a href="#战略评估战略评估" id="toc-战略评估战略评估" class="nav-link" data-scroll-target="#战略评估战略评估">1.16 战略评估（战略评估）</a></li>
+  <li><a href="#战略优化战略" id="toc-战略优化战略" class="nav-link" data-scroll-target="#战略优化战略">1.17 战略优化（战略）</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#战略分析" id="toc-战略分析" class="nav-link" data-scroll-target="#战略分析">战略分析</a>
+  <ul class="collapse">
+  <li><a href="#战略问题的导航图先选模型再做分析" id="toc-战略问题的导航图先选模型再做分析" class="nav-link" data-scroll-target="#战略问题的导航图先选模型再做分析">1）战略问题的“导航图”（先选模型，再做分析）</a></li>
+  <li><a href="#宏观环境与行业结构世界怎么影响我们" id="toc-宏观环境与行业结构世界怎么影响我们" class="nav-link" data-scroll-target="#宏观环境与行业结构世界怎么影响我们">2）宏观环境与行业结构（“世界怎么影响我们”）</a>
+  <ul class="collapse">
+  <li><a href="#宏观与制度" id="toc-宏观与制度" class="nav-link" data-scroll-target="#宏观与制度">宏观与制度</a></li>
+  <li><a href="#行业结构与竞争态势" id="toc-行业结构与竞争态势" class="nav-link" data-scroll-target="#行业结构与竞争态势">行业结构与竞争态势</a></li>
+  <li><a href="#市场与用户洞察战略输入" id="toc-市场与用户洞察战略输入" class="nav-link" data-scroll-target="#市场与用户洞察战略输入">市场与用户洞察（战略输入）</a></li>
+  </ul></li>
+  <li><a href="#竞争优势与凭什么赢护城河在哪里" id="toc-竞争优势与凭什么赢护城河在哪里" class="nav-link" data-scroll-target="#竞争优势与凭什么赢护城河在哪里">3）竞争优势与“凭什么赢”（护城河在哪里）</a>
+  <ul class="collapse">
+  <li><a href="#竞争定位学派positioning" id="toc-竞争定位学派positioning" class="nav-link" data-scroll-target="#竞争定位学派positioning">竞争定位学派（Positioning）</a></li>
+  <li><a href="#资源能力学派rbv能力" id="toc-资源能力学派rbv能力" class="nav-link" data-scroll-target="#资源能力学派rbv能力">资源能力学派（RBV/能力）</a></li>
+  <li><a href="#护城河与竞争机制更投资视角" id="toc-护城河与竞争机制更投资视角" class="nav-link" data-scroll-target="#护城河与竞争机制更投资视角">护城河与竞争机制（更“投资视角”）</a></li>
+  </ul></li>
+  <li><a href="#业务组合与资源配置做什么不做什么" id="toc-业务组合与资源配置做什么不做什么" class="nav-link" data-scroll-target="#业务组合与资源配置做什么不做什么">4）业务组合与资源配置（“做什么、不做什么”）</a></li>
+  <li><a href="#增长战略与商业模式怎么把钱越赚越多" id="toc-增长战略与商业模式怎么把钱越赚越多" class="nav-link" data-scroll-target="#增长战略与商业模式怎么把钱越赚越多">5）增长战略与商业模式（“怎么把钱越赚越多”）</a>
+  <ul class="collapse">
+  <li><a href="#增长路径与杠杆" id="toc-增长路径与杠杆" class="nav-link" data-scroll-target="#增长路径与杠杆">增长路径与杠杆</a></li>
+  <li><a href="#商业模式与价值创造" id="toc-商业模式与价值创造" class="nav-link" data-scroll-target="#商业模式与价值创造">商业模式与价值创造</a></li>
+  <li><a href="#产品-市场匹配与扩张" id="toc-产品-市场匹配与扩张" class="nav-link" data-scroll-target="#产品-市场匹配与扩张">产品-市场匹配与扩张</a></li>
+  </ul></li>
+  <li><a href="#平台生态与竞合搭台还是上台" id="toc-平台生态与竞合搭台还是上台" class="nav-link" data-scroll-target="#平台生态与竞合搭台还是上台">6）平台、生态与竞合（“搭台还是上台”）</a></li>
+  <li><a href="#创新颠覆与技术战略如何不被时代换掉" id="toc-创新颠覆与技术战略如何不被时代换掉" class="nav-link" data-scroll-target="#创新颠覆与技术战略如何不被时代换掉">7）创新、颠覆与技术战略（“如何不被时代换掉”）</a></li>
+  <li><a href="#国际化与进入战略去哪里打怎么进" id="toc-国际化与进入战略去哪里打怎么进" class="nav-link" data-scroll-target="#国际化与进入战略去哪里打怎么进">8）国际化与进入战略（“去哪里打、怎么进”）</a></li>
+  <li><a href="#并购联盟与合作战略买借建" id="toc-并购联盟与合作战略买借建" class="nav-link" data-scroll-target="#并购联盟与合作战略买借建">9）并购、联盟与合作战略（“买、借、建”）</a></li>
+  <li><a href="#组织与执行战略落不了地没有战略" id="toc-组织与执行战略落不了地没有战略" class="nav-link" data-scroll-target="#组织与执行战略落不了地没有战略">10）组织与执行（“战略落不了地=没有战略”）</a></li>
+  <li><a href="#不确定性博弈与风险未来不止一种" id="toc-不确定性博弈与风险未来不止一种" class="nav-link" data-scroll-target="#不确定性博弈与风险未来不止一种">11）不确定性、博弈与风险（“未来不止一种”）</a></li>
+  <li><a href="#一张选型表不同战略任务常用哪些模型" id="toc-一张选型表不同战略任务常用哪些模型" class="nav-link" data-scroll-target="#一张选型表不同战略任务常用哪些模型">12）一张“选型表”：不同战略任务常用哪些模型</a></li>
+  <li><a href="#关键-takeaway避免模型堆砌" id="toc-关键-takeaway避免模型堆砌" class="nav-link" data-scroll-target="#关键-takeaway避免模型堆砌">关键 takeaway（避免“模型堆砌”）</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<section id="整体分析" class="level1">
+<h1>整体分析</h1>
+<section id="宏观环境看趋势" class="level2">
+<h2 class="anchored" data-anchor-id="宏观环境看趋势">1.1 宏观环境（看趋势）</h2>
+<section id="政策支持" class="level3">
+<h3 class="anchored" data-anchor-id="政策支持">1.1.1 政策支持</h3>
+</section>
+<section id="经济处于扩张收缩衰退-收缩中" class="level3">
+<h3 class="anchored" data-anchor-id="经济处于扩张收缩衰退-收缩中">1.1.2 经济处于扩张、收缩、衰退 收缩中</h3>
+</section>
+<section id="利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整" class="level3">
+<h3 class="anchored" data-anchor-id="利率周期-基准利率上行还是下行-下行下降-2025年5月20日央行宣布下调政策利率0.1个百分点带动lpr下行0.1个百分点这是2025年首次也是年内唯一一次lpr调整">1.1.3 利率周期 基准利率上行还是下行 下行下降 2025年5月20日央行宣布下调政策利率0.1个百分点，带动LPR下行0.1个百分点。这是2025年首次也是年内唯一一次LPR调整。</h3>
+</section>
+<section id="信贷周期-宽松还是紧缩-宽松" class="level3">
+<h3 class="anchored" data-anchor-id="信贷周期-宽松还是紧缩-宽松">1.1.4 信贷周期 宽松还是紧缩 宽松</h3>
+</section>
+</section>
+<section id="行业分析-看赛道" class="level2">
+<h2 class="anchored" data-anchor-id="行业分析-看赛道">1.2 行业分析 （看赛道）</h2>
+<section id="市场规模与生命周期" class="level3">
+<h3 class="anchored" data-anchor-id="市场规模与生命周期">1.2.1 市场规模与生命周期</h3>
+</section>
+<section id="产业链分析" class="level3">
+<h3 class="anchored" data-anchor-id="产业链分析">1.2.2 产业链分析</h3>
+</section>
+<section id="竞争强度" class="level3">
+<h3 class="anchored" data-anchor-id="竞争强度">1.2.3 竞争强度</h3>
+</section>
+<section id="供给侧分析" class="level3">
+<h3 class="anchored" data-anchor-id="供给侧分析">1.2.4 供给侧分析</h3>
+</section>
+</section>
+<section id="公司业务-找生意" class="level2">
+<h2 class="anchored" data-anchor-id="公司业务-找生意">1.3 公司业务 （找生意）</h2>
+<section id="是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决" class="level3">
+<h3 class="anchored" data-anchor-id="是否是好生意-产品和服务是什么收费模式-一次性订阅佣金制-为什么买-目标客户是谁用户的核心痛点是什么公司如何解决">1.3.1 是否是好生意 产品和服务是什么？收费模式 一次性、订阅、佣金制 为什么买 目标客户是谁？用户的核心痛点是什么？公司如何解决。</h3>
+</section>
+<section id="是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济" class="level3">
+<h3 class="anchored" data-anchor-id="是否有护城河强大的竞争优势无形资产品牌专利技术政府牌照更换成本巨大产品价值随用户数量增加而提升规模经济">1.3.2 是否有护城河（强大的竞争优势，无形资产（品牌、专利技术、政府牌照），更换成本巨大，产品价值随用户数量增加而提升，规模经济</h3>
+</section>
+<section id="初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径" class="level3">
+<h3 class="anchored" data-anchor-id="初创高成长企业-单位经济效益毛利客户获取成本cac生命周期ltvfcf转正路径">1.3.3 初创/高成长企业 单位经济效益：毛利、客户获取成本（CAC）、生命周期（LTV）、FCF转正路径</h3>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">1.3.4</h3>
+</section>
+</section>
+<section id="财务解析-测质量" class="level2">
+<h2 class="anchored" data-anchor-id="财务解析-测质量">1.4 财务解析 （测质量）</h2>
+<section id="利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率" class="level3">
+<h3 class="anchored" data-anchor-id="利润表-增长与盈利结构-产品定价权与效率毛利率经营利润率利润可持续性扣非净利润率-收入驱动分析收入增加的驱动是提价扩量销量新品并购-资产与费用结构-盈利能力股东视角roe-净资产收益率">1.4.1 利润表 增长与盈利结构 产品定价权与效率：毛利率、经营利润率；利润可持续性：扣非净利润率 收入驱动分析：收入增加的驱动是：提价？扩量（销量）？新品？并购？ 资产与费用结构 盈利能力（股东视角）：ROE 净资产收益率</h3>
+</section>
+<section id="现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金" class="level3">
+<h3 class="anchored" data-anchor-id="现金流量表-汇款质量验证-经营性活动现金流cfo长期是否为证-营运资本质量应收账款存货应付账款增减-自由现金流fcf-fcfcfo-资本开支支capex-取投资活动现金流中购建固定资产无形资产支付的现金">1.4.2 现金流量表 汇款质量验证 经营性活动现金流（CFO）长期是否为证？ 营运资本质量（应收账款、存货，应付账款增减） 自由现金流（FCF） FCF=CFO-资本开支支（CapEx 取投资活动现金流中“购建固定资产/无形资产支付的现金”）</h3>
+</section>
+<section id="资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比" class="level3">
+<h3 class="anchored" data-anchor-id="资产负债表是否扛得住-长期信用安全-净负债ebitda-3倍短期流动性-流动比率-2倍速动比率-资产负债表-50-资本机构质量关注负债结构有息负债银行借款债券无媳负债营收账款的的占比">1.4.3 资产负债表：是否扛得住 长期信用安全 净负债/EBITDA 〈 3倍，短期流动性“ 流动比率 〉2倍，速动比率 资产负债表 〈50% 资本机构质量：关注负债结构（有息负债：银行借款，债券）无媳负债（营收账款的）的占比</h3>
+</section>
+<section id="盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定" class="level3">
+<h3 class="anchored" data-anchor-id="盈利质量主营业务是否是持续盈利现金质量cfo净利润产比率回款质量fcf持续-增长还是下降或者稳定">盈利质量（主营业务是否是持续盈利），现金质量（CFO/净利润产比率，回款质量，FCF持续 增长还是下降或者稳定）</h3>
+</section>
+</section>
+<section id="管理层-舵手及团队" class="level2">
+<h2 class="anchored" data-anchor-id="管理层-舵手及团队">1.5 管理层 （舵手及团队）</h2>
+<section id="利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金" class="level3">
+<h3 class="anchored" data-anchor-id="利益绑定-高持股意味着ceo财富命运与股权深度绑定薪酬结构中股权激励的占比是高于现金奖金">1.5.1 利益绑定 高持股意味着CEO财富命运与股权深度绑定，薪酬结构中股权激励的占比是高于现金奖金</h3>
+</section>
+<section id="经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先" class="level3">
+<h3 class="anchored" data-anchor-id="经营能力与效率-长期盈利增长-跨周期表现-连续盈利年限-效率对比人均产值人均创利是否在行业中领先">1.5.2 经营能力与效率 长期盈利增长 跨周期表现 连续盈利年限 效率对比（人均产值/人均创利是否在行业中领先）</h3>
+</section>
+<section id="再投资-并购与出售-股东回报" class="level3">
+<h3 class="anchored" data-anchor-id="再投资-并购与出售-股东回报">1.5.3 再投资 并购与出售 股东回报</h3>
+</section>
+<section id="管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易" class="level3">
+<h3 class="anchored" data-anchor-id="管理层可靠性验证-激励与一致性经营能力近eps-cagr-资本配置能力是否fcf投入到高roic中警惕信号是否有财务造假不合理的高溢价并购不透明的关联交易">1.5.4 管理层可靠性验证 激励与一致性，经营能力（近EPS CAGR） ，资本配置能力（是否FCF投入到高ROIC中），警惕信号（是否有财务造假，不合理的高溢价并购，不透明的关联交易）</h3>
+</section>
+</section>
+<section id="内在价值-价格" class="level2">
+<h2 class="anchored" data-anchor-id="内在价值-价格">1.6 内在价值 （价格）</h2>
+<section id="现金流折现dcf" class="level3">
+<h3 class="anchored" data-anchor-id="现金流折现dcf">1.6.1 现金流折现（DCF）</h3>
+</section>
+</section>
+<section id="相对估值pepbevebitda" class="level2">
+<h2 class="anchored" data-anchor-id="相对估值pepbevebitda">### 1.6.2 相对估值（P/E，P/B，EV/EBITDA）</h2>
+</section>
+<section id="战略管理" class="level2">
+<h2 class="anchored" data-anchor-id="战略管理">战略管理</h2>
+<section id="宏观环境分析pestel" class="level3">
+<h3 class="anchored" data-anchor-id="宏观环境分析pestel">1.1 宏观环境分析（PESTEL）</h3>
+</section>
+<section id="竞争格局分析波特五力" class="level3">
+<h3 class="anchored" data-anchor-id="竞争格局分析波特五力">1.2 竞争格局分析（波特五力）</h3>
+</section>
+<section id="产业链分析价值链" class="level3">
+<h3 class="anchored" data-anchor-id="产业链分析价值链">1.3 产业链分析（价值链）</h3>
+</section>
+<section id="战略定位bcg矩阵" class="level3">
+<h3 class="anchored" data-anchor-id="战略定位bcg矩阵">1.4 战略定位（BCG矩阵）</h3>
+</section>
+<section id="战略选择swot" class="level3">
+<h3 class="anchored" data-anchor-id="战略选择swot">1.5 战略选择（SWOT）</h3>
+</section>
+<section id="战略执行平衡计分卡" class="level3">
+<h3 class="anchored" data-anchor-id="战略执行平衡计分卡">1.6 战略执行（平衡计分卡）</h3>
+</section>
+<section id="战略变革战略转型" class="level3">
+<h3 class="anchored" data-anchor-id="战略变革战略转型">1.7 战略变革（战略转型）</h3>
+</section>
+<section id="战略评估战略诊断" class="level3">
+<h3 class="anchored" data-anchor-id="战略评估战略诊断">1.8 战略评估（战略诊断）</h3>
+</section>
+<section id="战略实施战略执行" class="level3">
+<h3 class="anchored" data-anchor-id="战略实施战略执行">1.9 战略实施（战略执行）</h3>
+</section>
+<section id="战略优化战略优化" class="level3">
+<h3 class="anchored" data-anchor-id="战略优化战略优化">1.10 战略优化（战略优化）</h3>
+</section>
+<section id="战略创新战略创新" class="level3">
+<h3 class="anchored" data-anchor-id="战略创新战略创新">1.11 战略创新（战略创新）</h3>
+</section>
+<section id="战略国际化战略国际化" class="level3">
+<h3 class="anchored" data-anchor-id="战略国际化战略国际化">1.12 战略国际化（战略国际化）</h3>
+</section>
+<section id="战略并购战略并购" class="level3">
+<h3 class="anchored" data-anchor-id="战略并购战略并购">1.13 战略并购（战略并购）</h3>
+</section>
+<section id="战略组织战略组织" class="level3">
+<h3 class="anchored" data-anchor-id="战略组织战略组织">1.14 战略组织（战略组织）</h3>
+</section>
+<section id="战略执行战略执行" class="level3">
+<h3 class="anchored" data-anchor-id="战略执行战略执行">1.15 战略执行（战略执行）</h3>
+</section>
+<section id="战略评估战略评估" class="level3">
+<h3 class="anchored" data-anchor-id="战略评估战略评估">1.16 战略评估（战略评估）</h3>
+</section>
+<section id="战略优化战略" class="level3">
+<h3 class="anchored" data-anchor-id="战略优化战略">1.17 战略优化（战略）</h3>
+<hr>
+</section>
+</section>
+</section>
+<section id="战略分析" class="level1">
+<h1>战略分析</h1>
+<p>战略框架是一个不断演化的工具集合，学界、咨询界、行业内方法论和公司自研框架层出不穷，也没有权威的“全集目录”。我们需要的通常是：<strong>把主流、常用、可复用的战略模型按用途系统整理成一张“工具地图”</strong>，遇到问题就能快速选对框架。</p>
+<p>下面是一份尽可能全面的<strong>战略模型大全（按场景分类）</strong>，覆盖经典理论、咨询常用工具、增长/平台/创新/国际化/并购/组织与执行等模块。</p>
+<hr>
+<section id="战略问题的导航图先选模型再做分析" class="level2">
+<h2 class="anchored" data-anchor-id="战略问题的导航图先选模型再做分析">1）战略问题的“导航图”（先选模型，再做分析）</h2>
+<p>不同问题用不同模型，先把“战略问题类型”对齐：</p>
+<ul>
+<li><strong>外部环境/行业怎么变？</strong> → 宏观与行业结构模型<br>
+</li>
+<li><strong>我们凭什么赢？</strong> → 竞争优势与资源能力模型<br>
+</li>
+<li><strong>去哪儿打、打什么？</strong> → 业务组合与资源配置模型<br>
+</li>
+<li><strong>怎么增长？</strong> → 增长与商业模式模型<br>
+</li>
+<li><strong>怎么创新、怎么防被颠覆？</strong> → 创新与颠覆模型<br>
+</li>
+<li><strong>怎么落地？</strong> → 目标分解、执行与组织模型<br>
+</li>
+<li><strong>怎么应对不确定性？</strong> → 情景、博弈与风险模型</li>
+</ul>
+<hr>
+</section>
+<section id="宏观环境与行业结构世界怎么影响我们" class="level2">
+<h2 class="anchored" data-anchor-id="宏观环境与行业结构世界怎么影响我们">2）宏观环境与行业结构（“世界怎么影响我们”）</h2>
+<p>这一类用于判断外部机会/威胁、行业利润池和结构性趋势。</p>
+<section id="宏观与制度" class="level3">
+<h3 class="anchored" data-anchor-id="宏观与制度">宏观与制度</h3>
+<ul>
+<li><strong>PEST / PESTEL</strong>（政治、经济、社会、技术、环境、法律）</li>
+<li><strong>STEEP / STEEPLE</strong>（PESTEL 的变体）</li>
+<li><strong>制度理论 / 监管风险框架</strong></li>
+<li><strong>国家钻石模型（Porter Diamond）</strong>（国家竞争优势）</li>
+</ul>
+</section>
+<section id="行业结构与竞争态势" class="level3">
+<h3 class="anchored" data-anchor-id="行业结构与竞争态势">行业结构与竞争态势</h3>
+<ul>
+<li><strong>波特五力模型（Five Forces）</strong></li>
+<li><strong>战略群组（Strategic Groups）</strong></li>
+<li><strong>价值网（Value Net, Brandenburger &amp; Nalebuff）</strong>（竞合）</li>
+<li><strong>产业生命周期（Industry Life Cycle）</strong></li>
+<li><strong>利润池（Profit Pools）</strong></li>
+<li><strong>SCP 范式（Structure–Conduct–Performance）</strong></li>
+<li><strong>CPM/竞争剖面矩阵（Competitive Profile Matrix）</strong></li>
+</ul>
+</section>
+<section id="市场与用户洞察战略输入" class="level3">
+<h3 class="anchored" data-anchor-id="市场与用户洞察战略输入">市场与用户洞察（战略输入）</h3>
+<ul>
+<li><strong>STP</strong>（细分-目标-定位）</li>
+<li><strong>需求链/购买决策链（DMU）</strong></li>
+<li><strong>Jobs to be Done（JTBD）</strong></li>
+<li><strong>用户旅程图（Customer Journey Map）</strong></li>
+<li><strong>Kano 模型</strong>（满意度与特性）</li>
+<li><strong>采用扩散理论（Diffusion of Innovations）</strong></li>
+<li><strong>“跨越鸿沟”（Crossing the Chasm）</strong></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="竞争优势与凭什么赢护城河在哪里" class="level2">
+<h2 class="anchored" data-anchor-id="竞争优势与凭什么赢护城河在哪里">3）竞争优势与“凭什么赢”（护城河在哪里）</h2>
+<p>这一类回答：优势来自成本、差异化、网络效应、资源能力还是位置？</p>
+<section id="竞争定位学派positioning" class="level3">
+<h3 class="anchored" data-anchor-id="竞争定位学派positioning">竞争定位学派（Positioning）</h3>
+<ul>
+<li><strong>波特通用战略（成本领先/差异化/聚焦）</strong></li>
+<li><strong>价值链（Value Chain）</strong></li>
+<li><strong>活动系统地图（Activity System Map）</strong></li>
+<li><strong>战略权衡（Trade-offs）</strong></li>
+<li><strong>战略画布/价值曲线（Blue Ocean Strategy Canvas）</strong></li>
+<li><strong>四项行动框架（消减-剔除-提升-创造）</strong></li>
+<li><strong>战略钟（Bowman’s Strategy Clock）</strong></li>
+</ul>
+</section>
+<section id="资源能力学派rbv能力" class="level3">
+<h3 class="anchored" data-anchor-id="资源能力学派rbv能力">资源能力学派（RBV/能力）</h3>
+<ul>
+<li><strong>RBV 资源基础观</strong></li>
+<li><strong>VRIO/VRIN</strong>（价值、稀缺、难模仿、组织）</li>
+<li><strong>核心能力（Core Competence）</strong></li>
+<li><strong>动态能力（Dynamic Capabilities：感知-捕捉-重构）</strong></li>
+<li><strong>知识基础观（KBV）</strong></li>
+<li><strong>经验曲线/学习曲线（Experience Curve）</strong></li>
+<li><strong>规模经济/范围经济/网络经济</strong></li>
+</ul>
+</section>
+<section id="护城河与竞争机制更投资视角" class="level3">
+<h3 class="anchored" data-anchor-id="护城河与竞争机制更投资视角">护城河与竞争机制（更“投资视角”）</h3>
+<ul>
+<li><strong>“护城河五源”</strong>（品牌、成本、转换成本、网络效应、规模/渠道等不同流派略有差异）</li>
+<li><strong>七种力量（7 Powers, Hamilton Helmer）</strong>：规模经济、网络效应、反向定位、转换成本、品牌、资源角、流程权力</li>
+<li><strong>竞争优势持续性分析</strong>（耐久度、侵蚀因素）</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="业务组合与资源配置做什么不做什么" class="level2">
+<h2 class="anchored" data-anchor-id="业务组合与资源配置做什么不做什么">4）业务组合与资源配置（“做什么、不做什么”）</h2>
+<p>集团/多业务最需要这一类，用来决定投什么、砍什么、怎么配资源。</p>
+<ul>
+<li><strong>BCG 矩阵（明星/金牛/问号/瘦狗）</strong></li>
+<li><strong>GE/麦肯锡九宫格（行业吸引力×竞争实力）</strong></li>
+<li><strong>Ansoff 矩阵（市场×产品：渗透/开发/开发/多元化）</strong></li>
+<li><strong>产品组合/管线管理（Stage-Gate 管线、组合平衡）</strong></li>
+<li><strong>70-20-10 创新组合</strong>（核心/邻近/变革）</li>
+<li><strong>资源配置与资本预算</strong>（NPV/IRR/回收期等—偏财务，但常嵌入战略）</li>
+<li><strong>增长-份额矩阵、市场吸引力矩阵（各类变体）</strong></li>
+</ul>
+<hr>
+</section>
+<section id="增长战略与商业模式怎么把钱越赚越多" class="level2">
+<h2 class="anchored" data-anchor-id="增长战略与商业模式怎么把钱越赚越多">5）增长战略与商业模式（“怎么把钱越赚越多”）</h2>
+<p>这是互联网/消费/ToB 都常用的“增长打法”。</p>
+<section id="增长路径与杠杆" class="level3">
+<h3 class="anchored" data-anchor-id="增长路径与杠杆">增长路径与杠杆</h3>
+<ul>
+<li><strong>AARRR 漏斗（海盗指标）</strong></li>
+<li><strong>增长会计（Growth Accounting）</strong></li>
+<li><strong>LTV/CAC 经济模型</strong></li>
+<li><strong>定价与收入模型框架</strong>（价值定价、分层定价、Freemium、捆绑、动态定价等）</li>
+<li><strong>渠道战略框架</strong>（直销/分销/平台招商/生态合作）</li>
+</ul>
+</section>
+<section id="商业模式与价值创造" class="level3">
+<h3 class="anchored" data-anchor-id="商业模式与价值创造">商业模式与价值创造</h3>
+<ul>
+<li><strong>商业模式画布（Business Model Canvas）</strong></li>
+<li><strong>精益画布（Lean Canvas）</strong></li>
+<li><strong>价值主张画布（Value Proposition Canvas）</strong></li>
+<li><strong>商业模式类型学</strong>（订阅、交易、佣金、广告、使用计费、授权、服务化等）</li>
+<li><strong>单位经济（Unit Economics）</strong></li>
+<li><strong>双边/多边市场框架</strong>（交叉网络效应、补贴侧、鸡生蛋问题）</li>
+</ul>
+</section>
+<section id="产品-市场匹配与扩张" class="level3">
+<h3 class="anchored" data-anchor-id="产品-市场匹配与扩张">产品-市场匹配与扩张</h3>
+<ul>
+<li><strong>PMF（Product-Market Fit）框架</strong>（含 Sean Ellis 测试等）</li>
+<li><strong>PLG（Product-Led Growth）</strong></li>
+<li><strong>销售驱动增长（SLG）与混合增长</strong></li>
+<li><strong>Land and Expand（先落地再扩张）</strong>（ToB 常用）</li>
+<li><strong>渗透定价 vs 撇脂定价</strong>（进入策略）</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="平台生态与竞合搭台还是上台" class="level2">
+<h2 class="anchored" data-anchor-id="平台生态与竞合搭台还是上台">6）平台、生态与竞合（“搭台还是上台”）</h2>
+<p>平台公司、供应链主导者、系统性产品（如操作系统/支付/云/卫星互联网）离不开这类模型。</p>
+<ul>
+<li><strong>平台战略（Platform Strategy）</strong></li>
+<li><strong>生态系统地图（Ecosystem Mapping）</strong></li>
+<li><strong>模块化理论（Modularity）</strong></li>
+<li><strong>互补品与补贴策略（Complementors）</strong></li>
+<li><strong>标准战（Standards Battles）</strong></li>
+<li><strong>锁定与转换成本模型（Lock-in）</strong></li>
+<li><strong>Co-opetition（竞合）与 Value Net</strong></li>
+<li><strong>Keystone/ Dominator / Niche Player（生态角色）</strong></li>
+<li><strong>API/接口治理与平台规则设计框架</strong></li>
+</ul>
+<hr>
+</section>
+<section id="创新颠覆与技术战略如何不被时代换掉" class="level2">
+<h2 class="anchored" data-anchor-id="创新颠覆与技术战略如何不被时代换掉">7）创新、颠覆与技术战略（“如何不被时代换掉”）</h2>
+<p>适用于新技术冲击、产品代际更替、硬科技路线选择。</p>
+<ul>
+<li><strong>颠覆式创新（Christensen Disruption）</strong></li>
+<li><strong>S 曲线（技术/性能 S-Curve）</strong></li>
+<li><strong>Henderson–Clark</strong>（组件/架构创新：渐进/模块/架构/激进）</li>
+<li><strong>技术路线图（Technology Roadmap）</strong></li>
+<li><strong>探索-利用（Exploration vs Exploitation）</strong></li>
+<li><strong>双元组织（Ambidexterity）</strong></li>
+<li><strong>开放式创新（Open Innovation）</strong></li>
+<li><strong>TRIZ（发明问题解决理论）</strong></li>
+<li><strong>Stage-Gate（研发到商业化流程）</strong></li>
+<li><strong>专利墙/专利地图（Patent Landscaping）</strong>（偏技术战略）</li>
+</ul>
+<hr>
+</section>
+<section id="国际化与进入战略去哪里打怎么进" class="level2">
+<h2 class="anchored" data-anchor-id="国际化与进入战略去哪里打怎么进">8）国际化与进入战略（“去哪里打、怎么进”）</h2>
+<ul>
+<li><strong>进入模式选择</strong>：出口、许可、合资、并购、绿地投资、特许经营等框架</li>
+<li><strong>CAGE 距离框架</strong>（文化/行政/地理/经济差异）</li>
+<li><strong>Uppsala 渐进国际化模型</strong></li>
+<li><strong>全球整合-本地响应（I-R 框架）</strong></li>
+<li><strong>跨国战略类型</strong>：国际型/多国本地化/全球标准化/跨国型</li>
+</ul>
+<hr>
+</section>
+<section id="并购联盟与合作战略买借建" class="level2">
+<h2 class="anchored" data-anchor-id="并购联盟与合作战略买借建">9）并购、联盟与合作战略（“买、借、建”）</h2>
+<ul>
+<li><strong>Build–Buy–Partner（自建/并购/合作）</strong></li>
+<li><strong>并购协同框架</strong>（成本协同/收入协同/能力协同）</li>
+<li><strong>尽调框架</strong>（商业、财务、法务、技术、人力）</li>
+<li><strong>并购后整合 PMI 框架</strong></li>
+<li><strong>战略联盟治理</strong>（控制权、激励相容、知识转移）</li>
+<li><strong>交易成本经济学（TCE）</strong>（自制还是外包/合作）</li>
+</ul>
+<hr>
+</section>
+<section id="组织与执行战略落不了地没有战略" class="level2">
+<h2 class="anchored" data-anchor-id="组织与执行战略落不了地没有战略">10）组织与执行（“战略落不了地=没有战略”）</h2>
+<p>再好的战略，不进机制和组织就会蒸发。</p>
+<ul>
+<li><strong>SWOT/TOWS</strong>（注意：SWOT 不是战略本身，是汇总与匹配）</li>
+<li><strong>平衡计分卡（BSC）</strong></li>
+<li><strong>OKR</strong></li>
+<li><strong>Hoshin Kanri（方针管理）</strong></li>
+<li><strong>7S 模型（麦肯锡）</strong></li>
+<li><strong>RACI（职责分配）</strong></li>
+<li><strong>KPI 树/目标分解（逻辑树、MECE）</strong></li>
+<li><strong>PDCA / OODA</strong>（闭环改进/快速决策）</li>
+<li><strong>变革管理</strong>：Kotter 8 步、ADKAR</li>
+<li><strong>组织设计</strong>：Span of Control、集权/分权、矩阵组织等</li>
+</ul>
+<hr>
+</section>
+<section id="不确定性博弈与风险未来不止一种" class="level2">
+<h2 class="anchored" data-anchor-id="不确定性博弈与风险未来不止一种">11）不确定性、博弈与风险（“未来不止一种”）</h2>
+<ul>
+<li><strong>情景规划（Scenario Planning）</strong></li>
+<li><strong>敏感性分析/压力测试</strong></li>
+<li><strong>蒙特卡洛模拟</strong>（偏量化）</li>
+<li><strong>实物期权（Real Options）</strong></li>
+<li><strong>博弈论框架</strong>（先动优势、承诺、信誉、囚徒困境等）</li>
+<li><strong>黑天鹅/反脆弱（Taleb）</strong></li>
+<li><strong>风险矩阵（概率×影响）</strong></li>
+<li><strong>预警指标体系（Leading Indicators）</strong></li>
+</ul>
+<hr>
+</section>
+<section id="一张选型表不同战略任务常用哪些模型" class="level2">
+<h2 class="anchored" data-anchor-id="一张选型表不同战略任务常用哪些模型">12）一张“选型表”：不同战略任务常用哪些模型</h2>
+<p>下面这张表帮你在实战里快速挑工具（而不是硬背清单）。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>战略任务</strong></th>
+<th><strong>优先模型</strong></th>
+<th><strong>产出物</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>判断行业吸引力</td>
+<td>五力、生命周期、利润池</td>
+<td>进入/退出、利润来源</td>
+</tr>
+<tr class="even">
+<td>找差异化与护城河</td>
+<td>通用战略、价值链、VRIO、7 Powers</td>
+<td>竞争优势叙事与证据</td>
+</tr>
+<tr class="odd">
+<td>定战略方向/增长路径</td>
+<td>Ansoff、商业模式画布、AARRR、LTV/CAC</td>
+<td>增长假设与关键指标</td>
+</tr>
+<tr class="even">
+<td>多业务资源分配</td>
+<td>BCG、GE 九宫格、70-20-10</td>
+<td>投资/收缩/孵化清单</td>
+</tr>
+<tr class="odd">
+<td>做平台与生态</td>
+<td>生态地图、网络效应、标准战、竞合</td>
+<td>角色、规则、补贴侧</td>
+</tr>
+<tr class="even">
+<td>创新与技术路线</td>
+<td>S 曲线、路线图、双元组织</td>
+<td>路线、里程碑、组织安排</td>
+</tr>
+<tr class="odd">
+<td>国际化扩张</td>
+<td>CAGE、I-R、进入模式</td>
+<td>国家优先级与进入打法</td>
+</tr>
+<tr class="even">
+<td>并购/合作</td>
+<td>Build-Buy-Partner、协同、PMI</td>
+<td>标的逻辑与整合计划</td>
+</tr>
+<tr class="odd">
+<td>战略落地</td>
+<td>BSC、OKR、7S、RACI</td>
+<td>指标树、机制与节奏</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="关键-takeaway避免模型堆砌" class="level2">
+<h2 class="anchored" data-anchor-id="关键-takeaway避免模型堆砌">关键 takeaway（避免“模型堆砌”）</h2>
+<ul>
+<li><strong>模型不是越多越好</strong>：一份高质量战略通常只需要 3–6 个框架，彼此串成因果链。<br>
+</li>
+<li><strong>顺序很重要</strong>：外部（机会/结构）→内部（能力/优势）→选择（哪里打/怎么赢）→落地（组织/指标/节奏）。<br>
+</li>
+<li><strong>同一模型有不同版本</strong>：比如 SWOT、BSC、BCG 都有大量变体，不纠结“唯一正确”。</li>
+</ul>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<!-- 不蒜子计数器脚本 -->
+<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- 显示计数器的样式，可以根据需要修改 CSS -->
+<div style="text-align: center; margin-top: 20px; color: #666;">
+    <span id="busuanzi_container_site_pv">
+        本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <span id="busuanzi_container_site_uv" style="margin-left: 10px;">
+        | 访客数 <span id="busuanzi_value_site_uv"></span> 人
+    </span>
+</div>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/andybourne\.cn\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
