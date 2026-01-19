@@ -4230,7 +4230,230 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Mon, 19 Jan 2026 02:00:52 GMT</pubDate>
+  <pubDate>Mon, 19 Jan 2026 12:59:35 GMT</pubDate>
+</item>
+<item>
+  <title>技术人格倾向性测试</title>
+  <dc:creator>你的名字 </dc:creator>
+  <link>https://andybourne.cn/posts/Test/TechTest.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div id="67ec9283" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;javascript&quot;}}">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%%</span> ojs</span>
+<span id="cb1-2"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//|</span> echo: false</span>
+<span id="cb1-3"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> 定义题目</span>
+<span id="cb1-4">viewof q1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Inputs.radio(</span>
+<span id="cb1-5">    [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"追求极致性能 (C++/Rust)"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"追求开发效率 (Python/JS)"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"追求系统稳健 (Java/Go)"</span>],</span>
+<span id="cb1-6">    { label: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"1. 你最看重的开发维度是什么？"</span>, value: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"追求开发效率 (Python/JS)"</span> }</span>
+<span id="cb1-7">)</span>
+<span id="cb1-8"></span>
+<span id="cb1-9">viewof q2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Inputs.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>], { label: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2. 你对新技术的“尝鲜”欲望 (0-10)："</span>, step: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> })</span></code></pre></div></div>
+</details>
+</div>
+<div id="f6ff6c2f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;javascript&quot;}}">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%%</span> ojs</span>
+<span id="cb2-2"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//|</span> echo: false</span>
+<span id="cb2-3"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> 响应式计算结果</span>
+<span id="cb2-4">results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb2-5">    let score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span>(q1.includes(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"性能"</span>)) score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span>(q1.includes(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"效率"</span>)) score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span>(q1.includes(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"稳健"</span>)) score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-9"></span>
+<span id="cb2-10">    score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> q2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-11">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> score<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-12">}</span>
+<span id="cb2-13"></span>
+<span id="cb2-14"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> 根据分数匹配人格</span>
+<span id="cb2-15">profile <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb2-16">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span>(results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span>) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> { title: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"硬核极客"</span>, desc: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"你喜欢钻研底层，对代码有着像素级的掌控欲。"</span> }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-17"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> (results <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> { title: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"务实开发者"</span>, desc: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"你善于利用工具解决问题，平衡艺术与现实。"</span> }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-18"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> { title: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"创意工程师"</span>, desc: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"你更关注产品本身，技术是你实现创意的画笔。"</span> }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-19">}</span></code></pre></div></div>
+</details>
+</div>
+<div id="90dd395d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;javascript&quot;}}">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%%</span> ojs</span>
+<span id="cb3-2"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//|</span> echo: false</span>
+<span id="cb3-3">md`</span>
+<span id="cb3-4"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb3-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">### 🎊 测试结果：${profile.title}</span></span>
+<span id="cb3-6"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> ${profile.desc}</span>
+<span id="cb3-7"></span>
+<span id="cb3-8"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>你的技术倾向性指数：${results} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span></span>
+<span id="cb3-9">`</span></code></pre></div></div>
+</details>
+</div>
+
+
+
+ ]]></description>
+  <guid>https://andybourne.cn/posts/Test/TechTest.html</guid>
+  <pubDate>Mon, 19 Jan 2026 12:59:35 GMT</pubDate>
 </item>
 <item>
   <title>Valuation</title>
@@ -4553,7 +4776,7 @@ Andy Bourne
 
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Valuation/</guid>
-  <pubDate>Mon, 19 Jan 2026 02:00:52 GMT</pubDate>
+  <pubDate>Mon, 19 Jan 2026 12:59:35 GMT</pubDate>
 </item>
 <item>
   <title>Mirror</title>
@@ -4600,53 +4823,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Mirror/</guid>
-  <pubDate>Mon, 19 Jan 2026 02:00:52 GMT</pubDate>
-</item>
-<item>
-  <title>Mirror 镜子 0000-01-01</title>
-  <dc:creator>AndyBourne </dc:creator>
-  <link>https://andybourne.cn/posts/Mirror/0000/0000.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-<section id="第一原则" class="level1" data-number="1">
-
-<ul>
-<li>存在平行时空</li>
-</ul>
-</section>
-<section id="第二原则" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 第二原则</h1>
-<ul>
-<li>超能力者可以穿越平行时空，但是不能改变不在同一维度的时空，即只能观察低纬度时空，每次只能观察一个，观察的同时要消耗的自己的物理尺度即生命值</li>
-</ul>
-</section>
-<section id="第三原则" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 第三原则</h1>
-<ul>
-<li>在一个封闭的平时时空里，一个人的生命如果能跨越其物理尺度，那么他就能跃迁到另一个平行时空（且维度只能比此前高一个等级里)。</li>
-</ul>
-</section>
-<section id="第四原则" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 第四原则</h1>
-<ul>
-<li>最后一个假设，平行时空最高等级与最低等级的维度之差不能大于等于10个等级.</li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>Mirror</category>
-  <category>镜子</category>
-  <category>创作</category>
-  <guid>https://andybourne.cn/posts/Mirror/0000/0000.html</guid>
-  <pubDate>Fri, 31 Dec -0001 15:54:17 GMT</pubDate>
-  <media:content url="https://andybourne.cn/posts/Mirror/0000/cover.jpg" medium="image" type="image/jpeg"/>
+  <pubDate>Mon, 19 Jan 2026 12:59:35 GMT</pubDate>
 </item>
 </channel>
 </rss>
