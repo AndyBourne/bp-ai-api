@@ -118,7 +118,7 @@
   <category>Rethink，Gabriel</category>
   <guid>https://andybourne.cn/posts/Rethink/ Rethink20260118/Rethink20260118.html</guid>
   <pubDate>Sat, 17 Jan 2026 16:00:00 GMT</pubDate>
-  <media:content url="https://andybourne.cn/posts/Rethink/ Rethink20260118/Gabriel.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://andybourne.cn/posts/Rethink/ Rethink20260118/Gabriel.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>研究框架/估值模型</title>
@@ -269,15 +269,6 @@
 </section>
 <section id="战略组织战略组织" class="level3">
 <h3 class="anchored" data-anchor-id="战略组织战略组织">1.14 战略组织（战略组织）</h3>
-</section>
-<section id="战略执行战略执行" class="level3">
-<h3 class="anchored" data-anchor-id="战略执行战略执行">1.15 战略执行（战略执行）</h3>
-</section>
-<section id="战略评估战略评估" class="level3">
-<h3 class="anchored" data-anchor-id="战略评估战略评估">1.16 战略评估（战略评估）</h3>
-</section>
-<section id="战略优化战略" class="level3">
-<h3 class="anchored" data-anchor-id="战略优化战略">1.17 战略优化（战略）</h3>
 <hr>
 </section>
 </section>
@@ -4143,10 +4134,10 @@ Alphabet 数据内可复算的“现金与有价证券−长期债务”。</p><
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluayVFRiVCQyU4Q0dhYnJpZWw=" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768756532712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU1JThGJThEJUU2JTgwJTlEJTJDUmV0aGluayVFRiVCQyU4Q0dhYnJpZWw=" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768787875945" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
 <div class="thumbnail"><a href="../../posts/Rethink/ Rethink20260118/Rethink20260118.html" class="no-external">
 
-<img loading="lazy" src="https://andybourne.cn/posts/Rethink/ Rethink20260118/Gabriel.jpeg" class="thumbnail-image">
+<img loading="lazy" src="https://andybourne.cn/posts/Rethink/ Rethink20260118/Gabriel.webp" class="thumbnail-image">
 
 </a></div>
 <div class="body">
@@ -4239,7 +4230,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Sun, 18 Jan 2026 17:18:26 GMT</pubDate>
+  <pubDate>Mon, 19 Jan 2026 02:00:52 GMT</pubDate>
 </item>
 <item>
   <title>Valuation</title>
@@ -4257,7 +4248,7 @@ AndyBourne
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768726370891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1554">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JUExJTg2JUU2JTlFJUI2JTJDJUU0JUJDJUIwJUU1JTgwJUJDJTJDJUU1JTk1JTg2JUU0JUI4JTlBJUU1JTg4JTg2JUU2JTlFJTkwJTJDJUU1JTg4JTg2JUU2JTlFJTkwJUU2JUE4JUExJUU1JTlFJThC" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1768788003758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1548">
 <div class="thumbnail"><a href="../../posts/Valuation/theModelOfValuation/ModelOfValuation.html" class="no-external">
 
 <img loading="lazy" src="https://andybourne.cn/posts/Valuation/theModelOfValuation/BusinesAnalyisize.png" class="thumbnail-image">
@@ -4562,7 +4553,7 @@ Andy Bourne
 
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Valuation/</guid>
-  <pubDate>Sun, 18 Jan 2026 17:18:26 GMT</pubDate>
+  <pubDate>Mon, 19 Jan 2026 02:00:52 GMT</pubDate>
 </item>
 <item>
   <title>Mirror</title>
@@ -4609,7 +4600,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Mirror/</guid>
-  <pubDate>Sun, 18 Jan 2026 17:18:26 GMT</pubDate>
+  <pubDate>Mon, 19 Jan 2026 02:00:52 GMT</pubDate>
 </item>
 <item>
   <title>Mirror 镜子 0000-01-01</title>
