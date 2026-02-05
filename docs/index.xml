@@ -7245,7 +7245,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Rethink/</guid>
-  <pubDate>Thu, 05 Feb 2026 08:39:16 GMT</pubDate>
+  <pubDate>Thu, 05 Feb 2026 08:57:27 GMT</pubDate>
 </item>
 <item>
   <title>Test</title>
@@ -7263,7 +7263,7 @@ AndyBourne
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1770279981189" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1770281668584" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
 <div class="thumbnail"><a href="../../posts/Test/Milk.html" class="no-external">
 
 <!-- img(9CEB782EFEE6)[progressive=false, height=]:listing:posts/Test/Milk.html -->
@@ -7284,7 +7284,7 @@ AndyBourne
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://andybourne.cn/posts/Test/</guid>
-  <pubDate>Thu, 05 Feb 2026 08:39:16 GMT</pubDate>
+  <pubDate>Thu, 05 Feb 2026 08:57:27 GMT</pubDate>
 </item>
 <item>
   <title>数据分析</title>
@@ -7299,8 +7299,6 @@ AndyBourne
 <section id="鲜做和老化对比按照组别的示意图" class="level1">
 <h1>鲜做和老化对比按照组别的示意图</h1>
 <div id="18d05d01" class="cell" data-execution_count="16">
-<details class="code-fold">
-<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
@@ -8773,7 +8771,6 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'/Users/wangguotao/Downloads/ISAR/ZJ/室外7度存放两天.xls'</span></span>
 <span id="cb1-279">    main(FRESH_FILE, AGED_FILE)</span></code></pre></div></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>当前使用的字体: Arial Unicode MS
 图表已保存：./tpa_plots/鲜做_A组_硬度.png
@@ -8810,8 +8807,6 @@ Excel文件已生成：/Users/wangguotao/IMBA_Study/面包TPA检测结果汇总�
 </div>
 </div>
 <div id="f0e428fe" class="cell" data-execution_count="17">
-<details class="code-fold">
-<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
@@ -9898,14 +9893,11 @@ font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"__main__"</span>:</span>
 <span id="cb3-166">    generate_orthogonal_excel()</span></code></pre></div></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Excel文件已生成：/Users/wangguotao/IMBA_Study/正交实验数据分析汇总.xlsx</code></pre>
 </div>
 </div>
 <div id="814e3bba" class="cell" data-execution_count="14">
-<details class="code-fold">
-<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
@@ -11288,7 +11280,6 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'/Users/wangguotao/Downloads/ISAR/ZJ/室外7度存放两天.xls'</span></span>
 <span id="cb5-269">    main(FRESH_FILE, AGED_FILE)</span></code></pre></div></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>当前使用的字体: Arial Unicode MS
 图表已保存：./tpa_plots/A组_硬度_鲜做vs老化.png
@@ -11319,8 +11310,6 @@ Excel文件已生成：/Users/wangguotao/IMBA_Study/面包TPA检测结果汇总�
 <section id="正交分析" class="level1">
 <h1>正交分析</h1>
 <div id="90f3b96c" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
@@ -11785,7 +11774,6 @@ background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">40</span>)</span></code></pre></div></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>--- 原始实验数据表 ---
  试验编号  A 水(mL)  B 酵母(g)  C 桑麻粉(g)  D 蜂蜜(g)  综合评分
@@ -11824,8 +11812,6 @@ D 蜂蜜(g)     4.0  238  79.33    6.0  233  77.67    8.0  209  69.67   9.67
 <section id="请确保您的-python-环境安装了-pandas-和-openpyxl-库使用-pip-install-pandas-openpyxl-安装" class="level3">
 <h3 class="anchored" data-anchor-id="请确保您的-python-环境安装了-pandas-和-openpyxl-库使用-pip-install-pandas-openpyxl-安装">请确保您的 Python 环境安装了 pandas 和 openpyxl 库（使用 pip install pandas openpyxl 安装）。</h3>
 <div id="9f3adcdc" class="cell" data-execution_count="9">
-<details class="code-fold">
-<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
@@ -12256,7 +12242,6 @@ background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"</span>)</span></code></pre></div></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>✨ 处理完成！所有数据已保存至: 正交试验完整分析结果.xlsx</code></pre>
 </div>
@@ -12266,8 +12251,6 @@ font-style: inherit;">"</span>)</span></code></pre></div></div>
 <section id="结果的完整图示" class="level1">
 <h1>结果的完整图示</h1>
 <div id="7dab550a" class="cell" data-execution_count="10">
-<details class="code-fold">
-<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
@@ -12767,7 +12750,6 @@ font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'tight'</span>)</span>
 <span id="cb11-74">plt.show()</span></code></pre></div></div>
-</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -12845,7 +12827,7 @@ font-style: inherit;">'tight'</span>)</span>
 
  ]]></description>
   <guid>https://andybourne.cn/posts/Test/Milk.html</guid>
-  <pubDate>Thu, 05 Feb 2026 08:39:16 GMT</pubDate>
+  <pubDate>Thu, 05 Feb 2026 08:57:27 GMT</pubDate>
 </item>
 </channel>
 </rss>
