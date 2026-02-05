@@ -1,0 +1,9 @@
+---
+title: "Test"
+listing:
+  contents: .
+  sort: "date desc"
+  page-size: 10
+  type: default
+  
+---
