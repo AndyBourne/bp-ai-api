@@ -11,6 +11,7 @@
   {
     "listing": "/posts/Test/index.html",
     "items": [
+      "/posts/Test/foodanalysis.html",
       "/posts/Test/Milk.html"
     ]
   },
@@ -42,6 +43,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/Rethink/index.html",
+      "/posts/Test/foodanalysis.html",
       "/posts/Test/index.html",
       "/posts/Test/Milk.html",
       "/posts/Valuation/index.html",
