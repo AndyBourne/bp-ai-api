@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="AndyBourne">
+
+<title>数据分析-IgG介导的食物不耐受与人连蛋白关联性分析 – AndyBourne-Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8448bcf7f9565bffb32063743d474478.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AndyBourne-Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">首页</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">关于</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/andybourne_cn"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/andybourne/AndyBourne-Blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">数据分析-IgG介导的食物不耐受与人连蛋白关联性分析</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>AndyBourne </p>
+            </div>
+    </div>
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#单元格-1环境配置与库导入" id="toc-单元格-1环境配置与库导入" class="nav-link active" data-scroll-target="#单元格-1环境配置与库导入">单元格 1：环境配置与库导入</a></li>
+  <li><a href="#单元格-2数据加载函数" id="toc-单元格-2数据加载函数" class="nav-link" data-scroll-target="#单元格-2数据加载函数">单元格 2：数据加载函数</a></li>
+  <li><a href="#单元格-3数据清洗与预处理" id="toc-单元格-3数据清洗与预处理" class="nav-link" data-scroll-target="#单元格-3数据清洗与预处理">单元格 3：数据清洗与预处理</a></li>
+  <li><a href="#单元格-4分层分析核心函数" id="toc-单元格-4分层分析核心函数" class="nav-link" data-scroll-target="#单元格-4分层分析核心函数">单元格 4：分层分析核心函数</a></li>
+  <li><a href="#单元格-5交互作用检验" id="toc-单元格-5交互作用检验" class="nav-link" data-scroll-target="#单元格-5交互作用检验">单元格 5：交互作用检验</a></li>
+  <li><a href="#单元格-6结果可视化" id="toc-单元格-6结果可视化" class="nav-link" data-scroll-target="#单元格-6结果可视化">单元格 6：结果可视化</a></li>
+  <li><a href="#单元格-7结果汇总导出" id="toc-单元格-7结果汇总导出" class="nav-link" data-scroll-target="#单元格-7结果汇总导出">单元格 7：结果汇总导出</a></li>
+  <li><a href="#单元格-8核心结论汇总" id="toc-单元格-8核心结论汇总" class="nav-link" data-scroll-target="#单元格-8核心结论汇总">单元格 8：核心结论汇总</a></li>
+  <li><a href="#单元格-8核心结论汇总-1" id="toc-单元格-8核心结论汇总-1" class="nav-link" data-scroll-target="#单元格-8核心结论汇总-1">单元格 8：核心结论汇总</a></li>
+  <li><a href="#分析过程说明" id="toc-分析过程说明" class="nav-link" data-scroll-target="#分析过程说明">分析过程说明</a></li>
+  <li><a href="#igg介导的食物不耐受与人连蛋白关联性分析完整过程整理" id="toc-igg介导的食物不耐受与人连蛋白关联性分析完整过程整理" class="nav-link" data-scroll-target="#igg介导的食物不耐受与人连蛋白关联性分析完整过程整理">IgG介导的食物不耐受与人连蛋白关联性分析完整过程整理</a>
+  <ul class="collapse">
+  <li><a href="#一环境准备与依赖配置" id="toc-一环境准备与依赖配置" class="nav-link" data-scroll-target="#一环境准备与依赖配置">一、环境准备与依赖配置</a></li>
+  <li><a href="#二原始数据加载与初步探索" id="toc-二原始数据加载与初步探索" class="nav-link" data-scroll-target="#二原始数据加载与初步探索">二、原始数据加载与初步探索</a></li>
+  <li><a href="#三数据清洗与预处理核心数据规整" id="toc-三数据清洗与预处理核心数据规整" class="nav-link" data-scroll-target="#三数据清洗与预处理核心数据规整">三、数据清洗与预处理（核心数据规整）</a></li>
+  <li><a href="#四分层关联性统计分析" id="toc-四分层关联性统计分析" class="nav-link" data-scroll-target="#四分层关联性统计分析">四、分层关联性统计分析</a></li>
+  <li><a href="#五交互作用检验igg与人口学特征的联合效应" id="toc-五交互作用检验igg与人口学特征的联合效应" class="nav-link" data-scroll-target="#五交互作用检验igg与人口学特征的联合效应">五、交互作用检验（IgG与人口学特征的联合效应）</a></li>
+  <li><a href="#六可视化呈现分层结果直观展示" id="toc-六可视化呈现分层结果直观展示" class="nav-link" data-scroll-target="#六可视化呈现分层结果直观展示">六、可视化呈现（分层结果直观展示）</a></li>
+  <li><a href="#七结果汇总与excel导出" id="toc-七结果汇总与excel导出" class="nav-link" data-scroll-target="#七结果汇总与excel导出">七、结果汇总与Excel导出</a></li>
+  <li><a href="#八核心结论汇总" id="toc-八核心结论汇总" class="nav-link" data-scroll-target="#八核心结论汇总">八、核心结论汇总</a></li>
+  <li><a href="#九全程问题排查与代码优化" id="toc-九全程问题排查与代码优化" class="nav-link" data-scroll-target="#九全程问题排查与代码优化">九、全程问题排查与代码优化</a></li>
+  <li><a href="#分析核心产出物" id="toc-分析核心产出物" class="nav-link" data-scroll-target="#分析核心产出物">分析核心产出物</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<section id="单元格-1环境配置与库导入" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-1环境配置与库导入">单元格 1：环境配置与库导入</h3>
+<div id="e42ff972" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">IgG介导的食物不耐受与人连蛋白关联性分析 - Jupyter Notebook版</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">数据路径：/Users/wangguotao/Downloads/ISAR/food/</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装依赖（首次运行时取消注释执行，执行一次即可）</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install pandas numpy matplotlib scipy statsmodels openpyxl</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 导入所需库</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> pearsonr, spearmanr</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openpyxl <span class="im">import</span> Workbook</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置中文字体（解决Jupyter中图表中文乱码问题）</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.sans-serif'</span>] <span class="op">=</span> [<span class="st">'WenQuanYi Zen Hei'</span>, <span class="st">'SimHei'</span>, <span class="st">'Arial Unicode MS'</span>]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'axes.unicode_minus'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 配置文件路径（适配你的本地路径）</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>MAIN_DATA_PATH <span class="op">=</span> <span class="st">"/Users/wangguotao/Downloads/ISAR/food/信息汇总全_加阳性率+加权+二分类+3种食物加.xlsx"</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>FATIGUE_DATA_PATH <span class="op">=</span> <span class="st">"/Users/wangguotao/Downloads/ISAR/food/疲劳量表.xls"</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>OUTPUT_DIR <span class="op">=</span> <span class="st">"/Users/wangguotao/Downloads/ISAR/food/"</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ 环境配置完成，库导入成功！"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>✅ 环境配置完成，库导入成功！</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-2数据加载函数" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-2数据加载函数">单元格 2：数据加载函数</h3>
+<div id="c8d3b33d" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_data(main_path, fatigue_path):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""加载主数据和疲劳量表数据（主数据为核心分析用）"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 加载主数据</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        df_main <span class="op">=</span> pd.read_excel(main_path)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"✅ 成功加载主数据：</span><span class="sc">{</span>main_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"主数据形状：</span><span class="sc">{</span>df_main<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">（行×列）"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"❌ 主数据加载失败：</span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 加载疲劳量表（备用，不影响核心分析）</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        df_fatigue <span class="op">=</span> pd.read_excel(fatigue_path)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"✅ 成功加载疲劳量表：</span><span class="sc">{</span>fatigue_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"疲劳量表形状：</span><span class="sc">{</span>df_fatigue<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">（行×列）"</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"⚠️  疲劳量表加载失败：</span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">（不影响核心分析）"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        df_fatigue <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 显示核心变量</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    key_vars <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> df_main.columns <span class="cf">if</span> <span class="bu">any</span>(x <span class="kw">in</span> col <span class="cf">for</span> x <span class="kw">in</span> </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>                [<span class="st">'性别'</span>, <span class="st">'年龄'</span>, <span class="st">'婚姻'</span>, <span class="st">'身高'</span>, <span class="st">'体重'</span>, <span class="st">'人连蛋白'</span>, <span class="st">'三种食物'</span>])]</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">核心分析变量（共</span><span class="sc">{</span><span class="bu">len</span>(key_vars)<span class="sc">}</span><span class="ss">个）："</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(key_vars, <span class="dv">1</span>):</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>i<span class="sc">:2d}</span><span class="ss">. </span><span class="sc">{</span>var<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df_main, df_fatigue</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行数据加载</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>df_main, df_fatigue <span class="op">=</span> load_data(MAIN_DATA_PATH, FATIGUE_DATA_PATH)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>✅ 成功加载主数据：/Users/wangguotao/Downloads/ISAR/food/信息汇总全_加阳性率+加权+二分类+3种食物加.xlsx
+主数据形状：(102, 30)（行×列）
+✅ 成功加载疲劳量表：/Users/wangguotao/Downloads/ISAR/food/疲劳量表.xls
+疲劳量表形状：(102, 11)（行×列）
+
+核心分析变量（共10个）：
+   1. 性别
+   2. 年龄
+   3. 婚姻
+   4. 身高
+   5. 体重
+   6. 人连蛋白四参数结果
+   7. 人连蛋白直线结果
+   8. 人连蛋白四参数结果.1
+   9. 人连蛋白直线结果.1
+  10. 三种食物分类加权评分</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-3数据清洗与预处理" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-3数据清洗与预处理">单元格 3：数据清洗与预处理</h3>
+<div id="11d6b0f9" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_and_preprocess(df):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""数据清洗：处理缺失值、创建分层变量、编码变量"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    df_work <span class="op">=</span> df.copy()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. 清理性别（仅保留男/女）</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'性别_clean'</span>] <span class="op">=</span> df_work[<span class="st">'性别'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x <span class="cf">if</span> x <span class="kw">in</span> [<span class="st">'男'</span>, <span class="st">'女'</span>] <span class="cf">else</span> np.nan)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. 清理婚姻状况（统一格式）</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'婚姻_clean'</span>] <span class="op">=</span> df_work[<span class="st">'婚姻'</span>].replace(<span class="st">'已婚·'</span>, <span class="st">'已婚'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    valid_marriage <span class="op">=</span> [<span class="st">'已婚'</span>, <span class="st">'未婚'</span>, <span class="st">'离异'</span>]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'婚姻_clean'</span>] <span class="op">=</span> df_work[<span class="st">'婚姻_clean'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x <span class="cf">if</span> x <span class="kw">in</span> valid_marriage <span class="cf">else</span> np.nan)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. 计算BMI及分类（中国标准）</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    df_work <span class="op">=</span> df_work.dropna(subset<span class="op">=</span>[<span class="st">'身高'</span>, <span class="st">'体重'</span>])  <span class="co"># 删除身高体重缺失值</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'BMI'</span>] <span class="op">=</span> df_work[<span class="st">'体重'</span>] <span class="op">/</span> ((df_work[<span class="st">'身高'</span>] <span class="op">/</span> <span class="dv">100</span>) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bmi_category(bmi):</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pd.isna(bmi):</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> np.nan</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> bmi <span class="op">&lt;</span> <span class="fl">18.5</span>:</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'偏瘦'</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="fl">18.5</span> <span class="op">&lt;=</span> bmi <span class="op">&lt;</span> <span class="dv">24</span>:</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'正常'</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="dv">24</span> <span class="op">&lt;=</span> bmi <span class="op">&lt;</span> <span class="dv">28</span>:</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'超重'</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'肥胖'</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'BMI分类'</span>] <span class="op">=</span> df_work[<span class="st">'BMI'</span>].<span class="bu">apply</span>(bmi_category)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'BMI分类合并'</span>] <span class="op">=</span> df_work[<span class="st">'BMI分类'</span>].replace({<span class="st">'偏瘦'</span>: <span class="st">'正常'</span>})  <span class="co"># 合并小样本组</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. 年龄分层（临床常用分组）</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    age_bins <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">35</span>, <span class="dv">45</span>, <span class="dv">55</span>, <span class="dv">100</span>]</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    age_labels <span class="op">=</span> [<span class="st">'≤35岁'</span>, <span class="st">'36-45岁'</span>, <span class="st">'46-55岁'</span>, <span class="st">'&gt;55岁'</span>]</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'年龄分层'</span>] <span class="op">=</span> pd.cut(df_work[<span class="st">'年龄'</span>], bins<span class="op">=</span>age_bins, labels<span class="op">=</span>age_labels, right<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 5. 选择核心变量并去重</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    core_vars <span class="op">=</span> [</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">'性别_clean'</span>, <span class="st">'年龄分层'</span>, <span class="st">'BMI分类'</span>, <span class="st">'BMI分类合并'</span>, <span class="st">'婚姻_clean'</span>,</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">'三种食物分类加权评分'</span>, <span class="st">'人连蛋白四参数结果.1'</span>, <span class="st">'是否耐受'</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    df_clean <span class="op">=</span> df_work[core_vars].dropna()</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 6. 创建回归编码变量</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    df_clean[<span class="st">'性别编码'</span>] <span class="op">=</span> df_clean[<span class="st">'性别_clean'</span>].<span class="bu">map</span>({<span class="st">'男'</span>: <span class="dv">1</span>, <span class="st">'女'</span>: <span class="dv">0</span>})</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    df_clean[<span class="st">'年龄连续'</span>] <span class="op">=</span> df_clean[<span class="st">'年龄分层'</span>].<span class="bu">map</span>({<span class="st">'≤35岁'</span>: <span class="dv">30</span>, <span class="st">'36-45岁'</span>: <span class="dv">40</span>, <span class="st">'46-55岁'</span>: <span class="dv">50</span>, <span class="st">'&gt;55岁'</span>: <span class="dv">60</span>})</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    df_clean[<span class="st">'BMI编码'</span>] <span class="op">=</span> df_clean[<span class="st">'BMI分类合并'</span>].<span class="bu">map</span>({<span class="st">'正常'</span>: <span class="dv">1</span>, <span class="st">'超重'</span>: <span class="dv">2</span>, <span class="st">'肥胖'</span>: <span class="dv">3</span>})</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 打印清洗结果</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">📊 数据清洗结果："</span>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"原始样本量：</span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss">例 → 有效样本量：</span><span class="sc">{</span><span class="bu">len</span>(df_clean)<span class="sc">}</span><span class="ss">例"</span>)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"各分层变量分布："</span>)</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  性别：</span><span class="sc">{</span>df_clean[<span class="st">'性别_clean'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  年龄分层：</span><span class="sc">{</span>df_clean[<span class="st">'年龄分层'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  BMI分类：</span><span class="sc">{</span>df_clean[<span class="st">'BMI分类合并'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  婚姻状况：</span><span class="sc">{</span>df_clean[<span class="st">'婚姻_clean'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 保存清洗后数据</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    clean_path <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">cleaned_analysis_data.csv"</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>    df_clean.to_csv(clean_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">'utf-8-sig'</span>)</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">💾 清洗后数据已保存：</span><span class="sc">{</span>clean_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df_clean</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行数据清洗</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> df_main <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    df_clean <span class="op">=</span> clean_and_preprocess(df_main)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"❌ 主数据加载失败，无法进行数据清洗"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+📊 数据清洗结果：
+原始样本量：102例 → 有效样本量：91例
+各分层变量分布：
+  性别：{'男': 71, '女': 20}
+  年龄分层：{'36-45岁': 31, '46-55岁': 29, '≤35岁': 25, '&gt;55岁': 6}
+  BMI分类：{'超重': 37, '正常': 32, '肥胖': 22}
+  婚姻状况：{'已婚': 76, '未婚': 12, '离异': 3}
+
+💾 清洗后数据已保存：/Users/wangguotao/Downloads/ISAR/food/cleaned_analysis_data.csv</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-4分层分析核心函数" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-4分层分析核心函数">单元格 4：分层分析核心函数</h3>
+<div id="98f95b46" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> stratified_analysis(df, strat_var):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""分层分析：计算相关系数、线性回归及显著性"""</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> {}</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    groups <span class="op">=</span> df.groupby(strat_var)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 分层变量中文名称映射</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    strat_cn <span class="op">=</span> {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'性别_clean'</span>: <span class="st">'性别'</span>, <span class="st">'年龄分层'</span>: <span class="st">'年龄'</span>, </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'BMI分类合并'</span>: <span class="st">'BMI'</span>, <span class="st">'婚姻_clean'</span>: <span class="st">'婚姻状况'</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    }[strat_var]</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">"</span> <span class="op">+</span> <span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"🔍 </span><span class="sc">{</span>strat_cn<span class="sc">}</span><span class="ss">分层分析结果"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> group_name, group_data <span class="kw">in</span> groups:</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(group_data) <span class="op">&lt;</span> <span class="dv">3</span>:  <span class="co"># 样本量&lt;3例跳过</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>            results[<span class="bu">str</span>(group_name)] <span class="op">=</span> {<span class="st">'样本量'</span>: <span class="bu">len</span>(group_data), <span class="st">'状态'</span>: <span class="st">'样本量不足'</span>}</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"【</span><span class="sc">{</span>group_name<span class="sc">}</span><span class="ss">】样本量</span><span class="sc">{</span><span class="bu">len</span>(group_data)<span class="sc">}</span><span class="ss">例，跳过分析"</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 相关分析（Pearson+Spearman）</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        pearson_r, pearson_p <span class="op">=</span> pearsonr(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'人连蛋白四参数结果.1'</span>]</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        spearman_r, spearman_p <span class="op">=</span> spearmanr(</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'人连蛋白四参数结果.1'</span>]</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 线性回归</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> smf.ols(</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分')"</span>, </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>            data<span class="op">=</span>group_data</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        ).fit()</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>        beta, beta_se, beta_p <span class="op">=</span> model.params[<span class="dv">1</span>], model.bse[<span class="dv">1</span>], model.pvalues[<span class="dv">1</span>]</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>        r2 <span class="op">=</span> model.rsquared</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 结果存储与打印</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>        results[<span class="bu">str</span>(group_name)] <span class="op">=</span> {</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>            <span class="st">'样本量'</span>: <span class="bu">len</span>(group_data), <span class="st">'Pearson_r'</span>: pearson_r, <span class="st">'Pearson_p'</span>: pearson_p,</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Spearman_r'</span>: spearman_r, <span class="st">'Spearman_p'</span>: spearman_p,</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>            <span class="st">'beta'</span>: beta, <span class="st">'beta_se'</span>: beta_se, <span class="st">'beta_p'</span>: beta_p, <span class="st">'R2'</span>: r2</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">【</span><span class="sc">{</span>group_name<span class="sc">}</span><span class="ss">】（样本量：</span><span class="sc">{</span><span class="bu">len</span>(group_data)<span class="sc">}</span><span class="ss">例）"</span>)</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  相关分析："</span>)</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"    Pearson：r=</span><span class="sc">{</span>pearson_r<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>pearson_p<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"    Spearman：ρ=</span><span class="sc">{</span>spearman_r<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>spearman_p<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  线性回归："</span>)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"    β=</span><span class="sc">{</span>beta<span class="sc">:.4f}</span><span class="ss">（SE=</span><span class="sc">{</span>beta_se<span class="sc">:.4f}</span><span class="ss">），p=</span><span class="sc">{</span>beta_p<span class="sc">:.4f}</span><span class="ss">，R²=</span><span class="sc">{</span>r2<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pearson_p <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="kw">or</span> spearman_p <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"  ⚠️  存在显著相关性（p&lt;0.05）"</span>)</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行分层分析</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'df_clean'</span> <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 性别分层分析</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    gender_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'性别_clean'</span>)</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 年龄分层分析</span></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    age_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'年龄分层'</span>)</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># BMI分层分析</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>    bmi_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'BMI分类合并'</span>)</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 婚姻状况分层分析</span></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>    marriage_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'婚姻_clean'</span>)</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"❌ 清洗后数据不存在，无法进行分层分析"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+============================================================
+🔍 性别分层分析结果
+============================================================
+
+【女】（样本量：20例）
+  相关分析：
+    Pearson：r=0.1493，p=0.5298
+    Spearman：ρ=0.2214，p=0.3482
+  线性回归：
+    β=21.1880（SE=33.0746），p=0.5298，R²=0.0223
+
+【男】（样本量：71例）
+  相关分析：
+    Pearson：r=-0.1814，p=0.1300
+    Spearman：ρ=-0.1003，p=0.4053
+  线性回归：
+    β=-40.2186（SE=26.2477），p=0.1300，R²=0.0329
+
+============================================================
+🔍 年龄分层分析结果
+============================================================
+
+【≤35岁】（样本量：25例）
+  相关分析：
+    Pearson：r=0.0511，p=0.8084
+    Spearman：ρ=0.0567，p=0.7877
+  线性回归：
+    β=9.3043（SE=37.9301），p=0.8084，R²=0.0026
+
+【36-45岁】（样本量：31例）
+  相关分析：
+    Pearson：r=0.2780，p=0.1299
+    Spearman：ρ=0.4193，p=0.0189
+  线性回归：
+    β=30.6741（SE=19.6785），p=0.1299，R²=0.0773
+  ⚠️  存在显著相关性（p&lt;0.05）
+
+【46-55岁】（样本量：29例）
+  相关分析：
+    Pearson：r=-0.2978，p=0.1167
+    Spearman：ρ=-0.6374，p=0.0002
+  线性回归：
+    β=-80.5820（SE=49.7132），p=0.1167，R²=0.0887
+  ⚠️  存在显著相关性（p&lt;0.05）
+
+【&gt;55岁】（样本量：6例）
+  相关分析：
+    Pearson：r=0.1592，p=0.7632
+    Spearman：ρ=0.1309，p=0.8047
+  线性回归：
+    β=17.3894（SE=53.9203），p=0.7632，R²=0.0253
+
+============================================================
+🔍 BMI分层分析结果
+============================================================
+
+【正常】（样本量：32例）
+  相关分析：
+    Pearson：r=0.0968，p=0.5980
+    Spearman：ρ=0.1170，p=0.5237
+  线性回归：
+    β=19.5630（SE=36.7118），p=0.5980，R²=0.0094
+
+【肥胖】（样本量：22例）
+  相关分析：
+    Pearson：r=-0.1735，p=0.4401
+    Spearman：ρ=-0.0534，p=0.8134
+  线性回归：
+    β=-44.6750（SE=56.7156），p=0.4401，R²=0.0301
+
+【超重】（样本量：37例）
+  相关分析：
+    Pearson：r=-0.2009，p=0.2331
+    Spearman：ρ=-0.2019，p=0.2307
+  线性回归：
+    β=-34.1264（SE=28.1246），p=0.2331，R²=0.0404
+
+============================================================
+🔍 婚姻状况分层分析结果
+============================================================
+
+【已婚】（样本量：76例）
+  相关分析：
+    Pearson：r=-0.1212，p=0.2971
+    Spearman：ρ=-0.0774，p=0.5061
+  线性回归：
+    β=-24.3615（SE=23.1985），p=0.2971，R²=0.0147
+
+【未婚】（样本量：12例）
+  相关分析：
+    Pearson：r=-0.3341，p=0.2885
+    Spearman：ρ=0.0521，p=0.8721
+  线性回归：
+    β=-136.2899（SE=121.5802），p=0.2885，R²=0.1116
+
+【离异】（样本量：3例）
+  相关分析：
+    Pearson：r=0.8532，p=0.3493
+    Spearman：ρ=0.8660，p=0.3333
+  线性回归：
+    β=18.3934（SE=11.2432），p=0.3493，R²=0.7280</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-5交互作用检验" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-5交互作用检验">单元格 5：交互作用检验</h3>
+<div id="c9df5a55" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_and_preprocess(df):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""数据清洗：处理缺失值、创建分层变量、编码变量"""</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    df_work <span class="op">=</span> df.copy()</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. 清理性别（仅保留男/女）</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'性别_clean'</span>] <span class="op">=</span> df_work[<span class="st">'性别'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x <span class="cf">if</span> x <span class="kw">in</span> [<span class="st">'男'</span>, <span class="st">'女'</span>] <span class="cf">else</span> np.nan)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. 清理婚姻状况（统一格式）</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'婚姻_clean'</span>] <span class="op">=</span> df_work[<span class="st">'婚姻'</span>].replace(<span class="st">'已婚·'</span>, <span class="st">'已婚'</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    valid_marriage <span class="op">=</span> [<span class="st">'已婚'</span>, <span class="st">'未婚'</span>, <span class="st">'离异'</span>]</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'婚姻_clean'</span>] <span class="op">=</span> df_work[<span class="st">'婚姻_clean'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x <span class="cf">if</span> x <span class="kw">in</span> valid_marriage <span class="cf">else</span> np.nan)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. 计算BMI及分类（中国标准）</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    df_work <span class="op">=</span> df_work.dropna(subset<span class="op">=</span>[<span class="st">'身高'</span>, <span class="st">'体重'</span>])  <span class="co"># 删除身高体重缺失值</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'BMI'</span>] <span class="op">=</span> df_work[<span class="st">'体重'</span>] <span class="op">/</span> ((df_work[<span class="st">'身高'</span>] <span class="op">/</span> <span class="dv">100</span>) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bmi_category(bmi):</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pd.isna(bmi):</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> np.nan</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> bmi <span class="op">&lt;</span> <span class="fl">18.5</span>:</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'偏瘦'</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="fl">18.5</span> <span class="op">&lt;=</span> bmi <span class="op">&lt;</span> <span class="dv">24</span>:</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'正常'</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="dv">24</span> <span class="op">&lt;=</span> bmi <span class="op">&lt;</span> <span class="dv">28</span>:</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'超重'</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'肥胖'</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'BMI分类'</span>] <span class="op">=</span> df_work[<span class="st">'BMI'</span>].<span class="bu">apply</span>(bmi_category)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'BMI分类合并'</span>] <span class="op">=</span> df_work[<span class="st">'BMI分类'</span>].replace({<span class="st">'偏瘦'</span>: <span class="st">'正常'</span>})  <span class="co"># 合并小样本组</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. 年龄分层（临床常用分组）</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    age_bins <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">35</span>, <span class="dv">45</span>, <span class="dv">55</span>, <span class="dv">100</span>]</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    age_labels <span class="op">=</span> [<span class="st">'≤35岁'</span>, <span class="st">'36-45岁'</span>, <span class="st">'46-55岁'</span>, <span class="st">'&gt;55岁'</span>]</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    df_work[<span class="st">'年龄分层'</span>] <span class="op">=</span> pd.cut(df_work[<span class="st">'年龄'</span>], bins<span class="op">=</span>age_bins, labels<span class="op">=</span>age_labels, right<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 5. 选择核心变量并去重</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    core_vars <span class="op">=</span> [</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">'性别_clean'</span>, <span class="st">'年龄分层'</span>, <span class="st">'BMI分类'</span>, <span class="st">'BMI分类合并'</span>, <span class="st">'婚姻_clean'</span>,</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">'三种食物分类加权评分'</span>, <span class="st">'人连蛋白四参数结果.1'</span>, <span class="st">'是否耐受'</span>, <span class="st">'年龄'</span>  <span class="co"># 新增原始年龄字段</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    df_clean <span class="op">=</span> df_work[core_vars].dropna()</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 6. 创建回归编码变量（关键修复：确保所有编码变量为数值型）</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>    df_clean[<span class="st">'性别编码'</span>] <span class="op">=</span> df_clean[<span class="st">'性别_clean'</span>].<span class="bu">map</span>({<span class="st">'男'</span>: <span class="dv">1</span>, <span class="st">'女'</span>: <span class="dv">0</span>}).astype(<span class="bu">float</span>)</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 修复：直接使用原始年龄作为连续变量，避免分类变量问题</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>    df_clean[<span class="st">'年龄连续'</span>] <span class="op">=</span> df_clean[<span class="st">'年龄'</span>].astype(<span class="bu">float</span>)  <span class="co"># 改用原始年龄字段</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 备用方案：如果仍想用分层映射值，需强制转换为数值型</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># age_map = {'≤35岁': 30.0, '36-45岁': 40.0, '46-55岁': 50.0, '&gt;55岁': 60.0}</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    <span class="co"># df_clean['年龄连续'] = df_clean['年龄分层'].map(age_map).astype(float)</span></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    df_clean[<span class="st">'BMI编码'</span>] <span class="op">=</span> df_clean[<span class="st">'BMI分类合并'</span>].<span class="bu">map</span>({<span class="st">'正常'</span>: <span class="fl">1.0</span>, <span class="st">'超重'</span>: <span class="fl">2.0</span>, <span class="st">'肥胖'</span>: <span class="fl">3.0</span>}).astype(<span class="bu">float</span>)</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 打印数据类型检查</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">🔍 关键变量数据类型检查："</span>)</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  三种食物分类加权评分: </span><span class="sc">{</span>df_clean[<span class="st">'三种食物分类加权评分'</span>]<span class="sc">.</span>dtype<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  人连蛋白四参数结果.1: </span><span class="sc">{</span>df_clean[<span class="st">'人连蛋白四参数结果.1'</span>]<span class="sc">.</span>dtype<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  性别编码: </span><span class="sc">{</span>df_clean[<span class="st">'性别编码'</span>]<span class="sc">.</span>dtype<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  年龄连续: </span><span class="sc">{</span>df_clean[<span class="st">'年龄连续'</span>]<span class="sc">.</span>dtype<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  BMI编码: </span><span class="sc">{</span>df_clean[<span class="st">'BMI编码'</span>]<span class="sc">.</span>dtype<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 打印清洗结果</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">📊 数据清洗结果："</span>)</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"原始样本量：</span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss">例 → 有效样本量：</span><span class="sc">{</span><span class="bu">len</span>(df_clean)<span class="sc">}</span><span class="ss">例"</span>)</span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"各分层变量分布："</span>)</span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  性别：</span><span class="sc">{</span>df_clean[<span class="st">'性别_clean'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  年龄分层：</span><span class="sc">{</span>df_clean[<span class="st">'年龄分层'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  BMI分类：</span><span class="sc">{</span>df_clean[<span class="st">'BMI分类合并'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  婚姻状况：</span><span class="sc">{</span>df_clean[<span class="st">'婚姻_clean'</span>]<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 保存清洗后数据</span></span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>    clean_path <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">cleaned_analysis_data.csv"</span></span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>    df_clean.to_csv(clean_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">'utf-8-sig'</span>)</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">💾 清洗后数据已保存：</span><span class="sc">{</span>clean_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df_clean</span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行数据清洗</span></span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> df_main <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>    df_clean <span class="op">=</span> clean_and_preprocess(df_main)</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"❌ 主数据加载失败，无法进行数据清洗"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+🔍 关键变量数据类型检查：
+  三种食物分类加权评分: float64
+  人连蛋白四参数结果.1: float64
+  性别编码: float64
+  年龄连续: float64
+  BMI编码: float64
+
+📊 数据清洗结果：
+原始样本量：102例 → 有效样本量：91例
+各分层变量分布：
+  性别：{'男': 71, '女': 20}
+  年龄分层：{'36-45岁': 31, '46-55岁': 29, '≤35岁': 25, '&gt;55岁': 6}
+  BMI分类：{'超重': 37, '正常': 32, '肥胖': 22}
+  婚姻状况：{'已婚': 76, '未婚': 12, '离异': 3}
+
+💾 清洗后数据已保存：/Users/wangguotao/Downloads/ISAR/food/cleaned_analysis_data.csv</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-6结果可视化" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-6结果可视化">单元格 6：结果可视化</h3>
+<div id="79237b50" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> stratified_analysis(df, strat_var):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""分层分析：计算相关系数、线性回归及显著性"""</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> {}</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    groups <span class="op">=</span> df.groupby(strat_var)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 分层变量中文名称映射</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    strat_cn <span class="op">=</span> {</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'性别_clean'</span>: <span class="st">'性别'</span>, <span class="st">'年龄分层'</span>: <span class="st">'年龄'</span>, </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'BMI分类合并'</span>: <span class="st">'BMI'</span>, <span class="st">'婚姻_clean'</span>: <span class="st">'婚姻状况'</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    }[strat_var]</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">"</span> <span class="op">+</span> <span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"🔍 </span><span class="sc">{</span>strat_cn<span class="sc">}</span><span class="ss">分层分析结果"</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> group_name, group_data <span class="kw">in</span> groups:</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(group_data) <span class="op">&lt;</span> <span class="dv">3</span>:  <span class="co"># 样本量&lt;3例跳过</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>            results[<span class="bu">str</span>(group_name)] <span class="op">=</span> {<span class="st">'样本量'</span>: <span class="bu">len</span>(group_data), <span class="st">'状态'</span>: <span class="st">'样本量不足'</span>}</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"【</span><span class="sc">{</span>group_name<span class="sc">}</span><span class="ss">】样本量</span><span class="sc">{</span><span class="bu">len</span>(group_data)<span class="sc">}</span><span class="ss">例，跳过分析"</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 相关分析（Pearson+Spearman）</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>        pearson_r, pearson_p <span class="op">=</span> pearsonr(</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'人连蛋白四参数结果.1'</span>]</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>        spearman_r, spearman_p <span class="op">=</span> spearmanr(</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>            group_data[<span class="st">'人连蛋白四参数结果.1'</span>]</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 线性回归</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> smf.ols(</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分')"</span>, </span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>            data<span class="op">=</span>group_data</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>        ).fit()</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>        beta, beta_se, beta_p <span class="op">=</span> model.params[<span class="dv">1</span>], model.bse[<span class="dv">1</span>], model.pvalues[<span class="dv">1</span>]</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>        r2 <span class="op">=</span> model.rsquared</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 结果存储与打印</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>        results[<span class="bu">str</span>(group_name)] <span class="op">=</span> {</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>            <span class="st">'样本量'</span>: <span class="bu">len</span>(group_data), <span class="st">'Pearson_r'</span>: pearson_r, <span class="st">'Pearson_p'</span>: pearson_p,</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Spearman_r'</span>: spearman_r, <span class="st">'Spearman_p'</span>: spearman_p,</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>            <span class="st">'beta'</span>: beta, <span class="st">'beta_se'</span>: beta_se, <span class="st">'beta_p'</span>: beta_p, <span class="st">'R2'</span>: r2</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">【</span><span class="sc">{</span>group_name<span class="sc">}</span><span class="ss">】（样本量：</span><span class="sc">{</span><span class="bu">len</span>(group_data)<span class="sc">}</span><span class="ss">例）"</span>)</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  相关分析："</span>)</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"    Pearson：r=</span><span class="sc">{</span>pearson_r<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>pearson_p<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"    Spearman：ρ=</span><span class="sc">{</span>spearman_r<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>spearman_p<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  线性回归："</span>)</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"    β=</span><span class="sc">{</span>beta<span class="sc">:.4f}</span><span class="ss">（SE=</span><span class="sc">{</span>beta_se<span class="sc">:.4f}</span><span class="ss">），p=</span><span class="sc">{</span>beta_p<span class="sc">:.4f}</span><span class="ss">，R²=</span><span class="sc">{</span>r2<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pearson_p <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="kw">or</span> spearman_p <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"  ⚠️  存在显著相关性（p&lt;0.05）"</span>)</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行分层分析</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'df_clean'</span> <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 性别分层分析</span></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>    gender_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'性别_clean'</span>)</span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 年龄分层分析</span></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>    age_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'年龄分层'</span>)</span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># BMI分层分析</span></span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>    bmi_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'BMI分类合并'</span>)</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 婚姻状况分层分析</span></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>    marriage_res <span class="op">=</span> stratified_analysis(df_clean, <span class="st">'婚姻_clean'</span>)</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"❌ 清洗后数据不存在，无法进行分层分析"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+============================================================
+🔍 性别分层分析结果
+============================================================
+
+【女】（样本量：20例）
+  相关分析：
+    Pearson：r=0.1493，p=0.5298
+    Spearman：ρ=0.2214，p=0.3482
+  线性回归：
+    β=21.1880（SE=33.0746），p=0.5298，R²=0.0223
+
+【男】（样本量：71例）
+  相关分析：
+    Pearson：r=-0.1814，p=0.1300
+    Spearman：ρ=-0.1003，p=0.4053
+  线性回归：
+    β=-40.2186（SE=26.2477），p=0.1300，R²=0.0329
+
+============================================================
+🔍 年龄分层分析结果
+============================================================
+
+【≤35岁】（样本量：25例）
+  相关分析：
+    Pearson：r=0.0511，p=0.8084
+    Spearman：ρ=0.0567，p=0.7877
+  线性回归：
+    β=9.3043（SE=37.9301），p=0.8084，R²=0.0026
+
+【36-45岁】（样本量：31例）
+  相关分析：
+    Pearson：r=0.2780，p=0.1299
+    Spearman：ρ=0.4193，p=0.0189
+  线性回归：
+    β=30.6741（SE=19.6785），p=0.1299，R²=0.0773
+  ⚠️  存在显著相关性（p&lt;0.05）
+
+【46-55岁】（样本量：29例）
+  相关分析：
+    Pearson：r=-0.2978，p=0.1167
+    Spearman：ρ=-0.6374，p=0.0002
+  线性回归：
+    β=-80.5820（SE=49.7132），p=0.1167，R²=0.0887
+  ⚠️  存在显著相关性（p&lt;0.05）
+
+【&gt;55岁】（样本量：6例）
+  相关分析：
+    Pearson：r=0.1592，p=0.7632
+    Spearman：ρ=0.1309，p=0.8047
+  线性回归：
+    β=17.3894（SE=53.9203），p=0.7632，R²=0.0253
+
+============================================================
+🔍 BMI分层分析结果
+============================================================
+
+【正常】（样本量：32例）
+  相关分析：
+    Pearson：r=0.0968，p=0.5980
+    Spearman：ρ=0.1170，p=0.5237
+  线性回归：
+    β=19.5630（SE=36.7118），p=0.5980，R²=0.0094
+
+【肥胖】（样本量：22例）
+  相关分析：
+    Pearson：r=-0.1735，p=0.4401
+    Spearman：ρ=-0.0534，p=0.8134
+  线性回归：
+    β=-44.6750（SE=56.7156），p=0.4401，R²=0.0301
+
+【超重】（样本量：37例）
+  相关分析：
+    Pearson：r=-0.2009，p=0.2331
+    Spearman：ρ=-0.2019，p=0.2307
+  线性回归：
+    β=-34.1264（SE=28.1246），p=0.2331，R²=0.0404
+
+============================================================
+🔍 婚姻状况分层分析结果
+============================================================
+
+【已婚】（样本量：76例）
+  相关分析：
+    Pearson：r=-0.1212，p=0.2971
+    Spearman：ρ=-0.0774，p=0.5061
+  线性回归：
+    β=-24.3615（SE=23.1985），p=0.2971，R²=0.0147
+
+【未婚】（样本量：12例）
+  相关分析：
+    Pearson：r=-0.3341，p=0.2885
+    Spearman：ρ=0.0521，p=0.8721
+  线性回归：
+    β=-136.2899（SE=121.5802），p=0.2885，R²=0.1116
+
+【离异】（样本量：3例）
+  相关分析：
+    Pearson：r=0.8532，p=0.3493
+    Spearman：ρ=0.8660，p=0.3333
+  线性回归：
+    β=18.3934（SE=11.2432），p=0.3493，R²=0.7280</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-7结果汇总导出" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-7结果汇总导出">单元格 7：结果汇总导出</h3>
+<div id="dcf88eb5" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> interaction_test(df):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""交互作用检验：主效应模型 vs 交互效应模型"""</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">"</span> <span class="op">+</span> <span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"🔍 交互作用检验结果（IgG×性别/年龄/BMI）"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">60</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 数据类型二次检查与转换（双重保障）</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    df_model <span class="op">=</span> df.copy()</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 确保核心变量为数值型</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    numeric_cols <span class="op">=</span> [<span class="st">'三种食物分类加权评分'</span>, <span class="st">'人连蛋白四参数结果.1'</span>, <span class="st">'性别编码'</span>, <span class="st">'年龄连续'</span>, <span class="st">'BMI编码'</span>]</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> col <span class="kw">in</span> numeric_cols:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        df_model[col] <span class="op">=</span> pd.to_numeric(df_model[col], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 删除转换后仍有缺失值的行</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    df_model <span class="op">=</span> df_model.dropna(subset<span class="op">=</span>numeric_cols)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"📝 交互分析有效样本量：</span><span class="sc">{</span><span class="bu">len</span>(df_model)<span class="sc">}</span><span class="ss">例（剔除数值缺失行）"</span>)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 创建交互项（现在可以正常乘法运算）</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    df_model[<span class="st">'IgG_性别交互'</span>] <span class="op">=</span> df_model[<span class="st">'三种食物分类加权评分'</span>] <span class="op">*</span> df_model[<span class="st">'性别编码'</span>]</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    df_model[<span class="st">'IgG_年龄交互'</span>] <span class="op">=</span> df_model[<span class="st">'三种食物分类加权评分'</span>] <span class="op">*</span> df_model[<span class="st">'年龄连续'</span>]</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    df_model[<span class="st">'IgG_BMI交互'</span>] <span class="op">=</span> df_model[<span class="st">'三种食物分类加权评分'</span>] <span class="op">*</span> df_model[<span class="st">'BMI编码'</span>]</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 构建模型</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 模型1：主效应模型（无交互项）</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>    model1 <span class="op">=</span> smf.ols(</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分') + 性别编码 + 年龄连续 + BMI编码"</span>,</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>        data<span class="op">=</span>df_model</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    ).fit()</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 模型2：交互效应模型（含交互项）</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    model2 <span class="op">=</span> smf.ols(</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分') + 性别编码 + 年龄连续 + BMI编码 + "</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">"IgG_性别交互 + IgG_年龄交互 + IgG_BMI交互"</span>,</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>        data<span class="op">=</span>df_model</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>    ).fit()</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 模型比较（ANOVA）</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>    anova_result <span class="op">=</span> sm.stats.anova_lm(model1, model2)</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    anova_f <span class="op">=</span> anova_result[<span class="st">'F'</span>].iloc[<span class="dv">1</span>] <span class="cf">if</span> <span class="st">'F'</span> <span class="kw">in</span> anova_result.columns <span class="cf">else</span> np.nan</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>    anova_p <span class="op">=</span> anova_result[<span class="st">'Pr(&gt;F)'</span>].iloc[<span class="dv">1</span>] <span class="cf">if</span> <span class="st">'Pr(&gt;F)'</span> <span class="kw">in</span> anova_result.columns <span class="cf">else</span> np.nan</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 提取交互项参数</span></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>    interaction_params <span class="op">=</span> {}</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> term, name <span class="kw">in</span> [</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'IgG_性别交互'</span>, <span class="st">'IgG×性别'</span>), </span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'IgG_年龄交互'</span>, <span class="st">'IgG×年龄'</span>), </span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>        (<span class="st">'IgG_BMI交互'</span>, <span class="st">'IgG×BMI'</span>)</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>    ]:</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> term <span class="kw">in</span> model2.params.index:</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>            interaction_params[name] <span class="op">=</span> {</span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>                <span class="st">'coef'</span>: model2.params[term], </span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>                <span class="st">'se'</span>: model2.bse[term], </span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>                <span class="st">'p_val'</span>: model2.pvalues[term]</span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 打印结果</span></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"模型1（主效应）：R²=</span><span class="sc">{</span>model1<span class="sc">.</span>rsquared<span class="sc">:.4f}</span><span class="ss">，F_p=</span><span class="sc">{</span>model1<span class="sc">.</span>f_pvalue<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"模型2（交互效应）：R²=</span><span class="sc">{</span>model2<span class="sc">.</span>rsquared<span class="sc">:.4f}</span><span class="ss">，F_p=</span><span class="sc">{</span>model2<span class="sc">.</span>f_pvalue<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"ANOVA检验（交互项整体）：F=</span><span class="sc">{</span>anova_f<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>anova_p<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">各交互项单独检验："</span>)</span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, params <span class="kw">in</span> interaction_params.items():</span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a>        sig <span class="op">=</span> <span class="st">"✅ 显著"</span> <span class="cf">if</span> params[<span class="st">'p_val'</span>] <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="cf">else</span> <span class="st">"❌ 不显著"</span></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">： coef=</span><span class="sc">{</span>params[<span class="st">'coef'</span>]<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>params[<span class="st">'p_val'</span>]<span class="sc">:.4f}</span><span class="ss"> </span><span class="sc">{</span>sig<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>        <span class="st">'model1'</span>: model1, <span class="st">'model2'</span>: model2, <span class="st">'anova_f'</span>: anova_f, <span class="st">'anova_p'</span>: anova_p,</span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>        <span class="st">'interaction_params'</span>: interaction_params</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行交互作用检验</span></span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'df_clean'</span> <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>    interaction_res <span class="op">=</span> interaction_test(df_clean)</span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"❌ 清洗后数据不存在，无法进行交互作用检验"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+============================================================
+🔍 交互作用检验结果（IgG×性别/年龄/BMI）
+============================================================
+📝 交互分析有效样本量：91例（剔除数值缺失行）
+模型1（主效应）：R²=0.0217，F_p=0.7518
+模型2（交互效应）：R²=0.0505，F_p=0.7289
+ANOVA检验（交互项整体）：F=0.8388，p=0.4764
+
+各交互项单独检验：
+  IgG×性别： coef=-39.0498，p=0.5110 ❌ 不显著
+  IgG×年龄： coef=-2.6017，p=0.3987 ❌ 不显著
+  IgG×BMI： coef=-18.3876，p=0.5905 ❌ 不显著</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-8核心结论汇总" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-8核心结论汇总">单元格 8：核心结论汇总</h3>
+<div id="199e8be0" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_results(df):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""生成分层分析可视化图表（在Notebook中显示并保存）"""</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">12</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    fig.suptitle(<span class="st">'IgG食物不耐受与人连蛋白关联性分析（分层结果）'</span>, fontsize<span class="op">=</span><span class="dv">16</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 颜色配置</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    gender_colors <span class="op">=</span> {<span class="st">'男'</span>: <span class="st">'#1f77b4'</span>, <span class="st">'女'</span>: <span class="st">'#ff7f0e'</span>}</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    age_colors <span class="op">=</span> {<span class="st">'≤35岁'</span>: <span class="st">'#2ca02c'</span>, <span class="st">'36-45岁'</span>: <span class="st">'#d62728'</span>, <span class="st">'46-55岁'</span>: <span class="st">'#9467bd'</span>, <span class="st">'&gt;55岁'</span>: <span class="st">'#8c564b'</span>}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    bmi_colors <span class="op">=</span> {<span class="st">'正常'</span>: <span class="st">'#2ca02c'</span>, <span class="st">'超重'</span>: <span class="st">'#ff7f0e'</span>, <span class="st">'肥胖'</span>: <span class="st">'#d62728'</span>}</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    marriage_colors <span class="op">=</span> {<span class="st">'已婚'</span>: <span class="st">'#1f77b4'</span>, <span class="st">'未婚'</span>: <span class="st">'#9467bd'</span>, <span class="st">'离异'</span>: <span class="st">'#8c564b'</span>}</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 子图1：性别分层</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    ax1 <span class="op">=</span> axes[<span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> gender, color <span class="kw">in</span> gender_colors.items():</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> df[df[<span class="st">'性别_clean'</span>] <span class="op">==</span> gender]</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        ax1.scatter(</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'人连蛋白四参数结果.1'</span>],</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.6</span>, s<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>gender<span class="sc">}</span><span class="ss">（n=</span><span class="sc">{</span><span class="bu">len</span>(data)<span class="sc">}</span><span class="ss">）'</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 回归线</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> smf.ols(<span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分')"</span>, data<span class="op">=</span>data).fit()</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>        x_pred <span class="op">=</span> np.linspace(data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">min</span>(), data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">max</span>(), <span class="dv">100</span>)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>        ax1.plot(x_pred, model.params[<span class="dv">0</span>] <span class="op">+</span> model.params[<span class="dv">1</span>] <span class="op">*</span> x_pred, color<span class="op">=</span>color, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    ax1.set_title(<span class="st">'性别分层'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    ax1.set_xlabel(<span class="st">'三种食物分类加权评分（IgG）'</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    ax1.set_ylabel(<span class="st">'人连蛋白四参数结果'</span>)</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    ax1.legend()</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    ax1.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 子图2：年龄分层</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    ax2 <span class="op">=</span> axes[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> age, color <span class="kw">in</span> age_colors.items():</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> df[df[<span class="st">'年龄分层'</span>] <span class="op">==</span> age]</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(data) <span class="op">&lt;</span> <span class="dv">3</span>: <span class="cf">continue</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>        ax2.scatter(</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'人连蛋白四参数结果.1'</span>],</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.6</span>, s<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>age<span class="sc">}</span><span class="ss">（n=</span><span class="sc">{</span><span class="bu">len</span>(data)<span class="sc">}</span><span class="ss">）'</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 回归线</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> smf.ols(<span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分')"</span>, data<span class="op">=</span>data).fit()</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>        x_pred <span class="op">=</span> np.linspace(data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">min</span>(), data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">max</span>(), <span class="dv">100</span>)</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>        ax2.plot(x_pred, model.params[<span class="dv">0</span>] <span class="op">+</span> model.params[<span class="dv">1</span>] <span class="op">*</span> x_pred, color<span class="op">=</span>color, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>    ax2.set_title(<span class="st">'年龄分层'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    ax2.set_xlabel(<span class="st">'三种食物分类加权评分（IgG）'</span>)</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    ax2.set_ylabel(<span class="st">'人连蛋白四参数结果'</span>)</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>    ax2.legend()</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>    ax2.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 子图3：BMI分层</span></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>    ax3 <span class="op">=</span> axes[<span class="dv">1</span>, <span class="dv">0</span>]</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> bmi, color <span class="kw">in</span> bmi_colors.items():</span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> df[df[<span class="st">'BMI分类合并'</span>] <span class="op">==</span> bmi]</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>        ax3.scatter(</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'人连蛋白四参数结果.1'</span>],</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.6</span>, s<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>bmi<span class="sc">}</span><span class="ss">（n=</span><span class="sc">{</span><span class="bu">len</span>(data)<span class="sc">}</span><span class="ss">）'</span></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 回归线</span></span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> smf.ols(<span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分')"</span>, data<span class="op">=</span>data).fit()</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>        x_pred <span class="op">=</span> np.linspace(data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">min</span>(), data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">max</span>(), <span class="dv">100</span>)</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>        ax3.plot(x_pred, model.params[<span class="dv">0</span>] <span class="op">+</span> model.params[<span class="dv">1</span>] <span class="op">*</span> x_pred, color<span class="op">=</span>color, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>    ax3.set_title(<span class="st">'BMI分层'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>    ax3.set_xlabel(<span class="st">'三种食物分类加权评分（IgG）'</span>)</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>    ax3.set_ylabel(<span class="st">'人连蛋白四参数结果'</span>)</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>    ax3.legend()</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>    ax3.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 子图4：婚姻分层</span></span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>    ax4 <span class="op">=</span> axes[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> marriage, color <span class="kw">in</span> marriage_colors.items():</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> df[df[<span class="st">'婚姻_clean'</span>] <span class="op">==</span> marriage]</span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(data) <span class="op">&lt;</span> <span class="dv">3</span>: <span class="cf">continue</span></span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>        ax4.scatter(</span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'三种食物分类加权评分'</span>], </span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">'人连蛋白四参数结果.1'</span>],</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>            alpha<span class="op">=</span><span class="fl">0.6</span>, s<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>marriage<span class="sc">}</span><span class="ss">（n=</span><span class="sc">{</span><span class="bu">len</span>(data)<span class="sc">}</span><span class="ss">）'</span></span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 回归线</span></span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> smf.ols(<span class="st">"Q('人连蛋白四参数结果.1') ~ Q('三种食物分类加权评分')"</span>, data<span class="op">=</span>data).fit()</span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>        x_pred <span class="op">=</span> np.linspace(data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">min</span>(), data[<span class="st">'三种食物分类加权评分'</span>].<span class="bu">max</span>(), <span class="dv">100</span>)</span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>        ax4.plot(x_pred, model.params[<span class="dv">0</span>] <span class="op">+</span> model.params[<span class="dv">1</span>] <span class="op">*</span> x_pred, color<span class="op">=</span>color, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>    ax4.set_title(<span class="st">'婚姻状况分层'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>    ax4.set_xlabel(<span class="st">'三种食物分类加权评分（IgG）'</span>)</span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>    ax4.set_ylabel(<span class="st">'人连蛋白四参数结果'</span>)</span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>    ax4.legend()</span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a>    ax4.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 在Notebook中显示图表</span></span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 保存图表到本地</span></span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a>    plot_path <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">stratified_analysis_plot.png"</span></span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a>    fig.savefig(plot_path, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>, facecolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>    plt.close()</span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">💾 可视化图表已保存：</span><span class="sc">{</span>plot_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行可视化</span></span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'df_clean'</span> <span class="kw">in</span> <span class="bu">locals</span>():</span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>    plot_results(df_clean)</span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"❌ 清洗后数据不存在，无法生成可视化图表"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="food_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+💾 可视化图表已保存：/Users/wangguotao/Downloads/ISAR/food/stratified_analysis_plot.png</code></pre>
+</div>
+</div>
+<div id="997a353a" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> export_results(gender_res<span class="op">=</span><span class="va">None</span>, age_res<span class="op">=</span><span class="va">None</span>, bmi_res<span class="op">=</span><span class="va">None</span>, marriage_res<span class="op">=</span><span class="va">None</span>, interaction_res<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""将所有结果汇总到Excel文件（增加容错处理）"""</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 检查并定位缺失的变量</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    missing_vars <span class="op">=</span> []</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> gender_res <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        missing_vars.append(<span class="st">"性别分层结果(gender_res)"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_res <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        missing_vars.append(<span class="st">"年龄分层结果(age_res)"</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> bmi_res <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>        missing_vars.append(<span class="st">"BMI分层结果(bmi_res)"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> marriage_res <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        missing_vars.append(<span class="st">"婚姻分层结果(marriage_res)"</span>)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> interaction_res <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        missing_vars.append(<span class="st">"交互作用结果(interaction_res)"</span>)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 如果关键分层结果都缺失，直接返回</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(missing_vars) <span class="op">&gt;=</span> <span class="dv">4</span>:</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"❌ 关键分析结果缺失过多：</span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(missing_vars)<span class="sc">}</span><span class="ss">，无法生成Excel"</span>)</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 初始化Excel工作簿</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    wb <span class="op">=</span> Workbook()</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 工作表1：性别分层（容错处理）</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    ws1 <span class="op">=</span> wb.active</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    ws1.title <span class="op">=</span> <span class="st">"性别分层"</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    ws1.append([<span class="st">'性别'</span>, <span class="st">'样本量'</span>, <span class="st">'Pearson_r'</span>, <span class="st">'Pearson_p'</span>, <span class="st">'Spearman_r'</span>, <span class="st">'Spearman_p'</span>, <span class="st">'beta'</span>, <span class="st">'beta_p'</span>, <span class="st">'R2'</span>])</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> gender_res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> g, res <span class="kw">in</span> gender_res.items():</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="st">'状态'</span> <span class="kw">not</span> <span class="kw">in</span> res:</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>                ws1.append([</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>                    g, res[<span class="st">'样本量'</span>], <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'R2'</span>]<span class="sc">:.4f}</span><span class="ss">"</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>                ])</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>        ws1.append([<span class="st">'无数据'</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>])</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 工作表2：年龄分层（容错处理）</span></span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>    ws2 <span class="op">=</span> wb.create_sheet(<span class="st">"年龄分层"</span>)</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>    ws2.append([<span class="st">'年龄组'</span>, <span class="st">'样本量'</span>, <span class="st">'Pearson_r'</span>, <span class="st">'Pearson_p'</span>, <span class="st">'Spearman_r'</span>, <span class="st">'Spearman_p'</span>, <span class="st">'beta'</span>, <span class="st">'beta_p'</span>, <span class="st">'R2'</span>])</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> a, res <span class="kw">in</span> age_res.items():</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="st">'状态'</span> <span class="kw">not</span> <span class="kw">in</span> res:</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>                ws2.append([</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>                    a, res[<span class="st">'样本量'</span>], <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'R2'</span>]<span class="sc">:.4f}</span><span class="ss">"</span></span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>                ])</span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>        ws2.append([<span class="st">'无数据'</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>])</span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 工作表3：BMI分层（容错处理）</span></span>
+<span id="cb17-54"><a href="#cb17-54" aria-hidden="true" tabindex="-1"></a>    ws3 <span class="op">=</span> wb.create_sheet(<span class="st">"BMI分层"</span>)</span>
+<span id="cb17-55"><a href="#cb17-55" aria-hidden="true" tabindex="-1"></a>    ws3.append([<span class="st">'BMI分类'</span>, <span class="st">'样本量'</span>, <span class="st">'Pearson_r'</span>, <span class="st">'Pearson_p'</span>, <span class="st">'Spearman_r'</span>, <span class="st">'Spearman_p'</span>, <span class="st">'beta'</span>, <span class="st">'beta_p'</span>, <span class="st">'R2'</span>])</span>
+<span id="cb17-56"><a href="#cb17-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> bmi_res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb17-57"><a href="#cb17-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> b, res <span class="kw">in</span> bmi_res.items():</span>
+<span id="cb17-58"><a href="#cb17-58" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="st">'状态'</span> <span class="kw">not</span> <span class="kw">in</span> res:</span>
+<span id="cb17-59"><a href="#cb17-59" aria-hidden="true" tabindex="-1"></a>                ws3.append([</span>
+<span id="cb17-60"><a href="#cb17-60" aria-hidden="true" tabindex="-1"></a>                    b, res[<span class="st">'样本量'</span>], <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-61"><a href="#cb17-61" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-62"><a href="#cb17-62" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'R2'</span>]<span class="sc">:.4f}</span><span class="ss">"</span></span>
+<span id="cb17-63"><a href="#cb17-63" aria-hidden="true" tabindex="-1"></a>                ])</span>
+<span id="cb17-64"><a href="#cb17-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-65"><a href="#cb17-65" aria-hidden="true" tabindex="-1"></a>        ws3.append([<span class="st">'无数据'</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>])</span>
+<span id="cb17-66"><a href="#cb17-66" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-67"><a href="#cb17-67" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 工作表4：婚姻分层（容错处理）</span></span>
+<span id="cb17-68"><a href="#cb17-68" aria-hidden="true" tabindex="-1"></a>    ws4 <span class="op">=</span> wb.create_sheet(<span class="st">"婚姻分层"</span>)</span>
+<span id="cb17-69"><a href="#cb17-69" aria-hidden="true" tabindex="-1"></a>    ws4.append([<span class="st">'婚姻状况'</span>, <span class="st">'样本量'</span>, <span class="st">'Pearson_r'</span>, <span class="st">'Pearson_p'</span>, <span class="st">'Spearman_r'</span>, <span class="st">'Spearman_p'</span>, <span class="st">'beta'</span>, <span class="st">'beta_p'</span>, <span class="st">'R2'</span>])</span>
+<span id="cb17-70"><a href="#cb17-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> marriage_res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb17-71"><a href="#cb17-71" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> m, res <span class="kw">in</span> marriage_res.items():</span>
+<span id="cb17-72"><a href="#cb17-72" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="st">'状态'</span> <span class="kw">not</span> <span class="kw">in</span> res:</span>
+<span id="cb17-73"><a href="#cb17-73" aria-hidden="true" tabindex="-1"></a>                ws4.append([</span>
+<span id="cb17-74"><a href="#cb17-74" aria-hidden="true" tabindex="-1"></a>                    m, res[<span class="st">'样本量'</span>], <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Pearson_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-75"><a href="#cb17-75" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'Spearman_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>,</span>
+<span id="cb17-76"><a href="#cb17-76" aria-hidden="true" tabindex="-1"></a>                    <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'beta_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="ss">f"</span><span class="sc">{</span>res[<span class="st">'R2'</span>]<span class="sc">:.4f}</span><span class="ss">"</span></span>
+<span id="cb17-77"><a href="#cb17-77" aria-hidden="true" tabindex="-1"></a>                ])</span>
+<span id="cb17-78"><a href="#cb17-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-79"><a href="#cb17-79" aria-hidden="true" tabindex="-1"></a>        ws4.append([<span class="st">'无数据'</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>])</span>
+<span id="cb17-80"><a href="#cb17-80" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-81"><a href="#cb17-81" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 工作表5：交互作用检验（容错处理）</span></span>
+<span id="cb17-82"><a href="#cb17-82" aria-hidden="true" tabindex="-1"></a>    ws5 <span class="op">=</span> wb.create_sheet(<span class="st">"交互作用检验"</span>)</span>
+<span id="cb17-83"><a href="#cb17-83" aria-hidden="true" tabindex="-1"></a>    ws5.append([<span class="st">'检验项目'</span>, <span class="st">'数值'</span>, <span class="st">'显著性'</span>])</span>
+<span id="cb17-84"><a href="#cb17-84" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> interaction_res <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb17-85"><a href="#cb17-85" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'模型1 R²'</span>, <span class="ss">f"</span><span class="sc">{</span>interaction_res[<span class="st">'model1'</span>]<span class="sc">.</span>rsquared<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="st">'-'</span>])</span>
+<span id="cb17-86"><a href="#cb17-86" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'模型1 F_p'</span>, <span class="ss">f"</span><span class="sc">{</span>interaction_res[<span class="st">'model1'</span>]<span class="sc">.</span>f_pvalue<span class="sc">:.4f}</span><span class="ss">"</span>, </span>
+<span id="cb17-87"><a href="#cb17-87" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'显著'</span> <span class="cf">if</span> interaction_res[<span class="st">'model1'</span>].f_pvalue <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="cf">else</span> <span class="st">'不显著'</span>])</span>
+<span id="cb17-88"><a href="#cb17-88" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'模型2 R²'</span>, <span class="ss">f"</span><span class="sc">{</span>interaction_res[<span class="st">'model2'</span>]<span class="sc">.</span>rsquared<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="st">'-'</span>])</span>
+<span id="cb17-89"><a href="#cb17-89" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'模型2 F_p'</span>, <span class="ss">f"</span><span class="sc">{</span>interaction_res[<span class="st">'model2'</span>]<span class="sc">.</span>f_pvalue<span class="sc">:.4f}</span><span class="ss">"</span>, </span>
+<span id="cb17-90"><a href="#cb17-90" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'显著'</span> <span class="cf">if</span> interaction_res[<span class="st">'model2'</span>].f_pvalue <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="cf">else</span> <span class="st">'不显著'</span>])</span>
+<span id="cb17-91"><a href="#cb17-91" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'ANOVA F'</span>, <span class="ss">f"</span><span class="sc">{</span>interaction_res[<span class="st">'anova_f'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, <span class="st">'-'</span>])</span>
+<span id="cb17-92"><a href="#cb17-92" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'ANOVA p'</span>, <span class="ss">f"</span><span class="sc">{</span>interaction_res[<span class="st">'anova_p'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, </span>
+<span id="cb17-93"><a href="#cb17-93" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'显著'</span> <span class="cf">if</span> interaction_res[<span class="st">'anova_p'</span>] <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="cf">else</span> <span class="st">'不显著'</span>])</span>
+<span id="cb17-94"><a href="#cb17-94" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> name, params <span class="kw">in</span> interaction_res[<span class="st">'interaction_params'</span>].items():</span>
+<span id="cb17-95"><a href="#cb17-95" aria-hidden="true" tabindex="-1"></a>            ws5.append([<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> p值"</span>, <span class="ss">f"</span><span class="sc">{</span>params[<span class="st">'p_val'</span>]<span class="sc">:.4f}</span><span class="ss">"</span>, </span>
+<span id="cb17-96"><a href="#cb17-96" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'显著'</span> <span class="cf">if</span> params[<span class="st">'p_val'</span>] <span class="op">&lt;</span> <span class="fl">0.05</span> <span class="cf">else</span> <span class="st">'不显著'</span>])</span>
+<span id="cb17-97"><a href="#cb17-97" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-98"><a href="#cb17-98" aria-hidden="true" tabindex="-1"></a>        ws5.append([<span class="st">'无交互作用分析数据'</span>, <span class="st">''</span>, <span class="st">''</span>])</span>
+<span id="cb17-99"><a href="#cb17-99" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-100"><a href="#cb17-100" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 保存Excel文件</span></span>
+<span id="cb17-101"><a href="#cb17-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb17-102"><a href="#cb17-102" aria-hidden="true" tabindex="-1"></a>        excel_path <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">IgG人连蛋白分析结果汇总.xlsx"</span></span>
+<span id="cb17-103"><a href="#cb17-103" aria-hidden="true" tabindex="-1"></a>        wb.save(excel_path)</span>
+<span id="cb17-104"><a href="#cb17-104" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> missing_vars:</span>
+<span id="cb17-105"><a href="#cb17-105" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"⚠️  Excel生成完成（部分数据缺失）：</span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(missing_vars)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-106"><a href="#cb17-106" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb17-107"><a href="#cb17-107" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"✅ Excel生成完成"</span>)</span>
+<span id="cb17-108"><a href="#cb17-108" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"💾 结果汇总Excel已保存：</span><span class="sc">{</span>excel_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-109"><a href="#cb17-109" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-110"><a href="#cb17-110" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"❌ Excel保存失败：</span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-111"><a href="#cb17-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-112"><a href="#cb17-112" aria-hidden="true" tabindex="-1"></a><span class="co"># 执行结果导出（先检查变量是否存在，不存在则传None）</span></span>
+<span id="cb17-113"><a href="#cb17-113" aria-hidden="true" tabindex="-1"></a>gender_res <span class="op">=</span> <span class="bu">locals</span>().get(<span class="st">'gender_res'</span>, <span class="va">None</span>)</span>
+<span id="cb17-114"><a href="#cb17-114" aria-hidden="true" tabindex="-1"></a>age_res <span class="op">=</span> <span class="bu">locals</span>().get(<span class="st">'age_res'</span>, <span class="va">None</span>)</span>
+<span id="cb17-115"><a href="#cb17-115" aria-hidden="true" tabindex="-1"></a>bmi_res <span class="op">=</span> <span class="bu">locals</span>().get(<span class="st">'bmi_res'</span>, <span class="va">None</span>)</span>
+<span id="cb17-116"><a href="#cb17-116" aria-hidden="true" tabindex="-1"></a>marriage_res <span class="op">=</span> <span class="bu">locals</span>().get(<span class="st">'marriage_res'</span>, <span class="va">None</span>)</span>
+<span id="cb17-117"><a href="#cb17-117" aria-hidden="true" tabindex="-1"></a>interaction_res <span class="op">=</span> <span class="bu">locals</span>().get(<span class="st">'interaction_res'</span>, <span class="va">None</span>)</span>
+<span id="cb17-118"><a href="#cb17-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-119"><a href="#cb17-119" aria-hidden="true" tabindex="-1"></a><span class="co"># 打印变量检查结果</span></span>
+<span id="cb17-120"><a href="#cb17-120" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🔍 导出前变量检查："</span>)</span>
+<span id="cb17-121"><a href="#cb17-121" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  gender_res: </span><span class="sc">{</span><span class="st">'存在'</span> <span class="cf">if</span> gender_res <span class="cf">else</span> <span class="st">'缺失'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-122"><a href="#cb17-122" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  age_res: </span><span class="sc">{</span><span class="st">'存在'</span> <span class="cf">if</span> age_res <span class="cf">else</span> <span class="st">'缺失'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-123"><a href="#cb17-123" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  bmi_res: </span><span class="sc">{</span><span class="st">'存在'</span> <span class="cf">if</span> bmi_res <span class="cf">else</span> <span class="st">'缺失'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-124"><a href="#cb17-124" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  marriage_res: </span><span class="sc">{</span><span class="st">'存在'</span> <span class="cf">if</span> marriage_res <span class="cf">else</span> <span class="st">'缺失'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-125"><a href="#cb17-125" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  interaction_res: </span><span class="sc">{</span><span class="st">'存在'</span> <span class="cf">if</span> interaction_res <span class="cf">else</span> <span class="st">'缺失'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-126"><a href="#cb17-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-127"><a href="#cb17-127" aria-hidden="true" tabindex="-1"></a><span class="co"># 调用导出函数</span></span>
+<span id="cb17-128"><a href="#cb17-128" aria-hidden="true" tabindex="-1"></a>export_results(gender_res, age_res, bmi_res, marriage_res, interaction_res)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>🔍 导出前变量检查：
+  gender_res: 存在
+  age_res: 存在
+  bmi_res: 存在
+  marriage_res: 存在
+  interaction_res: 存在
+✅ Excel生成完成
+💾 结果汇总Excel已保存：/Users/wangguotao/Downloads/ISAR/food/IgG人连蛋白分析结果汇总.xlsx</code></pre>
+</div>
+</div>
+</section>
+<section id="单元格-8核心结论汇总-1" class="level3">
+<h3 class="anchored" data-anchor-id="单元格-8核心结论汇总-1">单元格 8：核心结论汇总</h3>
+<div id="ffd478a3" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 核心结论汇总</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">80</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🎯 核心分析结论"</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">80</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 年龄分层关键发现（46-55岁组）</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'46-55岁'</span> <span class="kw">in</span> age_res <span class="kw">and</span> <span class="st">'Spearman_p'</span> <span class="kw">in</span> age_res[<span class="st">'46-55岁'</span>]:</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    age_46_55 <span class="op">=</span> age_res[<span class="st">'46-55岁'</span>]</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_46_55[<span class="st">'Spearman_p'</span>] <span class="op">&lt;</span> <span class="fl">0.01</span>:</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"1. 46-55岁组：IgG与人间蛋白呈显著负相关（ρ=</span><span class="sc">{</span>age_46_55[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">，p&lt;0.01）"</span>)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> age_46_55[<span class="st">'Spearman_p'</span>] <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"1. 46-55岁组：IgG与人间蛋白呈显著负相关（ρ=</span><span class="sc">{</span>age_46_55[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">，p&lt;0.05）"</span>)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"1. 46-55岁组：IgG与人间蛋白无显著相关性（ρ=</span><span class="sc">{</span>age_46_55[<span class="st">'Spearman_r'</span>]<span class="sc">:.4f}</span><span class="ss">，p=</span><span class="sc">{</span>age_46_55[<span class="st">'Spearman_p'</span>]<span class="sc">:.4f}</span><span class="ss">）"</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 交互作用结论</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> interaction_res[<span class="st">'anova_p'</span>] <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"2. 交互作用：发现IgG与性别/年龄/BMI的显著整体交互效应（p=</span><span class="sc">{</span>interaction_res[<span class="st">'anova_p'</span>]<span class="sc">:.4f}</span><span class="ss">）"</span>)</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"2. 交互作用：未发现IgG与性别/年龄/BMI的显著交互效应（p=</span><span class="sc">{</span>interaction_res[<span class="st">'anova_p'</span>]<span class="sc">:.4f}</span><span class="ss">）"</span>)</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 其他分层结论</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"3. 其他分层：性别、BMI、婚姻状况均未发现显著相关性"</span>)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. 输出文件清单</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">"</span> <span class="op">+</span> <span class="st">"="</span><span class="op">*</span><span class="dv">80</span>)</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ 分析完成！所有结果已保存到："</span>)</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"   </span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"生成文件："</span>)</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"1. cleaned_analysis_data.csv → 清洗后数据集"</span>)</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2. stratified_analysis_plot.png → 可视化图表"</span>)</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"3. IgG人连蛋白分析结果汇总.xlsx → 结果汇总Excel"</span>)</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">80</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>================================================================================
+🎯 核心分析结论
+================================================================================
+1. 46-55岁组：IgG与人间蛋白呈显著负相关（ρ=-0.6374，p&lt;0.01）
+2. 交互作用：未发现IgG与性别/年龄/BMI的显著交互效应（p=0.4764）
+3. 其他分层：性别、BMI、婚姻状况均未发现显著相关性
+
+================================================================================
+✅ 分析完成！所有结果已保存到：
+   /Users/wangguotao/Downloads/ISAR/food/
+生成文件：
+1. cleaned_analysis_data.csv → 清洗后数据集
+2. stratified_analysis_plot.png → 可视化图表
+3. IgG人连蛋白分析结果汇总.xlsx → 结果汇总Excel
+================================================================================</code></pre>
+</div>
+</div>
+</section>
+<section id="分析过程说明" class="level3">
+<h3 class="anchored" data-anchor-id="分析过程说明">分析过程说明</h3>
+</section>
+<section id="igg介导的食物不耐受与人连蛋白关联性分析完整过程整理" class="level1">
+<h1>IgG介导的食物不耐受与人连蛋白关联性分析完整过程整理</h1>
+<p>本次分析以IgG介导的食物不耐受相关指标（三种食物分类加权评分）和人连蛋白四参数结果为核心，结合性别、年龄、BMI、婚姻状况等人口学特征，开展<strong>分层关联性分析</strong>与<strong>交互作用检验</strong>，并完成数据清洗、可视化呈现和结果汇总导出，整体流程分8个核心步骤，全程基于Python在Jupyter Notebook中实现，以下是详细分析过程：</p>
+<section id="一环境准备与依赖配置" class="level2">
+<h2 class="anchored" data-anchor-id="一环境准备与依赖配置">一、环境准备与依赖配置</h2>
+<ol type="1">
+<li><strong>编码声明</strong>：在代码首行添加<code># -*- coding: utf-8 -*-</code>，解决Python解析中文的编码错误，符合PEP 263编码规范。</li>
+<li><strong>依赖安装</strong>：安装数据分析与可视化核心库，包括pandas（数据处理）、numpy（数值运算）、matplotlib（绘图）、scipy/statsmodels（统计检验）、openpyxl（Excel读写）。</li>
+<li><strong>环境配置</strong>：关闭无关警告，设置Matplotlib中文字体（如WenQuanYi Zen Hei、SimHei）并取消负号乱码，保证可视化结果可读性。</li>
+<li><strong>路径定义</strong>：指定原始数据路径（主数据、疲劳量表Excel/XLs文件）、结果输出目录，统一管理文件读写路径，适配本地环境。</li>
+</ol>
+</section>
+<section id="二原始数据加载与初步探索" class="level2">
+<h2 class="anchored" data-anchor-id="二原始数据加载与初步探索">二、原始数据加载与初步探索</h2>
+<ol type="1">
+<li><strong>数据读取</strong>：通过pandas分别加载主数据（信息汇总全量数据，含核心分析指标）和疲劳量表数据（备用，不影响核心分析），对读取异常做捕获处理，加载失败时给出明确提示。</li>
+<li><strong>有效性校验</strong>：打印数据基本信息，包括数据形状（行×列），确认样本量和字段数量。</li>
+<li><strong>核心变量筛选</strong>：从主数据中提取与分析相关的关键字段，包括性别、年龄、婚姻、身高、体重、人连蛋白四参数结果、三种食物分类加权评分等，明确分析核心维度。</li>
+</ol>
+</section>
+<section id="三数据清洗与预处理核心数据规整" class="level2">
+<h2 class="anchored" data-anchor-id="三数据清洗与预处理核心数据规整">三、数据清洗与预处理（核心数据规整）</h2>
+<p>针对原始数据中存在的缺失值、格式不统一、分类不规范等问题，进行标准化处理，同时创建分析所需衍生变量，<strong>确保数据满足统计检验要求</strong>，步骤如下： 1. <strong>分类变量清洗</strong>：性别仅保留「男/女」，婚姻状况统一格式（修正「已婚·」为「已婚」，仅保留已婚/未婚/离异有效类别），剔除无效值并标记为缺失。 2. <strong>BMI指标计算与分类</strong>：基于身高、体重计算BMI（体重/身高²，身高单位转换为米），按中国标准分为偏瘦、正常、超重、肥胖，合并小样本「偏瘦」组至「正常」组，减少统计偏差。 3. <strong>年龄分层处理</strong>：将连续年龄按临床常用标准分为4个分层：≤35岁、36-45岁、46-55岁、&gt;55岁，同时保留原始年龄数值作为连续变量（避免分类变量无法参与数值运算）。 4. <strong>缺失值处理</strong>：删除身高、体重、核心分析指标的缺失行，保证后续运算无空值；对清洗后的核心变量做整体去重。 5. <strong>衍生编码变量创建</strong>：将分类变量转换为数值型，满足回归分析要求——性别编码（男=1/女=0）、BMI编码（正常=1/超重=2/肥胖=3）、年龄连续（直接使用原始年龄浮点型，修复分类变量乘法运算错误）。 6. <strong>清洗结果校验</strong>：打印清洗前后样本量变化，输出各分层变量（性别、年龄、BMI、婚姻）的样本分布，同时将清洗后的数据保存为UTF-8编码的CSV文件，便于后续复用。</p>
+</section>
+<section id="四分层关联性统计分析" class="level2">
+<h2 class="anchored" data-anchor-id="四分层关联性统计分析">四、分层关联性统计分析</h2>
+<p>以<strong>性别、年龄分层、BMI分类、婚姻状况</strong>为4个分层维度，分别分析各亚组中「三种食物分类加权评分（IgG）」与「人连蛋白四参数结果」的关联性，<strong>每个亚组的分析逻辑一致</strong>，核心统计方法如下： 1. <strong>样本量筛选</strong>：亚组样本量&lt;3时跳过分析，避免小样本导致的统计结果偏差。 2. <strong>相关分析</strong>：同时计算Pearson相关系数（适用于线性分布数据）和Spearman秩相关系数（非参数检验，适用于非正态分布数据），并输出对应的P值，判断相关性是否显著。 3. <strong>线性回归分析</strong>：构建以人连蛋白四参数结果为因变量、IgG加权评分为自变量的一元线性回归模型，计算回归系数β、标准误SE、P值和决定系数R²，量化IgG对人连蛋白的影响程度。 4. <strong>结果输出</strong>：按分层维度逐一打印分析结果，标注显著相关性（P&lt;0.05），同时将各亚组分析结果存储为字典，为后续汇总做准备。</p>
+</section>
+<section id="五交互作用检验igg与人口学特征的联合效应" class="level2">
+<h2 class="anchored" data-anchor-id="五交互作用检验igg与人口学特征的联合效应">五、交互作用检验（IgG与人口学特征的联合效应）</h2>
+<p>检验IgG介导的食物不耐受与人口学特征（性别、年龄、BMI）的<strong>交互效应</strong>，判断不同性别/年龄/BMI群体中，IgG对人连蛋白的影响是否存在差异，步骤如下： 1. <strong>交互项创建</strong>：在清洗后的数据基础上，生成IgG与各数值型编码变量的交互项——IgG×性别、IgG×年龄、IgG×BMI（交互项=IgG加权评分×对应特征编码值）。 2. <strong>统计模型构建</strong>：构建两个线性回归模型做对比： - 主效应模型：人连蛋白结果 ~ IgG加权评分 + 性别编码 + 年龄连续 + BMI编码（仅考虑单独效应）； - 交互效应模型：在主效应模型基础上，加入3个交互项（考虑联合效应）。 3. <strong>模型比较</strong>：通过ANOVA方差分析对比两个模型的拟合效果，输出F值和P值，判断交互项整体是否具有统计学意义。 4. <strong>单独交互项检验</strong>：提取每个交互项的回归系数、标准误和P值，逐一判断单个交互效应是否显著（P&lt;0.05）。 5. <strong>结果解读</strong>：打印两个模型的R²和F检验P值，标注各交互项的显著性，明确IgG与人口学特征是否存在联合影响。</p>
+</section>
+<section id="六可视化呈现分层结果直观展示" class="level2">
+<h2 class="anchored" data-anchor-id="六可视化呈现分层结果直观展示">六、可视化呈现（分层结果直观展示）</h2>
+<p>采用2×2子图布局，分别绘制<strong>性别、年龄分层、BMI分类、婚姻状况</strong>四个维度的散点图+回归线，直观展示各亚组中IgG与人工蛋白的关联性，绘图要点如下： 1. <strong>分组配色</strong>：为每个分层的不同类别设置专属颜色，保证图表辨识度（如性别：男=蓝色/女=橙色；年龄：不同分层对应绿/红/紫/棕）。 2. <strong>图形元素</strong>：每个亚组绘制散点图（展示原始数据分布），并拟合一元线性回归线（虚线），标注每组样本量。 3. <strong>图表规范</strong>：添加标题、坐标轴标签（IgG三种食物分类加权评分/人连蛋白四参数结果）、图例和网格，保证图表完整、易读。 4. <strong>双重输出</strong>：在Jupyter Notebook中直接显示图表，同时将高清图表（300DPI）保存为PNG文件至输出目录，便于后续使用。</p>
+</section>
+<section id="七结果汇总与excel导出" class="level2">
+<h2 class="anchored" data-anchor-id="七结果汇总与excel导出">七、结果汇总与Excel导出</h2>
+<p>将分层分析、交互作用检验的所有统计结果，按维度整理到Excel工作簿中，实现<strong>结果标准化、结构化汇总</strong>，同时做容错处理，保证部分结果缺失时仍能正常导出： 1. <strong>工作表分维度设计</strong>：Excel包含5个工作表，分别对应性别分层、年龄分层、BMI分层、婚姻状况分层、交互作用检验，每个工作表按统计指标列化结果。 2. <strong>统计指标完整呈现</strong>：分层分析工作表包含样本量、Pearson_r/P值、Spearman_r/P值、回归β/P值、R²；交互作用检验工作表包含模型R²、F检验P值、ANOVA结果、各交互项P值及显著性标注。 3. <strong>容错与缺失处理</strong>：对缺失的分析结果，在对应单元格标注「无数据」；导出前做变量存在性检查，打印缺失变量提示，避免因个别结果缺失导致导出失败。 4. <strong>文件保存</strong>：将汇总后的Excel文件保存至指定输出目录，命名为「IgG人连蛋白分析结果汇总.xlsx」，保证文件可直接用于报告撰写。</p>
+</section>
+<section id="八核心结论汇总" class="level2">
+<h2 class="anchored" data-anchor-id="八核心结论汇总">八、核心结论汇总</h2>
+<p>基于所有统计检验和可视化结果，提炼分析核心结论，明确IgG介导的食物不耐受与人连蛋白的关联性规律，核心结论维度包括： 1. <strong>关键亚组关联性</strong>：重点分析46-55岁等临床关注亚组的相关性结果，标注显著相关（P&lt;0.05/P&lt;0.01）及相关方向（正/负相关）。 2. <strong>交互效应整体判断</strong>：明确IgG与性别、年龄、BMI是否存在显著联合效应，判断不同群体的影响差异。 3. <strong>整体关联性规律</strong>：总结性别、BMI、婚姻状况等维度的整体分析结果，明确无显著相关性的维度。 4. <strong>结果文件清单</strong>：列出本次分析生成的所有结果文件（清洗后CSV、可视化PNG、汇总Excel），明确文件存储路径，方便后续查阅和使用。</p>
+</section>
+<section id="九全程问题排查与代码优化" class="level2">
+<h2 class="anchored" data-anchor-id="九全程问题排查与代码优化">九、全程问题排查与代码优化</h2>
+<p>分析过程中针对出现的技术问题做针对性修复，保证代码鲁棒性和分析结果有效性： 1. <strong>编码错误</strong>：添加UTF-8编码声明，解决Non-ASCII character解析错误。 2. <strong>类型运算错误</strong>：将「年龄连续」从分类变量改为原始浮点型数值，解决category类型无法乘法运算的TypeError。 3. <strong>结果导出失败</strong>：增加变量容错处理，修改严格的变量存在性检查为柔性检查，支持部分结果缺失时的Excel导出。 4. <strong>数据有效性问题</strong>：在统计检验前做样本量筛选、缺失值二次剔除，避免小样本和空值导致的统计偏差。</p>
+</section>
+<section id="分析核心产出物" class="level2">
+<h2 class="anchored" data-anchor-id="分析核心产出物">分析核心产出物</h2>
+<p>本次分析最终生成3类标准化文件，均保存至指定本地目录，可直接用于后续分析和报告撰写： 1. <strong>cleaned_analysis_data.csv</strong>：清洗后的核心分析数据集，UTF-8编码，无缺失值、变量格式标准化。 2. <strong>stratified_analysis_plot.png</strong>：2×2分层关联性可视化图表，300DPI高清，中文无乱码。 3. <strong>IgG人连蛋白分析结果汇总.xlsx</strong>：结构化统计结果，分维度呈现所有相关系数、回归指标、交互效应检验结果，标注显著性。</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<!-- 不蒜子计数器脚本 -->
+<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- 显示计数器的样式，可以根据需要修改 CSS -->
+<div style="text-align: center; margin-top: 20px; color: #666;">
+    <span id="busuanzi_container_site_pv">
+        本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <span id="busuanzi_container_site_uv" style="margin-left: 10px;">
+        | 访客数 <span id="busuanzi_value_site_uv"></span> 人
+    </span>
+</div>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/andybourne\.cn\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

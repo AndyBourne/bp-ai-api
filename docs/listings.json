@@ -2,6 +2,7 @@
   {
     "listing": "/posts/Test/index.html",
     "items": [
+      "/posts/Test/food.html",
       "/posts/Test/foodanalysis.html",
       "/posts/Test/综合分析报告.html",
       "/posts/Test/Milk.html",
@@ -45,6 +46,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/Rethink/index.html",
+      "/posts/Test/food.html",
       "/posts/Test/foodanalysis.html",
       "/posts/Test/综合分析报告.html",
       "/posts/Test/index.html",
