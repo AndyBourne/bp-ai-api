@@ -3,6 +3,7 @@
     "listing": "/posts/Test/index.html",
     "items": [
       "/posts/Test/foodanalysis.html",
+      "/posts/Test/综合分析报告.html",
       "/posts/Test/Milk.html",
       "/posts/Test/yperfect.html"
     ]
@@ -45,6 +46,7 @@
     "items": [
       "/posts/Rethink/index.html",
       "/posts/Test/foodanalysis.html",
+      "/posts/Test/综合分析报告.html",
       "/posts/Test/index.html",
       "/posts/Test/Milk.html",
       "/posts/Test/yperfect.html",
