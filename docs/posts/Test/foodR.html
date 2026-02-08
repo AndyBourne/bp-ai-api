@@ -361,6 +361,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#六结果可视化" id="toc-六结果可视化" class="nav-link" data-scroll-target="#六结果可视化">六、结果可视化</a></li>
   <li><a href="#七结果汇总导出excel" id="toc-七结果汇总导出excel" class="nav-link" data-scroll-target="#七结果汇总导出excel">七、结果汇总导出（Excel）</a></li>
   <li><a href="#八核心结论汇总" id="toc-八核心结论汇总" class="nav-link" data-scroll-target="#八核心结论汇总">八、核心结论汇总</a></li>
+  <li><a href="#分析过程" id="toc-分析过程" class="nav-link" data-scroll-target="#分析过程">分析过程</a></li>
+  <li><a href="#igg介导的食物不耐受与人连蛋白关联性分析r语言版完整过程文字说明" id="toc-igg介导的食物不耐受与人连蛋白关联性分析r语言版完整过程文字说明" class="nav-link" data-scroll-target="#igg介导的食物不耐受与人连蛋白关联性分析r语言版完整过程文字说明">IgG介导的食物不耐受与人连蛋白关联性分析（R语言版）完整过程文字说明</a>
+  <ul class="collapse">
+  <li><a href="#一分析环境配置与依赖准备" id="toc-一分析环境配置与依赖准备" class="nav-link" data-scroll-target="#一分析环境配置与依赖准备">一、分析环境配置与依赖准备</a>
+  <ul class="collapse">
+  <li><a href="#工作目录与编码设置" id="toc-工作目录与编码设置" class="nav-link" data-scroll-target="#工作目录与编码设置">1. 工作目录与编码设置</a></li>
+  <li><a href="#核心依赖包安装与加载" id="toc-核心依赖包安装与加载" class="nav-link" data-scroll-target="#核心依赖包安装与加载">2. 核心依赖包安装与加载</a></li>
+  </ul></li>
+  <li><a href="#二原始数据加载与初步探索" id="toc-二原始数据加载与初步探索" class="nav-link" data-scroll-target="#二原始数据加载与初步探索">二、原始数据加载与初步探索</a>
+  <ul class="collapse">
+  <li><a href="#数据加载函数设计" id="toc-数据加载函数设计" class="nav-link" data-scroll-target="#数据加载函数设计">1. 数据加载函数设计</a></li>
+  <li><a href="#核心变量筛选与展示" id="toc-核心变量筛选与展示" class="nav-link" data-scroll-target="#核心变量筛选与展示">2. 核心变量筛选与展示</a></li>
+  </ul></li>
+  <li><a href="#三数据清洗与预处理核心步骤" id="toc-三数据清洗与预处理核心步骤" class="nav-link" data-scroll-target="#三数据清洗与预处理核心步骤">三、数据清洗与预处理（核心步骤）</a>
+  <ul class="collapse">
+  <li><a href="#数值变量处理" id="toc-数值变量处理" class="nav-link" data-scroll-target="#数值变量处理">2. 数值变量处理</a></li>
+  <li><a href="#衍生变量创建与类型校准" id="toc-衍生变量创建与类型校准" class="nav-link" data-scroll-target="#衍生变量创建与类型校准">3. 衍生变量创建与类型校准</a></li>
+  <li><a href="#清洗结果校验" id="toc-清洗结果校验" class="nav-link" data-scroll-target="#清洗结果校验">4. 清洗结果校验</a></li>
+  </ul></li>
+  <li><a href="#四分层关联性统计分析" id="toc-四分层关联性统计分析" class="nav-link" data-scroll-target="#四分层关联性统计分析">四、分层关联性统计分析</a>
+  <ul class="collapse">
+  <li><a href="#双方法相关性检验" id="toc-双方法相关性检验" class="nav-link" data-scroll-target="#双方法相关性检验">2. 双方法相关性检验</a></li>
+  <li><a href="#线性回归分析" id="toc-线性回归分析" class="nav-link" data-scroll-target="#线性回归分析">3. 线性回归分析</a></li>
+  <li><a href="#结果输出与存储" id="toc-结果输出与存储" class="nav-link" data-scroll-target="#结果输出与存储">4. 结果输出与存储</a></li>
+  </ul></li>
+  <li><a href="#五交互作用检验igg与人口学特征的联合效应" id="toc-五交互作用检验igg与人口学特征的联合效应" class="nav-link" data-scroll-target="#五交互作用检验igg与人口学特征的联合效应">五、交互作用检验（IgG与人口学特征的联合效应）</a>
+  <ul class="collapse">
+  <li><a href="#双模型构建与对比" id="toc-双模型构建与对比" class="nav-link" data-scroll-target="#双模型构建与对比">2. 双模型构建与对比</a></li>
+  <li><a href="#模型比较与结果提取" id="toc-模型比较与结果提取" class="nav-link" data-scroll-target="#模型比较与结果提取">3. 模型比较与结果提取</a></li>
+  <li><a href="#结果输出" id="toc-结果输出" class="nav-link" data-scroll-target="#结果输出">4. 结果输出</a></li>
+  </ul></li>
+  <li><a href="#六分层可视化呈现" id="toc-六分层可视化呈现" class="nav-link" data-scroll-target="#六分层可视化呈现">六、分层可视化呈现</a>
+  <ul class="collapse">
+  <li><a href="#子图设计22布局" id="toc-子图设计22布局" class="nav-link" data-scroll-target="#子图设计22布局">2. 子图设计（2×2布局）</a></li>
+  <li><a href="#图表标注与保存" id="toc-图表标注与保存" class="nav-link" data-scroll-target="#图表标注与保存">3. 图表标注与保存</a></li>
+  </ul></li>
+  <li><a href="#七结果汇总与excel导出" id="toc-七结果汇总与excel导出" class="nav-link" data-scroll-target="#七结果汇总与excel导出">七、结果汇总与Excel导出</a>
+  <ul class="collapse">
+  <li><a href="#多工作表设计" id="toc-多工作表设计" class="nav-link" data-scroll-target="#多工作表设计">2. 多工作表设计</a></li>
+  <li><a href="#异常捕获" id="toc-异常捕获" class="nav-link" data-scroll-target="#异常捕获">3. 异常捕获</a></li>
+  </ul></li>
+  <li><a href="#八核心结论汇总-1" id="toc-八核心结论汇总-1" class="nav-link" data-scroll-target="#八核心结论汇总-1">八、核心结论汇总</a></li>
+  <li><a href="#九r语言版核心特点" id="toc-九r语言版核心特点" class="nav-link" data-scroll-target="#九r语言版核心特点">九、R语言版核心特点</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -374,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="一环境配置与依赖加载" class="level3">
 <h3 class="anchored" data-anchor-id="一环境配置与依赖加载">一、环境配置与依赖加载</h3>
-<div id="2bf63d7e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="9">
+<div id="2bf63d7e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 设置工作目录（替换为你的数据路径）</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/wangguotao/Downloads/ISAR/food/"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -405,7 +449,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="二数据加载函数" class="level3">
 <h3 class="anchored" data-anchor-id="二数据加载函数">二、数据加载函数</h3>
-<div id="f3897729" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="2">
+<div id="f3897729" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>load_data <span class="ot">&lt;-</span> <span class="cf">function</span>(main_path, fatigue_path) {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 加载主数据</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tryCatch</span>({</span>
@@ -466,7 +510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="三数据清洗与预处理" class="level3">
 <h3 class="anchored" data-anchor-id="三数据清洗与预处理">三、数据清洗与预处理</h3>
-<div id="da20fbbf" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="3">
+<div id="da20fbbf" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>clean_and_preprocess <span class="ot">&lt;-</span> <span class="cf">function</span>(df) {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  df_clean <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. 清理性别</span></span>
@@ -575,7 +619,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="四分层关联性分析" class="level3">
 <h3 class="anchored" data-anchor-id="四分层关联性分析">四、分层关联性分析</h3>
-<div id="5e2b59b1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="4">
+<div id="5e2b59b1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 分层分析核心函数</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>stratified_analysis <span class="ot">&lt;-</span> <span class="cf">function</span>(df, strat_var) {</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 分层变量中文名称映射</span></span>
@@ -764,7 +808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="五交互作用检验" class="level3">
 <h3 class="anchored" data-anchor-id="五交互作用检验">五、交互作用检验</h3>
-<div id="a23aad45" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="5">
+<div id="a23aad45" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>interaction_test <span class="ot">&lt;-</span> <span class="cf">function</span>(df) {</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">%s</span><span class="sc">\n</span><span class="st">🔍 交互作用检验结果（IgG×性别/年龄/BMI）</span><span class="sc">\n</span><span class="st">%s</span><span class="sc">\n</span><span class="st">"</span>, </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">strrep</span>(<span class="st">"="</span>, <span class="dv">60</span>), <span class="fu">strrep</span>(<span class="st">"="</span>, <span class="dv">60</span>)))</span>
@@ -877,7 +921,7 @@ ANOVA检验（交互项整体）：F=0.8388，p=0.4764
 </section>
 <section id="六结果可视化" class="level3">
 <h3 class="anchored" data-anchor-id="六结果可视化">六、结果可视化</h3>
-<div id="981e314e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="6">
+<div id="981e314e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plot_results <span class="ot">&lt;-</span> <span class="cf">function</span>(df) {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 颜色配置</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  gender_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"男"</span> <span class="ot">=</span> <span class="st">"#1f77b4"</span>, <span class="st">"女"</span> <span class="ot">=</span> <span class="st">"#ff7f0e"</span>)</span>
@@ -964,7 +1008,7 @@ ANOVA检验（交互项整体）：F=0.8388，p=0.4764
 </section>
 <section id="七结果汇总导出excel" class="level3">
 <h3 class="anchored" data-anchor-id="七结果汇总导出excel">七、结果汇总导出（Excel）</h3>
-<div id="55e17fc8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="7">
+<div id="55e17fc8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>export_results <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">gender_res =</span> <span class="cn">NULL</span>, <span class="at">age_res =</span> <span class="cn">NULL</span>, <span class="at">bmi_res =</span> <span class="cn">NULL</span>, <span class="at">marriage_res =</span> <span class="cn">NULL</span>, <span class="at">interaction_res =</span> <span class="cn">NULL</span>) {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 检查缺失变量</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  missing_vars <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
@@ -1166,7 +1210,7 @@ TRUE
 </section>
 <section id="八核心结论汇总" class="level3">
 <h3 class="anchored" data-anchor-id="八核心结论汇总">八、核心结论汇总</h3>
-<div id="e26e922d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="8">
+<div id="e26e922d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;r&quot;}}" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 核心结论输出</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">%s</span><span class="sc">\n</span><span class="st">🎯 核心分析结论</span><span class="sc">\n</span><span class="st">%s</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">strrep</span>(<span class="st">"="</span>, <span class="dv">80</span>), <span class="fu">strrep</span>(<span class="st">"="</span>, <span class="dv">80</span>)))</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1222,8 +1266,148 @@ TRUE
 ================================================================================</code></pre>
 </div>
 </div>
+</section>
+<section id="分析过程" class="level3">
+<h3 class="anchored" data-anchor-id="分析过程">分析过程</h3>
+</section>
+<section id="igg介导的食物不耐受与人连蛋白关联性分析r语言版完整过程文字说明" class="level1">
+<h1>IgG介导的食物不耐受与人连蛋白关联性分析（R语言版）完整过程文字说明</h1>
+<p>本次分析基于R语言实现，完全复刻Python版本的分析逻辑，围绕IgG介导的食物不耐受核心指标（三种食物分类加权评分）与人连蛋白四参数结果的关联性展开，结合性别、年龄、BMI、婚姻状况等人口学特征完成分层分析、交互作用检验、可视化及结果汇总，全程遵循R语言统计分析最佳实践，以下是分阶段的详细文字说明：</p>
+<section id="一分析环境配置与依赖准备" class="level2">
+<h2 class="anchored" data-anchor-id="一分析环境配置与依赖准备">一、分析环境配置与依赖准备</h2>
+<section id="工作目录与编码设置" class="level3">
+<h3 class="anchored" data-anchor-id="工作目录与编码设置">1. 工作目录与编码设置</h3>
+<ul>
+<li>首先通过<code>setwd()</code>指定数据存储和结果输出的工作目录（需替换为用户本地路径），统一管理文件读写路径；</li>
+<li>配置系统字符编码（Mac/Linux用<code>zh_CN.UTF-8</code>，Windows用<code>Chinese</code>），解决R语言解析中文时的乱码问题；</li>
+<li>设置绘图默认中文字体（<code>Arial Unicode MS</code>），确保可视化图表中中文标签正常显示；</li>
+<li>关闭无关警告（<code>options(warn = -1)</code>），简化分析过程中的输出日志。</li>
+</ul>
+</section>
+<section id="核心依赖包安装与加载" class="level3">
+<h3 class="anchored" data-anchor-id="核心依赖包安装与加载">2. 核心依赖包安装与加载</h3>
+<p>安装并加载R语言统计分析必备包，各包功能分工明确： - 数据读写：<code>readxl</code>（读取Excel文件）、<code>writexl</code>（导出多工作表Excel）； - 数据处理：<code>dplyr</code>（数据清洗/筛选/分组）、<code>tidyr</code>（数据重塑）、<code>stringr</code>（字符串处理）； - 可视化：<code>ggplot2</code>（核心绘图）、<code>ggpubr</code>（多图组合）、<code>corrplot</code>（相关性可视化）； - 统计检验：<code>car</code>（方差分析/交互检验）、<code>broom</code>（统计结果结构化整理）。</p>
+</section>
+</section>
+<section id="二原始数据加载与初步探索" class="level2">
+<h2 class="anchored" data-anchor-id="二原始数据加载与初步探索">二、原始数据加载与初步探索</h2>
+<section id="数据加载函数设计" class="level3">
+<h3 class="anchored" data-anchor-id="数据加载函数设计">1. 数据加载函数设计</h3>
+<p>编写<code>load_data()</code>函数实现模块化数据加载，包含两类异常处理： - 主数据加载：通过<code>read_excel()</code>读取核心分析数据（信息汇总全量Excel），捕获文件不存在、格式错误等异常，加载成功后打印数据维度（行×列）； - 备用数据加载：读取疲劳量表数据，即使加载失败也仅给出警告，不影响核心分析流程。</p>
+</section>
+<section id="核心变量筛选与展示" class="level3">
+<h3 class="anchored" data-anchor-id="核心变量筛选与展示">2. 核心变量筛选与展示</h3>
+<p>通过<code>stringr</code>包的<code>str_detect()</code>函数，从主数据列名中筛选含「性别、年龄、婚姻、身高、体重、人连蛋白、三种食物」的核心变量，打印变量清单，明确分析维度，为后续清洗和分析奠定基础。</p>
+</section>
+</section>
+<section id="三数据清洗与预处理核心步骤" class="level2">
+<h2 class="anchored" data-anchor-id="三数据清洗与预处理核心步骤">三、数据清洗与预处理（核心步骤）</h2>
+<p>编写<code>clean_and_preprocess()</code>函数完成数据标准化，解决原始数据中的缺失值、格式不统一、类型错误等问题，步骤如下： ### 1. 分类变量清洗 - 性别清洗：仅保留「男/女」有效类别，其余标记为缺失值（<code>NA</code>）； - 婚姻状况清洗：统一格式（将「已婚·」修正为「已婚」），仅保留「已婚/未婚/离异」三类，剔除无效值。</p>
+<section id="数值变量处理" class="level3">
+<h3 class="anchored" data-anchor-id="数值变量处理">2. 数值变量处理</h3>
+<ul>
+<li>缺失值剔除：删除身高、体重缺失的行（<code>drop_na(身高, 体重)</code>），保证BMI计算有效性；</li>
+<li>BMI计算与分类：基于公式<code>BMI=体重/(身高/100)²</code>计算BMI，按中国标准分为「偏瘦/正常/超重/肥胖」，合并小样本「偏瘦」组至「正常」组，减少统计偏差；</li>
+<li>年龄分层：将连续年龄划分为4个临床常用分层（≤35岁/36-45岁/46-55岁/&gt;55岁），同时保留原始年龄数值（避免分类变量无法参与数值运算）。</li>
+</ul>
+</section>
+<section id="衍生变量创建与类型校准" class="level3">
+<h3 class="anchored" data-anchor-id="衍生变量创建与类型校准">3. 衍生变量创建与类型校准</h3>
+<ul>
+<li>核心变量筛选：仅保留分析所需字段（性别/年龄分层/BMI/婚姻/核心评分/原始年龄），删除所有缺失行；</li>
+<li>编码变量生成：将分类变量转换为数值型（性别编码：男=1/女=0；BMI编码：正常=1/超重=2/肥胖=3），并强制转换核心评分、人连蛋白结果为数值型，避免后续运算错误；</li>
+<li>数据保存：将清洗后的数据导出为UTF-8编码的CSV文件，便于复用和跨平台查看。</li>
+</ul>
+</section>
+<section id="清洗结果校验" class="level3">
+<h3 class="anchored" data-anchor-id="清洗结果校验">4. 清洗结果校验</h3>
+<p>打印清洗前后样本量变化，输出各分层变量（性别、年龄、BMI、婚姻）的分布表（<code>table()</code>），直观展示数据清洗效果。</p>
+</section>
+</section>
+<section id="四分层关联性统计分析" class="level2">
+<h2 class="anchored" data-anchor-id="四分层关联性统计分析">四、分层关联性统计分析</h2>
+<p>编写<code>stratified_analysis()</code>函数，按「性别、年龄分层、BMI分类、婚姻状况」四个维度开展亚组分析，核心逻辑： ### 1. 分组与样本量筛选 按分层变量拆分数据（<code>split(df, df[[strat_var]])</code>），对样本量&lt;3的亚组直接跳过分析，避免小样本导致的统计偏差。</p>
+<section id="双方法相关性检验" class="level3">
+<h3 class="anchored" data-anchor-id="双方法相关性检验">2. 双方法相关性检验</h3>
+<p>对每个有效亚组，同时开展两种相关分析，兼顾不同数据分布特征： - Pearson相关：适用于正态分布数据，通过<code>cor.test(..., method="pearson")</code>计算相关系数（r）和P值； - Spearman秩相关：非参数检验，适用于非正态分布数据，通过<code>cor.test(..., method="spearman")</code>计算秩相关系数（ρ）和P值。</p>
+</section>
+<section id="线性回归分析" class="level3">
+<h3 class="anchored" data-anchor-id="线性回归分析">3. 线性回归分析</h3>
+<p>构建一元线性回归模型（<code>lm(人连蛋白四参数结果.1 ~ 三种食物分类加权评分)</code>），提取核心指标： - 回归系数（β）及标准误（SE）、P值：量化IgG评分对人连蛋白结果的影响程度； - 决定系数（R²）：反映模型拟合优度。</p>
+</section>
+<section id="结果输出与存储" class="level3">
+<h3 class="anchored" data-anchor-id="结果输出与存储">4. 结果输出与存储</h3>
+<ul>
+<li>可视化输出：打印每个亚组的样本量、相关系数、回归指标，标注显著相关性（P&lt;0.05）；</li>
+<li>结构化存储：将分析结果存入列表，为后续Excel导出提供数据支撑。</li>
+</ul>
+</section>
+</section>
+<section id="五交互作用检验igg与人口学特征的联合效应" class="level2">
+<h2 class="anchored" data-anchor-id="五交互作用检验igg与人口学特征的联合效应">五、交互作用检验（IgG与人口学特征的联合效应）</h2>
+<p>编写<code>interaction_test()</code>函数检验IgG评分与性别、年龄、BMI的交互效应，步骤如下： ### 1. 数据预处理 筛选核心数值变量（人连蛋白结果、IgG评分、性别编码、年龄连续、BMI编码），删除缺失行，确保交互项计算有效性。</p>
+<section id="双模型构建与对比" class="level3">
+<h3 class="anchored" data-anchor-id="双模型构建与对比">2. 双模型构建与对比</h3>
+<ul>
+<li>主效应模型：仅包含IgG评分和人口学特征的单独效应（<code>人连蛋白~IgG+性别+年龄+BMI</code>）；</li>
+<li>交互效应模型：在主效应模型基础上加入交互项（<code>人连蛋白~IgG*(性别+年龄+BMI)</code>），自动生成IgG×性别、IgG×年龄、IgG×BMI三个交互项。</li>
+</ul>
+</section>
+<section id="模型比较与结果提取" class="level3">
+<h3 class="anchored" data-anchor-id="模型比较与结果提取">3. 模型比较与结果提取</h3>
+<ul>
+<li>ANOVA检验：通过<code>anova(model1, model2)</code>对比两个模型的拟合效果，输出F值和P值，判断交互项整体是否显著；</li>
+<li>交互项单独检验：通过<code>broom::tidy()</code>整理回归结果，提取每个交互项的系数、标准误和P值，逐一判断单个交互效应的显著性。</li>
+</ul>
+</section>
+<section id="结果输出" class="level3">
+<h3 class="anchored" data-anchor-id="结果输出">4. 结果输出</h3>
+<p>打印两个模型的R²、F检验P值，以及ANOVA结果和各交互项显著性，明确IgG与人口学特征是否存在联合影响。</p>
+</section>
+</section>
+<section id="六分层可视化呈现" class="level2">
+<h2 class="anchored" data-anchor-id="六分层可视化呈现">六、分层可视化呈现</h2>
+<p>编写<code>plot_results()</code>函数，基于<code>ggplot2</code>实现4维度分层可视化，核心设计： ### 1. 配色与样式统一 为不同分层维度设置专属配色方案（如性别：男=蓝色/女=橙色；年龄：4个分层对应绿/红/紫/棕），保证图表辨识度。</p>
+<section id="子图设计22布局" class="level3">
+<h3 class="anchored" data-anchor-id="子图设计22布局">2. 子图设计（2×2布局）</h3>
+<p>每个子图包含两类元素，兼顾数据分布和趋势： - 散点图：展示原始数据分布（<code>geom_point(alpha=0.6)</code>，半透明避免重叠）； - 回归线：拟合一元线性回归线（<code>geom_smooth(method="lm", se=FALSE, linetype="dashed")</code>），无置信区间，突出趋势。</p>
+</section>
+<section id="图表标注与保存" class="level3">
+<h3 class="anchored" data-anchor-id="图表标注与保存">3. 图表标注与保存</h3>
+<ul>
+<li>标签优化：坐标轴标注「三种食物分类加权评分（IgG）」「人连蛋白四参数结果」，图例标注各亚组样本量；</li>
+<li>多图组合：通过<code>ggpubr::ggarrange()</code>将4个子图组合为2×2布局，添加总标题；</li>
+<li>双重输出：在控制台显示图表，同时保存300DPI高清PNG文件至工作目录。</li>
+</ul>
+</section>
+</section>
+<section id="七结果汇总与excel导出" class="level2">
+<h2 class="anchored" data-anchor-id="七结果汇总与excel导出">七、结果汇总与Excel导出</h2>
+<p>编写<code>export_results()</code>函数实现统计结果结构化导出，兼顾容错性和完整性： ### 1. 缺失值容错处理 - 变量检查：先检查分层分析、交互检验结果是否存在，定位缺失变量并给出提示； - 部分导出：即使部分结果缺失，仍生成Excel文件，缺失部分标注「无数据」，避免因个别变量缺失导致导出失败。</p>
+<section id="多工作表设计" class="level3">
+<h3 class="anchored" data-anchor-id="多工作表设计">2. 多工作表设计</h3>
+<p>Excel文件包含5个工作表，按分析维度分类： - 分层分析表：性别/年龄/BMI/婚姻分层表，包含样本量、相关系数、回归指标； - 交互作用表：包含模型R²、ANOVA结果、各交互项P值及显著性标注（「显著/不显著」）。</p>
+</section>
+<section id="异常捕获" class="level3">
+<h3 class="anchored" data-anchor-id="异常捕获">3. 异常捕获</h3>
+<p>通过<code>tryCatch()</code>捕获Excel保存异常（如路径权限不足、文件被占用），给出明确错误提示，避免程序崩溃。</p>
+</section>
+</section>
+<section id="八核心结论汇总-1" class="level2">
+<h2 class="anchored" data-anchor-id="八核心结论汇总-1">八、核心结论汇总</h2>
+<p>基于所有统计结果，提炼3类核心结论： 1. 关键亚组分析：重点解读46-55岁组的相关性结果，标注P值显著性（P&lt;0.05/P&lt;0.01）及相关方向； 2. 交互效应判断：明确IgG与性别/年龄/BMI是否存在显著联合效应； 3. 整体规律总结：归纳性别、BMI、婚姻状况等维度的分析结果，明确无显著相关性的维度； 4. 输出文件清单：列出清洗后CSV、可视化PNG、汇总Excel三类产出物的存储路径，便于后续使用。</p>
+</section>
+<section id="九r语言版核心特点" class="level2">
+<h2 class="anchored" data-anchor-id="九r语言版核心特点">九、R语言版核心特点</h2>
+<ol type="1">
+<li>语法适配：完全复刻Python版本分析逻辑，使用R原生统计函数（<code>lm()</code>/<code>cor.test()</code>/<code>anova()</code>），符合R语言用户使用习惯；</li>
+<li>模块化设计：所有功能封装为函数，便于复用和调试，代码可读性高；</li>
+<li>鲁棒性强：全流程包含异常捕获、缺失值处理、类型校准，避免因数据问题导致分析中断；</li>
+<li>结果标准化：导出的Excel/CSV/PNG文件格式与Python版本完全一致，便于跨语言结果对比。</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
