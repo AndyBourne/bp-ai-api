@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-input16b7075d31462dc5 – AndyBourne-Blog</title>
+<title>v5 – AndyBourne-Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -292,27 +292,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#无治疗病例数据分析完整报告mac版" id="toc-无治疗病例数据分析完整报告mac版" class="nav-link active" data-scroll-target="#无治疗病例数据分析完整报告mac版">无治疗病例数据分析完整报告（Mac版）</a>
+  <li><a href="#方法核对按结局类型v5" id="toc-方法核对按结局类型v5" class="nav-link active" data-scroll-target="#方法核对按结局类型v5">方法核对（按结局类型）v5</a>
   <ul class="collapse">
-  <li><a href="#一分析概述" id="toc-一分析概述" class="nav-link" data-scroll-target="#一分析概述">一、分析概述</a>
-  <ul class="collapse">
-  <li><a href="#数据来源" id="toc-数据来源" class="nav-link" data-scroll-target="#数据来源">1.1 数据来源</a></li>
-  <li><a href="#分析内容" id="toc-分析内容" class="nav-link" data-scroll-target="#分析内容">1.2 分析内容</a></li>
-  </ul></li>
-  <li><a href="#二基础分析结果" id="toc-二基础分析结果" class="nav-link" data-scroll-target="#二基础分析结果">二、基础分析结果</a>
-  <ul class="collapse">
-  <li><a href="#数据基本信息" id="toc-数据基本信息" class="nav-link" data-scroll-target="#数据基本信息">2.1 数据基本信息</a></li>
-  <li><a href="#协变量平衡性" id="toc-协变量平衡性" class="nav-link" data-scroll-target="#协变量平衡性">2.2 协变量平衡性</a></li>
-  <li><a href="#bootstrap成本分析" id="toc-bootstrap成本分析" class="nav-link" data-scroll-target="#bootstrap成本分析">2.3 Bootstrap成本分析</a></li>
-  </ul></li>
-  <li><a href="#三iptw权重分析结果" id="toc-三iptw权重分析结果" class="nav-link" data-scroll-target="#三iptw权重分析结果">三、IPTW权重分析结果</a>
-  <ul class="collapse">
-  <li><a href="#权重统计" id="toc-权重统计" class="nav-link" data-scroll-target="#权重统计">3.1 权重统计</a></li>
-  <li><a href="#有效样本量ess" id="toc-有效样本量ess" class="nav-link" data-scroll-target="#有效样本量ess">3.2 有效样本量（ESS）</a></li>
-  <li><a href="#截断阈值敏感性分析" id="toc-截断阈值敏感性分析" class="nav-link" data-scroll-target="#截断阈值敏感性分析">3.3 截断阈值敏感性分析</a></li>
-  </ul></li>
-  <li><a href="#四结论与建议" id="toc-四结论与建议" class="nav-link" data-scroll-target="#四结论与建议">四、结论与建议</a></li>
-  <li><a href="#五交付文件清单" id="toc-五交付文件清单" class="nav-link" data-scroll-target="#五交付文件清单">五、交付文件清单</a></li>
+  <li><a href="#已包含的必选检查" id="toc-已包含的必选检查" class="nav-link" data-scroll-target="#已包含的必选检查">已包含的必选检查</a></li>
+  <li><a href="#结局-方法对应关系代码实现" id="toc-结局-方法对应关系代码实现" class="nav-link" data-scroll-target="#结局-方法对应关系代码实现">结局-方法对应关系（代码实现）</a></li>
+  <li><a href="#总汇总表不同截断阈值" id="toc-总汇总表不同截断阈值" class="nav-link" data-scroll-target="#总汇总表不同截断阈值">总汇总表（不同截断阈值）</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -324,243 +308,143 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="无治疗病例数据分析完整报告mac版" class="level1">
-<h1>无治疗病例数据分析完整报告（Mac版）</h1>
-<section id="一分析概述" class="level2">
-<h2 class="anchored" data-anchor-id="一分析概述">一、分析概述</h2>
-<section id="数据来源" class="level3">
-<h3 class="anchored" data-anchor-id="数据来源">1.1 数据来源</h3>
+<section id="方法核对按结局类型v5" class="level1">
+<h1>方法核对（按结局类型）v5</h1>
+<section id="已包含的必选检查" class="level2">
+<h2 class="anchored" data-anchor-id="已包含的必选检查">已包含的必选检查</h2>
 <ul>
-<li>数据文件：/Users/wangguotao/Downloads/ISAR/Doctor/数据分析总表.xlsx</li>
-<li>原始样本量：143 例</li>
-<li>分析对象：术前无治疗病例（治疗状态代码=0）</li>
-<li>分析样本量：127 例（占原始样本 88.8%）</li>
+<li><p>共同支持域检查：已实现（PS overlap 区间 + PS密度图 + 剔除数量）。</p></li>
+<li><p>不同截断阈值敏感性：已实现（TRUNC_QS=[0.95, 0.99]）。</p></li>
+<li><p>加权后协变量平衡：已实现（加权SMD表，阈值0.10）。</p></li>
+<li><p>费用正态性检查：已实现（Shapiro p for cost &amp; log(cost)）。</p></li>
 </ul>
 </section>
-<section id="分析内容" class="level3">
-<h3 class="anchored" data-anchor-id="分析内容">1.2 分析内容</h3>
-<ol type="1">
-<li>数据预处理与无治疗病例筛选</li>
-<li>核心协变量描述性统计</li>
-<li>随机抽样匹配与组间平衡性检验</li>
-<li>Bootstrap成本分布分析（2000次抽样）</li>
-<li>IPTW权重分析（倾向得分、权重截断、ESS计算、敏感性分析）</li>
-<li>多维度可视化与结果导出</li>
-</ol>
+<section id="结局-方法对应关系代码实现" class="level2">
+<h2 class="anchored" data-anchor-id="结局-方法对应关系代码实现">结局-方法对应关系（代码实现）</h2>
+<div class="line-block">结局类型 | 主分析方法 | 敏感性分析方法 | 代码实现位置 |</div>
+<p>|—|—|—|—|</p>
+<div class="line-block">事件数 &lt; 5（死亡） | 贝叶斯（Beta-Binomial）+ Firth 校正 Logistic（协变量调整OR）；并尝试DR(AIPW)（若结局单一类别会自动跳过） | 单纯 IPTW(ATT)；单纯 G-computation（logistic OR） | <code>bayes_beta_binom_two_group</code>, <code>firth_or_treat</code>, <code>aipw_binary</code>, <code>att_weighted_binary_effect</code>, <code>gcomp_binary</code> |</div>
+<div class="line-block">事件数≥5（缓解） | 标准化 IPTW（ATT 权重 + 99%截断） | DR(AIPW) | <code>att_weights+truncate+standardize_att_weights</code>, <code>att_weighted_binary_effect</code>, <code>aipw_binary</code> |</div>
+<div class="line-block">连续变量（费用） | 标准化 IPTW（ATT 权重 + 99%截断） | DR(线性) + log(费用)的IPTW | <code>att_weighted_continuous_effect</code>, <code>aipw_continuous</code>, <code>log_cost</code>分支 |</div>
 </section>
-</section>
-<section id="二基础分析结果" class="level2">
-<h2 class="anchored" data-anchor-id="二基础分析结果">二、基础分析结果</h2>
-<section id="数据基本信息" class="level3">
-<h3 class="anchored" data-anchor-id="数据基本信息">2.1 数据基本信息</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>分析项目</th>
-<th>数值</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>原始总病例数</td>
-<td>143 例</td>
-</tr>
-<tr class="even">
-<td>无治疗病例数</td>
-<td>127 例</td>
-</tr>
-<tr class="odd">
-<td>匹配组病例数</td>
-<td>64 例</td>
-</tr>
-<tr class="even">
-<td>非匹配组病例数</td>
-<td>63 例</td>
-</tr>
-<tr class="odd">
-<td>第一次住院总费用均值（无治疗组）</td>
-<td>81738.39 元</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="协变量平衡性" class="level3">
-<h3 class="anchored" data-anchor-id="协变量平衡性">2.2 协变量平衡性</h3>
-<section id="评估标准" class="level4">
-<h4 class="anchored" data-anchor-id="评估标准">2.2.1 评估标准</h4>
-<ul>
-<li><strong>平衡性良好</strong>：标准化均差（SMD）&lt; 0.1</li>
-<li><strong>需改善</strong>：SMD ≥ 0.1（无统计学差异但平衡度不足）</li>
-</ul>
-</section>
-<section id="核心结果" class="level4">
-<h4 class="anchored" data-anchor-id="核心结果">2.2.2 核心结果</h4>
-<p>共分析 8 个协变量，其中 4 个平衡性良好： - 术前既往治疗（0、无治疗2、仅经皮穿刺3、仅内镜治疗1、接受过外科手术（无论是否联合其他治疗））（SMD：0.0000） - 改良CTSI评分（SMD：0.0244） - 囊肿（1、单发0、多发）（SMD：0.0926） - 囊肿最大径mm（SMD：0.0080）</p>
-</section>
-</section>
-<section id="bootstrap成本分析" class="level3">
-<h3 class="anchored" data-anchor-id="bootstrap成本分析">2.3 Bootstrap成本分析</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>统计指标</th>
-<th>无治疗总样本（元）</th>
-<th>匹配组（元）</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bootstrap均值</td>
-<td>81632.28</td>
-<td>87615.36</td>
-</tr>
-<tr class="even">
-<td>95%置信区间</td>
-<td>73678 ~ 90584</td>
-<td>74538 ~ 104007</td>
-</tr>
-<tr class="odd">
-<td>95%分位数</td>
-<td>89161.38</td>
-<td>100724.65</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="三iptw权重分析结果" class="level2">
-<h2 class="anchored" data-anchor-id="三iptw权重分析结果">三、IPTW权重分析结果</h2>
-<section id="权重统计" class="level3">
-<h3 class="anchored" data-anchor-id="权重统计">3.1 权重统计</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>权重类型</th>
-<th>均值</th>
-<th>截断阈值</th>
-<th>被截断样本数</th>
-<th>被截断占比(%)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>原始IPTW权重</td>
-<td>2.1184</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>截断后IPTW权重</td>
-<td>2.1184</td>
-<td>54.96</td>
-<td>0</td>
-<td>0.0</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="有效样本量ess" class="level3">
-<h3 class="anchored" data-anchor-id="有效样本量ess">3.2 有效样本量（ESS）</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>权重类型</th>
-<th>ESS值（例）</th>
-<th>ESS/原始样本(%)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>原始权重</td>
-<td>57.65</td>
-<td>45.4</td>
-</tr>
-<tr class="even">
-<td>截断后权重</td>
-<td>57.65</td>
-<td>45.4</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="截断阈值敏感性分析" class="level3">
-<h3 class="anchored" data-anchor-id="截断阈值敏感性分析">3.3 截断阈值敏感性分析</h3>
+<section id="总汇总表不同截断阈值" class="level2">
+<h2 class="anchored" data-anchor-id="总汇总表不同截断阈值">总汇总表（不同截断阈值）</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 12%">
-<col style="width: 18%">
-<col style="width: 16%">
-<col style="width: 17%">
-<col style="width: 19%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 1%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 9%">
+<col style="width: 3%">
+<col style="width: 8%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 5%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">截断阈值类型</th>
-<th style="text-align: right;">截断阈值</th>
-<th style="text-align: right;">截断后权重均值</th>
-<th style="text-align: right;">被截断样本数</th>
-<th style="text-align: right;">有效样本量ESS</th>
-<th style="text-align: right;">ESS/原始样本(%)</th>
+<th style="text-align: left;">截断分位</th>
+<th style="text-align: right;">权重阈值</th>
+<th style="text-align: right;">ESS</th>
+<th style="text-align: left;">SMD&lt;0.10</th>
+<th style="text-align: right;">死亡事件数</th>
+<th style="text-align: right;">死亡_Bayes_P(pt&lt;pc)</th>
+<th style="text-align: right;">死亡_Bayes_RD</th>
+<th style="text-align: left;">死亡_Bayes_RD_CrI</th>
+<th style="text-align: right;">死亡_Firth_OR</th>
+<th style="text-align: left;">死亡_Firth_OR_CI</th>
+<th style="text-align: right;">死亡_DR_RD</th>
+<th style="text-align: left;">死亡_DR_reason</th>
+<th style="text-align: right;">死亡_IPTW_RD</th>
+<th style="text-align: right;">死亡_Gcomp_RD</th>
+<th style="text-align: right;">缓解_IPTW_RD</th>
+<th style="text-align: right;">缓解_IPTW_RR</th>
+<th style="text-align: right;">缓解_DR_RD</th>
+<th style="text-align: left;">缓解_DR_reason</th>
+<th style="text-align: right;">费用_IPTW_ATE(元)</th>
+<th style="text-align: right;">费用_DR_ATE(元)</th>
+<th style="text-align: left;">费用_DR_reason</th>
+<th style="text-align: right;">费用_Shapiro_p</th>
+<th style="text-align: right;">log费用_Shapiro_p</th>
+<th style="text-align: right;">log费用_IPTW_Δlog</th>
+<th style="text-align: right;">log费用_IPTW_cost_ratio</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">90%分位数</td>
-<td style="text-align: right;">3.5365</td>
-<td style="text-align: right;">1.8377</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">108.24</td>
-<td style="text-align: right;">85.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">95%分位数</td>
-<td style="text-align: right;">4.4586</td>
-<td style="text-align: right;">1.9084</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">102.26</td>
-<td style="text-align: right;">80.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">99%分位数</td>
-<td style="text-align: right;">7.4118</td>
-<td style="text-align: right;">1.9742</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">93.93</td>
-<td style="text-align: right;">74</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">用户指定</td>
-<td style="text-align: right;">54.96</td>
-<td style="text-align: right;">2.1184</td>
+<td style="text-align: left;">95%</td>
+<td style="text-align: right;">3.28342</td>
+<td style="text-align: right;">48.599</td>
+<td style="text-align: left;">2/7</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">57.65</td>
-<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">0.32942</td>
+<td style="text-align: right;">0.017477</td>
+<td style="text-align: left;">(-0.032724937350209475, 0.12124939557693766)</td>
+<td style="text-align: right;">1.41553</td>
+<td style="text-align: left;">0.13830356008277545~14.48788835859107</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">one_outcome_class</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">nan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">one_outcome_class</td>
+<td style="text-align: right;">-32256.5</td>
+<td style="text-align: right;">-34060.9</td>
+<td style="text-align: left;">ok</td>
+<td style="text-align: right;">0.087586</td>
+<td style="text-align: right;">0.288216</td>
+<td style="text-align: right;">-0.564277</td>
+<td style="text-align: right;">0.568771</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">99%</td>
+<td style="text-align: right;">4.47728</td>
+<td style="text-align: right;">47.6473</td>
+<td style="text-align: left;">2/7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.32942</td>
+<td style="text-align: right;">0.017477</td>
+<td style="text-align: left;">(-0.032724937350209475, 0.12124939557693766)</td>
+<td style="text-align: right;">1.41553</td>
+<td style="text-align: left;">0.13830356008277545~14.48788835859107</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">one_outcome_class</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">nan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">one_outcome_class</td>
+<td style="text-align: right;">-33055.6</td>
+<td style="text-align: right;">-34060.9</td>
+<td style="text-align: left;">ok</td>
+<td style="text-align: right;">0.087586</td>
+<td style="text-align: right;">0.288216</td>
+<td style="text-align: right;">-0.573992</td>
+<td style="text-align: right;">0.563273</td>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="四结论与建议" class="level2">
-<h2 class="anchored" data-anchor-id="四结论与建议">四、结论与建议</h2>
-<ol type="1">
-<li><strong>数据质量</strong>：无治疗病例占比高（88.8%），费用数据完整，适合进一步临床分析</li>
-<li><strong>协变量平衡</strong>：4 个核心协变量平衡性良好，可通过PSM优化剩余协变量</li>
-<li><strong>IPTW权重</strong>：建议使用用户指定阈值（54.96）的截断权重，ESS保留率 45.4%，结果稳定</li>
-<li><strong>后续方向</strong>：基于IPTW权重分析内镜与外科治疗的费用差异及疗效对比</li>
-</ol>
-</section>
-<section id="五交付文件清单" class="level2">
-<h2 class="anchored" data-anchor-id="五交付文件清单">五、交付文件清单</h2>
-<ol type="1">
-<li>无治疗病例基础分析图表.png（基础分析可视化）</li>
-<li>IPTW权重分析图表.png（IPTW权重可视化）</li>
-<li>无治疗病例分析总报告.xlsx（6个工作表，完整数据）</li>
-<li>无治疗病例分析完整报告.md（本报告）</li>
-</ol>
 <hr>
-<p><em>报告生成时间</em>：2026-02-09 23:10:44 <em>运行环境</em>：Mac + Jupyter Notebook + Python 3.9+</p>
+<p>输出目录：<code>/Users/wangguotao/bp-ai-api/AndyBourne-Blog/posts/Test/无治疗病例分析结果_v5</code></p>
 
 
 </section>
