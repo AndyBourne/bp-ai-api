@@ -12,9 +12,11 @@
     "listing": "/posts/Test/index.html",
     "items": [
       "/posts/Test/food.html",
+      "/posts/Test/yRresult.html",
       "/posts/Test/foodanalysis.html",
       "/posts/Test/yresult.html",
       "/posts/Test/综合分析报告.html",
+      "/posts/Test/R_分析结果/R_分析报告.html",
       "/posts/Test/foodR.html",
       "/posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html",
       "/posts/Test/Milk.html",
@@ -54,9 +56,11 @@
     "items": [
       "/posts/Rethink/index.html",
       "/posts/Test/food.html",
+      "/posts/Test/yRresult.html",
       "/posts/Test/foodanalysis.html",
       "/posts/Test/yresult.html",
       "/posts/Test/综合分析报告.html",
+      "/posts/Test/R_分析结果/R_分析报告.html",
       "/posts/Test/foodR.html",
       "/posts/Test/index.html",
       "/posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html",
