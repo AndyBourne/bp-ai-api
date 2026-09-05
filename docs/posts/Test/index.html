@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="AndyBourne">
 
 <title>Test – AndyBourne-Blog</title>
 <style>
@@ -84,10 +85,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 10,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -302,7 +303,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -345,34 +346,39 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Test</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Test</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>AndyBourne </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 
@@ -477,22 +483,25 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1770546503519" data-listing-reading-time-sort="3" data-listing-word-count-sort="596">
-<div class="thumbnail"><a href="../../posts/Test/综合分析报告.html" class="no-external">
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1772021842437" data-listing-reading-time-sort="5" data-listing-word-count-sort="897">
+<div class="thumbnail"><a href="../../posts/Test/Kaggle/stock-market-prediction.html" class="no-external">
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+<p class="card-img-top"><img src="Kaggle/stock-market-prediction_files/figure-html/cell-2-output-2.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../posts/Test/综合分析报告.html" class="no-external">内镜vs外科治疗胰腺疾病综合分析报告（结果增强版）</a>
+<a href="../../posts/Test/Kaggle/stock-market-prediction.html" class="no-external">数据分析版本V20250225基于Python语言的-Stock Market Prediction（股票价格预测）</a>
 </h3>
-<div class="delink listing-description"><a href="../../posts/Test/综合分析报告.html" class="no-external">
-modified_ctsi 6.3 6.8 6.3 6.3 0.251 0.006 是 walled_necrosis 0.3 0.5 0.3 0.4 0.369 0.018 是 lesion_diameter 111.2 111.5 111.2 111.4 0.007 0.005 是
+<div class="delink listing-description"><a href="../../posts/Test/Kaggle/stock-market-prediction.html" class="no-external">
+所有股票的回归 R² 均为负或接近零，说明模型完全无法解释次日收益率的方差。 交叉验证 RMSE 普遍高于单次测试 RMSE（例如 AAPL 从 1.59% 升至 2.86%），且标准差较大，表明模型在不同时间段表现差异巨大，泛化能力差。 2. 分类任务：略高于随机，但无实际意义
 </a></div>
 </div>
 <div class="metadata">
-<a href="../../posts/Test/综合分析报告.html" class="no-external">
+<a href="../../posts/Test/Kaggle/stock-market-prediction.html" class="no-external">
+<div class="listing-author">
+AndyBourne
+</div>
 </a>
 </div>
 </div>
@@ -512,6 +521,9 @@ modified_ctsi 6.3 6.8 6.3 6.3 0.251 0.006 是 walled_necrosis 0.3 0.5 0.3 0.4 0.
 </div>
 <div class="metadata">
 <a href="../../posts/Test/R_分析结果/R_分析报告.html" class="no-external">
+<div class="listing-author">
+AndyBourne
+</div>
 </a>
 </div>
 </div>
@@ -537,45 +549,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1770649844856" data-listing-reading-time-sort="3" data-listing-word-count-sort="467">
-<div class="thumbnail"><a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">无治疗病例数据分析完整报告（Mac版）</a>
-</h3>
-<div class="delink listing-description"><a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">
-共分析 8 个协变量，其中 4 个平衡性良好： - 术前既往治疗（0、无治疗2、仅经皮穿刺3、仅内镜治疗1、接受过外科手术（无论是否联合其他治疗））（SMD：0.0000） - 改良CTSI评分（SMD：0.0244） - 囊肿（1、单发0、多发）（SMD：0.0926） - 囊肿最大径mm（SMD：0.0080）
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1770365578116" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
-<div class="thumbnail"><a href="../../posts/Test/Milk.html" class="no-external">
-
-<p class="card-img-top"><img src="Milk_files/figure-html/cell-9-output-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/Test/Milk.html" class="no-external">数据分析面包</a>
-</h3>
-<div class="delink listing-description"><a href="../../posts/Test/Milk.html" class="no-external">
-在完成数据计算与图表绘制后，我们需要将这些枯燥的数字转化为逻辑严密的文字描述。这部分内容通常出现在论文的“结果与分析”章节。
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/Test/Milk.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1770996269505" data-listing-reading-time-sort="19" data-listing-word-count-sort="3773">
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1770996269505" data-listing-reading-time-sort="19" data-listing-word-count-sort="3773">
 <div class="thumbnail"><a href="../../posts/Test/yperfect.html" class="no-external">
 
 <p class="card-img-top"><img src="yperfect_files/figure-html/cell-13-output-2.png"  class="thumbnail-image card-img"/></p>
@@ -597,10 +571,10 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1771143866828" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1772625300056" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
 <div class="thumbnail"><a href="../../posts/Test/IgPython.html" class="no-external">
 
-<p class="card-img-top"><img data-src="IgPython_files/figure-html/cell-3-output-2.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="IgPython_files/figure-html/cell-3-output-2.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -619,29 +593,10 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1770731777865" data-listing-reading-time-sort="3" data-listing-word-count-sort="459">
-<div class="thumbnail"><a href="../../posts/Test/无治疗病例分析结果_v4_2/无治疗病例分析报告_v4_2.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/Test/无治疗病例分析结果_v4_2/无治疗病例分析报告_v4_2.html" class="no-external">无治疗病例分析报告（v4.2 修复版）</a>
-</h3>
-<div class="delink listing-description"><a href="../../posts/Test/无治疗病例分析结果_v4_2/无治疗病例分析报告_v4_2.html" class="no-external">
-CEAC：
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/Test/无治疗病例分析结果_v4_2/无治疗病例分析报告_v4_2.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1770655327611" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1770655327611" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail"><a href="../../posts/Test/yrperfect.html" class="no-external">
 
-<p class="card-img-top"><img data-src="yrperfect_files/figure-html/cell-2-output-2.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="yrperfect_files/figure-html/cell-2-output-2.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -663,7 +618,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1771211703606" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
+<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1771211703606" data-listing-reading-time-sort="2" data-listing-word-count-sort="236">
 <div class="thumbnail"><a href="../../posts/Test/yend-2.html" class="no-external">
 
 <p class="card-img-top"><img data-src="yend-2_files/figure-html/cell-2-output-8.png"  class="thumbnail-image card-img"/></p>
@@ -685,45 +640,7 @@ AndyBourne
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1770728807909" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
-<div class="thumbnail"><a href="../../posts/Test/无治疗病例分析结果_v2/无治疗病例分析报告_v2.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/Test/无治疗病例分析结果_v2/无治疗病例分析报告_v2.html" class="no-external">无治疗病例分析报告（v2）</a>
-</h3>
-<div class="delink listing-description"><a href="../../posts/Test/无治疗病例分析结果_v2/无治疗病例分析报告_v2.html" class="no-external">
-数据文件：<code>/Users/wangguotao/Downloads/ISAR/Doctor/数据分析总表.xlsx</code>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/Test/无治疗病例分析结果_v2/无治疗病例分析报告_v2.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1770733141870" data-listing-reading-time-sort="4" data-listing-word-count-sort="749">
-<div class="thumbnail"><a href="../../posts/Test/无治疗病例分析结果_v5/方法核对_按结局类型_v5.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/Test/无治疗病例分析结果_v5/方法核对_按结局类型_v5.html" class="no-external">方法核对（按结局类型）v5</a>
-</h3>
-<div class="delink listing-description"><a href="../../posts/Test/无治疗病例分析结果_v5/方法核对_按结局类型_v5.html" class="no-external">
-共同支持域检查：已实现（PS overlap 区间 + PS密度图 + 剔除数量）。
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/Test/无治疗病例分析结果_v5/方法核对_按结局类型_v5.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="16" data-listing-file-modified-sort="1771214578135" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
+<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1771214578135" data-listing-reading-time-sort="1" data-listing-word-count-sort="155">
 <div class="thumbnail"><a href="../../posts/Test/yRend-3.html" class="no-external">
 
 <p class="card-img-top"><img data-src="yRend-3_files/figure-html/cell-2-output-7.png"  class="thumbnail-image card-img"/></p>
@@ -739,6 +656,56 @@ AndyBourne
 </div>
 <div class="metadata">
 <a href="../../posts/Test/yRend-3.html" class="no-external">
+<div class="listing-author">
+AndyBourne
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-listing-date-sort="1788537600000" data-listing-file-modified-sort="1788572422603" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="596">
+<div class="thumbnail"><a href="../../posts/Test/综合分析报告.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../posts/Test/综合分析报告.html" class="no-external">综合分析报告</a>
+</h3>
+<div class="delink listing-description"><a href="../../posts/Test/综合分析报告.html" class="no-external">
+modified_ctsi 6.3 6.8 6.3 6.3 0.251 0.006 是 walled_necrosis 0.3 0.5 0.3 0.4 0.369 0.018 是 lesion_diameter 111.2 111.5 111.2 111.4 0.007 0.005 是
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../posts/Test/综合分析报告.html" class="no-external">
+<div class="listing-date">
+Sep 5, 2026
+</div>
+<div class="listing-author">
+AndyBourne
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1788537600000" data-listing-file-modified-sort="1788572419382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="467">
+<div class="thumbnail"><a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">无治疗病例分析完整报告</a>
+</h3>
+<div class="delink listing-description"><a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">
+共分析 8 个协变量，其中 4 个平衡性良好： - 术前既往治疗（0、无治疗2、仅经皮穿刺3、仅内镜治疗1、接受过外科手术（无论是否联合其他治疗））（SMD：0.0000） - 改良CTSI评分（SMD：0.0244） - 囊肿（1、单发0、多发）（SMD：0.0926） - 囊肿最大径mm（SMD：0.0080）
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../posts/Test/无治疗病例分析结果/无治疗病例分析完整报告.html" class="no-external">
+<div class="listing-date">
+Sep 5, 2026
+</div>
 <div class="listing-author">
 AndyBourne
 </div>

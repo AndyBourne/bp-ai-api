@@ -1,0 +1,5 @@
+format:
+  html:
+    toc: true  # 显示目录
+    number-sections: false  # 不显示章节编号
+author: "AndyBourne"  # 统一作者名

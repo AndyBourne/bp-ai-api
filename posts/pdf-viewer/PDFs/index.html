@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF预览 | AndyBourne-Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .pdf-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PDF文档预览</h1>
+    <p>（AndyBourne-Blog 文档专区）</p>
+
+    <!-- 关键：链接路径改为子文件夹内的相对路径 -->
+    <div class="pdf-item">
+        <h3>示例PDF文档</h3>
+        <a href="viewer.html?file=pdfs/example.pdf" target="_blank">在线预览示例PDF</a>
+    </div>
+
+    <!-- 新增PDF只需复制此块，修改文件名和标题 -->
+    <div class="pdf-item">
+        <h3>我的技术笔记</h3>
+        <a href="viewer.html?file=pdfs/tech-notes.pdf" target="_blank">在线预览技术笔记</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF预览 | AndyBourne-Blog</title>
+    <!-- 依然使用CDN加载PDF.js，无需调整 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 1rem;
+            background: #f5f5f5;
+        }
+
+        #pdf-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pdf-container">
+        <div class="loading">正在加载PDF文件...</div>
+        <div id="pdf-viewer"></div>
+    </div>
+
+    <script>
+        // 获取URL中的PDF文件路径参数（子文件夹内相对路径已适配）
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfFile = urlParams.get('file');
+
+        if (!pdfFile) {
+            document.querySelector('.loading').textContent = '未指定PDF文件！';
+            throw new Error('No PDF file specified');
+        }
+
+        // 初始化PDF.js（逻辑不变，CDN路径无需调整）
+        async function renderPDF() {
+            try {
+                pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+                // 关键：这里的pdfFile是子文件夹内的相对路径，无需额外修改
+                const pdf = await pdfjsLib.getDocument(pdfFile).promise;
+                document.querySelector('.loading').textContent = `共 ${pdf.numPages} 页`;
+
+                // 渲染每一页PDF
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    const page = await pdf.getPage(pageNum);
+                    const viewport = page.getViewport({ scale: 1.5 });
+
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    canvas.style.margin = '2rem 0';
+                    canvas.style.maxWidth = '100%';
+                    canvas.style.height = 'auto';
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+
+                    document.getElementById('pdf-viewer').appendChild(canvas);
+                }
+            } catch (error) {
+                document.querySelector('.loading').textContent = `加载失败：${error.message}`;
+                console.error('PDF加载错误：', error);
+            }
+        }
+
+        renderPDF();
+    </script>
+</body>
+
+</html>

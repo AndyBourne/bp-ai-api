@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -320,29 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">数据分析版本V20250215基于Python语言的-IgG介导的食物不耐受与人连蛋白关联性分析</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>AndyBourne </p>
-            </div>
-    </div>
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -384,14 +362,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">数据分析版本V20250215基于Python语言的-IgG介导的食物不耐受与人连蛋白关联性分析</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>AndyBourne </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
-<div id="06df6ab4" class="cell" data-execution_count="1">
+
+<div id="06df6ab4" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =============================================================</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># IgG介导的食物不耐受与人连蛋白关联性分析（Python版）</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 数据路径：/Users/wangguotao/Downloads/ISAR/food/</span></span>
@@ -783,7 +782,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. 主函数：整合所有分析步骤</span></span>
 <span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
 <span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 数据路径（请确认路径正确）</span></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>    food_data_path <span class="op">=</span> <span class="st">'/Users/wangguotao/Downloads/ISAR/food/信息汇总全_加阳性率+加权+二分类+3种食物加.xlsx'</span></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>    food_data_path <span class="op">=</span> <span class="st">'/Users/wangguotao/Downloads/ISAR/food/信息汇总全_加阳性率+加权+二分类+3种食物加权.xlsx'</span></span>
 <span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>    fatigue_data_path <span class="op">=</span> <span class="st">'/Users/wangguotao/Downloads/ISAR/food/疲劳量表.xls'</span></span>
 <span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 步骤1：数据读取与清洗</span></span>
@@ -955,7 +954,7 @@ Excel文件包含3个sheet：
 ============================================================</code></pre>
 </div>
 </div>
-<div id="7fa40c5c" class="cell" data-execution_count="2">
+<div id="7fa40c5c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =============================================================</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># IgG介导的食物不耐受与人连蛋白关联性分析（Jupyter Notebook版）</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 数据路径：/Users/wangguotao/Downloads/ISAR/food/</span></span>
@@ -1301,7 +1300,7 @@ Excel文件包含3个sheet：
 <span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. 主函数：整合所有步骤（Jupyter中逐步骤显示）</span></span>
 <span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
 <span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 数据路径（确认与您的文件位置一致）</span></span>
-<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a>    food_path <span class="op">=</span> <span class="st">'/Users/wangguotao/Downloads/ISAR/food/信息汇总全_加阳性率+加权+二分类+3种食物加.xlsx'</span></span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a>    food_path <span class="op">=</span> <span class="st">'/Users/wangguotao/Downloads/ISAR/food/信息汇总全_加阳性率+加权+二分类+3种食物加权.xlsx'</span></span>
 <span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a>    fatigue_path <span class="op">=</span> <span class="st">'/Users/wangguotao/Downloads/ISAR/food/疲劳量表.xls'</span></span>
 <span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 步骤1：数据读取与清洗</span></span>

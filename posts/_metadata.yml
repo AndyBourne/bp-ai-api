@@ -1,13 +1,5 @@
-# options specified here will apply to all posts in this folder
-
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
-code-fold: true
-
-# Enable banner style title blocks
-title-block-banner: true
-
-execute: 
-  freeze: auto
-
+format:
+  html:
+    toc: true
+    number-sections: false
+author: "AndyBourne"
