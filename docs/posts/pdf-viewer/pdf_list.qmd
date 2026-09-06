@@ -1,0 +1,16 @@
+---
+title: "PDF 文档列表"
+---
+
+欢迎浏览 AndyBourne-Blog 的 PDF 文档资源。点击下方链接在线预览。
+
+::: {.pdf-item}
+### CFA 一级 2025 第8卷 - 另类投资
+[在线预览](viewer.html?file=PDFs/CFA_LV1_2025_-_Volume_08_-_Alternative_Investments.pdf){target="_blank"}
+:::
+
+<!-- 后续新增 PDF 按相同格式添加 -->
+::: {.pdf-item}
+### CFA 一级 2025 第4卷 - 财务报表分析
+[在线预览](viewer.html?file=PDFs/CFA_LV1_2025_-_Volume_04_-_Financial_Statement_Analysis.pdf){target="_blank"}
+:::

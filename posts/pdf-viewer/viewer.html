@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF预览 | AndyBourne-Blog</title>
+    <!-- 使用 CDN 加载 PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 1rem;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 顶部返回导航栏 */
+        #top-nav {
+            max-width: 1000px;
+            margin: 0 auto 1rem auto;
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        #top-nav a {
+            color: #0366d6;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+
+        #top-nav a:hover {
+            text-decoration: underline;
+        }
+
+        #pdf-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        canvas {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部返回导航 -->
+    <div id="top-nav">
+        <a href="pdf_list.html">← 返回PDF列表</a>
+        <a href="/">返回首页</a>
+    </div>
+
+    <!-- PDF 显示区域 -->
+    <div id="pdf-container">
+        <div class="loading" id="loading-message">正在加载PDF文件...</div>
+        <div id="pdf-viewer"></div>
+    </div>
+
+    <script>
+        // 获取 URL 中的 PDF 文件路径参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfFile = urlParams.get('file');
+
+        const loadingEl = document.getElementById('loading-message');
+        const viewerEl = document.getElementById('pdf-viewer');
+
+        if (!pdfFile) {
+            loadingEl.textContent = '❌ 未指定PDF文件！';
+            throw new Error('No PDF file specified');
+        }
+
+        // 初始化 PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        async function renderPDF() {
+            try {
+                const pdf = await pdfjsLib.getDocument(pdfFile).promise;
+                loadingEl.textContent = `📄 共 ${pdf.numPages} 页`;
+
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    const page = await pdf.getPage(pageNum);
+                    const viewport = page.getViewport({ scale: 1.5 });
+
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+
+                    viewerEl.appendChild(canvas);
+                }
+
+                loadingEl.textContent = `✅ 加载完成，共 ${pdf.numPages} 页`;
+
+            } catch (error) {
+                loadingEl.textContent = `❌ 加载失败：${error.message}`;
+                console.error('PDF加载错误：', error);
+            }
+        }
+
+        renderPDF();
+    </script>
+</body>
+
+</html>

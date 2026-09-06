@@ -1,19 +1,54 @@
 ---
-title: "About"
-image: profile.jpg
-about:
-  template: jolla
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
+# title: "About"
+# image: profile.jpg
+# about:
+#   template: jolla
+#   links:
+#     - icon: twitter
+#       text: Twitter
+#       href: https://twitter.com
+#     - icon: linkedin
+#       text: LinkedIn
+#       href: https://linkedin.com
+#     - icon: github
+#       text: Github
+#       href: https://andybourne.github.com
 
 ---
 
 About this blog
+
+---
+title: "About Me"
+image: profile.jpg
+about:
+  template: jolla
+---
+
+Hi, I'm **AndyBourne** – a finance professional, MBA candidate, and a passionate researcher at the intersection of capital markets and emerging technologies.
+
+Currently based in Sichuan, China, I work in the IPO advisory space for Hong Kong hard‑tech companies, with a focus on cornerstone investment strategies and anchor‑effect dynamics. My daily work involves hands‑on financial modeling, valuation, and deal structuring – experience I actively share on this blog.
+
+### What I write about
+
+- **IPO data & valuation modeling** – real‑world case studies from the HKEX pipeline.
+- **AI & robotics value chains** – deep‑dive industry research on supply chains, competitive moats, and technology adoption curves.
+- **Investment frameworks** – exploring the intersection of fundamental analysis, behavioral finance, and quantitative methods.
+
+### My vision
+
+> *“Future adaptability = AI × Robotics × Content Creation × Health.”*
+
+I believe the next decade belongs to those who can synthesise insights across disciplines. This blog is my laboratory – a place to publish raw data, test hypotheses, and refine my thinking in public.
+
+### Let’s connect
+
+- **X (Twitter):** [@andybourne_cn](https://x.com/andybourne_cn)
+- **GitHub:** [andybourne/AndyBourne-Blog](https://github.com/andybourne)
+- **Xiaohongshu (小红书):** 9605202597 (for Chinese‑language updates)
+
+For project collaboration, industry exchange, or just a thoughtful conversation – feel free to reach out via the platforms above.
+
+---
+
+*“The only difference is that everything is different.”*

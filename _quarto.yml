@@ -17,6 +17,8 @@ website:
         text: 首页
       - href: about.qmd
         text: 关于
+      - href: posts/pdf-viewer/pdf_list.qmd   # 👈 新增 PDF 文档入口
+        text: PDF文档
 
     right:
       - icon: twitter
@@ -32,4 +34,6 @@ format:
     toc: true
     code-fold: true
     include-after-body: footer.html
+resources:
+  - posts/pdf-viewer/
 
